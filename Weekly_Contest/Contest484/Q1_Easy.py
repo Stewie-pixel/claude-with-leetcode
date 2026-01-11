@@ -52,6 +52,28 @@ Note: Please do not copy the description during the contest to maintain the inte
 
 """
 
+"""
+Intuition:
+        A prefix is a residue if the number of distinct characters matches the
+        prefix length modulo 3. We can track distinct characters as we iterate
+        through the string and compare with the current prefix length modulo 3.
+
+        Approach:
+        - Use a set to store distinct characters seen so far.
+        - Iterate through the string, adding each character to the set.
+        - For each prefix ending at index i, check if len(seen) == (i + 1) % 3.
+        - Increment a counter whenever the condition is satisfied.
+
+        Complexity:
+        - Time: O(N), where N is the length of the string, since each character
+          is processed once.
+        - Space: O(1) extra space, as the set can contain at most 26 lowercase letters.
+
+        Returns:
+            int: Number of residue prefixes.
+"""
+
+# Coding Section
 class Solution:
     def residuePrefixes(self, s: str) -> int:
         seen = set()
