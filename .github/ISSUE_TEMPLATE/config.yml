@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Join our Discord
+    url: https://discord.com/channels/1498314968662282270/1498314972302676029
+    about: Get help, discuss features, and connect with the community.
+
+  - name: Report a security vulnerability
+    url: https://mail.google.com/mail/?view=cm&fs=1&to=insideyourcode@gmail.com
+    about: Send us an email directly through Gmail.
