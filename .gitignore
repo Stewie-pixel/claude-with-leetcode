@@ -19,7 +19,6 @@ public_html/hot
 storage/*.key
 .env
 .idea/
-.vscode/
 __pycache__/
 Homestead.yaml
 Homestead.json
@@ -163,14 +162,6 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
