@@ -1,12 +1,12 @@
 <div align="center">
 
-# Claude with LeetCode
+# Daily LeetCode
 
-[![Build README](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml/badge.svg)](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml)
-[![Problems Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/claude-with-leetcode/main/.problemSiteData.json&color=brightgreen&logo=leetcode)](https://github.com/Stewie-pixel/claude-with-leetcode)
+[![Build README](https://github.com/Stewie-pixel/daily-leetcode/actions/workflows/build-readme.yml/badge.svg)](https://github.com/Stewie-pixel/daily-leetcode/actions/workflows/build-readme.yml)
+[![Problems Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/daily-leetcode/main/.problemSiteData.json&color=brightgreen&logo=leetcode)](https://github.com/Stewie-pixel/daily-leetcode)
 <language-badges />
 
-A little assistant from Claude to help you learn daily LeetCode problems organised by DSA topic and difficulty
+A little assistant from Claude to help you learn daily LeetCode problems organised by DSA topic and difficulty.
 
 </div>
 
