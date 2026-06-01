@@ -27,3 +27,9 @@ jobs:
         run: |
           copilot -p "Review the git log for this repository and write a bullet point summary of all code changes that were made today, with links to the relevant commit on GitHub. Above the bullet list give a description (max 100 words) summarizing the changes made. Write the details to summary.md" --allow-tool='shell(git:*)' --allow-tool=write --no-ask-user
           cat summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create issue with summary
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          gh issue create --title "Daily Summary for $(date +'%Y-%m-%d')" --body-file summary.md --label "daily-summary" "copilot-cli"
