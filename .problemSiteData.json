@@ -1,9 +1,9 @@
 [
-    {
-        "problem": "Two Sum",
-        "pattern": "Arrays & Hashing",
-        "difficulty": "Easy",
-        "link": "two-sum",
-        "code": "0001"
-    }
+  {
+    "problem": "Two Sum",
+    "pattern": "Arrays & Hashing",
+    "difficulty": "Easy",
+    "link": "two-sum",
+    "code": "0001"
+  }
 ]

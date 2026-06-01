@@ -1,9 +1,9 @@
 <div align="center">
 
-# Daily LeetCode
+# Claude with LeetCode
 
-[![Build README](https://github.com/Stewie-pixel/daily-leetcode/actions/workflows/build-readme.yml/badge.svg)](https://github.com/Stewie-pixel/daily-leetcode/actions/workflows/build-readme.yml)
-[![Problems Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/daily-leetcode/main/.problemSiteData.json&color=brightgreen&logo=leetcode)](https://github.com/Stewie-pixel/daily-leetcode)
+[![Build README](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml/badge.svg)](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml)
+[![Problems Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/claude-with-leetcode/main/.problemSiteData.json&color=brightgreen&logo=leetcode)](https://github.com/Stewie-pixel/claude-with-leetcode)
 ![C%2B%2B](https://img.shields.io/badge/C%2B%2B-00599c?logo=cplusplus&logoColor=ffffff)
 ![Python](https://img.shields.io/badge/Python-3776ab?logo=python&logoColor=ffffff)
 
@@ -21,7 +21,7 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 ## Structure
 
 ```
-daily-leetcode/
+claude-with-leetcode/
 ├── .github/
 │   └── workflows/
 │       └── build-readme.yml       ← automated README rebuild
@@ -75,4 +75,10 @@ e.g. 0001-two-sum.cpp
 
 
 ## Problem List
+
+### Arrays & Hashing
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C++</sub> | <sub>dcc</sub> | <sub>Python</sub>
+---- | ---- | ---- | ---- | ----
+<sub>[0001 - Two Sum](https://leetcode.com/problems/two-sum)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
