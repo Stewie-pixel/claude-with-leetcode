@@ -24,23 +24,37 @@ const existingCodes = new Set(existing.map((p) => p.code));
 
 const newProblems = new Set();
 
-for (const dir of directories) {
+function scanDir(dir) {
+    if (!fs.existsSync(dir)) return;
+
     const entries = fs.readdirSync(dir, { withFileTypes: true });
 
     for (const entry of entries) {
         if (!entry.isDirectory()) continue;
 
-        // Match folder starting with a number e.g. 1-two-sum or 0001-two-sum
         const match = entry.name.match(/^(\d+)-/);
         if (!match) continue;
 
-        // Normalize to 4 digit code
         const code = String(parseInt(match[1])).padStart(4, '0');
-
         if (!existingCodes.has(code)) {
             newProblems.add(parseInt(match[1]));
         }
     }
+}
+
+// Scan root language dirs — cpp/, python/, etc.
+for (const dir of directories) {
+    scanDir(dir);
+}
+
+// Scan dcc/language dirs — dcc/cpp/, dcc/python/, etc.
+for (const dir of directories) {
+    scanDir(`dcc/${dir}`);
+}
+
+// Scan study_plan/leetcode75/language dirs — study_plan/leetcode75/cpp/, study_plan/leetcode75/python/, etc.
+for (const dir of directories) {
+    scanDir(`study_plan/leetcode75/${dir}`);
 }
 
 if (newProblems.size === 0) {
@@ -48,7 +62,7 @@ if (newProblems.size === 0) {
     process.exit(0);
 }
 
-console.log(`🔍 Found ${newProblems.size} new problem(s) — fetching from LeetCode...\n`);
+console.log(`Found ${newProblems.size} new problem(s) — fetching from LeetCode...\n`);
 
 for (const problemNumber of [...newProblems].sort((a, b) => a - b)) {
     try {

@@ -19,7 +19,6 @@ public_html/hot
 storage/*.key
 .env
 .idea/
-.vscode/
 __pycache__/
 Homestead.yaml
 Homestead.json
