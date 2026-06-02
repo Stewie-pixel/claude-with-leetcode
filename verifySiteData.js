@@ -1,12 +1,9 @@
 const fs = require('fs');
-const https = require('https');
+const path = require('path');
 
 const PROBLEMS_SITE_DATA = JSON.parse(
     fs.readFileSync('./.problemSiteData.json', 'utf8'),
 );
-
-const GITHUB_BASE_URL =
-    'https://github.com/Stewie-pixel/claude-with-leetcode/blob/main';
 
 const languageMap = {
     c: { directory: 'c', extension: 'c' },
@@ -25,26 +22,15 @@ const languageMap = {
     dart: { directory: 'dart', extension: 'dart' },
 };
 
-function checkUrl(url) {
-    return new Promise((resolve) => {
-        https
-            .get(url, (res) => {
-                resolve({ url, status: res.statusCode });
-                res.resume();
-            })
-            .on('error', () => {
-                resolve({ url, status: 'ERROR' });
-            });
-    });
-}
-
 async function verify() {
-    const checks = [];
+    let failed = 0;
+    let totalChecks = 0;
 
     for (const problem of PROBLEMS_SITE_DATA) {
         for (const language in languageMap) {
             if (problem[language] !== true) continue;
 
+            totalChecks++;
             const { directory, extension } = languageMap[language];
 
             let strippedId = problem.code;
@@ -53,25 +39,23 @@ async function verify() {
             }
 
             const folderName = `${strippedId}-${problem.link}`;
-            const url = `${GITHUB_BASE_URL}/${directory}/${folderName}/${problem.link}.${extension}`;
-            checks.push(checkUrl(url));
-        }
-    }
+            const localPath = path.join(
+                directory,
+                folderName,
+                `${problem.link}.${extension}`,
+            );
 
-    const results = await Promise.all(checks);
-    let failed = 0;
-
-    for (const { url, status } of results) {
-        if (status !== 200) {
-            console.log(`❌ ${status} — ${url}`);
-            failed++;
+            if (!fs.existsSync(localPath)) {
+                console.log(`Missing Local File — ${localPath}`);
+                failed++;
+            }
         }
     }
 
     if (failed === 0) {
-        console.log(`All ${results.length} URLs verified successfully`);
+        console.log(`All ${totalChecks} local files verified successfully.`);
     } else {
-        console.log(`\n${failed} URL(s) failed out of ${results.length}`);
+        console.log(`\n${failed} file(s) missing out of ${totalChecks}`);
         process.exit(1);
     }
 }
