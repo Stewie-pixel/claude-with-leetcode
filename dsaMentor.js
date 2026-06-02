@@ -106,7 +106,7 @@ async function runMentor() {
     }
 
     const basePrompt = fs.readFileSync('./CLAUDE.md', 'utf8');
-    const skillPrompt = fs.readFileSync('./skills/dsa_mentor.md', 'utf8');
+    const skillPrompt = fs.readFileSync('./skills/dsa-mentor.md', 'utf8');
     const combinedSystemPrompt = `${basePrompt}\n\n${skillPrompt}`;
 
     for (const dir of targetDirs) {
