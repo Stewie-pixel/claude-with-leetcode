@@ -1,0 +1,70 @@
+name: Code Mentor
+
+on:
+    push:
+        branches: ['main']
+        paths:
+            - 'cpp/**'
+            - 'python/**'
+            - 'javascript/**'
+            - 'java/**'
+            - 'typescript/**'
+            - 'c/**'
+            - 'csharp/**'
+            - 'go/**'
+            - 'ruby/**'
+            - 'swift/**'
+            - 'kotlin/**'
+            - 'rust/**'
+            - 'scala/**'
+            - 'dart/**'
+            - 'dcc/cpp/**'
+            - 'dcc/python/**'
+            - 'dcc/javascript/**'
+            - 'dcc/java/**'
+            - 'dcc/typescript/**'
+            - 'dcc/c/**'
+            - 'dcc/csharp/**'
+            - 'dcc/go/**'
+            - 'dcc/ruby/**'
+            - 'dcc/swift/**'
+            - 'dcc/kotlin/**'
+            - 'dcc/rust/**'
+            - 'dcc/scala/**'
+            - 'dcc/dart/**'
+
+jobs:
+    explain:
+        if: "!contains(github.event.head_commit.message, 'Daily Claude Analysis')"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.BOT_TOKEN }}
+                  fetch-depth: 2
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20.x
+
+            - name: Run Claude DSA Mentor Analysis
+              env:
+                  OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+              run: node dsaMentor.js
+
+            - name: Check for new analysis files
+              id: git-check
+              run: |
+                  echo modified=$(if [ -z "$(git status --porcelain)" ]; then echo "false"; else echo "true"; fi) >> $GITHUB_OUTPUT
+
+            - name: Push Mentor Analysis
+              if: steps.git-check.outputs.modified == 'true'
+              run: |
+                  git config --global user.email "${{ secrets.BOT_EMAIL }}"
+                  git config --global user.name "${{ secrets.BOT_USERNAME }}"
+                  git add .
+                  git commit -m "docs: Automated Mentor Analysis for new solution"
+                  git push || git pull --rebase && git push

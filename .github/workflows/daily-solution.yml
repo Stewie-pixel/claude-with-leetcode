@@ -1,0 +1,48 @@
+name: Daily LeetCode Solution
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '30 17 * * *'
+
+permissions:
+    contents: read
+    issues: write
+
+jobs:
+    daily-solution:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Find Today's Lecture File
+              id: locate-file
+              run: |
+                  TODAY=$(date +'%Y-%m-%d')
+                  FILE_PATH=$(find lectures -name "${TODAY}*.md" | head -n 1)
+                  if [ -z "$FILE_PATH" ]; then
+                    echo "No lecture file found matching today's date ($TODAY)."
+                    echo "found=false" >> $GITHUB_OUTPUT
+                  else
+                    echo "Found file: $FILE_PATH"
+                    echo "found=true" >> $GITHUB_OUTPUT
+                    echo "filepath=$FILE_PATH" >> $GITHUB_OUTPUT
+                    TITLE=$(grep -m 1 '^#' "$FILE_PATH" | sed 's/^#\s*//')
+                    if [ -z "$TITLE" ]; then
+                      TITLE="Daily Lecture Summary - $TODAY"
+                    fi
+                    echo "title=$TITLE" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Create Issue with Summary
+              if: steps.locate-file.outputs.found == 'true'
+              env:
+                  GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+              run: |
+                  cat "${{ steps.locate-file.outputs.filepath }}" >> "$GITHUB_STEP_SUMMARY"
+                  gh issue create \
+                    --title "${{ steps.locate-file.outputs.title }}" \
+                    --body-file "${{ steps.locate-file.outputs.filepath }}" \
+                    --label "daily-solution" \
+                    --label "dsa-lecture"
