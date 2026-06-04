@@ -92,6 +92,14 @@
     "cpp": true
   },
   {
+    "problem": "Total Waviness of Numbers in Range I",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "total-waviness-of-numbers-in-range-i",
+    "code": "3751",
+    "cpp": true
+  },
+  {
     "problem": "Limit Occurrences in Sorted Array",
     "pattern": "Uncategorized",
     "difficulty": "Easy",
