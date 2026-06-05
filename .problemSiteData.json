@@ -102,6 +102,22 @@
     "code": "2248"
   },
   {
+    "problem": "Equal Row and Column Pairs",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "equal-row-and-column-pairs",
+    "code": "2352",
+    "cpp": true
+  },
+  {
+    "problem": "Removing Stars From a String",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "removing-stars-from-a-string",
+    "code": "2390",
+    "cpp": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -123,6 +139,14 @@
     "difficulty": "Medium",
     "link": "total-waviness-of-numbers-in-range-i",
     "code": "3751",
+    "cpp": true
+  },
+  {
+    "problem": "Total Waviness of Numbers in Range II",
+    "pattern": "Math",
+    "difficulty": "Hard",
+    "link": "total-waviness-of-numbers-in-range-ii",
+    "code": "3753",
     "cpp": true
   },
   {
