@@ -54,6 +54,7 @@ jobs:
             - name: Run Claude DSA Mentor Analysis
               env:
                   OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+                  SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
               run: node dsaMentor.js
 
             - name: Check for new analysis files
