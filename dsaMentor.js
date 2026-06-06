@@ -4,9 +4,93 @@ const https = require('https');
 const { execSync } = require('child_process');
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const SERPER_API_KEY = process.env.SERPER_API_KEY;
+
 if (!OPENROUTER_API_KEY) {
     console.error('Missing OPENROUTER_API_KEY environment variable.');
     process.exit(1);
+}
+if (!SERPER_API_KEY) {
+    console.error('Missing SERPER_API_KEY environment variable.');
+    process.exit(1);
+}
+
+function httpsPost(hostname, path, headers, body) {
+    return new Promise((resolve, reject) => {
+        const data = JSON.stringify(body);
+        const options = {
+            hostname,
+            port: 443,
+            path,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Content-Length': Buffer.byteLength(data),
+                ...headers,
+            },
+        };
+
+        const req = https.request(options, (res) => {
+            let responseBody = '';
+            res.on('data', (chunk) => (responseBody += chunk));
+            res.on('end', () => {
+                try {
+                    resolve(JSON.parse(responseBody));
+                } catch (e) {
+                    reject(
+                        new Error(`Failed to parse response: ${responseBody}`),
+                    );
+                }
+            });
+        });
+
+        req.on('error', reject);
+        req.write(data);
+        req.end();
+    });
+}
+
+async function searchYoutube(problemNumber, problemName) {
+    console.log(
+        `Searching YouTube for: neetcode ${problemNumber} ${problemName} solution`,
+    );
+
+    try {
+        const data = await httpsPost(
+            'google.serper.dev',
+            '/search',
+            { 'X-API-KEY': SERPER_API_KEY },
+            { q: `neetcode ${problemNumber} ${problemName} solution`, num: 5 },
+        );
+
+        const results = [...(data.videos || []), ...(data.organic || [])];
+        const youtubeLinks = results
+            .filter((r) => r.link?.includes('youtube.com/watch'))
+            .map((r) => `- ${r.title} → ${r.link}`)
+            .join('\n');
+
+        if (!youtubeLinks) {
+            console.warn('No YouTube watch URLs found in search results.');
+            return null;
+        }
+
+        console.log(`Found YouTube results:\n${youtubeLinks}`);
+        return youtubeLinks;
+    } catch (err) {
+        console.error('Serper search failed:', err.message);
+        return null;
+    }
+}
+
+function extractProblemMeta(readmeContent) {
+    const match =
+        readmeContent.match(/#+?\s*(\d+)[.\-\s]+(.+)/m) ??
+        readmeContent.match(/(\d+)[.\-\s]+(.+)/m);
+
+    return {
+        number: match?.[1]?.trim() ?? '',
+        name: match?.[2]?.trim().split('\n')[0] ?? '',
+    };
 }
 
 function askOpenRouter(systemPrompt, userContent) {
@@ -27,6 +111,7 @@ function askOpenRouter(systemPrompt, userContent) {
             headers: {
                 Authorization: `Bearer ${OPENROUTER_API_KEY}`,
                 'Content-Type': 'application/json',
+                'Content-Length': Buffer.byteLength(data),
             },
         };
 
@@ -36,16 +121,12 @@ function askOpenRouter(systemPrompt, userContent) {
             res.on('end', () => {
                 try {
                     const response = JSON.parse(body);
-                    if (
-                        response.choices &&
-                        response.choices[0] &&
-                        response.choices[0].message
-                    ) {
+                    if (response.choices?.[0]?.message) {
                         resolve(response.choices[0].message.content);
                     } else {
                         reject(
                             new Error(
-                                `Unexpected OpenRouter response structure: ${body}`,
+                                `Unexpected OpenRouter response: ${body}`,
                             ),
                         );
                     }
@@ -55,7 +136,7 @@ function askOpenRouter(systemPrompt, userContent) {
             });
         });
 
-        req.on('error', (e) => reject(e));
+        req.on('error', reject);
         req.write(data);
         req.end();
     });
@@ -87,7 +168,7 @@ async function runMentor() {
         });
         recentCommits = commitLogRaw.trim().split('\n').filter(Boolean);
     } catch (err) {
-        console.error('Failed to read git log commit history:', err.message);
+        console.error('Failed to read git log:', err.message);
         return;
     }
 
@@ -95,9 +176,7 @@ async function runMentor() {
         try {
             const gitLog = execSync(
                 `git diff-tree --no-commit-id --name-only -r ${commitHash}`,
-                {
-                    encoding: 'utf8',
-                },
+                { encoding: 'utf8' },
             );
 
             gitLog.split('\n').forEach((line) => {
@@ -109,9 +188,7 @@ async function runMentor() {
             });
 
             if (targetDirs.size > 0) {
-                console.log(
-                    `Targeting solution files found in historical commit: ${commitHash}`,
-                );
+                console.log(`Found solution files in commit: ${commitHash}`);
                 break;
             }
         } catch (err) {
@@ -123,9 +200,7 @@ async function runMentor() {
     }
 
     if (targetDirs.size === 0) {
-        console.log(
-            'No new solution folders found in recent commit history. Skipping analysis.',
-        );
+        console.log('No new solution folders found. Skipping.');
         return;
     }
 
@@ -143,11 +218,26 @@ async function runMentor() {
         );
         if (!codeFile) continue;
 
-        console.log(`Claude Mentor is analyzing the solution in: ${dir}...`);
+        console.log(`Analyzing solution in: ${dir}...`);
 
         const problemDescription = fs.readFileSync(readmePath, 'utf8');
         const sourceCode = fs.readFileSync(path.join(dir, codeFile), 'utf8');
-        const userContent = `Problem Description:\n${problemDescription}\n\nMy Solution Code:\n\`\`\`\n${sourceCode}\n\`\`\``;
+
+        const { number, name } = extractProblemMeta(problemDescription);
+        console.log(`Problem detected: #${number} ${name}`);
+
+        const youtubeResults =
+            number && name ? await searchYoutube(number, name) : null;
+
+        const searchContext = youtubeResults
+            ? `\n\n---\nReal YouTube search results for this problem (pick the most relevant watch URL):\n${youtubeResults}\n---\n`
+            : '\n\n---\nNo YouTube results found — omit the Video Solution section.\n---\n';
+
+        const userContent = [
+            `Problem Description:\n${problemDescription}`,
+            `My Solution Code:\n\`\`\`\n${sourceCode}\n\`\`\``,
+            searchContext,
+        ].join('\n\n');
 
         try {
             const analysis = await askOpenRouter(
@@ -156,7 +246,7 @@ async function runMentor() {
             );
             const analysisPath = path.join(dir, 'ANALYSIS.md');
             fs.writeFileSync(analysisPath, analysis, 'utf8');
-            console.log(`Saved mentor analysis to: ${analysisPath}`);
+            console.log(`Saved analysis to: ${analysisPath}`);
         } catch (error) {
             console.error(
                 `Failed to generate analysis for ${dir}:`,
