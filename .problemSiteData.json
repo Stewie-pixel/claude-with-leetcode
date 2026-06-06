@@ -23,6 +23,14 @@
     "cpp": true
   },
   {
+    "problem": "Permutations II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "permutations-ii",
+    "code": "0047",
+    "cpp": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
