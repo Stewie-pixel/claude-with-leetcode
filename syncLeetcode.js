@@ -281,8 +281,7 @@ async function run() {
             );
 
             if (!existingEntry) {
-                const pattern =
-                    question.topicTags?.[0]?.name || 'Uncategorized';
+                const pattern = question.topicTags?.[0]?.name || 'Contest';
                 existingEntry = {
                     problem: question.title,
                     pattern: pattern,

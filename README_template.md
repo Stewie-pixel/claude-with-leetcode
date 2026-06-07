@@ -25,8 +25,9 @@ claude-with-leetcode/
 ├── .github/
 │   └── workflows/                      ← CI/CD pipelines
 ├── .vscode/                            ← editor settings
+├── contest                             ← Weekly + Biweekly programming contests
 ├── cpp/                                ← C++ solutions
-├── dcc/                                ← additional solution set
+├── dcc/                                ← Daily Coding Challenge
 ├── java/
 │   └── 2-add-two-numbers/              ← Java solutions
 ├── python/

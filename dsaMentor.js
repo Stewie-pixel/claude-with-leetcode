@@ -15,13 +15,13 @@ if (!SERPER_API_KEY) {
     process.exit(1);
 }
 
-function httpsPost(hostname, path, headers, body) {
+function httpsPost(hostname, urlPath, headers, body) {
     return new Promise((resolve, reject) => {
         const data = JSON.stringify(body);
         const options = {
             hostname,
             port: 443,
-            path,
+            path: urlPath,
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,95 +51,106 @@ function httpsPost(hostname, path, headers, body) {
 }
 
 async function searchYoutube(problemNumber, problemName) {
-    console.log(
-        `Searching YouTube for: neetcode ${problemNumber} ${problemName} solution`,
-    );
+    const queries = [
+        `leetcode ${problemNumber} ${problemName} solution`,
+        `neetcode ${problemNumber} ${problemName}`,
+        `leetcode ${problemName} solution explanation`,
+    ];
 
-    try {
-        const data = await httpsPost(
-            'google.serper.dev',
-            '/search',
-            { 'X-API-KEY': SERPER_API_KEY },
-            { q: `neetcode ${problemNumber} ${problemName} solution`, num: 5 },
-        );
+    for (const query of queries) {
+        console.log(`Searching YouTube for: ${query}`);
 
-        const results = [...(data.videos || []), ...(data.organic || [])];
-        const youtubeLinks = results
-            .filter((r) => r.link?.includes('youtube.com/watch'))
-            .map((r) => `- ${r.title} → ${r.link}`)
-            .join('\n');
+        try {
+            const data = await httpsPost(
+                'google.serper.dev',
+                '/videos',
+                { 'X-API-KEY': SERPER_API_KEY },
+                { q: query, num: 5 },
+            );
 
-        if (!youtubeLinks) {
-            console.warn('No YouTube watch URLs found in search results.');
-            return null;
+            const youtubeLinks = (data.videos || [])
+                .filter((r) => r.link?.includes('youtube.com/watch'))
+                .filter((r) => {
+                    const title = r.title?.toLowerCase() ?? '';
+                    return (
+                        title.includes(problemNumber) ||
+                        title.includes(problemName.toLowerCase().split(' ')[0])
+                    );
+                })
+                .map((r) => `- ${r.title} → ${r.link}`)
+                .join('\n');
+
+            if (youtubeLinks) {
+                console.log(`Found specific results:\n${youtubeLinks}`);
+                return youtubeLinks;
+            }
+
+            console.warn(
+                `No specific results for query: "${query}", trying next...`,
+            );
+        } catch (err) {
+            console.error('Serper search failed:', err.message);
         }
-
-        console.log(`Found YouTube results:\n${youtubeLinks}`);
-        return youtubeLinks;
-    } catch (err) {
-        console.error('Serper search failed:', err.message);
-        return null;
     }
+
+    console.warn('No specific YouTube video found for this problem.');
+    return null;
 }
 
 function extractProblemMeta(readmeContent) {
-    const match =
-        readmeContent.match(/#+?\s*(\d+)[.\-\s]+(.+)/m) ??
-        readmeContent.match(/(\d+)[.\-\s]+(.+)/m);
+    const plainText = readmeContent.replace(/<[^>]+>/g, '');
+    const match = plainText.match(/(\d+)[.\-\s]+([A-Za-z][^\n]{3,60})/m);
 
     return {
         number: match?.[1]?.trim() ?? '',
-        name: match?.[2]?.trim().split('\n')[0] ?? '',
+        name: match?.[2]?.trim() ?? '',
     };
 }
 
-function askOpenRouter(systemPrompt, userContent) {
-    return new Promise((resolve, reject) => {
-        const data = JSON.stringify({
-            model: 'nvidia/nemotron-3-super-120b-a12b:free',
-            messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: userContent },
-            ],
-        });
+async function askOpenRouter(systemPrompt, userContent, retries = 3) {
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+            const response = await httpsPost(
+                'openrouter.ai',
+                '/api/v1/chat/completions',
+                { Authorization: `Bearer ${OPENROUTER_API_KEY}` },
+                {
+                    model: 'nvidia/nemotron-3-super-120b-a12b:free',
+                    messages: [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user', content: userContent },
+                    ],
+                },
+            );
 
-        const options = {
-            hostname: 'openrouter.ai',
-            port: 443,
-            path: '/api/v1/chat/completions',
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-                'Content-Type': 'application/json',
-                'Content-Length': Buffer.byteLength(data),
-            },
-        };
+            if (response.choices?.[0]?.message) {
+                return response.choices[0].message.content;
+            }
 
-        const req = https.request(options, (res) => {
-            let body = '';
-            res.on('data', (chunk) => (body += chunk));
-            res.on('end', () => {
-                try {
-                    const response = JSON.parse(body);
-                    if (response.choices?.[0]?.message) {
-                        resolve(response.choices[0].message.content);
-                    } else {
-                        reject(
-                            new Error(
-                                `Unexpected OpenRouter response: ${body}`,
-                            ),
-                        );
-                    }
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        });
+            const errMsg = JSON.stringify(response);
+            console.warn(`Attempt ${attempt} failed: ${errMsg}`);
 
-        req.on('error', reject);
-        req.write(data);
-        req.end();
-    });
+            if (attempt < retries) {
+                const delay = attempt * 5000;
+                console.log(`Retrying in ${delay / 1000}s...`);
+                await new Promise((r) => setTimeout(r, delay));
+            } else {
+                throw new Error(
+                    `OpenRouter failed after ${retries} attempts: ${errMsg}`,
+                );
+            }
+        } catch (err) {
+            if (attempt < retries) {
+                const delay = attempt * 5000;
+                console.warn(
+                    `Attempt ${attempt} error: ${err.message}. Retrying in ${delay / 1000}s...`,
+                );
+                await new Promise((r) => setTimeout(r, delay));
+            } else {
+                throw err;
+            }
+        }
+    }
 }
 
 async function runMentor() {
@@ -230,7 +241,7 @@ async function runMentor() {
             number && name ? await searchYoutube(number, name) : null;
 
         const searchContext = youtubeResults
-            ? `\n\n---\nReal YouTube search results for this problem (pick the most relevant watch URL):\n${youtubeResults}\n---\n`
+            ? `\n\n---\nReal YouTube search results (pick the most relevant watch URL, prefer NeetCode):\n${youtubeResults}\n---\n`
             : '\n\n---\nNo YouTube results found — omit the Video Solution section.\n---\n';
 
         const userContent = [
