@@ -1,60 +1,118 @@
-# Bit Manipulation – Detecting Exactly One Consecutive Set‑Bits Pair
+# Bit Manipulation
 
 ## Concept
-When we look at the binary representation of a number, a *pair of consecutive set bits* appears as the pattern `11`.  
-If we shift the number right by one bit and AND it with the original number, every position that had `11` in the original becomes a single `1` in the result:
-
-```
-n      = … b3 b2 b1 b0
-n>>1   = … 0  b3 b2 b1
-n & (n>>1) = … (b3&b2) (b2&b1) (b1&b0)
-```
-
-Thus each `1` in `x = n & (n>>1)` corresponds to one occurrence of `11` in `n`.  
-The problem reduces to: **does `x` contain exactly one `1`?**  
-That is the classic “power‑of‑two” test: a non‑zero number with exactly one set bit satisfies `x & (x‑1) == 0`.
+Bit manipulation techniques let us work directly with the binary representation of integers using bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`). Many problems that ask about patterns of `1`s and `0`s can be solved in O(1) time by exploiting how these operators affect individual bits, without converting the number to a string.
 
 ## When to Use It
-Use bit‑wise tricks like this when the problem:
-- Asks about patterns in the binary representation (consecutive bits, alternating bits, etc.).
-- Can be expressed as a relationship between a number and its shifted version.
-- Requires O(1) time and O(1) extra space.
+Consider bit manipulation when the problem statement mentions:
+- Binary representation of a number
+- Counting or locating set bits (`1`s)
+- Patterns like “consecutive set bits”, “alternating bits”, “isolated bits”
+- Operations that can be expressed as masks or shifts
+- Constraints that allow O(1) or O(log n) solutions (since the number of bits is at most 32/64 for typical integer ranges)
 
 ## Template
 ```python
-def has_exactly_one_consecutive_pair(n: int) -> bool:
-    # Step 1: isolate positions where two consecutive 1s occur
-    x = n & (n >> 1)
-    # Step 2: check whether x has exactly one set bit (i.e., is a power of two)
-    return x != 0 and (x & (x - 1)) == 0
+def solve_bit_problem(n: int) -> ...:
+    # 1. Identify the bit pattern you need to check/create
+    #    (e.g., n & (n >> 1) finds positions where two consecutive bits are both 1)
+    # 2. Apply the appropriate mask/shift/combination
+    # 3. Derive the answer from the resulting value
+    #    (e.g., check if it is a power of two, count bits, etc.)
+    return result
 ```
-
----
+*Always comment each step so the reasoning behind the mask/shift is clear.*
 
 ## LeetCode Problem Walkthrough
 
-### Problem: 2579. Exactly One Consecutive Set Bits Pair
+### Problem: 2608. Exactly One Consecutive Set Bits Pair
 https://leetcode.com/problems/exactly-one-consecutive-set-bits-pair/
 
-### Approach 1: Brute Force – Scan Bit by Bit
+### Approach 1: Brute Force (String Scan)
 
 **Algorithm**
-1. Initialise `count = 0` and `prev_bit = 0`.
-2. While `n > 0`:
-   - Extract the current least‑significant bit `curr = n & 1`.
-   - If `prev_bit == 1` and `curr == 1`, we found a consecutive pair → increment `count`.
-   - Update `prev_bit = curr`.
-   - Right‑shift `n` (`n >>= 1`) to process the next bit.
-3. After the loop, return `count == 1`.
+1. Convert `n` to its binary string without the `0b` prefix.
+2. Scan the string and count how many times the substring `"11"` appears.
+   - Each occurrence corresponds to a pair of consecutive set bits.
+3. Return `True` if the count is exactly `1`, otherwise `False`.
 
 **Implementation**
 ```python
-def consecutive_set_bits_brute(n: int) -> bool:
+def consecutiveSetBits_bruteforce(n: int) -> bool:
+    # Step 1: binary representation
+    bin_str = bin(n)[2:]          # e.g., 6 -> '110'
+    # Step 2: count occurrences of "11"
+    pairs = 0
+    for i in range(len(bin_str) - 1):
+        if bin_str[i] == '1' and bin_str[i + 1] == '1':
+            pairs += 1
+    # Step 3: exactly one pair?
+    return pairs == 1
+```
+
+**Complexity Analysis**
+- Time complexity: O(L) where L = number of bits of n (≤ 17 for n ≤ 10⁵) → effectively O(1).
+- Space complexity: O(L) for the binary string → O(1) auxiliary besides the string.
+
+---
+
+### Approach 2: Bitwise Trick (Optimal)
+
+**Intuition**
+If we shift `n` right by one bit and AND it with the original `n`, every position where two consecutive bits were both `1` becomes a `1` in the result:
+```
+   n:      b_{k} … b_{2} b_{1} b_{0}
+   n>>1:   0   b_{k} … b_{2} b_{1}
+   n & (n>>1): 1 exactly where b_i = b_{i-1} = 1
+```
+Thus `x = n & (n>>1)` has a `1` for each consecutive‑set‑bit pair.  
+We need **exactly one** such pair → `x` must be a power of two (only a single `1` bit) and not zero.
+
+**Algorithm**
+1. Compute `x = n & (n >> 1)`.
+2. Return `True` iff `x != 0` and `x & (x - 1) == 0` (the classic power‑of‑two test).
+
+**Implementation**
+```python
+def consecutiveSetBits_optimal(n: int) -> bool:
+    x = n & (n >> 1)          # marks each pair of consecutive 1s
+    # x is a power of two <=> it has exactly one set bit
+    return x != 0 and (x & (x - 1)) == 0
+```
+
+**Complexity Analysis**
+- Time complexity: O(1) – a constant number of bitwise operations.
+- Space complexity: O(1) – only a few integer variables.
+
+---
+
+### Approach 3: Alternative Bitwise Count (Shift‑and‑Check)
+
+**Intuition**
+Instead of building the whole `x` mask, we can iterate through the bits of `n` and detect a pair on the fly:
+- Keep track of the previous bit (`prev`).
+- When the current bit and `prev` are both `1`, increment a counter.
+- After processing all bits, the counter must be exactly `1`.
+
+This approach is still O(number of bits) but avoids creating the intermediate mask and may be easier to follow for beginners.
+
+**Algorithm**
+1. Initialize `count = 0`, `prev = 0`.
+2. While `n > 0`:
+   - `curr = n & 1` (least‑significant bit)
+   - If `curr == 1` and `prev == 1`: `count += 1`
+   - Set `prev = curr`
+   - Right‑shift `n >>= 1`
+3. Return `count == 1`.
+
+**Implementation**
+```python
+def consecutiveSetBits_shift(n: int) -> bool:
     count = 0
     prev = 0
     while n:
         curr = n & 1
-        if prev == 1 and curr == 1:
+        if curr == 1 and prev == 1:
             count += 1
         prev = curr
         n >>= 1
@@ -62,66 +120,34 @@ def consecutive_set_bits_brute(n: int) -> bool:
 ```
 
 **Complexity Analysis**
-- Time complexity: O(log n) – we inspect each bit once (at most 17 bits for n ≤ 10⁵).
-- Space complexity: O(1) – only a few integer variables.
-
-### Approach 2: Bitwise Isolation + Power‑of‑Two Check
-
-**Intuition**
-The expression `n & (n >> 1)` leaves a `1` exactly where `n` had a `11` pattern.  
-If there is **exactly one** such pattern, the result is a power of two (a single `1` bit).  
-Testing for a power of two is done with `x & (x‑1) == 0` (and ensuring `x != 0`).
-
-**Algorithm**
-1. Compute `x = n & (n >> 1)`.
-2. Return `True` iff `x` is non‑zero and `x & (x‑1) == 0`.
-
-**Implementation**
-```python
-def consecutive_set_bits_optimal(n: int) -> bool:
-    x = n & (n >> 1)          # isolate every "11" as a single 1
-    return x != 0 and (x & (x - 1)) == 0   # power‑of‑two test
-```
-
-**Complexity Analysis**
-- Time complexity: O(1) – constant number of machine operations.
-- Space complexity: O(1) – only a few integer variables.
-
-### Approach 3: Count Set Bits in the Isolated Pattern
-
-**Intuition**
-After obtaining `x = n & (n >> 1)`, we can directly count how many bits are set.  
-If the count equals `1`, there was exactly one consecutive pair.  
-Python’s `bin(x).count('1')` (or `x.bit_count()` in 3.8+) does this in O(number of set bits), which is at most O(log n) but still trivial for the given constraints.
-
-**Algorithm**
-1. Compute `x = n & (n >> 1)`.
-2. Return `x.bit_count() == 1`.
-
-**Implementation**
-```python
-def consecutive_set_bits_bitcount(n: int) -> bool:
-    x = n & (n >> 1)
-    return x.bit_count() == 1   # Python 3.8+: int.bit_count()
-```
-
-**Complexity Analysis**
-- Time complexity: O(log n) in the worst case (proportional to number of set bits in x).
+- Time complexity: O(L) where L = number of bits of n (≤ 17 for the given constraints) → O(1).
 - Space complexity: O(1).
 
 ---
 
-## Dry Run (Example: n = 6)
+### Provide a Visual Demonstration (Dry Run)
 
-Binary of 6: `110`
+**Impact: HIGH** | **Category: explanation** | **Tags:** dry-run, trace, example
 
-| Step | n (binary) | n>>1 (binary) | n & (n>>1) (x) | x != 0? | x & (x-1) == 0? | Result |
-|------|------------|---------------|----------------|---------|-----------------|--------|
-| Start| 110        | 011           | 010 (=2)       | True    | 2 & 1 = 0 → True| True   |
+We trace the optimal approach with `n = 6` (binary `110`).
 
-Since `x` is non‑zero and a power of two, the function returns `True` – exactly one `11` pair.
+```
+Input: n = 6 (110₂)
 
---- 
+Step | n (binary) | n >> 1 (binary) | x = n & (n>>1) | x != 0? | x & (x-1) | Power‑of‑Two? | Return
+-----|------------|-----------------|----------------|---------|-----------|---------------|-------
+Init | 110        | 011             | 010            | True    | 010 & 001 = 000 | Yes (single 1) | True
+```
 
-**Key Takeaway:**  
-Many binary‑pattern problems become trivial once you recognize that shifting and masking can isolate the pattern of interest, turning the task into a simple power‑of‑two or bit‑count check.
+Explanation:
+- `n & (n>>1)` isolates the overlapping `1`s → `010₂` (only the middle bit set).
+- The result is non‑zero and has exactly one set bit (`x & (x-1) == 0`), so there is exactly one pair of consecutive set bits → `True`.
+
+---
+
+## Summary
+- **Brute force** converts to a string and scans for `"11"` – easy to understand but involves string allocation.
+- **Optimal bit trick** uses `n & (n>>1)` to mark consecutive pairs and checks whether the result is a power of two – O(1) time and space.
+- **Shift‑and‑count** offers a middle ground, iterating bits while tracking the previous bit.
+
+All three approaches satisfy the problem constraints; the bitwise trick is the most efficient and showcases the power of bit manipulation for pattern detection in binary numbers.

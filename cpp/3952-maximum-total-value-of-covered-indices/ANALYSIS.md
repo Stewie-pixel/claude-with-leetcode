@@ -1,138 +1,106 @@
-# Dynamic Programming: Maximum Total Value of Covered Indices  
+# Greedy
 
-## Video Solution  
+## Video Solution
 
-For more details about **Maximum Total Value of Covered Indices**, watch the walkthrough at [Neetcode 150 - All Questions Solved...!](https://www.youtube.com/watch?v=3-mZwU87Ttw).  
+For more details about **Maximum Total Value of Covered Indices**, watch the walkthrough at [https://www.youtube.com/watch?v=Bu343sVk9cY](https://www.youtube.com/watch?v=Bu343sVk9cY)
 
-## Concept  
+## Concept
 
-Think of each token as a worker who can either **stay** at his current desk or **shift one desk to the left** (if that desk exists).  
-Each desk (array index) has a reward `nums[i]`.  
-A desk contributes its reward **once** if at least one worker ends up there; putting multiple workers on the same desk does not increase the total.  
-We need to decide for every token whether to stay or shift so that the sum of rewards of the occupied desks is as large as possible.  
+Each token can either stay at its current index `i` or move left to `i‑1` (if `i>0`). The decision for one token does **not** affect the choices available to any other token because multiple tokens may occupy the same index after moving. Therefore the problem decomposes into independent sub‑problems: for every token we simply pick the larger of `nums[i]` (stay) and `nums[i‑1]` (move left). Summing these local maxima yields the global optimum.
 
-This is a classic “make a local binary choice that influences the next choice” situation → solved with a **1‑dimensional DP** that keeps only the best result for the two possible states of the current token.
+## When to Use It
 
-## When to Use It  
+- You see a problem where each element makes an independent binary choice (stay/move, take/skip, assign A/B, …).  
+- The total objective is a sum (or other additive function) of the individual contributions.  
+- No capacity constraints or conflicts exist between choices (overlap is allowed).  
+- In such cases a greedy per‑element selection of the locally optimal option is provably optimal.
 
-Use this DP pattern when you see:  
-
-- A list of items (tokens) processed in order.  
-- Each item can take **one of a few discrete actions** (here: stay or move left).  
-- The reward of an action depends on whether a **neighboring position** was already taken by the previous item.  
-- You want the **maximum total reward** and the number of items is up to 10⁵ → O(N) or O(N log N) is required.  
-
-In short: *local binary choices + conflict with immediate predecessor → DP with two states*.
-
-## Template  
+## Template
 
 ```python
-# dp0 = best total up to previous token when that token stayed at its original index
-# dp1 = best total up to previous token when that token moved left (to index-1)
-dp0, dp1 = initial values   # base case for the first token
-
-for each token in order (skip the first):
-    # best value we can have before deciding what this token does
-    best_prev = max(dp0, dp1) if dp1 is not None else dp0
-
-    # option 1: current token stays
-    new_dp0 = best_prev + nums[pos]                     # pos = current token index
-
-    # option 2: current token moves left (only if pos > 0)
-    new_dp1 = None
-    if pos > 0:
-        # if the left slot equals the previous token's original index,
-        # we cannot add nums[pos-1] again when the previous token stayed
-        left_val = nums[pos-1]
-        if pos - 1 == prev_pos:                         # conflict with previous token staying
-            cand = dp0 + left_val
-        else:
-            cand = best_prev + left_val                 # we can safely add left_val
-        # also consider the case where previous token already moved left
-        if dp1 is not None:
-            cand = max(cand, dp1 + left_val)
-        new_dp1 = cand
-
-    dp0, dp1 = new_dp0, new_dp1
-answer = max(dp0, dp1) if dp1 is not None else dp0
+def greedy_sum(nums: List[int], s: str) -> int:
+    total = 0
+    for i, ch in enumerate(s):
+        if ch == '1':
+            stay = nums[i]
+            move = nums[i-1] if i > 0 else 0   # moving left is impossible at i==0
+            total += max(stay, move)
+    return total
 ```
-
-The template keeps only two variables → **O(1) extra space** and **O(k) time**, where *k* is the number of tokens.
 
 ---
 
-## LeetCode Problem Walkthrough  
+## LeetCode Problem Walkthrough
 
-### Problem: 2559. Maximum Total Value of Covered Indices  
+### Problem: 2740. Maximum Total Value of Covered Indices
 
-https://leetcode.com/problems/maximum-total-value-of-covered-indices/  
+https://leetcode.com/problems/maximum-total-value-of-covered-indices/
 
-### Approach 1: Brute Force  
+### Approach 1: Brute Force (Backtracking)
 
 **Algorithm**  
-- Enumerate every subset of tokens’ decisions (stay = 0, move left = 1).  
-- For each of the `2^k` possibilities (`k` = number of tokens):  
-  1. Determine the final index each token occupies (`i` if stay, `i‑1` if move).  
-  2. If two tokens end up on the same index, treat it as a single covered index (no extra reward).  
-  3. Sum `nums[idx]` for all distinct covered indices.  
-- Return the maximum sum found.  
+For each token we recursively try both possibilities (stay or move left) and keep track of the best total value seen. Because each token has two choices, the search space is `2^k` where `k` is the number of tokens.
 
-**Implementation**  
+**Implementation**
 
 ```python
-from itertools import product
+from typing import List
 
 class Solution:
     def maxTotal(self, nums: List[int], s: str) -> int:
-        tokens = [i for i, ch in enumerate(s) if ch == '1']
-        if not tokens:
-            return 0
+        token_pos = [i for i, ch in enumerate(s) if ch == '1']
+        n = len(token_pos)
 
-        best = 0
-        for choices in product([0, 1], repeat=len(tokens)):   # 0 = stay, 1 = move left
-            covered = set()
-            for idx, move in zip(tokens, choices):
-                pos = idx - 1 if move else idx
-                covered.add(pos)
-            total = sum(nums[p] for p in covered)
-            best = max(best, total)
-        return best
+        def dfs(idx: int, covered: List[bool]) -> int:
+            if idx == n:
+                # compute total value of covered indices
+                return sum(nums[i] for i, cov in enumerate(covered) if cov)
+            pos = token_pos[idx]
+            # option 1: stay
+            covered[pos] = True
+            best = dfs(idx + 1, covered)
+            covered[pos] = False          # undo
+            # option 2: move left (if possible)
+            if pos > 0:
+                covered[pos-1] = True
+                best = max(best, dfs(idx + 1, covered))
+                covered[pos-1] = False    # undo
+            return best
+
+        return dfs(0, [False] * len(nums))
 ```
 
-**Complexity Analysis**  
-- Time: `O(2^k * k)` – exponential in the number of tokens (worst‑case `k = n`).  
-- Space: `O(k)` for the `covered` set (at most `k` entries).  
+**Complexity Analysis**
 
-This is infeasible for `n ≤ 10⁵`.
+- Time complexity: `O(2^k * n)` – we explore `2^k` leaf nodes and each leaf scans the array to sum values (`k` = number of tokens, worst‑case `k = n`).  
+- Space complexity: `O(n)` – recursion depth `O(k)` plus the `covered` boolean array.
 
 ---
 
-### Approach 2: DP with Two States (Optimized)  
+### Approach 2: Dynamic Programming (Linear)
 
 **Intuition**  
-When we process tokens from left to right, the only thing that can affect the current token’s decision is **whether the previous token occupied the index immediately to the left of the current token**.  
-Thus we need to remember two scenarios for the prefix processed so far:  
+Although the choices are independent, we can still formulate a DP that processes tokens from left to right. For each token we keep two states: the best total when the current token stays (`dp0`) and when it moves left (`dp1`). The transition only needs the previous token’s states because moving left from position `i` uses `nums[i‑1]`, which does not interfere with the decision of the token at `i‑1` (overlap is allowed).
 
-1. The previous token **stayed** at its original index.  
-2. The previous token **moved left** (to `index‑1`).  
+**Algorithm**
 
-From these we can compute the best total for the current token staying or moving left, guaranteeing no double‑count of overlapping indices.
+1. Extract the indices of all tokens into a list `tokens`.
+2. Initialise:
+   - `dp0 = nums[tokens[0]]` (first token stays)
+   - `dp1 = nums[tokens[0]-1]` if the first token can move left, otherwise `None`.
+3. For each subsequent token at position `t` with previous token at `tp`:
+   - `best_prev = max(dp0, dp1 if dp1 else dp0)` – the best total up to the previous token regardless of its state.
+   - `new_dp0 = best_prev + nums[t]` (current token stays).
+   - If `t > 0`:
+        - If `t-1 == tp` (the left cell is exactly the previous token’s original spot) then moving left can only add `nums[t-1]` to `dp0` (because the previous token cannot also occupy that same cell after it has moved).  
+          `val = dp0 + nums[t-1]`
+        - Otherwise we may add `nums[t-1]` to either `dp0` or `dp1`.  
+          `val = max(dp0, dp1 if dp1 else 0) + nums[t-1]`
+        - Set `new_dp1 = val`.
+   - Shift `dp0, dp1 <- new_dp0, new_dp1`.
+4. Answer is `max(dp0, dp1 if dp1 else dp0)`.
 
-**Algorithm**  
-- Extract the list `tokens` of indices where `s[i] == '1'`.  
-- Initialise `dp0` = value if the first token stays, `dp1` = value if it moves left (or `-inf` if moving left is impossible).  
-- Iterate over the remaining tokens:  
-  * `best_prev = max(dp0, dp1)` – the best total before deciding the current token’s action.  
-  * **Stay**: `new_dp0 = best_prev + nums[t]`.  
-  * **Move left** (if `t > 0`):  
-        - If the left slot `t‑1` equals the previous token’s original index, we can only add `nums[t‑1]` to `dp0` (the case where the previous token stayed).  
-        - Otherwise we may add it to `best_prev`.  
-        - Also consider the scenario where the previous token already moved left (`dp1`).  
-        - Take the maximum of the applicable candidates.  
-  * Assign `dp0, dp1 = new_dp0, new_dp1`.  
-- Answer is `max(dp0, dp1)` (or just `dp0` if `dp1` is invalid).  
-
-**Implementation**  
+**Implementation**
 
 ```python
 from typing import List, Optional
@@ -143,32 +111,25 @@ class Solution:
         if not tokens:
             return 0
 
-        # first token
-        first = tokens[0]
-        dp0 = nums[first]                     # stayed
-        dp1 = nums[first - 1] if first > 0 else None   # moved left (if possible)
+        dp0 = nums[tokens[0]]
+        dp1: Optional[int] = (
+            nums[tokens[0] - 1] if tokens[0] > 0 else None
+        )
 
-        for j in range(1, len(tokens)):
-            t = tokens[j]
-            prev = tokens[j - 1]
+        for idx in range(1, len(tokens)):
+            t = tokens[idx]
+            tp = tokens[idx - 1]
 
             best_prev = dp0 if dp1 is None else max(dp0, dp1)
-
-            # stay at t
             new_dp0 = best_prev + nums[t]
 
-            # move left to t-1
             new_dp1: Optional[int] = None
             if t > 0:
-                left_val = nums[t - 1]
-                # case 1: left slot equals previous token's original index
-                if t - 1 == prev:
-                    cand = dp0 + left_val          # only possible if prev token stayed
+                # value if we move the current token left
+                if t - 1 == tp:          # left cell is the previous token's original spot
+                    cand = dp0 + nums[t - 1]
                 else:
-                    cand = best_prev + left_val    # no conflict
-                # case 2: previous token already moved left
-                if dp1 is not None:
-                    cand = max(cand, dp1 + left_val)
+                    cand = best_prev + nums[t - 1]
                 new_dp1 = cand
 
             dp0, dp1 = new_dp0, new_dp1
@@ -176,37 +137,64 @@ class Solution:
         return dp0 if dp1 is None else max(dp0, dp1)
 ```
 
-**Complexity Analysis**  
-- Time: `O(k)` where `k` = number of tokens ≤ `n`. One pass, constant work per token.  
-- Space: `O(1)` – only two variables (`dp0`, `dp1`) are kept.  
+**Complexity Analysis**
+
+- Time complexity: `O(n)` – one pass over the array to collect tokens and another pass over the token list.  
+- Space complexity: `O(1)` – only a few scalar variables are used.
 
 ---
 
-### Provide a Visual Demonstration  
+### Approach 3: Greedy (Optimal)
 
-**Impact: HIGH** | **Category: explanation** | **Tags:** dry-run, trace, example  
+**Intuition**  
+Because each token’s contribution is independent and additive, the locally optimal choice (pick the larger of staying or moving left) directly yields the globally optimal sum. No look‑ahead or coordination between tokens is necessary.
 
-We dry‑run the DP on the first example:
+**Algorithm**
 
+- Iterate through the array once.
+- Whenever `s[i] == '1'`, add `max(nums[i], nums[i-1] if i>0 else 0)` to the answer.
+
+**Implementation**
+
+```python
+from typing import List
+
+class Solution:
+    def maxTotal(self, nums: List[int], s: str) -> int:
+        total = 0
+        for i, ch in enumerate(s):
+            if ch == '1':
+                stay = nums[i]
+                move = nums[i-1] if i > 0 else 0
+                total += max(stay, move)
+        return total
 ```
-nums = [9, 2, 6, 1]
-s    = "0101"
-tokens = [1, 3]          # positions that initially hold a token
-```
 
-| Step | t (token index) | prev (previous token) | dp0 (stay) | dp1 (move left) | Explanation |
-|------|-----------------|-----------------------|-----------|----------------|-------------|
-| Init | t = 1           | –                     | dp0 = nums[1] = 2 | dp1 = nums[0] = 9 | first token: stay → 2, move left → 9 |
-| 1    | t = 3           | prev = 1              | best_prev = max(2,9) = 9 → new_dp0 = 9 + nums[3] = 9 + 1 = 10 | left slot = 2 (≠ prev) → cand = best_prev + nums[2] = 9 + 6 = 15; dp1 from prev is 9 → cand2 = 9 + 6 = 15 → new_dp1 = 15 | After processing token 3 we have dp0=10 (both stay) and dp1=15 (first moved left, second stayed). |
-| End  | –               | –                     | answer = max(dp0, dp1) = max(10,15) = 15 | – | Maximum total value = 15, matching the example. |
+**Complexity Analysis**
 
-The table shows how the DP keeps track of the two mutually exclusive histories and picks the better one at each step.
+- Time complexity: `O(n)` – single traversal.  
+- Space complexity: `O(1)` – only a few integer variables.
 
----  
+---
 
-**Summary**  
-- The problem reduces to assigning each token to either its index or the index left of it, maximizing the sum of distinct indices’ values.  
-- A linear DP with two states (previous token stayed / moved left) yields an O(n) time, O(1) space solution.  
-- The brute‑force check (exponential) confirms the need for this optimization.  
+## Provide a Visual Demonstration
 
-You now have a template you can reuse for similar “binary choice with neighbor conflict” problems (e.g., maximum sum of non‑adjacent elements, house robber variants, etc.). Happy coding!
+**Impact: HIGH** | **Category: explanation** | **Tags:** dry-run, trace, example
+
+### Dry Run
+
+We trace the greedy algorithm on the first example:
+
+- `nums = [9, 2, 6, 1]`
+- `s    = "0101"`
+
+| i | s[i] | nums[i] | nums[i-1] (if i>0) | max(stay,move) | cumulative total |
+|---|------|---------|--------------------|----------------|------------------|
+| 0 | '0'  | 9       | –                  | 0              | 0                |
+| 1 | '1'  | 2       | 9                  | **9**          | 9                |
+| 2 | '0'  | 6       | –                  | 0              | 9                |
+| 3 | '1'  | 1       | 6                  | **6**          | 15               |
+
+Final answer = **15**, matching the expected output.
+
+---
