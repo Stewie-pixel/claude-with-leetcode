@@ -55,6 +55,14 @@
     "cpp": true
   },
   {
+    "problem": "Decode String",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "decode-string",
+    "code": "0394",
+    "cpp": true
+  },
+  {
     "problem": "Longest Repeating Character Replacement",
     "pattern": "Hash Table",
     "difficulty": "Medium",
@@ -102,11 +110,20 @@
     "cpp": true
   },
   {
+    "problem": "Find Kth Bit in Nth Binary String",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "find-kth-bit-in-nth-binary-string",
+    "code": "1545",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Length of Subarray With Positive Product",
     "pattern": "Array",
     "difficulty": "Medium",
     "link": "maximum-length-of-subarray-with-positive-product",
-    "code": "1567"
+    "code": "1567",
+    "cpp": true
   },
   {
     "problem": "Determine if Two Strings Are Close",
