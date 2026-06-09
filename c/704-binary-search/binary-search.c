@@ -1,6 +1,4 @@
 // Binary Search
-// Source: https://leetcode.com/problems/binary-search/
-// Author: Ngoc-Tien To
 
 // Description:
 // Given an array of integers nums which is sorted in ascending order,

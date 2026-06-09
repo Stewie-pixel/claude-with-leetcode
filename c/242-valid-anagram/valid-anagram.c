@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/valid-anagram/
-// Author: Ngoc-Tien To
-
 // Idea: Use an integer array of size 256 (ASCII charset) to count character frequencies.
 // Step 1: In one loop, increment count for s[i] and decrement for t[i].
 // Step 2: Traverse the count array, if any value != 0 → return false.

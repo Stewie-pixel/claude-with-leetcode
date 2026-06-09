@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/valid-parentheses/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Use a stack to track open parentheses.
 // 2. Traverse the string character by character:

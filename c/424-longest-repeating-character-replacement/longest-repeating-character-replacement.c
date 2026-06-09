@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Longest Repeating Character Replacement
-// Source : https://leetcode.com/problems/longest-repeating-character-replacement/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

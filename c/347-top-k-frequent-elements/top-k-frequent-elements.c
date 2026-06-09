@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/top-k-frequent-elements/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Use a hash map to count the frequency of each element.
 // 2. Store each (element, frequency) pair in an array/struct.

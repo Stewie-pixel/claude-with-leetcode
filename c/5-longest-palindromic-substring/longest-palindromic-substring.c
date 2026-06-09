@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Longest Palindromic Substring
-// Source : https://leetcode.com/problems/longest-palindromic-substring/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

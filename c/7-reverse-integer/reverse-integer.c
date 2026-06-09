@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Reverse Integer (7)
-// Source : https://leetcode.com/problems/reverse-integer/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

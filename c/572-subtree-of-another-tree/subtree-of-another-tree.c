@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Subtree of Another Tree
-// Source : https://leetcode.com/problems/subtree-of-another-tree/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

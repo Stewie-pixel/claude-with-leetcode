@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Invert Binary Tree
-// Source : https://leetcode.com/problems/invert-binary-tree/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

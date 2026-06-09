@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem : Combination Sum II
-// Source  : https://leetcode.com/problems/combination-sum-ii/
-// Author  : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

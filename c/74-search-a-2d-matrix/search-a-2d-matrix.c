@@ -1,6 +1,4 @@
 // Search a 2D Matrix
-// Source: https://leetcode.com/problems/search-a-2d-matrix/
-// Author: Ngoc-Tien To
 
 // Description:
 /*You are given an m x n integer matrix matrix with the following two properties:

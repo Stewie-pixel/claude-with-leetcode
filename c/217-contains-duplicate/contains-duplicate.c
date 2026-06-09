@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/contains-duplicate/
-// Author: Ngoc-Tien To
-
 // Idea: Use a large hash table (size 2 * 10^9 + 1) to mark each number, including negatives.
 // If a number is already marked when encountered, return true (duplicate found).
 

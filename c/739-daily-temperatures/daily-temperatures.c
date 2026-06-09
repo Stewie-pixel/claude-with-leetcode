@@ -1,6 +1,4 @@
 // Daily Temperatures
-// Source: https://leetcode.com/problems/daily-temperatures/
-// Author: Ngoc-Tien To
 
 // Description:
 // Given an array of integers temperatures represents the daily temperatures, 

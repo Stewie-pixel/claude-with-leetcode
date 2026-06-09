@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Kth Smallest Element in a BST
-// Source : https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

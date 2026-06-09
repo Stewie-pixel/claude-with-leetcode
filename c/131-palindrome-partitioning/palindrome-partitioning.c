@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem : Palindrome Partitioning
-// Source  : https://leetcode.com/problems/palindrome-partitioning/
-// Author  : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // Approach: DFS + Backtracking

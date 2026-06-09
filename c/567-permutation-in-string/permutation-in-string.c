@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Permutation in String
-// Source : https://leetcode.com/problems/permutation-in-string/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

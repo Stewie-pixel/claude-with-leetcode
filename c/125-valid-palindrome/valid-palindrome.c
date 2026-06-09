@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/valid-palindrome/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Normalize the string: remove non-alphanumeric characters and convert all letters to lowercase.
 // 2. Use two pointers, i starting from the beginning and j from the end:

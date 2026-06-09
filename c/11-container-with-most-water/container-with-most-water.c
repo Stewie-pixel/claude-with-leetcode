@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/container-with-most-water/
-// Author: Ngoc-Tien To
-
 // Idea: Think of its as finding the largest rectangle formed by two lines.
 // Initialize two pointers (left, right) at the beginning and at the end.
 // The width decreases as we move any pointer,

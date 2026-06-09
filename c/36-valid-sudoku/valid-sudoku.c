@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/valid-sudoku/
-// Author: Ngoc-Tien To
-
 // Idea: For each non-empty cell, check 
 // if the current value already exists in the same row, column, or 3x3 sub-box.
 // If a duplicate is found, return false; otherwise, continue. 

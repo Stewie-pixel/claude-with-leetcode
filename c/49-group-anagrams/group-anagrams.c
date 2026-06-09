@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/group-anagrams/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. For each string, sort its characters to create a "key" for anagram detection.
 // 2. Store the sorted string and its original index in a helper array.

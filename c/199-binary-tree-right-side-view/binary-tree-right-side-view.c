@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Binary Tree Right Side View
-// Source : https://leetcode.com/problems/binary-tree-right-side-view/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

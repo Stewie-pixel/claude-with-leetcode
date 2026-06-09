@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Last Stone Weight
-// Source : https://leetcode.com/problems/last-stone-weight/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

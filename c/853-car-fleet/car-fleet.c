@@ -1,6 +1,4 @@
 // Car Fleet
-// Source: https://leetcode.com/problems/car-fleet/
-// Author: Ngoc-Tien To
 
 // ----------------------------------DESCRIPTION----------------------------------
 // There are n cars at given miles away from the starting mile 0, traveling to reach the mile target.

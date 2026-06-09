@@ -1,6 +1,4 @@
 // Trapping rain water
-// Source: https://leetcode.com/problems/trapping-rain-water/
-// Author: Ngoc-Tien To
 
 // Description:
 //   Given an elevation map, compute how much water it can trap after raining.

@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/product-of-array-except-self/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Prefix variable: stores the product of all elements before index i in the array.
 // 2. Suffix variable: stores the product of all elements after index i in the array.

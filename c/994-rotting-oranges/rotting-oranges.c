@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Rotting Oranges
-// Source : https://leetcode.com/problems/rotting-oranges/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

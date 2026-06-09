@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Initialize two pointers: i at the beginning, j at the end of the array.
 // 2. While i < j:

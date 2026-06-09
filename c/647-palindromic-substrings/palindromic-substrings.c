@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Palindromic Substrings
-// Source : https://leetcode.com/problems/palindromic-substrings/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

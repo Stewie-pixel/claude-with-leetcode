@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Maximum Depth of Binary Tree
-// Source : https://leetcode.com/problems/maximum-depth-of-binary-tree/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

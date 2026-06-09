@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Climbing Stairs
-// Source : https://leetcode.com/problems/climbing-stairs/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

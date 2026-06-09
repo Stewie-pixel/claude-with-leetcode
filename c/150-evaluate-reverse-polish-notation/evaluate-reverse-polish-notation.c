@@ -1,6 +1,4 @@
 // Evaluate Reverse Polish Notation
-// Source: https://leetcode.com/problems/evaluate-reverse-polish-notation/
-// Author: Ngoc-Tien To
 
 // Description:
 // You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation.

@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Count Good Nodes in Binary Tree
-// Source : https://leetcode.com/problems/count-good-nodes-in-binary-tree/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

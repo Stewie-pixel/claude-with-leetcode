@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Lowest Common Ancestor of a Binary Search Tree
-// Source : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

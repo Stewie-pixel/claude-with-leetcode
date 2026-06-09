@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Surrounded Regions
-// Source : https://leetcode.com/problems/surrounded-regions/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

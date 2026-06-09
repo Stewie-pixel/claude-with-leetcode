@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Pacific Atlantic Water Flow
-// Source : https://leetcode.com/problems/pacific-atlantic-water-flow/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

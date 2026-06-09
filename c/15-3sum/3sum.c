@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/3sum/
-// Author: Ngoc-Tien To
-
 // Idea: Find all unique triplets (i, j, k) such that nums[i] + nums[j] + nums[k] == 0
 // 1. Sort the array in non-decreasing order to apply two-pointer technique easily
 // 2. For each index i from 0 to n-3:

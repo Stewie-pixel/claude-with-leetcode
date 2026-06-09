@@ -1,6 +1,4 @@
 // Largest Rectangle in Histogram
-// Source: https://leetcode.com/problems/largest-rectangle-in-histogram/
-// Author: Ngoc-Tien To
 
 // Description:
 // Given an array of integers heights representing the histogram's bar height 

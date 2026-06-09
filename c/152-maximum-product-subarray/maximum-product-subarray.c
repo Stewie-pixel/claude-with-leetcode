@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Maximum Product Subarray
-// Source : https://leetcode.com/problems/maximum-product-subarray/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

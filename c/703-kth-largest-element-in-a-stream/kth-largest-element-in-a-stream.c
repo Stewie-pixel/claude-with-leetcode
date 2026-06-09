@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Kth Largest Element in a Stream
-// Source : https://leetcode.com/problems/kth-largest-element-in-a-stream/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

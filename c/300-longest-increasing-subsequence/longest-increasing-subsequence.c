@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Longest Increasing Subsequence
-// Source : https://leetcode.com/problems/longest-increasing-subsequence/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

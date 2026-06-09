@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Binary Tree Level Order Traversal
-// Source : https://leetcode.com/problems/binary-tree-level-order-traversal/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

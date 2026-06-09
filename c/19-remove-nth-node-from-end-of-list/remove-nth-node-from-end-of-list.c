@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Remove Nth Node From End of List
-// Source : https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 // ---------------------------------- DESCRIPTION ----------------------------------

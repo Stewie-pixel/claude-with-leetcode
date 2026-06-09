@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Copy List with Random Pointer
-// Source : https://leetcode.com/problems/copy-list-with-random-pointer/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 // ---------------------------------- DESCRIPTION ----------------------------------

@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Set Matrix Zeroes (73)
-// Source : https://leetcode.com/problems/set-matrix-zeroes/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Max Area of Island
-// Source : https://leetcode.com/problems/max-area-of-island/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

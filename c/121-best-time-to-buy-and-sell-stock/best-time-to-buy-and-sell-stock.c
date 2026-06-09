@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Best Time to Buy and Sell Stock
-// Source : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 

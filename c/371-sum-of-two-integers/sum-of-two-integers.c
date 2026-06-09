@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Sum of Two Integers (371)
-// Source : https://leetcode.com/problems/sum-of-two-integers/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

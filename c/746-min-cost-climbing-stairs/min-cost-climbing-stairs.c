@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Min Cost Climbing Stairs
-// Source : https://leetcode.com/problems/min-cost-climbing-stairs/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

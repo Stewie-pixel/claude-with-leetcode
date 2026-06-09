@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Multiply Strings (43)
-// Source : https://leetcode.com/problems/multiply-strings/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA
