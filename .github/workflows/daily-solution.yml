@@ -12,35 +12,10 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
 
-            - name: Find Today's Lecture File
-              id: locate-file
-              run: |
-                  FILE_PATH=$(git log --diff-filter=A --name-only --format="" -- "**/ANALYSIS.md" | head -n 1)
-
-                  if [ -z "$FILE_PATH" ]; then
-                    echo "No ANALYSIS.md files found in the repository."
-                    echo "found=false" >> $GITHUB_OUTPUT
-                  else
-                    echo "Found latest file: $FILE_PATH"
-                    echo "found=true" >> $GITHUB_OUTPUT
-                    echo "filepath=$FILE_PATH" >> $GITHUB_OUTPUT
-                    DIR_CONTEXT=$(dirname "$FILE_PATH" | sed 's|^\./||')
-                    FIRST_HEX=$(grep -m 1 '^#' "$FILE_PATH" | sed 's/^#\s*//')
-                    TITLE="${FIRST_HEX:-Daily Lecture Summary} ($DIR_CONTEXT)"
-                    echo "title=$TITLE" >> $GITHUB_OUTPUT
-                  fi
-
-            - name: Create Issue with Summary
-              if: steps.locate-file.outputs.found == 'true'
+            - name: Create issues for new solutions
               env:
                   GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
               run: |
-                  cat "${{ steps.locate-file.outputs.filepath }}" >> "$GITHUB_STEP_SUMMARY"
-                  gh issue create \
-                    --title "${{ steps.locate-file.outputs.title }}" \
-                    --body-file "${{ steps.locate-file.outputs.filepath }}" \
-                    --label "daily-solution" \
-                    --label "dsa-lecture"
+                  chmod +x scripts/create-daily-issues.sh
+                  ./scripts/create-daily-issues.sh
