@@ -5,7 +5,7 @@ public:
         int curr = 0;
         int zeros = 0;
         int best = 0;
-        
+
         for (int n : nums) {
             if (n == 1) {
                 curr++;
@@ -16,7 +16,7 @@ public:
             }
             best = max(best, prev + curr);
         }
-        
+
         return zeros == 0 ? best - 1 : best;
     }
 };

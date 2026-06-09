@@ -4,9 +4,9 @@ public:
         int n = landStartTime.size(), m = waterStartTime.size();
 
         int minLandEnd = INT_MAX, minWaterEnd = INT_MAX;
-    
+
         for (int i = 0; i < n; i++) minLandEnd  = min(minLandEnd,  landStartTime[i]  + landDuration[i]);
-    
+
         for (int j = 0; j < m; j++) minWaterEnd = min(minWaterEnd, waterStartTime[j] + waterDuration[j]);
 
         int ans = INT_MAX;

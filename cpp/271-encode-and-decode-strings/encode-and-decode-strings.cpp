@@ -1,9 +1,3 @@
-// Idea:
-// 1. For each input string, first encode its length (convert length to string).
-// 2. Append a delimiter (e.g., '#') to separate the length and the actual string.
-// 3. Concatenate all encoded strings into one result string.
-// 4. During decoding, read the length before '#', then extract the substring accordingly.
-
 class Solution {
 public:
     string encode(vector<string>& strs) {

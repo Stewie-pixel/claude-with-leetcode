@@ -5,11 +5,11 @@ public:
         vector<long long> prefix(n + 1, 0);
         for (int i = 0; i < n; i++)
             prefix[i + 1] = prefix[i] + nums[i];
-    
+
         auto solve = [&](long long c) -> pair<long long, long long> {
             vector<long long> dp(n + 1, 0), count(n + 1, 0);
             deque<int> dq;
-    
+
             for (int i = 1; i <= n; i++) {
                 int k = i - l;
                 if (k >= 0) {
@@ -23,13 +23,13 @@ public:
                     }
                     dq.push_back(k);
                 }
-    
+
                 while (!dq.empty() && dq.front() < i - r)
                     dq.pop_front();
-    
+
                 dp[i] = dp[i - 1];
                 count[i] = count[i - 1];
-    
+
                 if (!dq.empty()) {
                     int f = dq.front();
                     long long cand = prefix[i] - c + dp[f] - prefix[f];
@@ -42,9 +42,9 @@ public:
             }
             return {dp[n], count[n]};
         };
-    
+
         auto [g0, k0] = solve(0);
-    
+
         if (k0 == 0) {
             long long best = LLONG_MIN;
             deque<int> dq;
@@ -58,16 +58,16 @@ public:
             }
             return best;
         }
-    
+
         if (k0 <= m) return g0;
-    
+
         long long low = 0, high = (long long)2e10;
         while (low < high) {
             long long mid = low + (high - low + 1) / 2;
             if (solve(mid).second >= m) low = mid;
             else high = mid - 1;
         }
-    
+
         auto [g, k] = solve(low);
         return g + low * m;
     }

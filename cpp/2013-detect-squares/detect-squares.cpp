@@ -1,33 +1,19 @@
-// -----------------------------------------------------------------------------
-// Problem: Detect Squares (2013)
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// Maintain a count map for points added. To count squares with a given point
-// (x,y), iterate over candidate points that share a row/column and check the
-// three other corners using counts from the map to multiply combinations.
-//
-// Time Complexity  : O(k) per count where k is number of points in map
-// Space Complexity : O(p) for p points stored
-// -----------------------------------------------------------------------------
-
 #include <map>
 #include <vector>
 #include <cmath>
 using namespace std;
 
-// -----------------------------------------------------------------------------
 class DetectSquares {
 private:
     map<pair<int, int>, int> mp;
 public:
     DetectSquares() {
     }
-    
+
     void add(vector<int> point) {
         mp[{point[0], point[1]}]++;
     }
-    
+
     int count(vector<int> point) {
         int result = 0;
         int x = point[0];
