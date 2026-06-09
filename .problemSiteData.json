@@ -39,6 +39,30 @@
     "cpp": true
   },
   {
+    "problem": "Longest Consecutive Sequence",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "longest-consecutive-sequence",
+    "code": "0128",
+    "cpp": true
+  },
+  {
+    "problem": "LRU Cache",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "lru-cache",
+    "code": "0146",
+    "cpp": true
+  },
+  {
+    "problem": "Course Schedule II",
+    "pattern": "Depth-First Search",
+    "difficulty": "Medium",
+    "link": "course-schedule-ii",
+    "code": "0210",
+    "cpp": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
@@ -52,6 +76,38 @@
     "difficulty": "Easy",
     "link": "contains-duplicate-ii",
     "code": "0219",
+    "cpp": true
+  },
+  {
+    "problem": "Graph Valid Tree",
+    "pattern": "Depth-First Search",
+    "difficulty": "Medium",
+    "link": "graph-valid-tree",
+    "code": "0261",
+    "cpp": true
+  },
+  {
+    "problem": "Encode and Decode Strings",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "encode-and-decode-strings",
+    "code": "0271",
+    "cpp": true
+  },
+  {
+    "problem": "Walls and Gates",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "walls-and-gates",
+    "code": "0286",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Connected Components in an Undirected Graph",
+    "pattern": "Depth-First Search",
+    "difficulty": "Medium",
+    "link": "number-of-connected-components-in-an-undirected-graph",
+    "code": "0323",
     "cpp": true
   },
   {
@@ -133,6 +189,14 @@
     "code": "1657",
     "rust": true,
     "python": true,
+    "cpp": true
+  },
+  {
+    "problem": "Detect Squares",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "detect-squares",
+    "code": "2013",
     "cpp": true
   },
   {
