@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/longest-consecutive-sequence/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. Insert all numbers from nums into a hash set to maintain unique elements and allow O(1) lookup.
 // 2. Traverse each number in the set:

@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Course Schedule II
-// Source : https://leetcode.com/problems/course-schedule-ii/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 //
 // IDEA

@@ -1,6 +1,3 @@
-// Source: https://leetcode.com/problems/encode-and-decode-strings/
-// Author: Ngoc-Tien To
-
 // Idea:
 // 1. For each input string, first encode its length (convert length to string).
 // 2. Append a delimiter (e.g., '#') to separate the length and the actual string.

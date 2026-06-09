@@ -1,7 +1,5 @@
 // -----------------------------------------------------------------------------
 // Problem: Number of Connected Components in an Undirected Graph
-// Source : https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
-// Author : Ngoc-Tien To
 // -----------------------------------------------------------------------------
 
 // ---------------------------------- IDEA ----------------------------------
