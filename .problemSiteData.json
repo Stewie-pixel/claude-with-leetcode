@@ -12,7 +12,32 @@
     "difficulty": "Medium",
     "link": "add-two-numbers",
     "code": "0002",
-    "java": true
+    "java": true,
+    "c": true
+  },
+  {
+    "problem": "Longest Substring Without Repeating Characters",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "longest-substring-without-repeating-characters",
+    "code": "0003",
+    "c": true
+  },
+  {
+    "problem": "Median of Two Sorted Arrays",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "median-of-two-sorted-arrays",
+    "code": "0004",
+    "c": true
+  },
+  {
+    "problem": "Longest Palindromic Substring",
+    "pattern": "Two Pointers",
+    "difficulty": "Medium",
+    "link": "longest-palindromic-substring",
+    "code": "0005",
+    "c": true
   },
   {
     "problem": "Zigzag Conversion",
@@ -23,12 +48,125 @@
     "cpp": true
   },
   {
+    "problem": "Reverse Integer",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "reverse-integer",
+    "code": "0007",
+    "c": true
+  },
+  {
+    "problem": "Container With Most Water",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "container-with-most-water",
+    "code": "0011",
+    "c": true
+  },
+  {
+    "problem": "3Sum",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "3sum",
+    "code": "0015",
+    "c": true
+  },
+  {
+    "problem": "Remove Nth Node From End of List",
+    "pattern": "Linked List",
+    "difficulty": "Medium",
+    "link": "remove-nth-node-from-end-of-list",
+    "code": "0019",
+    "c": true
+  },
+  {
+    "problem": "Valid Parentheses",
+    "pattern": "String",
+    "difficulty": "Easy",
+    "link": "valid-parentheses",
+    "code": "0020",
+    "c": true
+  },
+  {
     "problem": "Merge Two Sorted Lists",
     "pattern": "Linked List",
     "difficulty": "Easy",
     "link": "merge-two-sorted-lists",
     "code": "0021",
-    "cpp": true
+    "cpp": true,
+    "c": true
+  },
+  {
+    "problem": "Generate Parentheses",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
+    "problem": "Valid Sudoku",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "valid-sudoku",
+    "code": "0036",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "combination-sum-ii",
+    "code": "0040",
+    "c": true
+  },
+  {
+    "problem": "Trapping Rain Water",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "trapping-rain-water",
+    "code": "0042",
+    "c": true
+  },
+  {
+    "problem": "Multiply Strings",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "multiply-strings",
+    "code": "0043",
+    "c": true
+  },
+  {
+    "problem": "Permutations",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "permutations",
+    "code": "0046",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -39,12 +177,388 @@
     "cpp": true
   },
   {
+    "problem": "Rotate Image",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "rotate-image",
+    "code": "0048",
+    "c": true
+  },
+  {
+    "problem": "Group Anagrams",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "group-anagrams",
+    "code": "0049",
+    "c": true
+  },
+  {
+    "problem": "Pow(x, n)",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "powx-n",
+    "code": "0050",
+    "c": true
+  },
+  {
+    "problem": "Spiral Matrix",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "spiral-matrix",
+    "code": "0054",
+    "c": true
+  },
+  {
+    "problem": "Plus One",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "plus-one",
+    "code": "0066",
+    "c": true
+  },
+  {
+    "problem": "Climbing Stairs",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "climbing-stairs",
+    "code": "0070",
+    "c": true
+  },
+  {
+    "problem": "Set Matrix Zeroes",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "set-matrix-zeroes",
+    "code": "0073",
+    "c": true
+  },
+  {
+    "problem": "Search a 2D Matrix",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "search-a-2d-matrix",
+    "code": "0074",
+    "c": true
+  },
+  {
+    "problem": "Minimum Window Substring",
+    "pattern": "Hash Table",
+    "difficulty": "Hard",
+    "link": "minimum-window-substring",
+    "code": "0076",
+    "c": true
+  },
+  {
+    "problem": "Subsets",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "subsets",
+    "code": "0078",
+    "c": true
+  },
+  {
+    "problem": "Word Search",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "word-search",
+    "code": "0079",
+    "c": true
+  },
+  {
+    "problem": "Largest Rectangle in Histogram",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "largest-rectangle-in-histogram",
+    "code": "0084",
+    "c": true
+  },
+  {
+    "problem": "Subsets II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "subsets-ii",
+    "code": "0090",
+    "c": true
+  },
+  {
+    "problem": "Decode Ways",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "decode-ways",
+    "code": "0091",
+    "c": true
+  },
+  {
+    "problem": "Validate Binary Search Tree",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "validate-binary-search-tree",
+    "code": "0098",
+    "c": true
+  },
+  {
+    "problem": "Same Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "same-tree",
+    "code": "0100",
+    "c": true
+  },
+  {
+    "problem": "Binary Tree Level Order Traversal",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "binary-tree-level-order-traversal",
+    "code": "0102",
+    "c": true
+  },
+  {
+    "problem": "Maximum Depth of Binary Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "maximum-depth-of-binary-tree",
+    "code": "0104",
+    "c": true
+  },
+  {
+    "problem": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "code": "0105",
+    "c": true
+  },
+  {
+    "problem": "Balanced Binary Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "balanced-binary-tree",
+    "code": "0110",
+    "c": true
+  },
+  {
+    "problem": "Best Time to Buy and Sell Stock",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "best-time-to-buy-and-sell-stock",
+    "code": "0121",
+    "c": true
+  },
+  {
+    "problem": "Binary Tree Maximum Path Sum",
+    "pattern": "Dynamic Programming",
+    "difficulty": "Hard",
+    "link": "binary-tree-maximum-path-sum",
+    "code": "0124",
+    "c": true
+  },
+  {
+    "problem": "Valid Palindrome",
+    "pattern": "Two Pointers",
+    "difficulty": "Easy",
+    "link": "valid-palindrome",
+    "code": "0125",
+    "c": true
+  },
+  {
+    "problem": "Surrounded Regions",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "surrounded-regions",
+    "code": "0130",
+    "c": true
+  },
+  {
+    "problem": "Palindrome Partitioning",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "palindrome-partitioning",
+    "code": "0131",
+    "c": true
+  },
+  {
+    "problem": "Clone Graph",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "clone-graph",
+    "code": "0133",
+    "c": true
+  },
+  {
+    "problem": "Single Number",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "single-number",
+    "code": "0136",
+    "c": true
+  },
+  {
+    "problem": "Copy List with Random Pointer",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "copy-list-with-random-pointer",
+    "code": "0138",
+    "c": true
+  },
+  {
+    "problem": "Linked List Cycle",
+    "pattern": "Hash Table",
+    "difficulty": "Easy",
+    "link": "linked-list-cycle",
+    "code": "0141",
+    "c": true
+  },
+  {
+    "problem": "Reorder List",
+    "pattern": "Linked List",
+    "difficulty": "Medium",
+    "link": "reorder-list",
+    "code": "0143",
+    "c": true
+  },
+  {
+    "problem": "Evaluate Reverse Polish Notation",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "evaluate-reverse-polish-notation",
+    "code": "0150",
+    "c": true
+  },
+  {
+    "problem": "Maximum Product Subarray",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "maximum-product-subarray",
+    "code": "0152",
+    "c": true
+  },
+  {
+    "problem": "Find Minimum in Rotated Sorted Array",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "find-minimum-in-rotated-sorted-array",
+    "code": "0153",
+    "c": true
+  },
+  {
+    "problem": "Min Stack",
+    "pattern": "Stack",
+    "difficulty": "Medium",
+    "link": "min-stack",
+    "code": "0155",
+    "c": true
+  },
+  {
+    "problem": "Two Sum II - Input Array Is Sorted",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "two-sum-ii-input-array-is-sorted",
+    "code": "0167",
+    "c": true
+  },
+  {
+    "problem": "Reverse Bits",
+    "pattern": "Divide and Conquer",
+    "difficulty": "Easy",
+    "link": "reverse-bits",
+    "code": "0190",
+    "c": true
+  },
+  {
+    "problem": "Number of 1 Bits",
+    "pattern": "Divide and Conquer",
+    "difficulty": "Easy",
+    "link": "number-of-1-bits",
+    "code": "0191",
+    "c": true
+  },
+  {
+    "problem": "House Robber",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "house-robber",
+    "code": "0198",
+    "c": true
+  },
+  {
+    "problem": "Binary Tree Right Side View",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "binary-tree-right-side-view",
+    "code": "0199",
+    "c": true
+  },
+  {
+    "problem": "Number of Islands",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "number-of-islands",
+    "code": "0200",
+    "c": true
+  },
+  {
+    "problem": "Happy Number",
+    "pattern": "Hash Table",
+    "difficulty": "Easy",
+    "link": "happy-number",
+    "code": "0202",
+    "c": true
+  },
+  {
+    "problem": "Reverse Linked List",
+    "pattern": "Linked List",
+    "difficulty": "Easy",
+    "link": "reverse-linked-list",
+    "code": "0206",
+    "c": true
+  },
+  {
+    "problem": "Course Schedule",
+    "pattern": "Depth-First Search",
+    "difficulty": "Medium",
+    "link": "course-schedule",
+    "code": "0207",
+    "c": true
+  },
+  {
+    "problem": "Implement Trie (Prefix Tree)",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "implement-trie-prefix-tree",
+    "code": "0208",
+    "c": true
+  },
+  {
+    "problem": "Design Add and Search Words Data Structure",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "design-add-and-search-words-data-structure",
+    "code": "0211",
+    "c": true
+  },
+  {
+    "problem": "House Robber II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "house-robber-ii",
+    "code": "0213",
+    "c": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
     "link": "shortest-palindrome",
     "code": "0214",
     "cpp": true
+  },
+  {
+    "problem": "Contains Duplicate",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "contains-duplicate",
+    "code": "0217",
+    "c": true
   },
   {
     "problem": "Contains Duplicate II",
@@ -55,6 +569,110 @@
     "cpp": true
   },
   {
+    "problem": "Invert Binary Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "invert-binary-tree",
+    "code": "0226",
+    "c": true
+  },
+  {
+    "problem": "Kth Smallest Element in a BST",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "kth-smallest-element-in-a-bst",
+    "code": "0230",
+    "c": true
+  },
+  {
+    "problem": "Lowest Common Ancestor of a Binary Search Tree",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "lowest-common-ancestor-of-a-binary-search-tree",
+    "code": "0235",
+    "c": true
+  },
+  {
+    "problem": "Product of Array Except Self",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "product-of-array-except-self",
+    "code": "0238",
+    "c": true
+  },
+  {
+    "problem": "Sliding Window Maximum",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "sliding-window-maximum",
+    "code": "0239",
+    "c": true
+  },
+  {
+    "problem": "Valid Anagram",
+    "pattern": "Hash Table",
+    "difficulty": "Easy",
+    "link": "valid-anagram",
+    "code": "0242",
+    "c": true
+  },
+  {
+    "problem": "Missing Number",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "missing-number",
+    "code": "0268",
+    "c": true
+  },
+  {
+    "problem": "Find the Duplicate Number",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "find-the-duplicate-number",
+    "code": "0287",
+    "c": true
+  },
+  {
+    "problem": "Longest Increasing Subsequence",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "longest-increasing-subsequence",
+    "code": "0300",
+    "c": true
+  },
+  {
+    "problem": "Coin Change",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "coin-change",
+    "code": "0322",
+    "c": true
+  },
+  {
+    "problem": "Counting Bits",
+    "pattern": "Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "counting-bits",
+    "code": "0338",
+    "c": true
+  },
+  {
+    "problem": "Top K Frequent Elements",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "top-k-frequent-elements",
+    "code": "0347",
+    "c": true
+  },
+  {
+    "problem": "Sum of Two Integers",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "sum-of-two-integers",
+    "code": "0371",
+    "c": true
+  },
+  {
     "problem": "Decode String",
     "pattern": "String",
     "difficulty": "Medium",
@@ -63,12 +681,77 @@
     "cpp": true
   },
   {
+    "problem": "Pacific Atlantic Water Flow",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "pacific-atlantic-water-flow",
+    "code": "0417",
+    "c": true
+  },
+  {
     "problem": "Longest Repeating Character Replacement",
     "pattern": "Hash Table",
     "difficulty": "Medium",
     "link": "longest-repeating-character-replacement",
     "code": "0424",
-    "cpp": true
+    "cpp": true,
+    "c": true
+  },
+  {
+    "problem": "Diameter of Binary Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "diameter-of-binary-tree",
+    "code": "0543",
+    "c": true
+  },
+  {
+    "problem": "Permutation in String",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "permutation-in-string",
+    "code": "0567",
+    "c": true
+  },
+  {
+    "problem": "Subtree of Another Tree",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "subtree-of-another-tree",
+    "code": "0572",
+    "c": true
+  },
+  {
+    "problem": "Palindromic Substrings",
+    "pattern": "Two Pointers",
+    "difficulty": "Medium",
+    "link": "palindromic-substrings",
+    "code": "0647",
+    "c": true
+  },
+  {
+    "problem": "Max Area of Island",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "max-area-of-island",
+    "code": "0695",
+    "c": true
+  },
+  {
+    "problem": "Kth Largest Element in a Stream",
+    "pattern": "Tree",
+    "difficulty": "Easy",
+    "link": "kth-largest-element-in-a-stream",
+    "code": "0703",
+    "c": true
+  },
+  {
+    "problem": "Binary Search",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "binary-search",
+    "code": "0704",
+    "c": true
   },
   {
     "problem": "Find Pivot Index",
@@ -76,6 +759,54 @@
     "difficulty": "Easy",
     "link": "find-pivot-index",
     "code": "0724"
+  },
+  {
+    "problem": "Daily Temperatures",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "daily-temperatures",
+    "code": "0739",
+    "c": true
+  },
+  {
+    "problem": "Min Cost Climbing Stairs",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "min-cost-climbing-stairs",
+    "code": "0746",
+    "c": true
+  },
+  {
+    "problem": "Car Fleet",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "car-fleet",
+    "code": "0853",
+    "c": true
+  },
+  {
+    "problem": "Koko Eating Bananas",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "koko-eating-bananas",
+    "code": "0875",
+    "c": true
+  },
+  {
+    "problem": "Rotting Oranges",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "rotting-oranges",
+    "code": "0994",
+    "c": true
+  },
+  {
+    "problem": "Last Stone Weight",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "last-stone-weight",
+    "code": "1046",
+    "c": true
   },
   {
     "problem": "Number of Substrings Containing All Three Characters",
@@ -92,6 +823,14 @@
     "link": "longest-happy-prefix",
     "code": "1392",
     "cpp": true
+  },
+  {
+    "problem": "Count Good Nodes in Binary Tree",
+    "pattern": "Tree",
+    "difficulty": "Medium",
+    "link": "count-good-nodes-in-binary-tree",
+    "code": "1448",
+    "c": true
   },
   {
     "problem": "Maximum Number of Vowels in a Substring of Given Length",
