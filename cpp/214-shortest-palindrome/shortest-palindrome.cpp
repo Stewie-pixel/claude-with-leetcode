@@ -14,7 +14,7 @@ public:
             lps[i] = j;
         }
 
-        int longest = lps.back();  
+        int longest = lps.back();
         string add = s.substr(longest);
         reverse(add.begin(), add.end());
         return add + s;

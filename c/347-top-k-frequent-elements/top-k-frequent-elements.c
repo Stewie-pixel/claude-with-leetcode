@@ -1,9 +1,3 @@
-// Idea:
-// 1. Use a hash map to count the frequency of each element.
-// 2. Store each (element, frequency) pair in an array/struct.
-// 3. Sort the array by frequency in descending order.
-// 4. Take the first k elements and add their values to the result array.
-
 #define N 1e4
 
 struct Helper{
@@ -11,15 +5,12 @@ struct Helper{
     int fre;
 };
 
-// Utility to sort elements's frequency in no-increasing order
 int compare(const void *a, const void *b){
     struct Helper *x = (struct Helper *)a;
     struct Helper *y = (struct Helper *)b;
     return y->fre - x->fre;
 }
 
-
-// Add the number and its frequency to helper array
 struct Helper *createHelperArray(int *fre, int numsSize, int *count){
     struct Helper *f = (struct Helper *)malloc(sizeof(struct Helper) * numsSize);
     for(int i = 0; i <= 2 * N; i++){
@@ -40,22 +31,21 @@ int* topKFrequent(int* nums, int numsSize, int k, int* returnSize) {
 
     int *result = (int *)malloc(sizeof(int) * k);
     int count = 0;
-    
-    int *fre = (int *)calloc(20001, sizeof(int));// Count the frequency of each element
+
+    int *fre = (int *)calloc(20001, sizeof(int));
     for(int i = 0; i < numsSize; i++){
         int index = nums[i] + N;
         fre[index]++;
     }
-    
+
     struct Helper *helper = createHelperArray(fre, numsSize, &count);
     qsort(helper, count, sizeof(struct Helper), compare);
 
-    // Add k needed elements to result array
     for(int i = 0; i < k; i++){
         result[i] = helper[i].nums;
     }
     (*returnSize) = k;
-    
+
     free(helper);
     return result;
 }

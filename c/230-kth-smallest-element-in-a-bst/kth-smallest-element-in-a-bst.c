@@ -1,20 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Kth Smallest Element in a BST
-// -----------------------------------------------------------------------------
-
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. Perform an in-order traversal (Left → Root → Right).
-// 2. Keep track of the number of nodes visited.
-// 3. When visiting the k-th node, store its value as the result.
-// 4. Stop traversing early when the k-th node is found.
-//
-// Time Complexity  : O(k)  (we stop after visiting k nodes)
-// Space Complexity : O(h)  (recursion stack, h = height of the tree)
-// -----------------------------------------------------------------------------
-
-
 struct TreeNode {
     int val;
     struct TreeNode *left;

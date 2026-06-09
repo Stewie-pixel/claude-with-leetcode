@@ -1,15 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Reverse Integer (7)
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// Pop digits from x and push into result r while checking overflow conditions.
-// Use 64-bit temp or careful boundary checks to detect overflow and return 0.
-//
-// Time Complexity  : O(log10(|x|))
-// Space Complexity : O(1)
-// -----------------------------------------------------------------------------
-
 #define LIM1 (-2147483648)
 #define LIM2 2147483647
 

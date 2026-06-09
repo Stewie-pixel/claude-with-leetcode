@@ -14,7 +14,7 @@ public:
         ans.insert(ans.end(), left.begin(), left.end());
         ans.insert(ans.end(), middle.begin(), middle.end());
         ans.insert(ans.end(), right.begin(), right.end());
-        
+
         return ans;
     }
 };

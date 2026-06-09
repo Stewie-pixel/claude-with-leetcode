@@ -1,15 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Counting Bits (338)
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// Use DP: ans[i] = ans[i & (i - 1)] + 1 which removes the lowest set bit.
-// Alternatively ans[i] = ans[i >> 1] + (i & 1) — both are valid.
-//
-// Time Complexity  : O(n)
-// Space Complexity : O(n)
-// -----------------------------------------------------------------------------
-
 #include <stdlib.h>
 
 int* countBits(int n, int* returnSize) {

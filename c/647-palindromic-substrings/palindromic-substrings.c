@@ -1,16 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Palindromic Substrings
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// 1. Task: Count all palindromic substrings in a given string.
-// 2. Approach: Expand around each center for odd and even length palindromes
-//    and count matches.
-//
-// Time Complexity  : O(n^2)
-// Space Complexity : O(1)
-// -----------------------------------------------------------------------------
-
 #include <stdlib.h>
 #include <string.h>
 
@@ -33,6 +20,6 @@ int countSubstrings(char* s) {
             r++;
         }
     }
-    
+
     return result;
 }

@@ -1,17 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Pow(x, n) (50)
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// Use fast exponentiation (divide and conquer): compute x^(n/2) recursively
-// and square it. Handle negative exponent by taking reciprocal.
-//
-// Time Complexity  : O(log n)
-// Space Complexity : O(log n) recursion depth
-// -----------------------------------------------------------------------------
-
-// no special headers required; this file implements fast exponentiation
-// getPow: helper for myPow
 double getPow(double x, int n){
     if(n == 0){
         return (double)1;

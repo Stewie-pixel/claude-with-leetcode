@@ -1,31 +1,3 @@
-// Generate Parentheses 
-
-// Decription:
-// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
-
-// Idea: Draw the recursive tree and think about the conditions when an opening/closing bracket can be appended
-// 1. Use backtracking to generate all valid combinations of parentheses
-// 2. Define a recursive function `backtracking(result, n, returnSize, open, close, combination, position)`
-//      - `open`: number of '(' used so far
-//      - `close`: number of ')' used so far
-//      - `combination`: current string being built
-//      - `position`: current index in the combination
-// 3. Base condition:
-//      3.1 If open == close == n:
-//          a. Current combination is complete and valid
-//          b. Copy the combination into result array
-//          c. Increase the returnSize counter
-// 4. Recursive exploration:
-//      4.1 If open < n:
-//          a. Add '(' at current position
-//          b. Recurse with open + 1
-//      4.2 If close < open:
-//          a. Add ')' at current position
-//          b. Recurse with close + 1
-// 5. Continue exploring until all valid combinations are generated
-// 6. After recursion completes, return the result array containing all valid parentheses strings
-
-
 void backtracking(char **result, int n, int *returnSize, int open, int close, char *combination, int position){
     if(open == close && open == n){
         result[(*returnSize)] = (char *)malloc(sizeof(char) * (2 * n + 1));

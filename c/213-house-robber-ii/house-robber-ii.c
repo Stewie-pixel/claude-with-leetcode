@@ -1,16 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: House Robber II
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// 1. Task: Houses form a circle. Cannot rob adjacent houses; first and last
-//    are adjacent. Solve by reducing to two linear cases (exclude first or last).
-// 2. Approach: reuse linear helper `rob1` and take max of two ranges.
-//
-// Time Complexity  : O(n)
-// Space Complexity : O(1)
-// -----------------------------------------------------------------------------
-
 int max(int a, int b){
     return a > b ? a : b;
 }

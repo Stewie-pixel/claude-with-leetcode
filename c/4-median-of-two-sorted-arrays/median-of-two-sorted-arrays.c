@@ -1,30 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Median of Two Sorted Arrays
-// -----------------------------------------------------------------------------
-
-// ---------------------------------- DESCRIPTION ----------------------------------
-//
-// Given two sorted arrays nums1 and nums2 of size m and n respectively, 
-// return the median of the two sorted arrays.
-// The overall run time complexity should be O(log (m+n)).
-//
-// ----------------------------------------------------------------------------------
-
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. Median = element at middle position when both arrays are merged.
-// 2️. We can use Binary Search on the smaller array to find a partition:
-//       i + j = (n1 + n2) / 2
-//     such that:
-//       nums1[i-1] <= nums2[j] && nums2[j-1] <= nums1[i]
-// 3️. Once found:
-//       - If total is even: median = average(maxLeft, minRight)
-//       - If total is odd : median = maxLeft
-//
-// -----------------------------------------------------------------------------
-
-
 #define INF 1e9
 
 int min(int a, int b) {
@@ -50,8 +23,8 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     int total = n1 + n2;
     int half = total / 2;
     while(1) {
-        int i = (left + right) / 2; // a
-        int j = half - i; // b
+        int i = (left + right) / 2;
+        int j = half - i;
 
         int aLeft = (i > 0) ? nums1[i - 1] : -INF;
         int aRight = i < n1 ?  nums1[i] : INF;

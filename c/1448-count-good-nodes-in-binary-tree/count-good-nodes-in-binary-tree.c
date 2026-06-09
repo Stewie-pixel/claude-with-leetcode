@@ -1,20 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Count Good Nodes in Binary Tree
-// -----------------------------------------------------------------------------
-
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. Traverse the tree using DFS.
-// 2. Keep track of the maximum value encountered on the path from the root to the current node.
-// 3. A node is "good" if its value >= max value seen so far.
-// 4. Recursively count good nodes in left and right subtrees.
-//
-// Time Complexity  : O(n)  (visit each node once)
-// Space Complexity : O(h)  (recursive stack, where h is tree height)
-// -----------------------------------------------------------------------------
-
-
 struct TreeNode {
     int val;
     struct TreeNode *left;

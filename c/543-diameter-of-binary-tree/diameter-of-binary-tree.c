@@ -1,20 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Diameter of Binary Tree
-// -----------------------------------------------------------------------------
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. Use DFS to compute the depth of each node.
-// 2. For each node, the longest path that passes through it equals:
-//        left subtree height + right subtree height.
-// 3. Keep track of the maximum of all such paths using a global (or pointer) variable.
-// 4. The recursion returns the height of the current node to its parent.
-//
-// Time Complexity  : O(n)  (each node visited once)
-// Space Complexity : O(h)  (recursive stack, where h is the height of the tree)
-// -----------------------------------------------------------------------------
-
-
 struct TreeNode {
     int val;
     struct TreeNode *left;

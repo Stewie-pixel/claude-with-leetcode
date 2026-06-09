@@ -1,15 +1,3 @@
-// Idea:
-// 1. Use a stack to track open parentheses.
-// 2. Traverse the string character by character:
-//    - If the current char is an open bracket ('(', '{', '['), push it into the stack.
-//    - If it is a closing bracket (')', '}', ']'):
-//         + If the stack is empty, return false (no matching open bracket).
-//         + Otherwise, check if the top of the stack matches the current closing bracket.
-//           If not matching, return false.
-//           If matching, pop the top element.
-// 3. After traversal, if the stack is empty → all brackets matched → return true.
-//    Otherwise → return false.
-
 bool isValid(char* s) {
     int n = strlen(s);
     char *stack = (char *)malloc((n + 1) * sizeof(char));

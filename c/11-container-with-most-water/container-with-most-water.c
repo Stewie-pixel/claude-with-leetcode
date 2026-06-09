@@ -1,9 +1,3 @@
-// Idea: Think of its as finding the largest rectangle formed by two lines.
-// Initialize two pointers (left, right) at the beginning and at the end.
-// The width decreases as we move any pointer,
-// so to maximum the area, we must look for a taller line,
-// by moving the pointer at shorter line inward
-
 int maxArea(int* height, int heightSize) {
     int maxValue = 0;
     int left = 0, right = heightSize - 1;
@@ -20,7 +14,7 @@ int maxArea(int* height, int heightSize) {
         else{
             right--;
         }
-    }    
+    }
 
     return maxValue;
 }

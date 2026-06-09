@@ -1,16 +1,8 @@
-// Idea:
-// 1. Normalize the string: remove non-alphanumeric characters and convert all letters to lowercase.
-// 2. Use two pointers, i starting from the beginning and j from the end:
-//      2.1 If characters at i and j differ, return false.
-//      2.2 Otherwise, move i forward and j backward.
-// 3. If all characters match, return true.
-
 bool isPalindrome(char* s) {
     if(strlen(s) == 0){
         return true;
     }
 
-    // Normalize the string
     int n = strlen(s);
     char *newStr = (char *)malloc(sizeof(char) * (n + 1));
     int len = 0;
@@ -30,7 +22,7 @@ bool isPalindrome(char* s) {
         i++;
         j--;
     }
-    
+
     free(newStr);
     return true;
 }

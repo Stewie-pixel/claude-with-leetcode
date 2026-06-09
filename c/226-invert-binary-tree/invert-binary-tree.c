@@ -1,20 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Invert Binary Tree
-// -----------------------------------------------------------------------------
-
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. If the node is NULL, return NULL.
-// 2. Swap the left and right child of the current node.
-// 3. Recursively apply this operation on both children.
-// 4. Return the root after full inversion.
-//
-// Time Complexity  : O(n)  (each node is visited once)
-// Space Complexity : O(h)  (recursive stack, where h is the height of the tree)
-// -----------------------------------------------------------------------------
-
-
 struct TreeNode {
     int val;
     struct TreeNode *left;

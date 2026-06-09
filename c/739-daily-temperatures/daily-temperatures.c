@@ -1,24 +1,3 @@
-// Daily Temperatures
-
-// Description:
-// Given an array of integers temperatures represents the daily temperatures, 
-// return an array answer such that answer[i] is the number of days 
-// you have to wait after the ith day to get a warmer temperature. 
-// If there is no future day for which this is possible, keep answer[i] == 0 instead. (*)
-
-// Idea:
-// 1. Based on (*) statement, use the calloc() function to allocate the result array 
-//    and initialize all elements with 0 value
-// 2. Build a simple stack and use it to solve this problem efficiently
-// 3. Traverse the array:
-//      3.1 If stack is empty, push the current element into stack
-//      3.2 While the current value is greater than value at the top of the stack:
-//          a. Pop the top element from stack
-//          b. Number of days to wait is (i - element's index)
-//      3.3 Push the current element into stack
-// 4. After traversing all elements, the values of elements that do not have a warmer day remain 0 by default
-// 5. Return the result array
-
 #define N 100000
 
 struct Pair{

@@ -1,16 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Maximum Product Subarray
-// -----------------------------------------------------------------------------
-//
-// IDEA
-// 1. Task: Find contiguous subarray with maximum product.
-// 2. Approach: Track both max and min product ending at current position since
-//    a negative number can swap them. Update global max accordingly.
-//
-// Time Complexity  : O(n)
-// Space Complexity : O(1)
-// -----------------------------------------------------------------------------
-
 #include <stdlib.h>
 
 int maxNum(int a, int b){

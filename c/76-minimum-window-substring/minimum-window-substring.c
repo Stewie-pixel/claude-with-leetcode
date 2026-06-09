@@ -1,22 +1,3 @@
-// -----------------------------------------------------------------------------
-// Problem: Minimum Window Substring
-// -----------------------------------------------------------------------------
-
-// ---------------------------------- IDEA ----------------------------------
-//
-// 1. Use the sliding window technique with two pointers (left and right).
-// 2. Maintain a frequency count of required characters from t.
-// 3. Expand the right pointer to include characters until the window 
-//    contains all required characters.
-// 4. Then, contract the left pointer to minimize the window while still 
-//    containing all required characters.
-// 5. Keep track of the smallest window length and starting position.
-// 6. Return the substring corresponding to that minimum window.
-//
-// Time Complexity  : O(|s| + |t|)
-// Space Complexity : O(1) — fixed alphabet size (256 possible characters)
-// -----------------------------------------------------------------------------
-
 #define MAX 256
 #define MAX_INT 1e9
 
@@ -33,7 +14,7 @@ char* minWindow(char* s, char* t) {
     for(int i = 0; i < lenT; i++) {
         count[t[i]]++;
     }
-    
+
     int start = 0;
     int minLength = MAX_INT, left = 0, right = 0, need = lenT;
     while(right < lenS) {

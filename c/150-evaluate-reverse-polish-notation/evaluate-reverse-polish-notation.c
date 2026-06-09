@@ -1,18 +1,3 @@
-// Evaluate Reverse Polish Notation
-
-// Description:
-// You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation.
-// Evaluate the expression. Return an integer that represents the value of the expression.
-
-// Idea:
-// 1. Create a simple stack to use its operators
-// 2. Traverse the array, if you meet an operator:
-//      2.1 Pop two numbers from the stack (b = top(), pop; a = top(), pop)
-//      2.2 Perform the operation (a <op> b)
-//      2.3 Push the result back into the stack
-// 3. If you meet a number, push it into the stack
-// 4. After traversing all tokens, the only number left in stack is the final result
-
 struct Stack{
     int a[10000];
     int top;

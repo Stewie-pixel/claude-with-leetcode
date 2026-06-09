@@ -1,6 +1,3 @@
-// Idea: Use a large hash table (size 2 * 10^9 + 1) to mark each number, including negatives.
-// If a number is already marked when encountered, return true (duplicate found).
-
 #define N 1e9
 
 bool containsDuplicate(int* nums, int numsSize) {
