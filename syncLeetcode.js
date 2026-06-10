@@ -310,22 +310,23 @@ async function run() {
             console.log(
                 `\nSuccessfully synced ${newProblemsSynced} solution(s).`,
             );
-
-            try {
-                console.log('\nRunning updateSiteData.js...');
-                execSync('node updateSiteData.js', { stdio: 'inherit' });
-
-                console.log('\nRunning updateTable.js...');
-                execSync('node updateTable.js', { stdio: 'inherit' });
-
-                console.log('\nREADME table rebuild completed successfully.');
-            } catch (err) {
-                console.error('\nFailed to run update scripts:', err.message);
-            }
         } else {
             console.log(
                 '\nNo new solutions found to sync. Everything is up to date.',
             );
+        }
+
+        try {
+            console.log('\nRunning updateSiteData.js...');
+            execSync('node updateSiteData.js', { stdio: 'inherit' });
+
+            console.log('\nRunning updateTable.js...');
+            execSync('node updateTable.js', { stdio: 'inherit' });
+
+            console.log('\nREADME table rebuild completed successfully.');
+        } catch (err) {
+            console.error('\nFailed to run update scripts:', err.message);
+            process.exit(1);
         }
     } catch (err) {
         console.error('\nExecution failed:', err.message);
