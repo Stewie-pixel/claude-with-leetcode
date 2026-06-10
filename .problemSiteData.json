@@ -39,6 +39,14 @@
     "cpp": true
   },
   {
+    "problem": "Combinations",
+    "pattern": "Backtracking",
+    "difficulty": "Medium",
+    "link": "combinations",
+    "code": "0077",
+    "cpp": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
@@ -237,6 +245,14 @@
     "difficulty": "Medium",
     "link": "maximum-total-subarray-value-i",
     "code": "3689",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Total Subarray Value II",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "maximum-total-subarray-value-ii",
+    "code": "3691",
     "cpp": true
   },
   {
