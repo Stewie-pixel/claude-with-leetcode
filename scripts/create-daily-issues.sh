@@ -64,10 +64,12 @@ for SLUG in "${!SLUG_TO_FILE[@]}"; do
     | paste -sd ', ')
 
   FIRST_HEADING=$(grep -m 1 '^#' "$REPRESENTATIVE" | sed 's/^#\s*//')
+  TOPIC=$(echo "${FIRST_HEADING:-$SLUG}" | sed 's/ (.*//')
 
-  TITLE="${FIRST_HEADING:-$SLUG}"
+  DIR_CONTEXT=$(dirname "$REPRESENTATIVE")
+  TITLE="$TOPIC ($DIR_CONTEXT)"
 
-  if echo "$EXISTING_ISSUES" | grep -Fxq "$TITLE"; then
+  if echo "$EXISTING_ISSUES" | grep -Fq "($DIR_CONTEXT)"; then
     echo "Issue already exists, skipping: $TITLE"
     continue
   fi
