@@ -47,6 +47,14 @@
     "cpp": true
   },
   {
+    "problem": "Restore IP Addresses",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "restore-ip-addresses",
+    "code": "0093",
+    "cpp": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
@@ -99,6 +107,14 @@
     "difficulty": "Hard",
     "link": "longest-happy-prefix",
     "code": "1392",
+    "cpp": true
+  },
+  {
+    "problem": "The k-th Lexicographical String of All Happy Strings of Length n",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+    "code": "1415",
     "cpp": true
   },
   {
@@ -222,6 +238,14 @@
     "link": "minimum-operations-to-make-array-sum-divisible-by-k",
     "code": "3512",
     "cpp": true
+  },
+  {
+    "problem": "Number of Ways to Assign Edge Weights I",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "number-of-ways-to-assign-edge-weights-i",
+    "code": "3558",
+    "python": true
   },
   {
     "problem": "Earliest Finish Time for Land and Water Rides I",
