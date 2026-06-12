@@ -17,6 +17,9 @@ jobs:
               with:
                   token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+            - name: Pull latest changes
+              run: git pull --rebase origin main
+
             - name: Generate badge and solutions index
               run: |
                   chmod +x scripts/update-badge.sh
@@ -26,7 +29,6 @@ jobs:
               run: |
                   git config user.name  "github-actions[bot]"
                   git config user.email "github-actions[bot]@users.noreply.github.com"
-                  git pull --rebase origin main
                   git add .github/badges/solutions.json
                   git diff --cached --quiet && echo "No changes to commit" && exit 0
                   COUNT=$(jq '. | length' .github/badges/solutions.json)

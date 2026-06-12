@@ -1,0 +1,41 @@
+name: PR Code Review
+
+on:
+    pull_request:
+        types: [opened, synchronize]
+
+jobs:
+    code-review:
+        runs-on: ubuntu-latest
+        if: >-
+            github.repository == 'Stewie-pixel/claude-with-leetcode' &&
+            github.actor != 'mirabile-cli[bot]'
+
+        permissions:
+            contents: read
+            pull-requests: write
+            issues: write
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Generate GitHub App Token
+              id: app-token
+              uses: actions/create-github-app-token@v1
+              with:
+                  app-id: ${{ secrets.APP_ID }}
+                  private-key: ${{ secrets.PRIVATE_KEY }}
+
+            - name: Execute Code Review
+              uses: actions/github-script@v7
+              env:
+                  OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+                  OPENROUTER_MODEL: 'nvidia/nemotron-3-super-120b-a12b:free'
+              with:
+                  github-token: ${{ steps.app-token.outputs.token }}
+                  script: |
+                      const { review } = await import('${{ github.workspace }}/.github/scripts/pr-review.mjs');
+                      await review({ github, context, core });

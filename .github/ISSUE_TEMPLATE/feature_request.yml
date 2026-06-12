@@ -23,13 +23,6 @@ body:
       validations:
           required: true
     - type: 'textarea'
-      id: 'proof-validation'
-      attributes:
-          label: 'Evidence of accepted solution on Leetcode'
-          description: 'Please provide a link/image to the accepted solution on Leetcode that demonstrates the validated solution.'
-      validations:
-          required: true
-    - type: 'textarea'
       id: 'additional-context'
       attributes:
           label: 'Additional context'

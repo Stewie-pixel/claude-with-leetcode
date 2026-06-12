@@ -75,8 +75,7 @@ Please review the issues above before proceeding. If this is a duplicate, consid
 
 If you believe this is **not** a duplicate, no action is needed — a maintainer will review shortly.
 
----
-*Duplicate check by [@mirabile](https://github.com/apps/mirabile)*`;
+If you have any questions, feel free to tag **@maintainers** or mention **@mirabile** in a comment for an automated review`;
 
     await github.rest.issues.createComment({
         owner,
