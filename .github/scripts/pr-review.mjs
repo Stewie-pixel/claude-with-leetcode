@@ -1,5 +1,3 @@
-import { execSync } from 'child_process';
-
 export async function review({ github, context, core }) {
     const isComment = context.eventName === 'issue_comment';
 
@@ -65,8 +63,6 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
     const prNumber = context.payload.pull_request.number;
     const owner = context.repo.owner;
     const repo = context.repo.repo;
-    const baseSha = context.payload.pull_request.base.sha;
-    const headSha = context.payload.pull_request.head.sha;
     const prTitle = context.payload.pull_request.title;
     const prBody =
         context.payload.pull_request.body ?? 'No description provided.';
@@ -105,6 +101,8 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
         missingReadme: [],
     };
 
+    let diff = '';
+
     for (const file of files) {
         const parts = file.filename.split('/');
         if (!supportedLangs.includes(parts[0]) || parts.length < 3) continue;
@@ -119,6 +117,10 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
         if (filename !== 'README.md' && filename !== 'ANALYSIS.md') {
             if (!SLUG_PATTERN.test(filename)) {
                 violations.badNaming.push(file.filename);
+            }
+
+            if (file.patch) {
+                diff += `diff --git a/${file.filename} b/${file.filename}\n${file.patch}\n`;
             }
         }
     }
@@ -141,16 +143,7 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
 
     const hasViolations = Object.values(violations).some((v) => v.length > 0);
 
-    let diff = '';
-    try {
-        diff = execSync(
-            `git diff ${baseSha} ${headSha} -- '*.cpp' '*.py' '*.java' '*.js' '*.ts' '*.rs' '*.go' '*.c' '*.cs' '*.kt' '*.swift' '*.dart' '*.scala' '*.rb' '*.php' ':!**/README.md' ':!**/ANALYSIS.md'`,
-        )
-            .toString('utf8')
-            .substring(0, 15000);
-    } catch (err) {
-        core.warning(`Could not generate git diff: ${err.message}`);
-    }
+    diff = diff.substring(0, 15000);
 
     let summaryParagraph = 'No summary could be generated at this time.';
     let highlights = [];

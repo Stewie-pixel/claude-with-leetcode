@@ -30,10 +30,6 @@ jobs:
               with:
                   fetch-depth: 0
 
-            - name: Fetch PR commits for diff
-              if: github.event_name == 'pull_request_target'
-              run: git fetch origin refs/pull/${{ github.event.pull_request.number }}/head
-
             - name: Generate GitHub App Token
               id: app-token
               uses: actions/create-github-app-token@v1
