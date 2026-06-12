@@ -1,10 +1,8 @@
 name: PR Contribution Notifier
 
 on:
-    pull_request:
-        types: [opened]
     pull_request_target:
-        types: [opened, synchronize]
+        types: [opened]
 
 jobs:
     notifier:
