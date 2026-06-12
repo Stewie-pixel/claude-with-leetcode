@@ -248,6 +248,14 @@
     "python": true
   },
   {
+    "problem": "Number of Ways to Assign Edge Weights II",
+    "pattern": "Array",
+    "difficulty": "Hard",
+    "link": "number-of-ways-to-assign-edge-weights-ii",
+    "code": "3559",
+    "python": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
