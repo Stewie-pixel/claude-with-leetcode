@@ -1,0 +1,120 @@
+name: PR Description Check
+
+on:
+    pull_request:
+        types: [opened, edited, synchronize]
+
+jobs:
+    description-check:
+        runs-on: ubuntu-latest
+        if: >-
+            github.repository == 'Stewie-pixel/claude-with-leetcode' &&
+            github.actor != 'mirabile-cli[bot]'
+
+        permissions:
+            pull-requests: write
+            issues: write
+
+        steps:
+            - name: Generate GitHub App Token
+              id: app-token
+              uses: actions/create-github-app-token@v1
+              with:
+                  app-id: ${{ secrets.APP_ID }}
+                  private-key: ${{ secrets.PRIVATE_KEY }}
+
+            - name: Validate PR description
+              uses: actions/github-script@v7
+              with:
+                  github-token: ${{ steps.app-token.outputs.token }}
+                  script: |
+                      const pr = context.payload.pull_request;
+                      const body = pr.body ?? '';
+                      const owner = context.repo.owner;
+                      const repo = context.repo.repo;
+                      const prNumber = pr.number;
+
+                      const failures = [];
+
+                      // Check 1 — Summary section must be filled
+                      const summaryMatch = body.match(/##\s*Summary([\s\S]*?)(?=##|$)/i);
+                      const summaryContent = summaryMatch?.[1]
+                          ?.replace(/<!--[\s\S]*?-->/g, '')
+                          .trim() ?? '';
+                      if (summaryContent.length < 10) {
+                          failures.push('**Summary** section is empty or too short (min 30 characters).');
+                      }
+
+                      // Check 2 — Related Issues must reference an issue
+                      const hasIssueRef = /\b(closes|fixes|resolves|related to)\s+#\d+/i.test(body);
+                      if (!hasIssueRef) {
+                          failures.push('**Related Issues** section must reference an issue using `Closes #`, `Fixes #`, `Resolves #`, or `Related to #`.');
+                      }
+
+                      // Check 3 — How to Validate must be filled
+                      const validateMatch = body.match(/##\s*How to Validate([\s\S]*?)(?=##|$)/i);
+                      const validateContent = validateMatch?.[1]
+                          ?.replace(/<!--[\s\S]*?-->/g, '')
+                          .trim() ?? '';
+                      if (validateContent.length < 10) {
+                          failures.push('**How to Validate** section is empty. Please describe how reviewers can test your changes.');
+                      }
+
+                      // Check 4 — Pre-Merge Checklist must have at least 1 item checked
+                      const hasCheckedItem = /- \[x\]/i.test(body);
+                      if (!hasCheckedItem) {
+                          failures.push('**Pre-Merge Checklist** has no checked items. Please complete the checklist before requesting review.');
+                      }
+
+                      if (failures.length === 0) {
+                          console.log('PR description check passed.');
+
+                          // Remove failure label if previously added
+                          try {
+                              await github.rest.issues.removeLabel({
+                                  owner, repo,
+                                  issue_number: prNumber,
+                                  name: 'needs-description',
+                              });
+                          } catch {}
+
+                          await github.rest.issues.createComment({
+                              owner, repo,
+                              issue_number: prNumber,
+                              body: `PR description looks good! All required sections are filled in. Please wait for a review from our maintainers.`,
+                          });
+
+                          return;
+                      }
+
+                      const failureList = failures.map(f => `- ❌ ${f}`).join('\n');
+
+                      const comment = `## PR Description Check Failed
+
+                      Your PR description is missing required information. Please update it before this PR can be reviewed.
+
+                      ${failureList}
+
+                      ### How to Fix
+                      Edit your PR description and fill in all required sections based on the template:
+
+                      - **Summary** — What does this PR change and why?
+                      - **Related Issues** — Which issue does this close? (e.g. \`Closes #1\`)
+                      - **How to Validate** — How can reviewers test your changes?
+                      - **Pre-Merge Checklist** — Check all applicable items
+
+                      *For more details on how to have a clear contribution, reference at our [CONTRIBUTING.md](https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/CONTRIBUTING.md)*`;
+
+                      await github.rest.issues.createComment({
+                          owner, repo,
+                          issue_number: prNumber,
+                          body: comment,
+                      });
+
+                      await github.rest.issues.addLabels({
+                          owner, repo,
+                          issue_number: prNumber,
+                          labels: ['needs-description'],
+                      });
+
+                      core.setFailed(`PR description check failed with ${failures.length} issue(s).`);
