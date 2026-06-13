@@ -23,7 +23,7 @@ on:
 
 concurrency:
     group: '${{ github.workflow }}-${{ github.event.issue.number || github.event.inputs.issue_number || inputs.issue_number }}'
-    cancel-in-progress: true
+    cancel-in-progress: false
 
 defaults:
     run:

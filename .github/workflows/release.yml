@@ -70,17 +70,45 @@ jobs:
                   script: |
                       const tag = '${{ steps.tag.outputs.name }}';
                       const body = process.env.RELEASE_BODY?.trim();
+                      const owner = context.repo.owner;
+                      const repo = context.repo.repo;
 
-                      const { data: release } = await github.rest.repos.createRelease({
-                          owner: context.repo.owner,
-                          repo: context.repo.repo,
-                          tag_name: tag,
-                          name: tag,
-                          body: body || undefined,
-                          generate_release_notes: true,
-                          draft: false,
-                          prerelease: tag.includes('-'),   // treat v1.0.0-rc.1 as pre-release
-                      });
+                      let existingRelease = null;
+                      try {
+                          const { data } = await github.rest.repos.getReleaseByTag({
+                              owner, repo, tag,
+                          });
+                          existingRelease = data;
+                      } catch (err) {
+                          if (err.status !== 404) throw err;
+                      }
 
-                      core.info(`Created release: ${release.html_url}`);
+                      let release;
+
+                      if (existingRelease) {
+                          core.info(`Release for ${tag} already exists — updating...`);
+                          const { data } = await github.rest.repos.updateRelease({
+                              owner, repo,
+                              release_id: existingRelease.id,
+                              name: tag,
+                              body: body || existingRelease.body,
+                              draft: false,
+                              prerelease: tag.includes('-'),
+                          });
+                          release = data;
+                      } else {
+                          core.info(`Creating new release for ${tag}...`);
+                          const { data } = await github.rest.repos.createRelease({
+                              owner, repo,
+                              tag_name: tag,
+                              name: tag,
+                              body: body || undefined,
+                              generate_release_notes: true,
+                              draft: false,
+                              prerelease: tag.includes('-'),
+                          });
+                          release = data;
+                      }
+
+                      core.info(`Release ready: ${release.html_url}`);
                       core.setOutput('url', release.html_url);

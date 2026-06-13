@@ -1,3 +1,5 @@
+import { execSync } from 'child_process';
+
 export async function review({ github, context, core }) {
     const isComment = context.eventName === 'issue_comment';
 
@@ -15,19 +17,26 @@ export async function review({ github, context, core }) {
             pull_number: prNumber,
         });
 
-        const prompt = `You are Mirabile, an AI code reviewer on a GitHub PR for the claude-with-leetcode repository.
+        const prFiles = await github.paginate(github.rest.pulls.listFiles, {
+            owner,
+            repo,
+            pull_number: prNumber,
+            per_page: 100,
+        });
 
-A developer has asked you a question about PR #${prNumber}: "${pr.title}"
+        const classifyPrompt = `You are a question classifier for a GitHub PR assistant.
 
-Their question is:
-"${userQuestion}"
+Classify the following question into exactly one category:
+- "problem" — question about a LeetCode solution, algorithm, complexity, or code logic
+- "system" — question about CI/CD, GitHub Actions, scripts, workflows, or infrastructure
+- "docs" — question about README, CONTRIBUTING.md, documentation, or markdown files
+- "repo" — question about the repository itself, its purpose, structure, or maintainers
 
-PR description:
-${pr.body ?? 'No description provided.'}
+Question: "${userQuestion}"
 
-Answer the question directly and concisely in 2-4 sentences. Be technical and helpful. Do not repeat the question back.`;
+Reply ONLY with one word: problem, system, docs, or repo`;
 
-        const response = await fetch(
+        const classifyResponse = await fetch(
             'https://openrouter.ai/api/v1/chat/completions',
             {
                 method: 'POST',
@@ -37,13 +46,164 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
                 },
                 body: JSON.stringify({
                     model: process.env.OPENROUTER_MODEL,
-                    messages: [{ role: 'user', content: prompt }],
+                    messages: [{ role: 'user', content: classifyPrompt }],
                 }),
             },
         );
 
-        const data = await response.json();
-        const answer = data.choices?.[0]?.message?.content?.trim();
+        const classifyData = await classifyResponse.json();
+        const category =
+            classifyData.choices?.[0]?.message?.content?.trim().toLowerCase() ??
+            'repo';
+
+        core.info(`Question classified as: ${category}`);
+
+        const solutionExts = [
+            'cpp',
+            'py',
+            'java',
+            'js',
+            'ts',
+            'rs',
+            'go',
+            'c',
+            'cs',
+            'kt',
+            'swift',
+            'dart',
+            'scala',
+            'rb',
+            'php',
+        ];
+        const systemPaths = [
+            '.github/',
+            'scripts/',
+            'package.json',
+            'Dockerfile',
+            'docker-compose',
+        ];
+        const docsPaths = ['.md', 'docs/'];
+
+        let relevantContext = '';
+
+        if (category === 'problem') {
+            const solutionFiles = prFiles.filter((f) => {
+                const ext = f.filename.split('.').pop();
+                return (
+                    solutionExts.includes(ext) &&
+                    !f.filename.includes('ANALYSIS.md') &&
+                    !f.filename.includes('README.md')
+                );
+            });
+
+            relevantContext =
+                solutionFiles.length > 0
+                    ? solutionFiles
+                          .map((f) => `File: ${f.filename}\n${f.patch ?? ''}`)
+                          .join('\n\n')
+                          .substring(0, 8000)
+                    : 'No solution files found in this PR.';
+        } else if (category === 'system') {
+            const systemFiles = prFiles.filter((f) =>
+                systemPaths.some((p) => f.filename.includes(p)),
+            );
+
+            relevantContext =
+                systemFiles.length > 0
+                    ? systemFiles
+                          .map((f) => `File: ${f.filename}\n${f.patch ?? ''}`)
+                          .join('\n\n')
+                          .substring(0, 8000)
+                    : 'No system files found in this PR.';
+        } else if (category === 'docs') {
+            const docsFiles = prFiles.filter((f) =>
+                docsPaths.some(
+                    (p) => f.filename.endsWith(p) || f.filename.includes(p),
+                ),
+            );
+
+            relevantContext =
+                docsFiles.length > 0
+                    ? docsFiles
+                          .map((f) => `File: ${f.filename}\n${f.patch ?? ''}`)
+                          .join('\n\n')
+                          .substring(0, 8000)
+                    : 'No documentation files found in this PR.';
+        } else {
+            const repoFiles = ['README.md', 'CONTRIBUTING.md', 'CLAUDE.md'];
+            const fetchedDocs = [];
+
+            for (const path of repoFiles) {
+                try {
+                    const { data } = await github.rest.repos.getContent({
+                        owner,
+                        repo,
+                        path,
+                    });
+                    const content = Buffer.from(
+                        data.content,
+                        'base64',
+                    ).toString('utf8');
+                    fetchedDocs.push(
+                        `File: ${path}\n${content.substring(0, 2000)}`,
+                    );
+                } catch {}
+            }
+
+            relevantContext =
+                fetchedDocs.length > 0
+                    ? fetchedDocs.join('\n\n')
+                    : 'No repository documentation found.';
+        }
+
+        const categoryInstructions = {
+            problem: `You are reviewing a LeetCode solution. Focus only on the solution code files provided.
+Analyze the algorithm, time/space complexity, edge cases, and code quality.
+Be specific and reference actual line numbers or variable names from the code.`,
+            system: `You are reviewing CI/CD and system configuration files. Focus only on the workflow/script files provided.
+Analyze the pipeline logic, potential failures, security concerns, and efficiency.
+Reference specific steps, job names, or script sections in your answer.`,
+            docs: `You are reviewing documentation files. Focus only on the markdown/docs files provided.
+Analyze clarity, completeness, accuracy, and formatting.
+Reference specific sections or headings in your answer.`,
+            repo: `You are answering a question about the claude-with-leetcode repository.
+This is an open-source project that uses Claude AI to automatically generate daily DSA lectures from LeetCode solutions committed by developers.
+Use the repository documentation provided to answer. If the answer is not in the docs, direct the user to @Stewie-pixel (maintainer).
+Do not guess or fabricate information about the repo.`,
+        };
+
+        const answerPrompt = `You are Mirabile, an AI code reviewer on PR #${prNumber}: "${pr.title}".
+
+${categoryInstructions[category] ?? categoryInstructions.repo}
+
+---
+
+Relevant Files:
+${relevantContext}
+
+---
+
+Developer's question: "${userQuestion}"
+
+Answer directly and concisely in 3-5 sentences. Be technical and helpful.${category === 'repo' ? ' If you cannot answer from the provided docs, say: "I don\'t have enough context on this — this will be transfered for a maintainer response."' : ''}`;
+
+        const answerResponse = await fetch(
+            'https://openrouter.ai/api/v1/chat/completions',
+            {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    model: process.env.OPENROUTER_MODEL,
+                    messages: [{ role: 'user', content: answerPrompt }],
+                }),
+            },
+        );
+
+        const answerData = await answerResponse.json();
+        const answer = answerData.choices?.[0]?.message?.content?.trim();
 
         if (!answer || answer === 'null') {
             core.info('No answer generated, skipping.');
@@ -54,7 +214,7 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
             owner,
             repo,
             issue_number: prNumber,
-            body: `${answer}`,
+            body: `{answer}`,
         });
 
         return;
@@ -118,7 +278,6 @@ Answer the question directly and concisely in 2-4 sentences. Be technical and he
             if (!SLUG_PATTERN.test(filename)) {
                 violations.badNaming.push(file.filename);
             }
-
             if (file.patch) {
                 diff += `diff --git a/${file.filename} b/${file.filename}\n${file.patch}\n`;
             }
@@ -277,7 +436,7 @@ ${violations.missingReadme.length > 0 ? `Missing \`README.md\`:\n${violations.mi
 
 **If you need further feedback:** Mention **@mirabile** in a comment with your question and I'll respond directly.`;
 
-    let resolvedEvent = hasViolations ? 'REQUEST_CHANGES' : finalVerdict;
+    const resolvedEvent = hasViolations ? 'REQUEST_CHANGES' : finalVerdict;
 
     await github.rest.pulls.createReview({
         owner,
