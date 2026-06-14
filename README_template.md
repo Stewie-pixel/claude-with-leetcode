@@ -13,6 +13,16 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
+> This repo hosts solutions to all problems found on [Leetcode](https://leetcode.com/problemset/) with the help of Claude. The site will be updated daily with new solutions from this repo!
+
+<br/>
+
+Currently support these languages:
+
+> Python, Java, JavaScript, C++, Go, C#, TypeScript, Rust, Kotlin, Ruby, C
+
+Solutions are also welcome for any other _supported_ language on leetcode.com!
+
 ## 🎬 Demo
 
 <img src="/assets/demo.png" width="100%" alt="Demo" />
