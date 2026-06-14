@@ -63,7 +63,7 @@ jobs:
               if: >-
                   github.event_name == 'workflow_dispatch' ||
                   github.event_name == 'workflow_call'
-              uses: 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea'
+              uses: 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3'
               with:
                   github-token: '${{ secrets.GITHUB_TOKEN }}'
                   script: |
@@ -105,7 +105,7 @@ jobs:
               id: 'triage_issue'
               env:
                   OPENROUTER_API_KEY: '${{ secrets.OPENROUTER_API_KEY }}'
-              uses: 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea'
+              uses: 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3'
               with:
                   github-token: '${{ steps.app-token.outputs.token }}'
                   script: |
@@ -113,7 +113,7 @@ jobs:
                       await triage({ github, context, core });
 
             - name: 'Clean up conflicting status labels'
-              uses: 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea'
+              uses: 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3'
               with:
                   github-token: '${{ steps.app-token.outputs.token }}'
                   script: |
@@ -126,7 +126,7 @@ jobs:
                   ISSUE_NUMBER: >-
                       ${{ github.event.issue.number || github.event.inputs.issue_number || inputs.issue_number }}
                   RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
-              uses: 'actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea'
+              uses: 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3'
               with:
                   github-token: '${{ steps.app-token.outputs.token }}'
                   script: |
