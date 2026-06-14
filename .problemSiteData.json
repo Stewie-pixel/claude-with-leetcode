@@ -160,6 +160,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Twin Sum of a Linked List",
+    "pattern": "Linked List, Two Pointers, Stack",
+    "difficulty": "Medium",
+    "link": "maximum-twin-sum-of-a-linked-list",
+    "code": "2130",
+    "cpp": true
+  },
+  {
     "problem": "Partition Array According to Given Pivot",
     "pattern": "Array",
     "difficulty": "Medium",
