@@ -70,7 +70,7 @@ jobs:
                   fi
 
             - name: Upsert GitHub Release
-              uses: actions/github-script@v7
+              uses: actions/github-script@v9
               env:
                   RELEASE_BODY: ${{ steps.changelog.outputs.body }}
               with:
