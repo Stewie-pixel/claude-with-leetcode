@@ -405,5 +405,29 @@
     "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
     "code": "3957",
     "cpp": true
+  },
+  {
+    "problem": "Check Good Integer",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "check-good-integer",
+    "code": "3959",
+    "cpp": true
+  },
+  {
+    "problem": "Frequency Balance Subarray",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "frequency-balance-subarray",
+    "code": "3960",
+    "cpp": true
+  },
+  {
+    "problem": "Maximize Sum of Device Ratings",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "maximize-sum-of-device-ratings",
+    "code": "3961",
+    "cpp": true
   }
 ]
