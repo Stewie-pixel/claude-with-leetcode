@@ -1,7 +1,7 @@
 [
   {
     "problem": "Two Sum",
-    "pattern": "Arrays, Hash Table",
+    "pattern": "Array, Hash Table",
     "difficulty": "Easy",
     "link": "two-sum",
     "code": "0001"
