@@ -1,457 +1,457 @@
 [
-  {
-    "problem": "Two Sum",
-    "pattern": "Arrays & Hashing",
-    "difficulty": "Easy",
-    "link": "two-sum",
-    "code": "0001"
-  },
-  {
-    "problem": "Add Two Numbers",
-    "pattern": "Linked List",
-    "difficulty": "Medium",
-    "link": "add-two-numbers",
-    "code": "0002",
-    "java": true
-  },
-  {
-    "problem": "Zigzag Conversion",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "zigzag-conversion",
-    "code": "0006",
-    "cpp": true
-  },
-  {
-    "problem": "Merge Two Sorted Lists",
-    "pattern": "Linked List",
-    "difficulty": "Easy",
-    "link": "merge-two-sorted-lists",
-    "code": "0021",
-    "cpp": true
-  },
-  {
-    "problem": "Permutations II",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "permutations-ii",
-    "code": "0047",
-    "cpp": true
-  },
-  {
-    "problem": "Combinations",
-    "pattern": "Backtracking",
-    "difficulty": "Medium",
-    "link": "combinations",
-    "code": "0077",
-    "cpp": true
-  },
-  {
-    "problem": "Restore IP Addresses",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "restore-ip-addresses",
-    "code": "0093",
-    "cpp": true
-  },
-  {
-    "problem": "Shortest Palindrome",
-    "pattern": "String",
-    "difficulty": "Hard",
-    "link": "shortest-palindrome",
-    "code": "0214",
-    "cpp": true
-  },
-  {
-    "problem": "Contains Duplicate II",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "contains-duplicate-ii",
-    "code": "0219",
-    "cpp": true
-  },
-  {
-    "problem": "Decode String",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "decode-string",
-    "code": "0394",
-    "cpp": true
-  },
-  {
-    "problem": "Longest Repeating Character Replacement",
-    "pattern": "Hash Table",
-    "difficulty": "Medium",
-    "link": "longest-repeating-character-replacement",
-    "code": "0424",
-    "cpp": true
-  },
-  {
-    "problem": "Find Pivot Index",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "find-pivot-index",
-    "code": "0724"
-  },
-  {
-    "problem": "Largest Component Size by Common Factor",
-    "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
-    "difficulty": "Hard",
-    "link": "largest-component-size-by-common-factor",
-    "code": "0952",
-    "cpp": true
-  },
-  {
-    "problem": "Number of Substrings Containing All Three Characters",
-    "pattern": "Hash Table",
-    "difficulty": "Medium",
-    "link": "number-of-substrings-containing-all-three-characters",
-    "code": "1358",
-    "cpp": true
-  },
-  {
-    "problem": "Longest Happy Prefix",
-    "pattern": "String",
-    "difficulty": "Hard",
-    "link": "longest-happy-prefix",
-    "code": "1392",
-    "cpp": true
-  },
-  {
-    "problem": "The k-th Lexicographical String of All Happy Strings of Length n",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
-    "code": "1415",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Number of Vowels in a Substring of Given Length",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
-    "code": "1456",
-    "cpp": true
-  },
-  {
-    "problem": "Longest Subarray of 1's After Deleting One Element",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "longest-subarray-of-1s-after-deleting-one-element",
-    "code": "1493",
-    "cpp": true
-  },
-  {
-    "problem": "Find Kth Bit in Nth Binary String",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "find-kth-bit-in-nth-binary-string",
-    "code": "1545",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Length of Subarray With Positive Product",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "maximum-length-of-subarray-with-positive-product",
-    "code": "1567",
-    "cpp": true
-  },
-  {
-    "problem": "Determine if Two Strings Are Close",
-    "pattern": "Hash Table",
-    "difficulty": "Medium",
-    "link": "determine-if-two-strings-are-close",
-    "code": "1657",
-    "rust": true,
-    "python": true,
-    "cpp": true
-  },
-  {
-    "problem": "Process Restricted Friend Requests",
-    "pattern": "Union-Find, Graph Theory",
-    "difficulty": "Hard",
-    "link": "process-restricted-friend-requests",
-    "code": "2076",
-    "cpp": true
-  },
-  {
-    "problem": "Delete the Middle Node of a Linked List",
-    "pattern": "Linked List, Two Pointers",
-    "difficulty": "Medium",
-    "link": "delete-the-middle-node-of-a-linked-list",
-    "code": "2095",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Twin Sum of a Linked List",
-    "pattern": "Linked List, Two Pointers, Stack",
-    "difficulty": "Medium",
-    "link": "maximum-twin-sum-of-a-linked-list",
-    "code": "2130",
-    "cpp": true
-  },
-  {
-    "problem": "Partition Array According to Given Pivot",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "partition-array-according-to-given-pivot",
-    "code": "2161",
-    "cpp": true
-  },
-  {
-    "problem": "Create Binary Tree From Descriptions",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "create-binary-tree-from-descriptions",
-    "code": "2196",
-    "cpp": true
-  },
-  {
-    "problem": "Sum of Scores of Built Strings",
-    "pattern": "String",
-    "difficulty": "Hard",
-    "link": "sum-of-scores-of-built-strings",
-    "code": "2223",
-    "cpp": true
-  },
-  {
-    "problem": "Intersection of Multiple Arrays",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "intersection-of-multiple-arrays",
-    "code": "2248"
-  },
-  {
-    "problem": "Equal Row and Column Pairs",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "equal-row-and-column-pairs",
-    "code": "2352",
-    "cpp": true
-  },
-  {
-    "problem": "Removing Stars From a String",
-    "pattern": "String",
-    "difficulty": "Medium",
-    "link": "removing-stars-from-a-string",
-    "code": "2390",
-    "cpp": true
-  },
-  {
-    "problem": "Left and Right Sum Differences",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "left-and-right-sum-differences",
-    "code": "2574",
-    "cpp": true
-  },
-  {
-    "problem": "Debounce",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "debounce",
-    "code": "2627",
-    "javascript": true,
-    "typescript": true
-  },
-  {
-    "problem": "Add Two Promises",
-    "pattern": "Contest",
-    "difficulty": "Easy",
-    "link": "add-two-promises",
-    "code": "2723",
-    "typescript": true
-  },
-  {
-    "problem": "Minimum Operations to Make Array Sum Divisible by K",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "minimum-operations-to-make-array-sum-divisible-by-k",
-    "code": "3512",
-    "cpp": true
-  },
-  {
-    "problem": "Number of Ways to Assign Edge Weights I",
-    "pattern": "Math",
-    "difficulty": "Medium",
-    "link": "number-of-ways-to-assign-edge-weights-i",
-    "code": "3558",
-    "python": true
-  },
-  {
-    "problem": "Number of Ways to Assign Edge Weights II",
-    "pattern": "Array",
-    "difficulty": "Hard",
-    "link": "number-of-ways-to-assign-edge-weights-ii",
-    "code": "3559",
-    "python": true
-  },
-  {
-    "problem": "Earliest Finish Time for Land and Water Rides I",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "earliest-finish-time-for-land-and-water-rides-i",
-    "code": "3633",
-    "cpp": true
-  },
-  {
-    "problem": "Earliest Finish Time for Land and Water Rides II",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "earliest-finish-time-for-land-and-water-rides-ii",
-    "code": "3635",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Total Subarray Value I",
-    "pattern": "Array",
-    "difficulty": "Medium",
-    "link": "maximum-total-subarray-value-i",
-    "code": "3689",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Total Subarray Value II",
-    "pattern": "Array",
-    "difficulty": "Hard",
-    "link": "maximum-total-subarray-value-ii",
-    "code": "3691",
-    "cpp": true
-  },
-  {
-    "problem": "Total Waviness of Numbers in Range I",
-    "pattern": "Math",
-    "difficulty": "Medium",
-    "link": "total-waviness-of-numbers-in-range-i",
-    "code": "3751",
-    "cpp": true
-  },
-  {
-    "problem": "Total Waviness of Numbers in Range II",
-    "pattern": "Math",
-    "difficulty": "Hard",
-    "link": "total-waviness-of-numbers-in-range-ii",
-    "code": "3753",
-    "cpp": true
-  },
-  {
-    "problem": "Weighted Word Mapping",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "weighted-word-mapping",
-    "code": "3838",
-    "cpp": true
-  },
-  {
-    "problem": "Find the Degree of Each Vertex",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "find-the-degree-of-each-vertex",
-    "code": "3898",
-    "cpp": true
-  },
-  {
-    "problem": "Concatenate Array With Reverse",
-    "pattern": "Array",
-    "difficulty": "Easy",
-    "link": "concatenate-array-with-reverse",
-    "code": "3925",
-    "cpp": true
-  },
-  {
-    "problem": "Limit Occurrences in Sorted Array",
-    "pattern": "Contest",
-    "difficulty": "Easy",
-    "link": "limit-occurrences-in-sorted-array",
-    "code": "3940"
-  },
-  {
-    "problem": "Exactly One Consecutive Set Bits Pair",
-    "pattern": "Contest",
-    "difficulty": "Easy",
-    "link": "exactly-one-consecutive-set-bits-pair",
-    "code": "3950",
-    "cpp": true
-  },
-  {
-    "problem": "Minimum Energy to Maintain Brightness",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "minimum-energy-to-maintain-brightness",
-    "code": "3951",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Total Value of Covered Indices",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "maximum-total-value-of-covered-indices",
-    "code": "3952",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Score with Co-Prime Element",
-    "pattern": "Contest",
-    "difficulty": "Hard",
-    "link": "maximum-score-with-co-prime-element",
-    "code": "3953",
-    "cpp": true
-  },
-  {
-    "problem": "Sum of Compatible Numbers in Range I",
-    "pattern": "Contest",
-    "difficulty": "Easy",
-    "link": "sum-of-compatible-numbers-in-range-i",
-    "code": "3954",
-    "cpp": true
-  },
-  {
-    "problem": "Valid Binary Strings With Cost Limit",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "valid-binary-strings-with-cost-limit",
-    "code": "3955",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Sum of M Non-Overlapping Subarrays I",
-    "pattern": "Contest",
-    "difficulty": "Hard",
-    "link": "maximum-sum-of-m-non-overlapping-subarrays-i",
-    "code": "3956",
-    "cpp": true
-  },
-  {
-    "problem": "Maximum Sum of M Non-Overlapping Subarrays II",
-    "pattern": "Contest",
-    "difficulty": "Hard",
-    "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
-    "code": "3957",
-    "cpp": true
-  },
-  {
-    "problem": "Check Good Integer",
-    "pattern": "Contest",
-    "difficulty": "Easy",
-    "link": "check-good-integer",
-    "code": "3959",
-    "cpp": true
-  },
-  {
-    "problem": "Frequency Balance Subarray",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "frequency-balance-subarray",
-    "code": "3960",
-    "cpp": true
-  },
-  {
-    "problem": "Maximize Sum of Device Ratings",
-    "pattern": "Contest",
-    "difficulty": "Medium",
-    "link": "maximize-sum-of-device-ratings",
-    "code": "3961",
-    "cpp": true
-  }
+    {
+        "problem": "Two Sum",
+        "pattern": "Arrays, Hash Table",
+        "difficulty": "Easy",
+        "link": "two-sum",
+        "code": "0001"
+    },
+    {
+        "problem": "Add Two Numbers",
+        "pattern": "Linked List",
+        "difficulty": "Medium",
+        "link": "add-two-numbers",
+        "code": "0002",
+        "java": true
+    },
+    {
+        "problem": "Zigzag Conversion",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "zigzag-conversion",
+        "code": "0006",
+        "cpp": true
+    },
+    {
+        "problem": "Merge Two Sorted Lists",
+        "pattern": "Linked List",
+        "difficulty": "Easy",
+        "link": "merge-two-sorted-lists",
+        "code": "0021",
+        "cpp": true
+    },
+    {
+        "problem": "Permutations II",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "permutations-ii",
+        "code": "0047",
+        "cpp": true
+    },
+    {
+        "problem": "Combinations",
+        "pattern": "Backtracking",
+        "difficulty": "Medium",
+        "link": "combinations",
+        "code": "0077",
+        "cpp": true
+    },
+    {
+        "problem": "Restore IP Addresses",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "restore-ip-addresses",
+        "code": "0093",
+        "cpp": true
+    },
+    {
+        "problem": "Shortest Palindrome",
+        "pattern": "String",
+        "difficulty": "Hard",
+        "link": "shortest-palindrome",
+        "code": "0214",
+        "cpp": true
+    },
+    {
+        "problem": "Contains Duplicate II",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "contains-duplicate-ii",
+        "code": "0219",
+        "cpp": true
+    },
+    {
+        "problem": "Decode String",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "decode-string",
+        "code": "0394",
+        "cpp": true
+    },
+    {
+        "problem": "Longest Repeating Character Replacement",
+        "pattern": "Hash Table",
+        "difficulty": "Medium",
+        "link": "longest-repeating-character-replacement",
+        "code": "0424",
+        "cpp": true
+    },
+    {
+        "problem": "Find Pivot Index",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "find-pivot-index",
+        "code": "0724"
+    },
+    {
+        "problem": "Largest Component Size by Common Factor",
+        "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
+        "difficulty": "Hard",
+        "link": "largest-component-size-by-common-factor",
+        "code": "0952",
+        "cpp": true
+    },
+    {
+        "problem": "Number of Substrings Containing All Three Characters",
+        "pattern": "Hash Table",
+        "difficulty": "Medium",
+        "link": "number-of-substrings-containing-all-three-characters",
+        "code": "1358",
+        "cpp": true
+    },
+    {
+        "problem": "Longest Happy Prefix",
+        "pattern": "String",
+        "difficulty": "Hard",
+        "link": "longest-happy-prefix",
+        "code": "1392",
+        "cpp": true
+    },
+    {
+        "problem": "The k-th Lexicographical String of All Happy Strings of Length n",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+        "code": "1415",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Number of Vowels in a Substring of Given Length",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
+        "code": "1456",
+        "cpp": true
+    },
+    {
+        "problem": "Longest Subarray of 1's After Deleting One Element",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "longest-subarray-of-1s-after-deleting-one-element",
+        "code": "1493",
+        "cpp": true
+    },
+    {
+        "problem": "Find Kth Bit in Nth Binary String",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "find-kth-bit-in-nth-binary-string",
+        "code": "1545",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Length of Subarray With Positive Product",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "maximum-length-of-subarray-with-positive-product",
+        "code": "1567",
+        "cpp": true
+    },
+    {
+        "problem": "Determine if Two Strings Are Close",
+        "pattern": "Hash Table",
+        "difficulty": "Medium",
+        "link": "determine-if-two-strings-are-close",
+        "code": "1657",
+        "rust": true,
+        "python": true,
+        "cpp": true
+    },
+    {
+        "problem": "Process Restricted Friend Requests",
+        "pattern": "Union-Find, Graph Theory",
+        "difficulty": "Hard",
+        "link": "process-restricted-friend-requests",
+        "code": "2076",
+        "cpp": true
+    },
+    {
+        "problem": "Delete the Middle Node of a Linked List",
+        "pattern": "Linked List, Two Pointers",
+        "difficulty": "Medium",
+        "link": "delete-the-middle-node-of-a-linked-list",
+        "code": "2095",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Twin Sum of a Linked List",
+        "pattern": "Linked List, Two Pointers, Stack",
+        "difficulty": "Medium",
+        "link": "maximum-twin-sum-of-a-linked-list",
+        "code": "2130",
+        "cpp": true
+    },
+    {
+        "problem": "Partition Array According to Given Pivot",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "partition-array-according-to-given-pivot",
+        "code": "2161",
+        "cpp": true
+    },
+    {
+        "problem": "Create Binary Tree From Descriptions",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "create-binary-tree-from-descriptions",
+        "code": "2196",
+        "cpp": true
+    },
+    {
+        "problem": "Sum of Scores of Built Strings",
+        "pattern": "String",
+        "difficulty": "Hard",
+        "link": "sum-of-scores-of-built-strings",
+        "code": "2223",
+        "cpp": true
+    },
+    {
+        "problem": "Intersection of Multiple Arrays",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "intersection-of-multiple-arrays",
+        "code": "2248"
+    },
+    {
+        "problem": "Equal Row and Column Pairs",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "equal-row-and-column-pairs",
+        "code": "2352",
+        "cpp": true
+    },
+    {
+        "problem": "Removing Stars From a String",
+        "pattern": "String",
+        "difficulty": "Medium",
+        "link": "removing-stars-from-a-string",
+        "code": "2390",
+        "cpp": true
+    },
+    {
+        "problem": "Left and Right Sum Differences",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "left-and-right-sum-differences",
+        "code": "2574",
+        "cpp": true
+    },
+    {
+        "problem": "Debounce",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "debounce",
+        "code": "2627",
+        "javascript": true,
+        "typescript": true
+    },
+    {
+        "problem": "Add Two Promises",
+        "pattern": "Contest",
+        "difficulty": "Easy",
+        "link": "add-two-promises",
+        "code": "2723",
+        "typescript": true
+    },
+    {
+        "problem": "Minimum Operations to Make Array Sum Divisible by K",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "minimum-operations-to-make-array-sum-divisible-by-k",
+        "code": "3512",
+        "cpp": true
+    },
+    {
+        "problem": "Number of Ways to Assign Edge Weights I",
+        "pattern": "Math",
+        "difficulty": "Medium",
+        "link": "number-of-ways-to-assign-edge-weights-i",
+        "code": "3558",
+        "python": true
+    },
+    {
+        "problem": "Number of Ways to Assign Edge Weights II",
+        "pattern": "Array",
+        "difficulty": "Hard",
+        "link": "number-of-ways-to-assign-edge-weights-ii",
+        "code": "3559",
+        "python": true
+    },
+    {
+        "problem": "Earliest Finish Time for Land and Water Rides I",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "earliest-finish-time-for-land-and-water-rides-i",
+        "code": "3633",
+        "cpp": true
+    },
+    {
+        "problem": "Earliest Finish Time for Land and Water Rides II",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "earliest-finish-time-for-land-and-water-rides-ii",
+        "code": "3635",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Total Subarray Value I",
+        "pattern": "Array",
+        "difficulty": "Medium",
+        "link": "maximum-total-subarray-value-i",
+        "code": "3689",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Total Subarray Value II",
+        "pattern": "Array",
+        "difficulty": "Hard",
+        "link": "maximum-total-subarray-value-ii",
+        "code": "3691",
+        "cpp": true
+    },
+    {
+        "problem": "Total Waviness of Numbers in Range I",
+        "pattern": "Math",
+        "difficulty": "Medium",
+        "link": "total-waviness-of-numbers-in-range-i",
+        "code": "3751",
+        "cpp": true
+    },
+    {
+        "problem": "Total Waviness of Numbers in Range II",
+        "pattern": "Math",
+        "difficulty": "Hard",
+        "link": "total-waviness-of-numbers-in-range-ii",
+        "code": "3753",
+        "cpp": true
+    },
+    {
+        "problem": "Weighted Word Mapping",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "weighted-word-mapping",
+        "code": "3838",
+        "cpp": true
+    },
+    {
+        "problem": "Find the Degree of Each Vertex",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "find-the-degree-of-each-vertex",
+        "code": "3898",
+        "cpp": true
+    },
+    {
+        "problem": "Concatenate Array With Reverse",
+        "pattern": "Array",
+        "difficulty": "Easy",
+        "link": "concatenate-array-with-reverse",
+        "code": "3925",
+        "cpp": true
+    },
+    {
+        "problem": "Limit Occurrences in Sorted Array",
+        "pattern": "Contest",
+        "difficulty": "Easy",
+        "link": "limit-occurrences-in-sorted-array",
+        "code": "3940"
+    },
+    {
+        "problem": "Exactly One Consecutive Set Bits Pair",
+        "pattern": "Contest",
+        "difficulty": "Easy",
+        "link": "exactly-one-consecutive-set-bits-pair",
+        "code": "3950",
+        "cpp": true
+    },
+    {
+        "problem": "Minimum Energy to Maintain Brightness",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "minimum-energy-to-maintain-brightness",
+        "code": "3951",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Total Value of Covered Indices",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "maximum-total-value-of-covered-indices",
+        "code": "3952",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Score with Co-Prime Element",
+        "pattern": "Contest",
+        "difficulty": "Hard",
+        "link": "maximum-score-with-co-prime-element",
+        "code": "3953",
+        "cpp": true
+    },
+    {
+        "problem": "Sum of Compatible Numbers in Range I",
+        "pattern": "Contest",
+        "difficulty": "Easy",
+        "link": "sum-of-compatible-numbers-in-range-i",
+        "code": "3954",
+        "cpp": true
+    },
+    {
+        "problem": "Valid Binary Strings With Cost Limit",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "valid-binary-strings-with-cost-limit",
+        "code": "3955",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Sum of M Non-Overlapping Subarrays I",
+        "pattern": "Contest",
+        "difficulty": "Hard",
+        "link": "maximum-sum-of-m-non-overlapping-subarrays-i",
+        "code": "3956",
+        "cpp": true
+    },
+    {
+        "problem": "Maximum Sum of M Non-Overlapping Subarrays II",
+        "pattern": "Contest",
+        "difficulty": "Hard",
+        "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
+        "code": "3957",
+        "cpp": true
+    },
+    {
+        "problem": "Check Good Integer",
+        "pattern": "Contest",
+        "difficulty": "Easy",
+        "link": "check-good-integer",
+        "code": "3959",
+        "cpp": true
+    },
+    {
+        "problem": "Frequency Balance Subarray",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "frequency-balance-subarray",
+        "code": "3960",
+        "cpp": true
+    },
+    {
+        "problem": "Maximize Sum of Device Ratings",
+        "pattern": "Contest",
+        "difficulty": "Medium",
+        "link": "maximize-sum-of-device-ratings",
+        "code": "3961",
+        "cpp": true
+    }
 ]
