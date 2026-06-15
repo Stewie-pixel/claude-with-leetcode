@@ -60,6 +60,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1657-determine-if-two-strings-are-close/ANALYSIS.md"
   },
   {
+    "slug": "2076-process-restricted-friend-requests",
+    "title": "Union‑Find (Disjoint Set Union)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2076-process-restricted-friend-requests/ANALYSIS.md"
+  },
+  {
+    "slug": "2095-delete-the-middle-node-of-a-linked-list",
+    "title": "Fast and Slow Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2095-delete-the-middle-node-of-a-linked-list/ANALYSIS.md"
+  },
+  {
     "slug": "21-merge-two-sorted-lists",
     "title": "Linked List",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/21-merge-two-sorted-lists/ANALYSIS.md"
@@ -213,6 +223,16 @@
     "slug": "93-restore-ip-addresses",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/93-restore-ip-addresses/ANALYSIS.md"
+  },
+  {
+    "slug": "952-largest-component-size-by-common-factor",
+    "title": "Union Find",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/952-largest-component-size-by-common-factor/ANALYSIS.md"
+  },
+  {
+    "slug": "2574-left-and-right-sum-differences copy",
+    "title": "Prefix Sum",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/dcc/cpp/2574-left-and-right-sum-differences copy/ANALYSIS.md"
   },
   {
     "slug": "138-copy-list-with-random-pointer",
