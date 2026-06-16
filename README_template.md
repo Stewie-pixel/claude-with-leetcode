@@ -13,7 +13,7 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
-> This repo hosts solutions to all problems found on [Leetcode](https://leetcode.com/problemset/) with the help of Claude. The site will be updated daily with new solutions from this repo!
+> This repo hosts solutions to all problems found on [Leetcode](https://leetcode.com/problemset/) with the help of Claude. The site will be updated daily with new solutions under [problem list](https://github.com/Stewie-pixel/claude-with-leetcode#-problem-list)!
 
 <br/>
 
