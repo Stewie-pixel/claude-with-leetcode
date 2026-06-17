@@ -28,7 +28,7 @@ char* longestPalindrome(char* s) {
     strncpy(result, s + index, maxLen);
     result[maxLen] = '\0';
     return result;
-}
+// Remove lines 31-50 (the duplicate for-loop and second return)
 // Remove lines 34-53 (the duplicated for-loop and subsequent code)
         l = r = i;
         while(r + 1 < n && s[r + 1] == s[r]){
