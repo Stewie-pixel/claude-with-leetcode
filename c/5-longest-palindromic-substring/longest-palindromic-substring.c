@@ -29,7 +29,7 @@ char* longestPalindrome(char* s) {
     result[maxLen] = '\0';
     return result;
 }
-    for(int i = 0; i < n; i++){
+// Remove lines 34-53 (the duplicated for-loop and subsequent code)
         l = r = i;
         while(r + 1 < n && s[r + 1] == s[r]){
             r++;
