@@ -56,8 +56,17 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
     }
 
     *returnSize = count;
-    *returnColumnSizes = columnSizes;
+    if (count == 0) {
+        free(result);
+        free(columnSizes);
+        *returnColumnSizes = NULL;
+        return NULL;
+    }
+
+    // Reallocate to exact size
     result = (int **)realloc(result, count * sizeof(int *));
+    columnSizes = (int *)realloc(columnSizes, count * sizeof(int));
+    *returnColumnSizes = columnSizes;
 
     return result;
 }
