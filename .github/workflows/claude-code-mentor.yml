@@ -34,9 +34,12 @@ on:
             - 'dcc/scala/**'
             - 'dcc/dart/**'
 
+permissions:
+    contents: write
+
 jobs:
     explain:
-        if: "!contains(github.event.head_commit.message, 'Daily Claude Analysis')"
+        if: "!contains(github.event.head_commit.message, 'claude mentor analysis')"
         runs-on: ubuntu-latest
 
         steps:
@@ -68,5 +71,5 @@ jobs:
                   git config --global user.email "${{ secrets.BOT_EMAIL }}"
                   git config --global user.name "${{ secrets.BOT_USERNAME }}"
                   git add .
-                  git commit -m "docs: claude mentor analysis for new solution [skip ci]"
-                  git push || git pull --rebase && git push
+                  git commit -m "docs: claude mentor analysis for new solution"
+                  git push || (git pull --rebase && git push)

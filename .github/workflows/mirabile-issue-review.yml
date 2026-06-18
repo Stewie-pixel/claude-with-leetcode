@@ -38,92 +38,73 @@ jobs:
                   app-id: ${{ secrets.APP_ID }}
                   private-key: ${{ secrets.PRIVATE_KEY }}
 
-            - name: Extract issue data
-              run: |
-                  TITLE="${{ github.event.issue.title }}"
-
-                  BODY=$(cat <<'EOF'
-                  ${{ github.event.issue.body }}
-                  EOF
-                  )
-
-                  echo "TITLE<<EOF" >> $GITHUB_ENV
-                  echo "$TITLE" >> $GITHUB_ENV
-                  echo "EOF" >> $GITHUB_ENV
-
-                  echo "BODY<<EOF" >> $GITHUB_ENV
-                  echo "$BODY" >> $GITHUB_ENV
-                  echo "EOF" >> $GITHUB_ENV
-
             - name: Run issue review
+              uses: actions/github-script@v9
               env:
                   OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
                   OPENROUTER_MODEL: 'nvidia/nemotron-3-super-120b-a12b:free'
-              run: |
-                  NUMBER="${{ github.event.issue.number }}"
-                  URL="https://github.com/${{ github.repository }}/issues/$NUMBER"
-                  LABELS="${{ join(github.event.issue.labels.*.name, ', ') }}"
-                  AUTHOR="${{ github.event.issue.user.login }}"
+              with:
+                  github-token: ${{ steps.app-token.outputs.token }}
+                  script: |
+                      const issue = context.payload.issue;
+                      const number = issue.number;
+                      const title = issue.title;
+                      const body = issue.body ?? '';
+                      const author = issue.user.login;
+                      const labels = issue.labels.map(l => l.name).join(', ');
+                      const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/issues/${number}`;
 
-                  PROMPT="You are Mirabile, an AI assistant integrated into the claude-with-leetcode GitHub repository — an open-source project that uses Claude AI to automatically generate daily DSA (Data Structures & Algorithms) lectures from LeetCode solutions committed by developers.
+                      const prompt = `You are Mirabile, an AI assistant integrated into the claude-with-leetcode GitHub repository — an open-source project that uses Claude AI to automatically generate daily DSA (Data Structures & Algorithms) lectures from LeetCode solutions committed by developers.
 
-                  Your job is to review the following GitHub issue and provide a structured, insightful analysis that helps the maintainer understand the issue quickly and act on it effectively.
+                      Your job is to review the following GitHub issue and provide a structured, insightful analysis that helps the maintainer understand the issue quickly and act on it effectively.
 
-                  ---
+                      ---
 
-                  Issue Details:
-                  Issue: #$NUMBER
-                  Link: $URL
-                  Author: @$AUTHOR
-                  Labels: $LABELS
-                  Title: $TITLE
-                  Description:
-                  $BODY
+                      Issue Details:
+                      Issue: #${number}
+                      Link: ${url}
+                      Author: @${author}
+                      Labels: ${labels}
+                      Title: ${title}
+                      Description:
+                      ${body}
 
-                  ---
+                      ---
 
-                  Analyze the issue below and respond with only this section:
+                      Analyze the issue below and respond with only this section:
 
-                  ## Effort Analysis
-                  One short and clear paragraph. Identify which parts of the codebase are affected (e.g. solution ingestion, Claude prompt templates, lecture generation pipeline, output formatting, GitHub Actions workflow).
-                  Note whether existing patterns or utilities can be reused, whether the change is additive or modifies core logic,
-                  and close with an effort label: \`effort/small\` (1 day or less), \`effort/medium\` (2–3 days), or \`effort/large\` (4+ days).
+                      ## Effort Analysis
+                      One short and clear paragraph. Identify which parts of the codebase are affected (e.g. solution ingestion, Claude prompt templates, lecture generation pipeline, output formatting, GitHub Actions workflow).
+                      Note whether existing patterns or utilities can be reused, whether the change is additive or modifies core logic,
+                      and close with an effort label: \`effort/small\` (1 day or less), \`effort/medium\` (2–3 days), or \`effort/large\` (4+ days).
 
-                  Be concise, technical, and actionable. Do not repeat the issue title verbatim."
+                      Be concise, technical, and actionable. Do not repeat the issue title verbatim.`;
 
-                  RESPONSE=$(curl -s https://openrouter.ai/api/v1/chat/completions \
-                      -H "Authorization: Bearer $OPENROUTER_API_KEY" \
-                      -H "Content-Type: application/json" \
-                      -d "$(jq -n \
-                          --arg model "$OPENROUTER_MODEL" \
-                          --arg content "$PROMPT" \
-                          '{model: $model, messages: [{role: "user", content: $content}]}'
-                      )")
+                      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+                          method: 'POST',
+                          headers: {
+                              Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                              'Content-Type': 'application/json',
+                          },
+                          body: JSON.stringify({
+                              model: process.env.OPENROUTER_MODEL,
+                              messages: [{ role: 'user', content: prompt }],
+                          }),
+                      });
 
-                  REVIEW=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
+                      const data = await response.json();
+                      const review = data.choices?.[0]?.message?.content?.trim();
 
-                  if [ -z "$REVIEW" ] || [ "$REVIEW" = "null" ]; then
-                      echo "No review generated, skipping comment."
-                      exit 0
-                  fi
+                      if (!review || review === 'null') {
+                          core.info('No review generated, skipping comment.');
+                          return;
+                      }
 
-                  echo "REVIEW<<EOF" >> $GITHUB_ENV
-                  echo "$REVIEW" >> $GITHUB_ENV
-                  echo "EOF" >> $GITHUB_ENV
+                      const fullReview = `${review}\n\n---\n*Review generated by [@mirabile](https://github.com/apps/mirabile)*`;
 
-            - name: Post review comment
-              env:
-                  GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-              run: |
-                  FOOTER="---
-                  *Review generated by [@mirabile](https://github.com/apps/mirabile)*"
-
-                  FULL_REVIEW="$REVIEW
-
-                  $FOOTER"
-
-                  curl -s -X POST \
-                      -H "Authorization: token $GITHUB_TOKEN" \
-                      -H "Content-Type: application/json" \
-                      https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
-                      -d "$(jq -n --arg body "$FULL_REVIEW" '{body: $body}')"
+                      await github.rest.issues.createComment({
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          issue_number: number,
+                          body: fullReview,
+                      });

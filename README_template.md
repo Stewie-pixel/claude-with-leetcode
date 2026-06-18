@@ -13,48 +13,102 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
-## Table of Contents
+> This repo hosts solutions to all problems found on [Leetcode](https://leetcode.com/problemset/) with the help of Claude. The site will be updated daily with new solutions under [problem list](https://github.com/Stewie-pixel/claude-with-leetcode#-problem-list)!
 
-- [Structure](#structure)
+<br/>
+
+Currently support these languages:
+
+> Python, Java, JavaScript, C++, Go, C#, TypeScript, Rust, Kotlin, Ruby, C
+
+Solutions are also welcome for any other _supported_ language on leetcode.com!
+
+## 🎬 Demo
+
+<img src="/assets/demo.png" width="100%" alt="Demo" />
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![Alt](https://repobeats.axiom.co/api/embed/b0237f2a30e8e5f97624a13890a1a1c009018489.svg 'Repobeats analytics image')
+
+</div>
+
+## 💻 Table of Contents
+
+- [Features](#-features)
+- [Roadmap](#-roadmap)
+- [Share with the Community](#-share-with-the-community)
+- [Contributing](#-contributing)
+- [Thanks to our Contributors](#-thanks-to-our-contributors)
+- [License](#-license)
 - [Problem List](#problem-list)
 
-## Structure
+## 🚀 Features
 
-```
-claude-with-leetcode/
-├── .github/
-│   └── workflows/                      ← CI/CD pipelines
-├── .vscode/                            ← editor settings
-├── contest                             ← Weekly + Biweekly programming contests
-├── cpp/                                ← C++ solutions
-├── dcc/                                ← Daily Coding Challenge
-├── java/
-│   └── 2-add-two-numbers/              ← Java solutions
-├── python/
-│   └── 1-two-sum/                      ← Python solutions
-├── rust/
-│   └── 1-two-sum/                      ← Rust solutions
-├── skills/                             ← Claude agent skill definitions
-├── study_plan/
-│   └── leetcode75/
-│       └── cpp/                        ← LeetCode 75 study plan solutions
-├── .gitattributes
-├── .gitignore
-├── .prettierrc
-├── .problemSiteData.json               ← problem metadata store
-├── CLAUDE.md                           ← Claude DSA mentor agent config
-├── README.md                           ← auto-generated, do not edit
-├── README_template.md                  ← README template
-├── addProblem.js                       ← manually add a problem entry
-├── detectNewProblems.js                ← detects newly committed files
-├── dsaMentor.js                        ← triggers Claude DSA mentor agent
-├── package.json
-├── syncLeetcode.js                     ← fetches data from LeetCode
-├── updateSiteData.js                   ← scans dirs and updates metadata
-├── updateTable.js                      ← rebuilds README from template
-└── verifySiteData.js                   ← verifies solution URLs
-```
+### 🌐 Universal LeetCode Catalog Support
 
-## Problem List
+This repository organizes and compiles daily solutions for the entire universe of LeetCode questions, spanning everything from foundational array tasks to the most advanced dynamic programming problems found in weekly contests
+
+### 🤖 Intelligent AI Mentorship
+
+Get granular, structural breakdown hints and optimal code logic recommendations from Claude without spoiling the core algorithmic logic upfront.
+
+### 🔄 Multi-Language Synchronization
+
+Automatically track and synchronize your multi-language solutions across comprehensive tech stacks including C++, Java, Python, Rust, and JavaScript.
+
+### 📂 Automated Categorization
+
+Zero manual cataloging required. The system automatically parses multi-topic tags and maps individual problems out into relevant, consolidated DSA pattern matrices.
+
+## 🗺️ Roadmap
+
+### 🔄 Continuous Solution Stream
+
+- Maintain daily LeetCode coding challenge updates across C++, Java, Python, Rust, and JavaScript
+- Comprehensive tracking and solution mapping for all Weekly and Biweekly programming contests
+- Expand alternative optimal pattern variations for advanced dynamic programming structures
+
+### 🛠️ Developer Tooling & Integration
+
+- Mirabile CLI GitHub workflow integration to seamlessly guide developers through issue creation
+- Standardized Pull Request onboarding automation to assist external contributors during code submission
+- Implement automated execution verification hooks to validate runtime complexity statistics
+
+## 📢 Share with the Community
+
+If this project is helping you crush your technical interviews, share it with your network and help others level up their algorithmic skills.
+
+<div align="center">
+
+[![Twitter/X](https://img.shields.io/badge/X_/_Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com)
+[![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=devto&logoColor=white)](https://dev.to)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com)
+
+</div>
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Please fork the repository, make your feature modifications on a standalone branch, and open a clean Pull Request against the main branch.
+
+See our [Contributing Guide](./CONTRIBUTING.md) for development setup, coding
+standards, and how to submit pull requests.
+
+## 💖 Thanks to our Contributors
+
+A massive thank you to everyone helping maintain, optimize, and expand this data structure and algorithm sandbox.
+
+[![Contributors Graph](https://contrib.rocks/image?repo=Stewie-pixel/claude-with-leetcode)](https://github.com/Stewie-pixel/claude-with-leetcode/graphs/contributors)
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## ⚡ Problem List
 
 <completion-tables />

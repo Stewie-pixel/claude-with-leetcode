@@ -26,7 +26,7 @@ jobs:
 
             - name: Check if first-time contributor
               id: contributor-check
-              uses: actions/github-script@v7
+              uses: actions/github-script@v9
               with:
                   github-token: ${{ steps.app-token.outputs.token }}
                   script: |
@@ -53,7 +53,7 @@ jobs:
                       console.log(`Contributor: @${contributor} | First time: ${previousPRs.length === 0}`);
 
             - name: Post welcome comment
-              uses: actions/github-script@v7
+              uses: actions/github-script@v9
               with:
                   github-token: ${{ steps.app-token.outputs.token }}
                   script: |

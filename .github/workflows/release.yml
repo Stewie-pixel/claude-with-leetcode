@@ -25,35 +25,43 @@ jobs:
               with:
                   fetch-depth: 0
 
-            - name: 'Generate GitHub App Token'
+            - name: Generate GitHub App Token
               id: app-token
               uses: actions/create-github-app-token@v1
               with:
                   app-id: ${{ secrets.APP_ID }}
                   private-key: ${{ secrets.PRIVATE_KEY }}
 
-            - name: Resolve tag name
+            - name: Resolve and Ensure Tag
               id: tag
               run: |
                   if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-                    echo "name=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+                    TAG_NAME="${{ github.event.inputs.tag }}"
                   else
-                    echo "name=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+                    TAG_NAME="${GITHUB_REF#refs/tags/}"
                   fi
 
-            - name: Extract changelog entry for this version
+                  echo "name=$TAG_NAME" >> $GITHUB_OUTPUT
+
+                  # Ensure the tag exists locally and on remote for manual dispatches
+                  if ! git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+                    echo "Tag $TAG_NAME not found. Creating it now..."
+                    git tag "$TAG_NAME"
+                    git push origin "$TAG_NAME"
+                  fi
+
+            - name: Extract changelog entry
               id: changelog
               run: |
                   TAG="${{ steps.tag.outputs.name }}"
                   VERSION="${TAG#v}"
 
-                  # Extract the block between this version header and the next
                   NOTES=$(awk \
                     "/^## \[${VERSION}\]/{found=1; next} found && /^## \[/{exit} found{print}" \
                     CHANGELOG.md)
 
                   if [ -z "$NOTES" ]; then
-                    echo "No changelog entry found for ${TAG} — using auto-generated notes."
+                    echo "No changelog entry found for ${TAG}."
                     echo "body=" >> $GITHUB_OUTPUT
                   else
                     echo "body<<EOF" >> $GITHUB_OUTPUT
@@ -61,8 +69,8 @@ jobs:
                     echo "EOF" >> $GITHUB_OUTPUT
                   fi
 
-            - name: Create GitHub release
-              uses: actions/github-script@v7
+            - name: Upsert GitHub Release
+              uses: actions/github-script@v9
               env:
                   RELEASE_BODY: ${{ steps.changelog.outputs.body }}
               with:
@@ -70,17 +78,33 @@ jobs:
                   script: |
                       const tag = '${{ steps.tag.outputs.name }}';
                       const body = process.env.RELEASE_BODY?.trim();
+                      const { owner, repo } = context.repo;
 
-                      const { data: release } = await github.rest.repos.createRelease({
-                          owner: context.repo.owner,
-                          repo: context.repo.repo,
-                          tag_name: tag,
-                          name: tag,
-                          body: body || undefined,
-                          generate_release_notes: true,
-                          draft: false,
-                          prerelease: tag.includes('-'),   // treat v1.0.0-rc.1 as pre-release
-                      });
+                      let existingRelease = null;
+                      try {
+                          const { data } = await github.rest.repos.getReleaseByTag({ owner, repo, tag });
+                          existingRelease = data;
+                      } catch (err) {
+                          if (err.status !== 404) throw err;
+                      }
 
-                      core.info(`Created release: ${release.html_url}`);
-                      core.setOutput('url', release.html_url);
+                      if (existingRelease) {
+                          core.info(`Updating existing release: ${tag}`);
+                          await github.rest.repos.updateRelease({
+                              owner, repo,
+                              release_id: existingRelease.id,
+                              name: tag,
+                              body: body || existingRelease.body,
+                              prerelease: tag.includes('-')
+                          });
+                      } else {
+                          core.info(`Creating new release: ${tag}`);
+                          await github.rest.repos.createRelease({
+                              owner, repo,
+                              tag_name: tag,
+                              name: tag,
+                              body: body || undefined,
+                              generate_release_notes: !body,
+                              prerelease: tag.includes('-')
+                          });
+                      }

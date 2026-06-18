@@ -2,7 +2,7 @@ name: PR Code Review
 
 on:
     pull_request_target:
-        types: [opened, synchronize]
+        types: [opened]
     issue_comment:
         types: [created]
 
@@ -38,7 +38,7 @@ jobs:
                   private-key: ${{ secrets.PRIVATE_KEY }}
 
             - name: Execute Code Review
-              uses: actions/github-script@v7
+              uses: actions/github-script@v9
               env:
                   OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
                   OPENROUTER_MODEL: 'nvidia/nemotron-3-super-120b-a12b:free'

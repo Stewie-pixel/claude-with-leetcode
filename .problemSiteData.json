@@ -1,10 +1,13 @@
 [
   {
     "problem": "Two Sum",
-    "pattern": "Arrays & Hashing",
+    "pattern": "Array, Hash Table",
     "difficulty": "Easy",
     "link": "two-sum",
-    "code": "0001"
+    "code": "0001",
+    "cpp": true,
+    "python": true,
+    "rust": true
   },
   {
     "problem": "Add Two Numbers",
@@ -12,7 +15,24 @@
     "difficulty": "Medium",
     "link": "add-two-numbers",
     "code": "0002",
+    "c": true,
     "java": true
+  },
+  {
+    "problem": "Longest Substring Without Repeating Characters",
+    "pattern": "Hash Table, String, Sliding Window",
+    "difficulty": "Medium",
+    "link": "longest-substring-without-repeating-characters",
+    "code": "0003",
+    "c": true
+  },
+  {
+    "problem": "Median of Two Sorted Arrays",
+    "pattern": "Array, Binary Search, Divide and Conquer",
+    "difficulty": "Hard",
+    "link": "median-of-two-sorted-arrays",
+    "code": "0004",
+    "c": true
   },
   {
     "problem": "Zigzag Conversion",
@@ -21,6 +41,38 @@
     "link": "zigzag-conversion",
     "code": "0006",
     "cpp": true
+  },
+  {
+    "problem": "Reverse Integer",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "reverse-integer",
+    "code": "0007",
+    "c": true
+  },
+  {
+    "problem": "Container With Most Water",
+    "pattern": "Array, Two Pointers, Greedy",
+    "difficulty": "Medium",
+    "link": "container-with-most-water",
+    "code": "0011",
+    "c": true
+  },
+  {
+    "problem": "3Sum",
+    "pattern": "Array, Two Pointers, Sorting",
+    "difficulty": "Medium",
+    "link": "3sum",
+    "code": "0015",
+    "c": true
+  },
+  {
+    "problem": "Remove Nth Node From End of List",
+    "pattern": "Linked List, Two Pointers",
+    "difficulty": "Medium",
+    "link": "remove-nth-node-from-end-of-list",
+    "code": "0019",
+    "java": true
   },
   {
     "problem": "Merge Two Sorted Lists",
@@ -55,6 +107,54 @@
     "cpp": true
   },
   {
+    "problem": "Binary Tree Inorder Traversal",
+    "pattern": "Stack, Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Easy",
+    "link": "binary-tree-inorder-traversal",
+    "code": "0094",
+    "rust": true
+  },
+  {
+    "problem": "Longest Consecutive Sequence",
+    "pattern": "Array, Hash Table, Union-Find",
+    "difficulty": "Medium",
+    "link": "longest-consecutive-sequence",
+    "code": "0128",
+    "cpp": true
+  },
+  {
+    "problem": "Copy List with Random Pointer",
+    "pattern": "Hash Table, Linked List",
+    "difficulty": "Medium",
+    "link": "copy-list-with-random-pointer",
+    "code": "0138",
+    "java": true
+  },
+  {
+    "problem": "Linked List Cycle",
+    "pattern": "Hash Table, Linked List, Two Pointers",
+    "difficulty": "Easy",
+    "link": "linked-list-cycle",
+    "code": "0141",
+    "java": true
+  },
+  {
+    "problem": "Reorder List",
+    "pattern": "Linked List, Two Pointers, Stack, Recursion",
+    "difficulty": "Medium",
+    "link": "reorder-list",
+    "code": "0143",
+    "java": true
+  },
+  {
+    "problem": "Reverse Linked List",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Easy",
+    "link": "reverse-linked-list",
+    "code": "0206",
+    "java": true
+  },
+  {
     "problem": "Shortest Palindrome",
     "pattern": "String",
     "difficulty": "Hard",
@@ -68,6 +168,22 @@
     "difficulty": "Easy",
     "link": "contains-duplicate-ii",
     "code": "0219",
+    "cpp": true
+  },
+  {
+    "problem": "Find the Duplicate Number",
+    "pattern": "Array, Two Pointers, Binary Search, Bit Manipulation",
+    "difficulty": "Medium",
+    "link": "find-the-duplicate-number",
+    "code": "0287",
+    "java": true
+  },
+  {
+    "problem": "Reconstruct Itinerary",
+    "pattern": "Array, String, Depth-First Search, Graph Theory, Sorting, Heap (Priority Queue), Eulerian Circuit",
+    "difficulty": "Hard",
+    "link": "reconstruct-itinerary",
+    "code": "0332",
     "cpp": true
   },
   {
@@ -87,11 +203,64 @@
     "cpp": true
   },
   {
+    "problem": "Island Perimeter",
+    "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
+    "difficulty": "Easy",
+    "link": "island-perimeter",
+    "code": "0463",
+    "cpp": true
+  },
+  {
+    "problem": "Find K Closest Elements",
+    "pattern": "Array, Two Pointers, Binary Search, Sliding Window, Sorting, Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "link": "find-k-closest-elements",
+    "code": "0658",
+    "java": true
+  },
+  {
     "problem": "Find Pivot Index",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "find-pivot-index",
-    "code": "0724"
+    "code": "0724",
+    "cpp": true
+  },
+  {
+    "problem": "All Paths From Source to Target",
+    "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
+    "difficulty": "Medium",
+    "link": "all-paths-from-source-to-target",
+    "code": "0797",
+    "cpp": true
+  },
+  {
+    "problem": "Guess the Word",
+    "pattern": "Array, Math, String, Interactive, Game Theory",
+    "difficulty": "Hard",
+    "link": "guess-the-word",
+    "code": "0843",
+    "cpp": true,
+    "csharp": true,
+    "go": true,
+    "ruby": true,
+    "kotlin": true
+  },
+  {
+    "problem": "Largest Component Size by Common Factor",
+    "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
+    "difficulty": "Hard",
+    "link": "largest-component-size-by-common-factor",
+    "code": "0952",
+    "cpp": true
+  },
+  {
+    "problem": "Angle Between Hands of a Clock",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "angle-between-hands-of-a-clock",
+    "code": "1344",
+    "cpp": true
   },
   {
     "problem": "Number of Substrings Containing All Three Characters",
@@ -142,6 +311,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Number of Vertices to Reach All Nodes",
+    "pattern": "Graph Theory",
+    "difficulty": "Medium",
+    "link": "minimum-number-of-vertices-to-reach-all-nodes",
+    "code": "1557",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Length of Subarray With Positive Product",
     "pattern": "Array",
     "difficulty": "Medium",
@@ -155,9 +332,58 @@
     "difficulty": "Medium",
     "link": "determine-if-two-strings-are-close",
     "code": "1657",
-    "rust": true,
+    "cpp": true,
     "python": true,
+    "rust": true
+  },
+  {
+    "problem": "Find if Path Exists in Graph",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Easy",
+    "link": "find-if-path-exists-in-graph",
+    "code": "1971",
     "cpp": true
+  },
+  {
+    "problem": "Maximum Path Quality of a Graph",
+    "pattern": "Array, Backtracking, Graph Theory",
+    "difficulty": "Hard",
+    "link": "maximum-path-quality-of-a-graph",
+    "code": "2065",
+    "cpp": true
+  },
+  {
+    "problem": "Process Restricted Friend Requests",
+    "pattern": "Union-Find, Graph Theory",
+    "difficulty": "Hard",
+    "link": "process-restricted-friend-requests",
+    "code": "2076",
+    "cpp": true
+  },
+  {
+    "problem": "Delete the Middle Node of a Linked List",
+    "pattern": "Linked List, Two Pointers",
+    "difficulty": "Medium",
+    "link": "delete-the-middle-node-of-a-linked-list",
+    "code": "2095",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Twin Sum of a Linked List",
+    "pattern": "Linked List, Two Pointers, Stack",
+    "difficulty": "Medium",
+    "link": "maximum-twin-sum-of-a-linked-list",
+    "code": "2130",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Cost of Buying Candies With Discount",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Easy",
+    "link": "minimum-cost-of-buying-candies-with-discount",
+    "code": "2144",
+    "cpp": true,
+    "python": true
   },
   {
     "problem": "Partition Array According to Given Pivot",
@@ -165,7 +391,8 @@
     "difficulty": "Medium",
     "link": "partition-array-according-to-given-pivot",
     "code": "2161",
-    "cpp": true
+    "cpp": true,
+    "java": true
   },
   {
     "problem": "Create Binary Tree From Descriptions",
@@ -207,6 +434,22 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Score of a Path Between Two Cities",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "minimum-score-of-a-path-between-two-cities",
+    "code": "2492",
+    "cpp": true
+  },
+  {
+    "problem": "Add Edges to Make Degrees of All Nodes Even",
+    "pattern": "Hash Table, Graph Theory",
+    "difficulty": "Hard",
+    "link": "add-edges-to-make-degrees-of-all-nodes-even",
+    "code": "2508",
+    "cpp": true
+  },
+  {
     "problem": "Left and Right Sum Differences",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -222,6 +465,14 @@
     "code": "2627",
     "javascript": true,
     "typescript": true
+  },
+  {
+    "problem": "Count the Number of Complete Components",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "count-the-number-of-complete-components",
+    "code": "2685",
+    "cpp": true
   },
   {
     "problem": "Add Two Promises",
@@ -254,6 +505,22 @@
     "link": "number-of-ways-to-assign-edge-weights-ii",
     "code": "3559",
     "python": true
+  },
+  {
+    "problem": "Process String with Special Operations I",
+    "pattern": "String, Simulation",
+    "difficulty": "Medium",
+    "link": "process-string-with-special-operations-i",
+    "code": "3612",
+    "cpp": true
+  },
+  {
+    "problem": "Process String with Special Operations II",
+    "pattern": "String, Simulation",
+    "difficulty": "Hard",
+    "link": "process-string-with-special-operations-ii",
+    "code": "3614",
+    "cpp": true
   },
   {
     "problem": "Earliest Finish Time for Land and Water Rides I",
@@ -304,6 +571,14 @@
     "cpp": true
   },
   {
+    "problem": "Weighted Word Mapping",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "weighted-word-mapping",
+    "code": "3838",
+    "cpp": true
+  },
+  {
     "problem": "Find the Degree of Each Vertex",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -324,7 +599,8 @@
     "pattern": "Contest",
     "difficulty": "Easy",
     "link": "limit-occurrences-in-sorted-array",
-    "code": "3940"
+    "code": "3940",
+    "cpp": true
   },
   {
     "problem": "Exactly One Consecutive Set Bits Pair",
@@ -388,6 +664,30 @@
     "difficulty": "Hard",
     "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
     "code": "3957",
+    "cpp": true
+  },
+  {
+    "problem": "Check Good Integer",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "check-good-integer",
+    "code": "3959",
+    "cpp": true
+  },
+  {
+    "problem": "Frequency Balance Subarray",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "frequency-balance-subarray",
+    "code": "3960",
+    "cpp": true
+  },
+  {
+    "problem": "Maximize Sum of Device Ratings",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "maximize-sum-of-device-ratings",
+    "code": "3961",
     "cpp": true
   }
 ]

@@ -39,14 +39,27 @@ async function verify() {
             }
 
             const folderName = `${strippedId}-${problem.link}`;
-            const localPath = path.join(
-                directory,
-                folderName,
-                `${problem.link}.${extension}`,
-            );
+            const searchPaths = [
+                path.join(directory, folderName, `${problem.link}.${extension}`),
+                path.join('dcc', directory, folderName, `${problem.link}.${extension}`),
+                path.join('study_plan', 'leetcode75', directory, folderName, `${problem.link}.${extension}`),
+                path.join('contest', 'weekly', directory, folderName, `${problem.link}.${extension}`),
+                path.join('contest', 'biweekly', directory, folderName, `${problem.link}.${extension}`),
+            ];
 
-            if (!fs.existsSync(localPath)) {
-                console.log(`Missing Local File — ${localPath}`);
+            let found = false;
+            for (const localPath of searchPaths) {
+                if (fs.existsSync(localPath)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                console.log(`Missing Local File for [${problem.code}] in ${language} — expected one of:`);
+                for (const p of searchPaths) {
+                    console.log(`  - ${p}`);
+                }
                 failed++;
             }
         }

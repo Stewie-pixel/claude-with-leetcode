@@ -10,6 +10,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/3-longest-substring-without-repeating-characters/ANALYSIS.md"
   },
   {
+    "slug": "4-median-of-two-sorted-arrays",
+    "title": "Binary Search",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/4-median-of-two-sorted-arrays/ANALYSIS.md"
+  },
+  {
+    "slug": "7-reverse-integer",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
+  },
+  {
     "slug": "3950-exactly-one-consecutive-set-bits-pair",
     "title": "Bit Manipulation – Detecting Exactly One Consecutive Set‑Bits Pair",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/biweekly/cpp/3950-exactly-one-consecutive-set-bits-pair/ANALYSIS.md"
@@ -50,6 +60,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1545-find-kth-bit-in-nth-binary-string/ANALYSIS.md"
   },
   {
+    "slug": "1557-minimum-number-of-vertices-to-reach-all-nodes",
+    "title": "Graphs - Indegree Zero Nodes",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1557-minimum-number-of-vertices-to-reach-all-nodes/ANALYSIS.md"
+  },
+  {
     "slug": "1567-maximum-length-of-subarray-with-positive-product",
     "title": "Sliding Window",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1567-maximum-length-of-subarray-with-positive-product/ANALYSIS.md"
@@ -60,9 +75,29 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1657-determine-if-two-strings-are-close/ANALYSIS.md"
   },
   {
+    "slug": "2065-maximum-path-quality-of-a-graph",
+    "title": "Backtracking",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2065-maximum-path-quality-of-a-graph/ANALYSIS.md"
+  },
+  {
+    "slug": "2076-process-restricted-friend-requests",
+    "title": "Union‑Find (Disjoint Set Union)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2076-process-restricted-friend-requests/ANALYSIS.md"
+  },
+  {
+    "slug": "2095-delete-the-middle-node-of-a-linked-list",
+    "title": "Fast and Slow Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2095-delete-the-middle-node-of-a-linked-list/ANALYSIS.md"
+  },
+  {
     "slug": "21-merge-two-sorted-lists",
     "title": "Linked List",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/21-merge-two-sorted-lists/ANALYSIS.md"
+  },
+  {
+    "slug": "2130-maximum-twin-sum-of-a-linked-list",
+    "title": "Fast & Slow Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2130-maximum-twin-sum-of-a-linked-list/ANALYSIS.md"
   },
   {
     "slug": "214-shortest-palindrome",
@@ -100,14 +135,34 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2390-removing-stars-from-a-string/ANALYSIS.md"
   },
   {
+    "slug": "2508-add-edges-to-make-degrees-of-all-nodes-even",
+    "title": "Graphs",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2508-add-edges-to-make-degrees-of-all-nodes-even/ANALYSIS.md"
+  },
+  {
     "slug": "2574-left-and-right-sum-differences",
     "title": "Prefix Sum",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2574-left-and-right-sum-differences/ANALYSIS.md"
   },
   {
+    "slug": "332-reconstruct-itinerary",
+    "title": "Graphs",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/332-reconstruct-itinerary/ANALYSIS.md"
+  },
+  {
     "slug": "3512-minimum-operations-to-make-array-sum-divisible-by-k",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3512-minimum-operations-to-make-array-sum-divisible-by-k/ANALYSIS.md"
+  },
+  {
+    "slug": "3612-process-string-with-special-operations-i",
+    "title": "Stack",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3612-process-string-with-special-operations-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3614-process-string-with-special-operations-ii",
+    "title": "Stack",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3614-process-string-with-special-operations-ii/ANALYSIS.md"
   },
   {
     "slug": "3635-earliest-finish-time-for-land-and-water-rides-ii",
@@ -133,6 +188,11 @@
     "slug": "3753-total-waviness-of-numbers-in-range-ii",
     "title": "{Topic Name}",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3753-total-waviness-of-numbers-in-range-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "3838-weighted-word-mapping",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3838-weighted-word-mapping/ANALYSIS.md"
   },
   {
     "slug": "3898-find-the-degree-of-each-vertex",
@@ -170,6 +230,21 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3957-maximum-sum-of-m-non-overlapping-subarrays-ii/ANALYSIS.md"
   },
   {
+    "slug": "3959-check-good-integer",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3959-check-good-integer/ANALYSIS.md"
+  },
+  {
+    "slug": "3960-frequency-balance-subarray",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3960-frequency-balance-subarray/ANALYSIS.md"
+  },
+  {
+    "slug": "3961-maximize-sum-of-device-ratings",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3961-maximize-sum-of-device-ratings/ANALYSIS.md"
+  },
+  {
     "slug": "47-permutations-ii",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/47-permutations-ii/ANALYSIS.md"
@@ -185,9 +260,29 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/77-combinations/ANALYSIS.md"
   },
   {
+    "slug": "843-guess-the-word",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/843-guess-the-word/ANALYSIS.md"
+  },
+  {
     "slug": "93-restore-ip-addresses",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/93-restore-ip-addresses/ANALYSIS.md"
+  },
+  {
+    "slug": "952-largest-component-size-by-common-factor",
+    "title": "Union Find",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/952-largest-component-size-by-common-factor/ANALYSIS.md"
+  },
+  {
+    "slug": "2574-left-and-right-sum-differences copy",
+    "title": "Prefix Sum",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/dcc/cpp/2574-left-and-right-sum-differences copy/ANALYSIS.md"
+  },
+  {
+    "slug": "138-copy-list-with-random-pointer",
+    "title": "Linked List",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/138-copy-list-with-random-pointer/ANALYSIS.md"
   },
   {
     "slug": "141-linked-list-cycle",
@@ -200,9 +295,19 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/143-reorder-list/ANALYSIS.md"
   },
   {
+    "slug": "19-remove-nth-node-from-end-of-list",
+    "title": "Fast & Slow Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/19-remove-nth-node-from-end-of-list/ANALYSIS.md"
+  },
+  {
     "slug": "206-reverse-linked-list",
     "title": "Reverse Linked List",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/206-reverse-linked-list/ANALYSIS.md"
+  },
+  {
+    "slug": "287-find-the-duplicate-number",
+    "title": "Fast & Slow Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/287-find-the-duplicate-number/ANALYSIS.md"
   },
   {
     "slug": "658-find-k-closest-elements",
@@ -223,6 +328,11 @@
     "slug": "3559-number-of-ways-to-assign-edge-weights-ii",
     "title": "Lowest Common Ancestor (Binary Lifting)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3559-number-of-ways-to-assign-edge-weights-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "94-binary-tree-inorder-traversal",
+    "title": "Tree DFS - Inorder Traversal",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/rust/94-binary-tree-inorder-traversal/ANALYSIS.md"
   },
   {
     "slug": "2723-add-two-promises",

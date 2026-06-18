@@ -1,0 +1,45 @@
+graph LR
+    %% Style Definitions
+    classDef api fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
+    classDef local fill:#fff3e0,stroke:#ff9800,stroke-width:2px;
+    classDef script fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px;
+    classDef storage fill:#e8f5e9,stroke:#4caf50,stroke-width:2px;
+
+    %% Data Ingestion Source Matrix
+    subgraph Catalog_Source [Global LeetCode Universe]
+        A[Entire LeetCode Catalog API]:::api
+        B[Weekly/Biweekly Live Contests]:::api
+    end
+
+    %% Workspace Processing
+    subgraph Local_Workspace [Multi-Language Workspace]
+        C[Mirabile CLI Toolkit]:::local
+        D[Language Matrix C++/Java/Py/Rust/JS]:::local
+        E[Claude DSA Skill Engine]:::local
+    end
+
+    %% Pipeline Processing
+    subgraph Automation_Engine [Ecosystem Pipelines]
+        F[syncLeetcode.js Engine]:::script
+        G[updateSiteData.js Processor]:::script
+        H[updateTable.js Renderer]:::script
+    end
+
+    %% Centralized Registry
+    subgraph System_Outputs [Distributed Outputs]
+        I[(Universal Metadata Store .problemSiteData.json)]:::storage
+        J[Pattern-Based README.md Mapping]:::storage
+    end
+
+    %% Connections
+    A --> F
+    B --> F
+    F --> I
+
+    C --> G
+    D --> G
+    E --> G
+
+    G --> I
+    I --> H
+    H --> J
