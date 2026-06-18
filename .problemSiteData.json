@@ -102,6 +102,14 @@
     "code": "0724"
   },
   {
+    "problem": "All Paths From Source to Target",
+    "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
+    "difficulty": "Medium",
+    "link": "all-paths-from-source-to-target",
+    "code": "0797",
+    "cpp": true
+  },
+  {
     "problem": "Guess the Word",
     "pattern": "Array, Math, String, Interactive, Game Theory",
     "difficulty": "Hard",
@@ -119,6 +127,14 @@
     "difficulty": "Hard",
     "link": "largest-component-size-by-common-factor",
     "code": "0952",
+    "cpp": true
+  },
+  {
+    "problem": "Angle Between Hands of a Clock",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "angle-between-hands-of-a-clock",
+    "code": "1344",
     "cpp": true
   },
   {
@@ -193,6 +209,14 @@
     "code": "1657",
     "rust": true,
     "python": true,
+    "cpp": true
+  },
+  {
+    "problem": "Find if Path Exists in Graph",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Easy",
+    "link": "find-if-path-exists-in-graph",
+    "code": "1971",
     "cpp": true
   },
   {
