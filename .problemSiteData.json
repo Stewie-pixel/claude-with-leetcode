@@ -203,6 +203,14 @@
     "cpp": true
   },
   {
+    "problem": "Island Perimeter",
+    "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
+    "difficulty": "Easy",
+    "link": "island-perimeter",
+    "code": "0463",
+    "cpp": true
+  },
+  {
     "problem": "Find K Closest Elements",
     "pattern": "Array, Two Pointers, Binary Search, Sliding Window, Sorting, Heap (Priority Queue)",
     "difficulty": "Medium",
@@ -426,6 +434,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Score of a Path Between Two Cities",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "minimum-score-of-a-path-between-two-cities",
+    "code": "2492",
+    "cpp": true
+  },
+  {
     "problem": "Add Edges to Make Degrees of All Nodes Even",
     "pattern": "Hash Table, Graph Theory",
     "difficulty": "Hard",
@@ -449,6 +465,14 @@
     "code": "2627",
     "javascript": true,
     "typescript": true
+  },
+  {
+    "problem": "Count the Number of Complete Components",
+    "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "count-the-number-of-complete-components",
+    "code": "2685",
+    "cpp": true
   },
   {
     "problem": "Add Two Promises",
