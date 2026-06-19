@@ -337,6 +337,14 @@
     "rust": true
   },
   {
+    "problem": "Find the Highest Altitude",
+    "pattern": "Array, Prefix Sum",
+    "difficulty": "Easy",
+    "link": "find-the-highest-altitude",
+    "code": "1732",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
