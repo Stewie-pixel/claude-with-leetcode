@@ -345,6 +345,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Building Height",
+    "pattern": "Array, Math, Sorting",
+    "difficulty": "Hard",
+    "link": "maximum-building-height",
+    "code": "1840",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
