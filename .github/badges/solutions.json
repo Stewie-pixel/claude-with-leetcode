@@ -90,6 +90,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1657-determine-if-two-strings-are-close/ANALYSIS.md"
   },
   {
+    "slug": "1840-maximum-building-height",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1840-maximum-building-height/ANALYSIS.md"
+  },
+  {
     "slug": "1971-find-if-path-exists-in-graph",
     "title": "Graphs (Path Existence)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1971-find-if-path-exists-in-graph/ANALYSIS.md"
