@@ -227,6 +227,14 @@
     "cpp": true
   },
   {
+    "problem": "Network Delay Time",
+    "pattern": "Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Medium",
+    "link": "network-delay-time",
+    "code": "0743",
+    "cpp": true
+  },
+  {
     "problem": "All Paths From Source to Target",
     "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
