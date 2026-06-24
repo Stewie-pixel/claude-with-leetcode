@@ -438,7 +438,8 @@
     "difficulty": "Medium",
     "link": "maximum-twin-sum-of-a-linked-list",
     "code": "2130",
-    "cpp": true
+    "cpp": true,
+    "java": true
   },
   {
     "problem": "Minimum Cost of Buying Candies With Discount",
