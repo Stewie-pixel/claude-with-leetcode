@@ -72,7 +72,16 @@
     "difficulty": "Medium",
     "link": "remove-nth-node-from-end-of-list",
     "code": "0019",
+    "c": true,
     "java": true
+  },
+  {
+    "problem": "Valid Parentheses",
+    "pattern": "String, Stack",
+    "difficulty": "Easy",
+    "link": "valid-parentheses",
+    "code": "0020",
+    "c": true
   },
   {
     "problem": "Merge Two Sorted Lists",
