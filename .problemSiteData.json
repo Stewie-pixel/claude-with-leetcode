@@ -89,6 +89,7 @@
     "difficulty": "Easy",
     "link": "merge-two-sorted-lists",
     "code": "0021",
+    "c": true,
     "cpp": true
   },
   {
