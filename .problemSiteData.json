@@ -645,6 +645,14 @@
     "cpp": true
   },
   {
+    "problem": "Count Subarrays With Majority Element I",
+    "pattern": "Array, Hash Table, Divide and Conquer, Segment Tree, Merge Sort, Counting, Prefix Sum",
+    "difficulty": "Medium",
+    "link": "count-subarrays-with-majority-element-i",
+    "code": "3737",
+    "cpp": true
+  },
+  {
     "problem": "Total Waviness of Numbers in Range I",
     "pattern": "Math",
     "difficulty": "Medium",
