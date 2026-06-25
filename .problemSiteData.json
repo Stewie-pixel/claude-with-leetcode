@@ -59,6 +59,14 @@
     "c": true
   },
   {
+    "problem": "Integer to Roman",
+    "pattern": "Hash Table, Math, String",
+    "difficulty": "Medium",
+    "link": "integer-to-roman",
+    "code": "0012",
+    "cpp": true
+  },
+  {
     "problem": "3Sum",
     "pattern": "Array, Two Pointers, Sorting",
     "difficulty": "Medium",
