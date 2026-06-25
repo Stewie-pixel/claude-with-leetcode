@@ -72,6 +72,7 @@
     "difficulty": "Medium",
     "link": "remove-nth-node-from-end-of-list",
     "code": "0019",
+    "c": true,
     "java": true
   },
   {
