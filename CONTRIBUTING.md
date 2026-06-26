@@ -17,7 +17,7 @@ Each problem must live inside the correct language folder and follow this exact 
 ```
 cpp/1-two-sum/
 ├── README.md
-└── 1-two-sum.cpp
+└── two-sum.cpp
 ```
 
 ## Step 1 — Choose Your Language Folder
@@ -26,7 +26,9 @@ Place your problem inside the correct language directory:
 
 | Language   | Folder        |
 | ---------- | ------------- |
+| C          | `c/`          |
 | C++        | `cpp/`        |
+| Csharp     | `csharp/`     |
 | Python     | `python/`     |
 | Java       | `java/`       |
 | Rust       | `rust/`       |
@@ -34,8 +36,7 @@ Place your problem inside the correct language directory:
 | TypeScript | `typescript/` |
 | Go         | `go/`         |
 | Kotlin     | `kotlin/`     |
-| Swift      | `swift/`      |
-| Dart       | `dart/`       |
+| Ruby       | `ruby/`       |
 
 ## Step 2 — Name the Folder
 
@@ -113,18 +114,21 @@ The `README.md` must contain the full LeetCode problem description in HTML forma
 Name the solution file using the same slug as the folder with the correct extension:
 
 ```
-{problem-number}-{problem-slug}.{extension}
+{problem-slug}.{extension}
 ```
 
 | Language   | Extension | Example          |
 | ---------- | --------- | ---------------- |
-| C++        | `.cpp`    | `1-two-sum.cpp`  |
-| Python     | `.py`     | `1-two-sum.py`   |
-| Java       | `.java`   | `1-two-sum.java` |
-| Rust       | `.rs`     | `1-two-sum.rs`   |
-| JavaScript | `.js`     | `1-two-sum.js`   |
-| TypeScript | `.ts`     | `1-two-sum.ts`   |
-| Go         | `.go`     | `1-two-sum.go`   |
+| C          | `.c`      | `two-sum.c`      |
+| C++        | `.cpp`    | `two-sum.cpp`    |
+| Csharp     | `.cs`     | `two-sum.cs`     |
+| Python     | `.py`     | `two-sum.py`     |
+| Java       | `.java`   | `two-sum.java`   |
+| Rust       | `.rs`     | `two-sum.rs`     |
+| JavaScript | `.js`     | `two-sum.js`     |
+| TypeScript | `.ts`     | `two-sum.ts`     |
+| Go         | `.go`     | `two-sum.go`     |
+| Ruby       | `.rb`     | `two-sum.rb`     |
 
 ## Step 5 — Submit a Pull Request
 
