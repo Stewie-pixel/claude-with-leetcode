@@ -101,6 +101,14 @@
     "cpp": true
   },
   {
+    "problem": "Search Insert Position",
+    "pattern": "Array, Binary Search",
+    "difficulty": "Easy",
+    "link": "search-insert-position",
+    "code": "0035",
+    "python": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
@@ -668,6 +676,14 @@
     "difficulty": "Medium",
     "link": "count-subarrays-with-majority-element-i",
     "code": "3737",
+    "cpp": true
+  },
+  {
+    "problem": "Count Subarrays With Majority Element II",
+    "pattern": "Array, Hash Table, Divide and Conquer, Segment Tree, Merge Sort, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "count-subarrays-with-majority-element-ii",
+    "code": "3739",
     "cpp": true
   },
   {
