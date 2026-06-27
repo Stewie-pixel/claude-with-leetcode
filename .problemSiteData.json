@@ -583,6 +583,14 @@
     "typescript": true
   },
   {
+    "problem": "Find the Maximum Number of Elements in Subset",
+    "pattern": "Array, Hash Table, Enumeration",
+    "difficulty": "Medium",
+    "link": "find-the-maximum-number-of-elements-in-subset",
+    "code": "3020",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
