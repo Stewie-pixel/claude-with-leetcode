@@ -6,28 +6,38 @@
  * };
  */
 struct ListNode* reverseKGroup(struct ListNode* head, int k) {
-    if(!head) {
-        return NULL;
+    if (head == NULL || k <= 1) {
+        return head;
     }
-    struct ListNode *checkSize = head;
-    for(int i = 0; i < k; i++) {
-        if(!checkSize) {
-            return head;
+
+    struct ListNode dummy = {0};
+    dummy.next = head;
+    struct ListNode *groupPrev = &dummy;
+
+    while (1) {
+        struct ListNode *kth = groupPrev;
+        for (int i = 0; i < k && kth != NULL; i++) {
+            kth = kth->next;
         }
-        checkSize = checkSize->next;
+        if (kth == NULL) {
+            break;
+        }
+
+        struct ListNode *groupNext = kth->next;
+
+        struct ListNode *prev = groupNext;
+        struct ListNode *curr = groupPrev->next;
+        while (curr != groupNext) {
+            struct ListNode *tmp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = tmp;
+        }
+
+        struct ListNode *newGroupTail = groupPrev->next;
+        groupPrev->next = prev;
+        groupPrev = newGroupTail;
     }
-    int count = k;
-    struct ListNode *previous = NULL;
-    struct ListNode *current, *next;
-    current = next = head;
-    while(count--) {
-        next = current->next;
-        current->next = previous;
-        previous = current;
-        current = next;
-    }
-    if(next) {
-        head->next = reverseKGroup(next, k);
-    }
-    return previous;
+
+    return dummy.next;
 }
