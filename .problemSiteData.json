@@ -435,6 +435,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
@@ -581,6 +589,14 @@
     "code": "2723",
     "javascript": true,
     "typescript": true
+  },
+  {
+    "problem": "Find the Maximum Number of Elements in Subset",
+    "pattern": "Array, Hash Table, Enumeration",
+    "difficulty": "Medium",
+    "link": "find-the-maximum-number-of-elements-in-subset",
+    "code": "3020",
+    "cpp": true
   },
   {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
