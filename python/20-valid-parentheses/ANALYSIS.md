@@ -1,4 +1,4 @@
-#Stack
+# Stack
 
 ## Video Solution
 
