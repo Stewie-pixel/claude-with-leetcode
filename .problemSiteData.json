@@ -89,7 +89,8 @@
     "difficulty": "Easy",
     "link": "valid-parentheses",
     "code": "0020",
-    "c": true
+    "c": true,
+    "python": true
   },
   {
     "problem": "Merge Two Sorted Lists",
