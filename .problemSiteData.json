@@ -102,6 +102,22 @@
     "cpp": true
   },
   {
+    "problem": "Generate Parentheses",
+    "pattern": "String, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
     "problem": "Search Insert Position",
     "pattern": "Array, Binary Search",
     "difficulty": "Easy",
