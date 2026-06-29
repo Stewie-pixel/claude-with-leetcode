@@ -435,6 +435,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
