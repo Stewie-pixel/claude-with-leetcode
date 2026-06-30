@@ -46,7 +46,6 @@ def backtrack(candidates, target):
     return res
 ```
 
----
 
 ## LeetCode Problem Walkthrough
 
@@ -89,7 +88,6 @@ def combinationSum_brute(candidates: List[int], target: int) -> List[List[int]]:
 
 *Why it’s slow*: The search space explodes exponentially; many generated tuples are useless because their sum already exceeds the target, yet we still build them completely before checking.
 
----
 
 ### Approach 2: Backtracking with Pruning
 
@@ -141,7 +139,6 @@ def combinationSum_backtrack(candidates: List[int], target: int) -> List[List[in
 
 *Why it’s better*: We stop exploring as soon as the sum is too large, avoiding the exponential blow‑up of the brute‑force method.
 
----
 
 ### Approach 3: Sorted Backtracking with Early Break
 
@@ -189,7 +186,6 @@ def combinationSum_sorted(candidates: List[int], target: int) -> List[List[int]]
 
 *Why it’s optimal*: The combination of **incremental building**, **pruning on excess sum**, and **early termination via sorting** yields the fastest practical solution for the given constraints.
 
----
 
 ### Provide a Visual Demonstration
 
@@ -197,9 +193,7 @@ def combinationSum_sorted(candidates: List[int], target: int) -> List[List[int]]
 
 We trace the sorted backtracking approach on the example `candidates = [2,3,6,7]`, `target = 7`.
 
-```
 Input: candidates = [2,3,6,7], target = 7
-```
 
 | Step | start | remaining | path            | Action                                                               |
 |------|-------|-----------|-----------------|----------------------------------------------------------------------|
@@ -215,51 +209,6 @@ Input: candidates = [2,3,6,7], target = 7
 |10    | 2     | 1         | [2]             | backtrack, pop → i=3 (7) → 7 == 7 → choose 7                     |
 |11    | 3     | 0         | [2,7]           | remaining==0 → record [2,7] (but 2+7=9 > target, actually wait)   |
 |12    | ...   | ...       |                 | Oops – we made a mistake; let's correct trace.                     |
-```
-
-Let's redo the trace correctly (the algorithm never allows going backwards in index, so after choosing 2 at start=0 we can only consider indices >=0; after choosing 2 again we stay at start=0, etc.). A cleaner trace:
-
-```
-DFS(start=0, remain=7)
-  i=0, val=2 → path=[2]
-    DFS(start=0, remain=5)
-      i=0, val=2 → path=[2,2]
-        DFS(start=0, remain=3)
-          i=0, val=2 → path=[2,2,2]
-            DFS(start=0, remain=1)
-              i=0, val=2 → 2>1 → break loop
-            backtrack → path=[2,2]
-          i=1, val=3 → 3>3? no, equal → path=[2,2,3]
-            DFS(start=1, remain=0) → record [2,2,3]
-          i=2, val=6 → 6>3 → break
-        backtrack → path=[2]
-      i=1, val=3 → path=[2,3]
-        DFS(start=1, remain=2)
-          i=1, val=3 → 3>2 → break
-        backtrack → path=[2]
-      i=2, val=6 → 6>5 → break
-      i=3, val=7 → 7>5 → break
-    backtrack → path=[]
-  i=1, val=3 → path=[3]
-    DFS(start=1, remain=4)
-      i=1, val=3 → path=[3,3]
-        DFS(start=1, remain=1)
-          i=1, val=3 → 3>1 → break
-        backtrack → path=[3]
-      i=2, val=6 → 6>4 → break
-      i=3, val=7 → 7>4 → break
-    backtrack → path=[]
-  i=2, val=6 → path=[6]
-    DFS(start=2, remain=1)
-      i=2, val=6 → 6>1 → break
-    backtrack → path=[]
-  i=3, val=7 → path=[7]
-    DFS(start=3, remain=0) → record [7]
-```
-
-**Result:** `[[2,2,3],[7]]` – matches expected output.
-
----
 
 ### Summary
 
