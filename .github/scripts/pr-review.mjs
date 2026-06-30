@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs';
+import { parse } from 'node-html-parser';
 import { callOpenRouter, extractJSON } from './openrouter-utils.mjs';
 
 /**
@@ -71,16 +72,19 @@ function extractConstraints(readmeContent) {
     );
     if (!match) return '';
 
-    return match[1]
-        .replace(/<li>/gi, '- ')
-        .replace(/<\/li>/gi, '')
-        .replace(/<[^>]+>/g, '')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&')
-        .replace(/&le;/g, '≤')
-        .replace(/&ge;/g, '≥')
-        .trim();
+    try {
+        const root = parse(`<ul>${match[1]}</ul>`);
+        const items = root
+            .querySelectorAll('li')
+            .map((li) => li.text.trim())
+            .filter(Boolean);
+        return items
+            .map((item) => `- ${item}`)
+            .join('\n')
+            .trim();
+    } catch {
+        return '';
+    }
 }
 
 /**
