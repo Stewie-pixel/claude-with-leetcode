@@ -59,6 +59,14 @@
     "c": true
   },
   {
+    "problem": "Integer to Roman",
+    "pattern": "Hash Table, Math, String",
+    "difficulty": "Medium",
+    "link": "integer-to-roman",
+    "code": "0012",
+    "cpp": true
+  },
+  {
     "problem": "3Sum",
     "pattern": "Array, Two Pointers, Sorting",
     "difficulty": "Medium",
@@ -72,7 +80,17 @@
     "difficulty": "Medium",
     "link": "remove-nth-node-from-end-of-list",
     "code": "0019",
+    "c": true,
     "java": true
+  },
+  {
+    "problem": "Valid Parentheses",
+    "pattern": "String, Stack",
+    "difficulty": "Easy",
+    "link": "valid-parentheses",
+    "code": "0020",
+    "c": true,
+    "python": true
   },
   {
     "problem": "Merge Two Sorted Lists",
@@ -80,7 +98,56 @@
     "difficulty": "Easy",
     "link": "merge-two-sorted-lists",
     "code": "0021",
+    "c": true,
     "cpp": true
+  },
+  {
+    "problem": "Generate Parentheses",
+    "pattern": "String, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
+    "problem": "Search Insert Position",
+    "pattern": "Array, Binary Search",
+    "difficulty": "Easy",
+    "link": "search-insert-position",
+    "code": "0035",
+    "python": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum II",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum-ii",
+    "code": "0040",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -227,11 +294,27 @@
     "cpp": true
   },
   {
+    "problem": "Network Delay Time",
+    "pattern": "Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Medium",
+    "link": "network-delay-time",
+    "code": "0743",
+    "cpp": true
+  },
+  {
     "problem": "All Paths From Source to Target",
     "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
     "link": "all-paths-from-source-to-target",
     "code": "0797",
+    "cpp": true
+  },
+  {
+    "problem": "Bus Routes",
+    "pattern": "Array, Hash Table, Breadth-First Search",
+    "difficulty": "Hard",
+    "link": "bus-routes",
+    "code": "0815",
     "cpp": true
   },
   {
@@ -252,6 +335,30 @@
     "difficulty": "Hard",
     "link": "largest-component-size-by-common-factor",
     "code": "0952",
+    "cpp": true
+  },
+  {
+    "problem": "Shortest Path with Alternating Colors",
+    "pattern": "Breadth-First Search, Graph Theory",
+    "difficulty": "Medium",
+    "link": "shortest-path-with-alternating-colors",
+    "code": "1129",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Number of Balloons",
+    "pattern": "Hash Table, String, Counting",
+    "difficulty": "Easy",
+    "link": "maximum-number-of-balloons",
+    "code": "1189",
+    "cpp": true
+  },
+  {
+    "problem": "Get Watched Videos by Your Friends",
+    "pattern": "Array, Hash Table, Breadth-First Search, Graph Theory, Sorting",
+    "difficulty": "Medium",
+    "link": "get-watched-videos-by-your-friends",
+    "code": "1311",
     "cpp": true
   },
   {
@@ -337,6 +444,54 @@
     "rust": true
   },
   {
+    "problem": "Find the Highest Altitude",
+    "pattern": "Array, Prefix Sum",
+    "difficulty": "Easy",
+    "link": "find-the-highest-altitude",
+    "code": "1732",
+    "cpp": true
+  },
+  {
+    "problem": "Map of Highest Peak",
+    "pattern": "Array, Breadth-First Search, Matrix",
+    "difficulty": "Medium",
+    "link": "map-of-highest-peak",
+    "code": "1765",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Ice Cream Bars",
+    "pattern": "Array, Greedy, Sorting, Counting Sort",
+    "difficulty": "Medium",
+    "link": "maximum-ice-cream-bars",
+    "code": "1833",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Building Height",
+    "pattern": "Array, Math, Sorting",
+    "difficulty": "Hard",
+    "link": "maximum-building-height",
+    "code": "1840",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Strings That Appear as Substrings in Word",
+    "pattern": "Array, String",
+    "difficulty": "Easy",
+    "link": "number-of-strings-that-appear-as-substrings-in-word",
+    "code": "1967",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
@@ -374,7 +529,8 @@
     "difficulty": "Medium",
     "link": "maximum-twin-sum-of-a-linked-list",
     "code": "2130",
-    "cpp": true
+    "cpp": true,
+    "java": true
   },
   {
     "problem": "Minimum Cost of Buying Candies With Discount",
@@ -480,7 +636,16 @@
     "difficulty": "Easy",
     "link": "add-two-promises",
     "code": "2723",
+    "javascript": true,
     "typescript": true
+  },
+  {
+    "problem": "Find the Maximum Number of Elements in Subset",
+    "pattern": "Array, Hash Table, Enumeration",
+    "difficulty": "Medium",
+    "link": "find-the-maximum-number-of-elements-in-subset",
+    "code": "3020",
+    "cpp": true
   },
   {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
@@ -552,6 +717,38 @@
     "difficulty": "Hard",
     "link": "maximum-total-subarray-value-ii",
     "code": "3691",
+    "cpp": true
+  },
+  {
+    "problem": "Number of ZigZag Arrays I",
+    "pattern": "Dynamic Programming, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "number-of-zigzag-arrays-i",
+    "code": "3699",
+    "cpp": true
+  },
+  {
+    "problem": "Number of ZigZag Arrays II",
+    "pattern": "Math, Dynamic Programming",
+    "difficulty": "Hard",
+    "link": "number-of-zigzag-arrays-ii",
+    "code": "3700",
+    "cpp": true
+  },
+  {
+    "problem": "Count Subarrays With Majority Element I",
+    "pattern": "Array, Hash Table, Divide and Conquer, Segment Tree, Merge Sort, Counting, Prefix Sum",
+    "difficulty": "Medium",
+    "link": "count-subarrays-with-majority-element-i",
+    "code": "3737",
+    "cpp": true
+  },
+  {
+    "problem": "Count Subarrays With Majority Element II",
+    "pattern": "Array, Hash Table, Divide and Conquer, Segment Tree, Merge Sort, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "count-subarrays-with-majority-element-ii",
+    "code": "3739",
     "cpp": true
   },
   {
