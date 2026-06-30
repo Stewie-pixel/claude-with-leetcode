@@ -40,7 +40,8 @@
     "difficulty": "Medium",
     "link": "zigzag-conversion",
     "code": "0006",
-    "cpp": true
+    "cpp": true,
+    "rust": true
   },
   {
     "problem": "Reverse Integer",
