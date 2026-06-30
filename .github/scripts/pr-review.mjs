@@ -635,15 +635,25 @@ IMPORTANT:
                     }
 
                     let bodyStr = (c.body ?? '').trim();
-                    const hasTag = /^\[(CRITICAL|HIGH|MEDIUM|LOW)\]/i.test(
+                    let sev = c.severity ? c.severity.toUpperCase() : 'HIGH';
+
+                    const tagMatch = /^\[(CRITICAL|HIGH|MEDIUM|LOW)\]/i.test(
                         bodyStr,
                     );
-                    if (!hasTag) {
-                        const sev = c.severity
-                            ? c.severity.toUpperCase()
-                            : 'HIGH';
-                        bodyStr = `[${sev}] ${bodyStr}`;
+                    if (tagMatch) {
+                        const match = bodyStr.match(
+                            /^\[(CRITICAL|HIGH|MEDIUM|LOW)\]/i,
+                        );
+                        sev = match[1].toUpperCase();
+                        bodyStr = bodyStr.replace(/^\[.*?\]\s*/, '');
                     }
+
+                    let color = 'yellow';
+                    if (sev === 'CRITICAL') color = 'red';
+                    else if (sev === 'HIGH') color = 'orange';
+
+                    const badge = `<div align="right"><img src="https://img.shields.io/badge/Severity-${sev}-${color}" alt="${sev}" /></div>\n\n`;
+                    bodyStr = badge + bodyStr;
 
                     filtered.push({
                         path: c.path,
@@ -655,7 +665,7 @@ IMPORTANT:
                 inlineComments = filtered.slice(0, 5);
 
                 const hasCritical = inlineComments.some((c) =>
-                    c.body.startsWith('[CRITICAL]'),
+                    c.body.includes('Severity-CRITICAL'),
                 );
                 if (hasCritical && finalVerdict === 'APPROVE') {
                     core.info(
