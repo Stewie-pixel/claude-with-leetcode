@@ -77,9 +77,9 @@ function extractConstraints(readmeContent) {
         .replace(/<[^>]+>/g, '')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&')
         .replace(/&le;/g, '≤')
         .replace(/&ge;/g, '≥')
+        .replace(/&amp;/g, '&')
         .trim();
 }
 
