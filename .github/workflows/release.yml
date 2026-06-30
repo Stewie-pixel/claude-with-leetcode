@@ -1,4 +1,4 @@
-name: Release
+name: Push New Release Version
 
 on:
     push:
@@ -10,6 +10,8 @@ on:
                 description: 'Version tag to release'
                 required: true
                 type: string
+    schedule:
+        - cron: '0 0 * * *' # nightly at 00:00 UTC — adjust to taste
 
 jobs:
     release:
@@ -32,23 +34,150 @@ jobs:
                   app-id: ${{ secrets.APP_ID }}
                   private-key: ${{ secrets.PRIVATE_KEY }}
 
+            - name: Determine release type
+              id: release-type
+              run: |
+                  case "${{ github.event_name }}" in
+                    schedule)
+                      echo "type=nightly" >> $GITHUB_OUTPUT
+                      ;;
+                    workflow_dispatch)
+                      echo "type=preview" >> $GITHUB_OUTPUT
+                      ;;
+                    push)
+                      echo "type=pr" >> $GITHUB_OUTPUT
+                      ;;
+                    *)
+                      echo "Unsupported event: ${{ github.event_name }}"
+                      exit 1
+                      ;;
+                  esac
+
             - name: Resolve and Ensure Tag
               id: tag
               run: |
                   if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
                     TAG_NAME="${{ github.event.inputs.tag }}"
+                  elif [ "${{ github.event_name }}" = "schedule" ]; then
+                    LATEST_TAG=$(git tag --sort=-creatordate | head -n1)
+                    if [ -z "$LATEST_TAG" ]; then
+                      LATEST_TAG="v0.0.0"
+                    fi
+                    TAG_NAME="${LATEST_TAG}-nightly.$(date +%Y%m%d)"
                   else
                     TAG_NAME="${GITHUB_REF#refs/tags/}"
                   fi
 
                   echo "name=$TAG_NAME" >> $GITHUB_OUTPUT
 
-                  # Ensure the tag exists locally and on remote for manual dispatches
                   if ! git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
                     echo "Tag $TAG_NAME not found. Creating it now..."
                     git tag "$TAG_NAME"
                     git push origin "$TAG_NAME"
                   fi
+
+            - name: Generate changelog entry
+              id: gen-changelog
+              run: |
+                  TAG="${{ steps.tag.outputs.name }}"
+                  VERSION="${TAG#v}"
+                  DATE=$(date +%Y-%m-%d)
+
+                  PREV_TAG=$(git tag --sort=-creatordate | grep -A1 "^${TAG}$" | tail -n1)
+                  if [ "$PREV_TAG" = "$TAG" ] || [ -z "$PREV_TAG" ]; then
+                    PREV_TAG=""
+                  fi
+
+                  if [ -n "$PREV_TAG" ]; then
+                    RANGE="${PREV_TAG}..${TAG}"
+                  else
+                    RANGE="${TAG}"
+                  fi
+
+                  FEATS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^feat" -i || true)
+                  FIXES=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^fix" -i || true)
+                  OTHERS=$(git log $RANGE --pretty=format:"- %s (%h)" --invert-grep --grep="^feat" --grep="^fix" -i || true)
+
+                  {
+                    echo "## [${VERSION}] - ${DATE}"
+                    echo ""
+                    if [ -n "$FEATS" ]; then
+                      echo "### Added"
+                      echo "$FEATS"
+                      echo ""
+                    fi
+                    if [ -n "$FIXES" ]; then
+                      echo "### Fixed"
+                      echo "$FIXES"
+                      echo ""
+                    fi
+                    if [ -n "$OTHERS" ]; then
+                      echo "### Other"
+                      echo "$OTHERS"
+                      echo ""
+                    fi
+                  } > /tmp/new_entry.md
+
+                  echo "Generated changelog entry for ${VERSION}:"
+                  cat /tmp/new_entry.md
+
+            - name: Commit changelog
+              id: commit-changelog
+              env:
+                  GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+              run: |
+                  TYPE="${{ steps.release-type.outputs.type }}"
+                  TAG="${{ steps.tag.outputs.name }}"
+                  VERSION="${TAG#v}"
+                  TARGET_BRANCH="mirabile/release/${TAG}-${TYPE}-${{ github.run_id }}"
+
+                  echo "branch=$TARGET_BRANCH" >> $GITHUB_OUTPUT
+
+                  git config user.name "mirabile-cli[bot]"
+                  git config user.email "mirabile-cli[bot]@users.noreply.github.com"
+
+                  git checkout -b $TARGET_BRANCH
+
+                  if grep -q "^## \[${VERSION}\]" CHANGELOG.md 2>/dev/null; then
+                    echo "Changelog entry for ${VERSION} already exists on ${TARGET_BRANCH}, skipping insert."
+                  else
+                    touch CHANGELOG.md
+                    cat /tmp/new_entry.md CHANGELOG.md > /tmp/CHANGELOG.tmp.md
+                    mv /tmp/CHANGELOG.tmp.md CHANGELOG.md
+                  fi
+
+                  if git diff --quiet -- CHANGELOG.md; then
+                    echo "No changelog changes to commit."
+                  else
+                    git add CHANGELOG.md
+                    git commit -m "chore: update changelog for ${TAG} [skip ci]"
+                    git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" "HEAD:${TARGET_BRANCH}"
+                  fi
+
+            - name: Create release PR
+              id: create-pr
+              env:
+                  GH_TOKEN: ${{ steps.app-token.outputs.token }}
+              run: |
+                  TYPE="${{ steps.release-type.outputs.type }}"
+                  TAG="${{ steps.tag.outputs.name }}"
+                  TARGET_BRANCH="${{ steps.commit-changelog.outputs.branch }}"
+                  TEMPLATE_PATH=".github/PULL_REQUEST_TEMPLATE.md"
+                  PR_BODY_FILE="/tmp/pr_body.md"
+
+                  if [ -f "$TEMPLATE_PATH" ]; then
+                    cat "$TEMPLATE_PATH" > "$PR_BODY_FILE"
+                    printf "\n---\n\n" >> "$PR_BODY_FILE"
+                  fi
+                  cat /tmp/new_entry.md >> "$PR_BODY_FILE"
+
+                  gh pr create \
+                    --repo "${{ github.repository }}" \
+                    --base main \
+                    --head "$TARGET_BRANCH" \
+                    --title "chore: release ${TYPE} ${TAG}" \
+                    --label "release,${TYPE}" \
+                    --body-file "$PR_BODY_FILE"
 
             - name: Extract changelog entry
               id: changelog
