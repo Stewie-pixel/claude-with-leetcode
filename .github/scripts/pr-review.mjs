@@ -1,4 +1,101 @@
-import { execSync } from 'child_process';
+import { readFileSync } from 'fs';
+import { callOpenRouter, extractJSON } from './openrouter-utils.mjs';
+
+/**
+ * Parse a unified-diff patch string and return the Set of right-side
+ * (new-file) line numbers that appear in the diff hunks.
+ * These are the only line numbers GitHub's createReview API accepts.
+ *
+ * @param {string} patch - The raw patch string from GitHub's listFiles API
+ * @returns {Set<number>}
+ */
+function buildValidDiffLines(patch) {
+    const valid = new Set();
+    if (!patch) return valid;
+
+    let currentLine = 0;
+    for (const line of patch.split('\n')) {
+        const hunkHeader = line.match(
+            /^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/,
+        );
+        if (hunkHeader) {
+            currentLine = Number(hunkHeader[1]) - 1;
+            continue;
+        }
+        if (line.startsWith('-')) continue;
+        currentLine++;
+        if (!line.startsWith('\\')) {
+            valid.add(currentLine);
+        }
+    }
+    return valid;
+}
+
+/**
+ * Fetch a file's contents at a specific commit SHA via the GitHub REST API
+ * and return it as a UTF-8 string.
+ *
+ * @param {object} github
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} path
+ * @param {string} ref   - commit SHA or branch name
+ * @returns {string|null}
+ */
+async function fetchFileAtRef(github, owner, repo, path, ref) {
+    try {
+        const { data } = await github.rest.repos.getContent({
+            owner,
+            repo,
+            path,
+            ref,
+        });
+        return Buffer.from(data.content, 'base64').toString('utf8');
+    } catch {
+        return null;
+    }
+}
+
+/**
+ * Extract the Constraints block from a LeetCode README.md.
+ * Looks for a <strong>Constraints:</strong> HTML block followed by <ul> items.
+ *
+ * @param {string} readmeContent
+ * @returns {string} Extracted constraints text, or empty string
+ */
+function extractConstraints(readmeContent) {
+    if (!readmeContent) return '';
+
+    const match = readmeContent.match(
+        /<strong>Constraints:<\/strong>[\s\S]*?<ul>([\s\S]*?)<\/ul>/i,
+    );
+    if (!match) return '';
+
+    return match[1]
+        .replace(/<li>/gi, '- ')
+        .replace(/<\/li>/gi, '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&amp;/g, '&')
+        .replace(/&le;/g, '≤')
+        .replace(/&ge;/g, '≥')
+        .trim();
+}
+
+/**
+ * Prefix each line of source code with its 1-indexed line number.
+ * e.g.  "  1 | int main() {"
+ *
+ * @param {string} source
+ * @returns {string}
+ */
+function numberLines(source) {
+    return source
+        .split('\n')
+        .map((l, i) => `${String(i + 1).padStart(4)} | ${l}`)
+        .join('\n');
+}
 
 export async function review({ github, context, core }) {
     const isComment = context.eventName === 'issue_comment';
@@ -36,25 +133,17 @@ Question: "${userQuestion}"
 
 Reply ONLY with one word: problem, system, docs, or repo`;
 
-        const classifyResponse = await fetch(
-            'https://openrouter.ai/api/v1/chat/completions',
-            {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    model: process.env.OPENROUTER_MODEL,
-                    messages: [{ role: 'user', content: classifyPrompt }],
-                }),
-            },
-        );
-
-        const classifyData = await classifyResponse.json();
-        const category =
-            classifyData.choices?.[0]?.message?.content?.trim().toLowerCase() ??
-            'repo';
+        let category = 'repo';
+        try {
+            const classifyRaw = await callOpenRouter({
+                messages: [{ role: 'user', content: classifyPrompt }],
+                retries: 3,
+                core,
+            });
+            category = classifyRaw.trim().toLowerCase();
+        } catch (err) {
+            core.warning(`Question classification failed: ${err.message}`);
+        }
 
         core.info(`Question classified as: ${category}`);
 
@@ -95,7 +184,6 @@ Reply ONLY with one word: problem, system, docs, or repo`;
                     !f.filename.includes('README.md')
                 );
             });
-
             relevantContext =
                 solutionFiles.length > 0
                     ? solutionFiles
@@ -107,7 +195,6 @@ Reply ONLY with one word: problem, system, docs, or repo`;
             const systemFiles = prFiles.filter((f) =>
                 systemPaths.some((p) => f.filename.includes(p)),
             );
-
             relevantContext =
                 systemFiles.length > 0
                     ? systemFiles
@@ -121,7 +208,6 @@ Reply ONLY with one word: problem, system, docs, or repo`;
                     (p) => f.filename.endsWith(p) || f.filename.includes(p),
                 ),
             );
-
             relevantContext =
                 docsFiles.length > 0
                     ? docsFiles
@@ -132,7 +218,6 @@ Reply ONLY with one word: problem, system, docs, or repo`;
         } else {
             const repoFiles = ['README.md', 'CONTRIBUTING.md', 'CLAUDE.md'];
             const fetchedDocs = [];
-
             for (const path of repoFiles) {
                 try {
                     const { data } = await github.rest.repos.getContent({
@@ -149,7 +234,6 @@ Reply ONLY with one word: problem, system, docs, or repo`;
                     );
                 } catch {}
             }
-
             relevantContext =
                 fetchedDocs.length > 0
                     ? fetchedDocs.join('\n\n')
@@ -187,23 +271,16 @@ Developer's question: "${userQuestion}"
 
 Answer directly and concisely in 3-5 sentences. Be technical and helpful.${category === 'repo' ? ' If you cannot answer from the provided docs, say: "I don\'t have enough context on this — this will be transfered for a maintainer response."' : ''}`;
 
-        const answerResponse = await fetch(
-            'https://openrouter.ai/api/v1/chat/completions',
-            {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    model: process.env.OPENROUTER_MODEL,
-                    messages: [{ role: 'user', content: answerPrompt }],
-                }),
-            },
-        );
-
-        const answerData = await answerResponse.json();
-        const answer = answerData.choices?.[0]?.message?.content?.trim();
+        let answer = null;
+        try {
+            answer = await callOpenRouter({
+                messages: [{ role: 'user', content: answerPrompt }],
+                retries: 3,
+                core,
+            });
+        } catch (err) {
+            core.warning(`Answer generation failed: ${err.message}`);
+        }
 
         if (!answer || answer === 'null') {
             core.info('No answer generated, skipping.');
@@ -214,7 +291,7 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
             owner,
             repo,
             issue_number: prNumber,
-            body: `{answer}`,
+            body: answer,
         });
 
         return;
@@ -227,6 +304,7 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
     const prBody =
         context.payload.pull_request.body ?? 'No description provided.';
     const prAuthor = context.payload.pull_request.user.login;
+    const headSha = context.payload.pull_request.head.sha;
 
     const files = await github.paginate(github.rest.pulls.listFiles, {
         owner,
@@ -261,7 +339,27 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
         missingReadme: [],
     };
 
+    /** @type {Map<string, Set<number>>} path → Set of valid right-side line numbers */
+    const validDiffLinesMap = new Map();
     let diff = '';
+
+    const solutionExtSet = new Set([
+        'cpp',
+        'py',
+        'java',
+        'js',
+        'ts',
+        'rs',
+        'go',
+        'c',
+        'cs',
+        'kt',
+        'swift',
+        'dart',
+        'scala',
+        'rb',
+        'php',
+    ]);
 
     for (const file of files) {
         const parts = file.filename.split('/');
@@ -274,12 +372,18 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
         }
 
         const filename = parts[parts.length - 1];
+        const ext = filename.split('.').pop();
+
         if (filename !== 'README.md' && filename !== 'ANALYSIS.md') {
             if (!SLUG_PATTERN.test(filename)) {
                 violations.badNaming.push(file.filename);
             }
-            if (file.patch) {
+            if (file.patch && solutionExtSet.has(ext)) {
                 diff += `diff --git a/${file.filename} b/${file.filename}\n${file.patch}\n`;
+                validDiffLinesMap.set(
+                    file.filename,
+                    buildValidDiffLines(file.patch),
+                );
             }
         }
     }
@@ -301,17 +405,96 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
     }
 
     const hasViolations = Object.values(violations).some((v) => v.length > 0);
-
     diff = diff.substring(0, 15000);
+
+    /** @type {Map<string, string>} folder → constraint text */
+    const constraintsMap = new Map();
+    /** @type {Map<string, string>} path → numbered source */
+    const numberedSourceMap = new Map();
+
+    if (diff.trim()) {
+        for (const folder of problemFolders) {
+            const readmePath = `${folder}/README.md`;
+            const content = await fetchFileAtRef(
+                github,
+                owner,
+                repo,
+                readmePath,
+                headSha,
+            );
+            if (content) {
+                const constraints = extractConstraints(content);
+                if (constraints) constraintsMap.set(folder, constraints);
+            }
+        }
+
+        for (const file of files) {
+            const parts = file.filename.split('/');
+            if (!supportedLangs.includes(parts[0]) || parts.length < 3)
+                continue;
+            const filename = parts[parts.length - 1];
+            const ext = filename.split('.').pop();
+            if (filename === 'README.md' || filename === 'ANALYSIS.md')
+                continue;
+            if (!solutionExtSet.has(ext)) continue;
+
+            const source = await fetchFileAtRef(
+                github,
+                owner,
+                repo,
+                file.filename,
+                headSha,
+            );
+            if (source) {
+                numberedSourceMap.set(file.filename, numberLines(source));
+            }
+        }
+    }
+
+    const constraintsSection =
+        constraintsMap.size > 0
+            ? [...constraintsMap.entries()]
+                  .map(([folder, c]) => `### ${folder}\n${c}`)
+                  .join('\n\n')
+            : 'No constraints found in README files.';
+
+    const validLinesSection =
+        validDiffLinesMap.size > 0
+            ? [...validDiffLinesMap.entries()]
+                  .map(([path, lineSet]) => {
+                      const lines = [...lineSet].sort((a, b) => a - b);
+                      return `${path}: [${lines.join(', ')}]`;
+                  })
+                  .join('\n')
+            : 'No diff line data available.';
+
+    const numberedSourceSection =
+        numberedSourceMap.size > 0
+            ? [...numberedSourceMap.entries()]
+                  .map(([path, src]) => `### ${path}\n\`\`\`\n${src}\n\`\`\``)
+                  .join('\n\n')
+                  .substring(0, 10000)
+            : 'No full source available.';
+
+    let rubric = '';
+    try {
+        rubric = readFileSync(
+            `${process.env.GITHUB_WORKSPACE}/skills/dsa-code-review.md`,
+            'utf8',
+        );
+    } catch (err) {
+        core.warning(`Could not load DSA skill rubric: ${err.message}`);
+    }
 
     let summaryParagraph = 'No summary could be generated at this time.';
     let highlights = [];
     let reviewFeedback = 'No AI feedback could be generated at this time.';
     let inlineComments = [];
     let finalVerdict = 'COMMENT';
+    let aiReviewSucceeded = false;
 
     if (diff.trim()) {
-        const prompt = `You are Mirabile, an AI code reviewer checking LeetCode solutions in the claude-with-leetcode repository.
+        const call1Prompt = `You are Mirabile, an AI code reviewer for the claude-with-leetcode repository.
 
 PR Details:
 - PR #${prNumber}: ${prTitle}
@@ -321,71 +504,152 @@ PR Details:
 Git Diff:
 ${diff}
 
-You must return ONLY a raw JSON object in this exact structure with no markdown wrapping:
+Return ONLY a raw JSON object with no markdown fences:
 {
   "summary": "2-3 sentence summary of what this PR does and its overall quality.",
-  "highlights": ["most important thing 1", "most important thing 2", "most important thing 3"],
-  "feedback": "1-2 paragraph review feedback covering code quality, approach correctness, and specific observations about the solution.",
-  "verdict": "APPROVE" or "COMMENT" or "REQUEST_CHANGES",
+  "highlights": ["most important point 1", "most important point 2", "most important point 3"]
+}
+
+Rules:
+- highlights: maximum 3 items, each a short specific observation
+- No markdown wrapping around the JSON`;
+
+        try {
+            const raw1 = await callOpenRouter({
+                messages: [{ role: 'user', content: call1Prompt }],
+                jsonMode: true,
+                retries: 3,
+                core,
+            });
+            const parsed1 = extractJSON(raw1);
+            summaryParagraph = parsed1.summary ?? summaryParagraph;
+            highlights = Array.isArray(parsed1.highlights)
+                ? parsed1.highlights.slice(0, 3)
+                : [];
+            core.info('Call 1 (summary) succeeded.');
+        } catch (err) {
+            core.error(`Call 1 (summary) failed: ${err.message}`);
+        }
+
+        const call2Prompt = `You are Mirabile, an expert DSA code reviewer. Apply the rubric below to produce a structured JSON review.
+
+## DSA Review Rubric
+${rubric}
+
+---
+
+## PR Details
+- PR #${prNumber}: ${prTitle}
+- Author: @${prAuthor}
+
+## Problem Constraints (from README files)
+${constraintsSection}
+
+## Full Numbered Source (at PR head commit)
+${numberedSourceSection}
+
+## Git Diff
+${diff}
+
+## Valid Diff Lines (ONLY use these line numbers for inline comments)
+${validLinesSection}
+
+---
+
+Return ONLY a raw JSON object with no markdown fences, matching this exact schema:
+{
+  "checks": {
+    "correctness":           "pass|fail|unknown — one sentence",
+    "overflow":              "pass|fail|unknown — one sentence",
+    "time_complexity":       "O(...) — pass|fail vs constraints",
+    "space_memory":          "pass|fail — one sentence",
+    "algorithmic_soundness": "pass|fail — pattern named"
+  },
+  "feedback": "1-2 paragraphs with specific line references",
+  "verdict": "APPROVE|COMMENT|REQUEST_CHANGES",
   "comments": [
     {
       "path": "exact/file/path.ext",
-      "line": 42,
-      "body": "Technical critique.\\n\\n\`\`\`suggestion\\n// replacement code here\\n\`\`\`"
+      "line": <number from Valid Diff Lines>,
+      "severity": "CRITICAL|HIGH|MEDIUM",
+      "body": "[CRITICAL|HIGH|MEDIUM] explanation\\n\\n\`\`\`suggestion\\n// code\\n\`\`\`"
     }
   ]
 }
 
-Rules:
-- highlights must have maximum 3 items
-- For inline comments, the line number must be the absolute line number in the NEW file version
-- Use \`\`\`suggestion blocks for suggested code changes
-- Only include inline comments for critical or high severity issues
-- If no inline comments needed, return empty array []`;
+IMPORTANT:
+- line values MUST be from the Valid Diff Lines list — no other lines will be accepted
+- body MUST start with [CRITICAL], [HIGH], or [MEDIUM]
+- Include at least 1 comment when any check is "fail"
+- Maximum 5 comments, CRITICAL/HIGH only unless budget allows MEDIUM
+- No markdown fences around the JSON`;
 
         try {
-            const response = await fetch(
-                'https://openrouter.ai/api/v1/chat/completions',
-                {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        model: process.env.OPENROUTER_MODEL,
-                        messages: [{ role: 'user', content: prompt }],
-                    }),
-                },
-            );
+            const raw2 = await callOpenRouter({
+                messages: [{ role: 'user', content: call2Prompt }],
+                jsonMode: true,
+                retries: 3,
+                core,
+            });
+            const parsed2 = extractJSON(raw2);
 
-            const data = await response.json();
-            const rawContent = data.choices[0].message.content.trim();
-            const jsonString = rawContent.startsWith('```json')
-                ? rawContent.slice(7, -3).trim()
-                : rawContent.startsWith('```')
-                  ? rawContent.slice(3, -3).trim()
-                  : rawContent;
+            reviewFeedback = parsed2.feedback ?? reviewFeedback;
+            finalVerdict = parsed2.verdict ?? 'COMMENT';
 
-            const parsed = JSON.parse(jsonString);
-            summaryParagraph = parsed.summary ?? summaryParagraph;
-            highlights = Array.isArray(parsed.highlights)
-                ? parsed.highlights.slice(0, 3)
-                : [];
-            reviewFeedback = parsed.feedback ?? reviewFeedback;
-            finalVerdict = parsed.verdict ?? 'COMMENT';
+            if (Array.isArray(parsed2.comments)) {
+                const rawComments = parsed2.comments;
+                const filtered = [];
+                for (const c of rawComments) {
+                    const validLines = validDiffLinesMap.get(c.path);
+                    if (!validLines) {
+                        core.warning(
+                            `Dropping inline comment on unknown path "${c.path}" (not in diff)`,
+                        );
+                        continue;
+                    }
+                    if (!validLines.has(Number(c.line))) {
+                        core.warning(
+                            `Dropping inline comment on ${c.path}:${c.line} — line not in diff`,
+                        );
+                        continue;
+                    }
+                    const bodyOk = /^\[(CRITICAL|HIGH|MEDIUM)\]/.test(
+                        (c.body ?? '').trim(),
+                    );
+                    if (!bodyOk) {
+                        core.warning(
+                            `Dropping inline comment on ${c.path}:${c.line} — body missing severity tag`,
+                        );
+                        continue;
+                    }
+                    filtered.push({
+                        path: c.path,
+                        line: Number(c.line),
+                        side: 'RIGHT',
+                        body: c.body,
+                    });
+                }
+                inlineComments = filtered.slice(0, 5);
 
-            if (Array.isArray(parsed.comments)) {
-                inlineComments = parsed.comments.map((c) => ({
-                    path: c.path,
-                    line: Number(c.line),
-                    side: 'RIGHT',
-                    body: c.body,
-                }));
+                const hasCritical = inlineComments.some((c) =>
+                    c.body.startsWith('[CRITICAL]'),
+                );
+                if (hasCritical && finalVerdict === 'APPROVE') {
+                    core.info(
+                        'Overriding APPROVE → REQUEST_CHANGES due to CRITICAL inline comment.',
+                    );
+                    finalVerdict = 'REQUEST_CHANGES';
+                }
             }
+
+            aiReviewSucceeded = true;
+            core.info('Call 2 (DSA review) succeeded.');
         } catch (err) {
-            core.error(`Failed parsing AI review: ${err.message}`);
+            core.error(`Call 2 (DSA review) failed: ${err.message}`);
         }
+    } else {
+        aiReviewSucceeded = true;
+        core.info('No solution diff found — skipping AI review.');
     }
 
     const highlightsList =
@@ -403,7 +667,7 @@ ${summaryParagraph}
 
 ${highlightsList}
 
-*For more details, reference at our [CONTRIBUTING.md](https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/CONTRIBUTING.md)*`;
+*For more details, reference our [CONTRIBUTING.md](https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/CONTRIBUTING.md)*`;
 
     await github.rest.issues.createComment({
         owner,
@@ -455,14 +719,21 @@ ${violations.missingReadme.length > 0 ? `Missing \`README.md\`:\n${violations.mi
             labels: ['needs-changes'],
         });
         core.setFailed('Structural assertions unmet.');
-    } else {
-        try {
-            await github.rest.issues.removeLabel({
-                owner,
-                repo,
-                issue_number: prNumber,
-                name: 'needs-changes',
-            });
-        } catch {}
+        return;
+    }
+
+    try {
+        await github.rest.issues.removeLabel({
+            owner,
+            repo,
+            issue_number: prNumber,
+            name: 'needs-changes',
+        });
+    } catch {}
+
+    if (!aiReviewSucceeded) {
+        core.setFailed(
+            'AI review generation failed after retries. Re-run the workflow to retry.',
+        );
     }
 }
