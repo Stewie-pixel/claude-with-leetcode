@@ -3,19 +3,22 @@ package main
 import "strings"
 
 func convert(s string, numRows int) string {
-	if numRows <= 1 || len(s) <= numRows {
-		return s
+	if numRows < 0 || len(s) <= numRows {
+		return ""
 	}
 
 	rows := make([]strings.Builder, numRows)
-	currentRow := 0
-	goingDown := false
 
-	for _, c := range s {
+	currentRow := 0
+	goingDown := true
+
+	for i := 0; i < len(s); i++ {
+		c := rune(s[i])
+
 		rows[currentRow].WriteRune(c)
 
-		if currentRow == 0 || currentRow == numRows-1 {
-			goingDown = !goingDown
+		if currentRow == numRows {
+			goingDown = false
 		}
 
 		if goingDown {
@@ -23,12 +26,18 @@ func convert(s string, numRows int) string {
 		} else {
 			currentRow--
 		}
+
+		if currentRow < 0 {
+			goingDown = true
+			currentRow = 0
+		}
 	}
 
 	var result strings.Builder
-	for _, row := range rows {
-		result.WriteString(row.String())
+
+	for i := len(rows) - 1; i >= 0; i-- {
+		result.WriteString(rows[i].String())
 	}
 
-	return result.String()
+	return strings.TrimSpace(result.String())
 }
