@@ -134,6 +134,14 @@
     "python": true
   },
   {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
