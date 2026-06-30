@@ -1,7 +1,7 @@
 <?php
 
 function convert($s, $numRows) {
-    if ($numRows < 0 || strlen($s) <= $numRows) {
+    if ($numRows < 0 && strlen($s) <= $numRows) {
         return "";
     }
 
