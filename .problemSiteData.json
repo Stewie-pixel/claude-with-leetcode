@@ -89,7 +89,8 @@
     "difficulty": "Easy",
     "link": "valid-parentheses",
     "code": "0020",
-    "c": true
+    "c": true,
+    "python": true
   },
   {
     "problem": "Merge Two Sorted Lists",
@@ -101,12 +102,44 @@
     "cpp": true
   },
   {
+    "problem": "Generate Parentheses",
+    "pattern": "String, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
     "problem": "Search Insert Position",
     "pattern": "Array, Binary Search",
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
     "python": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -432,6 +465,22 @@
     "difficulty": "Hard",
     "link": "maximum-building-height",
     "code": "1840",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Strings That Appear as Substrings in Word",
+    "pattern": "Array, String",
+    "difficulty": "Easy",
+    "link": "number-of-strings-that-appear-as-substrings-in-word",
+    "code": "1967",
     "cpp": true
   },
   {
