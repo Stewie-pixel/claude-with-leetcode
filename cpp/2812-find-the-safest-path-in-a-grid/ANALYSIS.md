@@ -1,4 +1,4 @@
-# Binary Search (on Answer)
+# Binary Search
 
 ## Video Solution
 
