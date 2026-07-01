@@ -617,7 +617,7 @@ Return ONLY a raw JSON object with no markdown fences, matching this schema:
   "comments": [
     {
       "path": "path/to/file.ext",
-      "start_line": 8
+      "start_line": 8,
       "line": 15,
       "severity": "CRITICAL|HIGH|MEDIUM",
       "body": "[CRITICAL|HIGH|MEDIUM] explanation\n\n\`\`\`suggestion\n// code\n\`\`\`"
@@ -741,7 +741,7 @@ IMPORTANT:
                 inlineComments = filtered.slice(0, 5);
 
                 const hasCritical = inlineComments.some((c) =>
-                    c.body.includes('Severity-CRITICAL'),
+                    c.body.includes('alt="CRITICAL"'),
                 );
                 if (hasCritical && finalVerdict === 'APPROVE') {
                     core.info(
