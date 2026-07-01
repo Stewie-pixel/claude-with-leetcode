@@ -627,8 +627,8 @@ Return ONLY a raw JSON object with no markdown fences, matching this schema:
 
 IMPORTANT:
 - If you detect a logical error, you MUST provide at least one inline comment with a \`\`\`suggestion block fixing it.
-- suggestion blocks MUST cover the entire replaced code block — if the fix spans multiple lines, anchor the comment to the FIRST line of the block and include ALL original lines in the suggestion (both the removed and replacement lines), so GitHub replaces the full range cleanly without overlap.
-- line values MUST be from the Valid Diff Lines list — no other lines will be accepted
+- For multi-line fixes, set start_line to the FIRST line of the block to replace and line to the LAST line. GitHub will replace every line from start_line to line (inclusive) with the suggestion content. Do NOT repeat the anchor lines inside the suggestion — only write the replacement code.
+- For single-line fixes, omit start_line entirely and set line to the target line only.
 - Prefer lines from the added (prefer these) list; only use context (allowed) if no added line is appropriate
 - suggestion blocks MUST match the exact indentation of the surrounding code at the target line — use the numbered source to determine the correct whitespace prefix
 - body MUST start with [CRITICAL], [HIGH], or [MEDIUM]
@@ -720,10 +720,11 @@ IMPORTANT:
                     const badge = `<div align="left"><img src="https://img.shields.io/badge/${sev}-${color}" alt="${sev}" /></div>\n\n`;
                     bodyStr = badge + bodyStr;
 
+                    const indentAnchor = c.start_line ? Number(c.start_line) : lineNum;
                     bodyStr = fixSuggestionIndent(
                         bodyStr,
                         c.path,
-                        lineNum,
+                        indentAnchor,
                         numberedSourceMap,
                     );
 
