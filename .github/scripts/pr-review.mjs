@@ -560,7 +560,7 @@ ${validLinesSection}
 
 ---
 
-Return ONLY a raw JSON object with no markdown fences, matching this exact schema:
+Return ONLY a raw JSON object with no markdown fences, matching this schema:
 {
   "checks": {
     "correctness":           "pass|fail|unknown — one sentence",
@@ -573,15 +573,16 @@ Return ONLY a raw JSON object with no markdown fences, matching this exact schem
   "verdict": "APPROVE|COMMENT|REQUEST_CHANGES",
   "comments": [
     {
-      "path": "exact/file/path.ext",
-      "line": <number from Valid Diff Lines>,
+      "path": "path/to/file.ext",
+      "line": 123,
       "severity": "CRITICAL|HIGH|MEDIUM",
-      "body": "[CRITICAL|HIGH|MEDIUM] explanation\\n\\n\`\`\`suggestion\\n// code\\n\`\`\`"
+      "body": "[CRITICAL|HIGH|MEDIUM] explanation\n\n\`\`\`suggestion\n// code\n\`\`\`"
     }
   ]
 }
 
 IMPORTANT:
+- If you detect a logical error, you MUST provide at least one inline comment with a \`\`\`suggestion block fixing it.
 - line values MUST be from the Valid Diff Lines list — no other lines will be accepted
 - body MUST start with [CRITICAL], [HIGH], or [MEDIUM]
 - Include at least 1 comment when any check is "fail"
@@ -604,7 +605,22 @@ IMPORTANT:
                 const rawComments = parsed2.comments;
                 const filtered = [];
                 for (const c of rawComments) {
-                    const validLines = validDiffLinesMap.get(c.path);
+                    const rawPath = (c.path || '').trim().replace(/:$/, '');
+                    let validLines = validDiffLinesMap.get(rawPath);
+
+                    if (!validLines) {
+                        for (const [key, val] of validDiffLinesMap.entries()) {
+                            if (
+                                key.endsWith(rawPath) ||
+                                rawPath.endsWith(key)
+                            ) {
+                                validLines = val;
+                                c.path = key;
+                                break;
+                            }
+                        }
+                    }
+
                     if (!validLines) {
                         core.warning(
                             `Dropping inline comment on unknown path "${c.path}" (not in diff)`,
@@ -617,26 +633,39 @@ IMPORTANT:
                         );
                         continue;
                     }
-                    const bodyOk = /^\[(CRITICAL|HIGH|MEDIUM)\]/.test(
-                        (c.body ?? '').trim(),
+
+                    let bodyStr = (c.body ?? '').trim();
+                    let sev = c.severity ? c.severity.toUpperCase() : 'HIGH';
+
+                    const tagMatch = /^\[(CRITICAL|HIGH|MEDIUM|LOW)\]/i.test(
+                        bodyStr,
                     );
-                    if (!bodyOk) {
-                        core.warning(
-                            `Dropping inline comment on ${c.path}:${c.line} — body missing severity tag`,
+                    if (tagMatch) {
+                        const match = bodyStr.match(
+                            /^\[(CRITICAL|HIGH|MEDIUM|LOW)\]/i,
                         );
-                        continue;
+                        sev = match[1].toUpperCase();
+                        bodyStr = bodyStr.replace(/^\[.*?\]\s*/, '');
                     }
+
+                    let color = 'yellow';
+                    if (sev === 'CRITICAL') color = 'red';
+                    else if (sev === 'HIGH') color = 'orange';
+
+                    const badge = `<div align="right"><img src="https://img.shields.io/badge/Severity-${sev}-${color}" alt="${sev}" /></div>\n\n`;
+                    bodyStr = badge + bodyStr;
+
                     filtered.push({
                         path: c.path,
                         line: Number(c.line),
                         side: 'RIGHT',
-                        body: c.body,
+                        body: bodyStr,
                     });
                 }
                 inlineComments = filtered.slice(0, 5);
 
                 const hasCritical = inlineComments.some((c) =>
-                    c.body.startsWith('[CRITICAL]'),
+                    c.body.includes('Severity-CRITICAL'),
                 );
                 if (hasCritical && finalVerdict === 'APPROVE') {
                     core.info(
