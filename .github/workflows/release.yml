@@ -63,7 +63,7 @@ jobs:
                     if [ -z "$LATEST_TAG" ]; then
                       LATEST_TAG="v0.0.0"
                     fi
-                    TAG_NAME="${LATEST_TAG}-nightly.$(date +%Y%m%d)"
+                    TAG_NAME="${LATEST_TAG}.$(date +%Y%m%d)"
                   else
                     TAG_NAME="${GITHUB_REF#refs/tags/}"
                   fi
@@ -96,6 +96,10 @@ jobs:
 
                   FEATS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^feat" -i || true)
                   FIXES=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^fix" -i || true)
+                  DOCS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^docs" -i || true)
+                  CHORE=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^chore" -i || true)
+                  REFACTOR=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^refactor" -i || true)
+                  TEST=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^test" -i || true)
                   OTHERS=$(git log $RANGE --pretty=format:"- %s (%h)" --invert-grep --grep="^feat" --grep="^fix" -i || true)
 
                   {
@@ -109,6 +113,26 @@ jobs:
                     if [ -n "$FIXES" ]; then
                       echo "### Fixed"
                       echo "$FIXES"
+                      echo ""
+                    fi
+                    if [ -n "$DOCS" ]; then
+                      echo "### Documentation"
+                      echo "$DOCS"
+                      echo ""
+                    fi
+                    if [ -n "$CHORE" ]; then
+                      echo "### Updated"
+                      echo "$CHORE"
+                      echo ""
+                    fi
+                    if [ -n "$REFACTOR" ]; then
+                      echo "### Refactored"
+                      echo "$REFACTOR"
+                      echo ""
+                    fi
+                    if [ -n "$TEST" ]; then
+                      echo "### Tests"
+                      echo "$TEST"
                       echo ""
                     fi
                     if [ -n "$OTHERS" ]; then
