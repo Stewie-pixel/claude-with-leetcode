@@ -155,6 +155,11 @@ object. The calling script will reject non-JSON output and retry.
   allows after CRITICAL/HIGH).
 - Attach a ` ```suggestion ` block only when you can provide a valid, complete
   replacement for the flagged lines.
+- When the fix replaces **more than one source line**, set both `start_line`
+  (first line replaced) and `line` (last line replaced).
+- The suggestion body must be the **final replacement text only** — not a diff,
+  and not a mix of old and new lines. Malformed suggestions are stripped
+  server-side (comment text kept, Apply button removed).
 
 ---
 
@@ -183,6 +188,21 @@ int used[N];
       "body": "[CRITICAL] `#define N 200` is a magic constant. The README states `candidates.length <= 100`, so N=200 gives false safety. If constraints ever relax, this silently overflows the stack.\n\n```suggestion\n// Derive size from actual input\nint *used = calloc(candidatesSize, sizeof(int));\n// remember: free(used) before returning\n```"
     }
   ]
+}
+```
+
+**Multi-line fix example (Kotlin, Integer to Roman):**
+
+When replacing two array declarations (lines 3–8), set `start_line` and `line`
+to span the full block:
+
+```json
+{
+  "path": "kotlin/12-integer-to-roman/integer-to-roman.kt",
+  "start_line": 3,
+  "line": 8,
+  "severity": "HIGH",
+  "body": "[HIGH] Values and symbols must be in descending order for the greedy scan.\n\n```suggestion\n        val values = intArrayOf(\n            1, 5, 10, 50, 100, 500, 1000\n        )\n        val symbols = arrayOf(\n            \"I\", \"V\", \"X\", \"L\", \"C\", \"D\", \"M\"\n        )\n```"
 }
 ```
 

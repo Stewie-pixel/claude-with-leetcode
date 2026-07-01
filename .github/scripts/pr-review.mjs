@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { parse } from 'node-html-parser';
 import { callOpenRouter, extractJSON } from './openrouter-utils.mjs';
+import { repairSuggestionComment } from './suggestion-utils.mjs';
 
 /**
  * Parse a unified-diff patch string and return the Set of right-side
@@ -627,8 +628,11 @@ Return ONLY a raw JSON object with no markdown fences, matching this schema:
 
 IMPORTANT:
 - If you detect a logical error, you MUST provide at least one inline comment with a \`\`\`suggestion block fixing it.
-- For multi-line fixes, set start_line to the FIRST line of the block to replace and line to the LAST line. GitHub will replace every line from start_line to line (inclusive) with the suggestion content. Do NOT repeat the anchor lines inside the suggestion — only write the replacement code.
-- For single-line fixes, omit start_line entirely and set line to the target line only.
+- When the fix replaces more than one source line, you MUST set both \`start_line\` (first line replaced) and \`line\` (last line replaced).
+- The suggestion block must contain the final replacement text only — not a diff, and not a mix of old and new lines.
+- suggestion blocks MUST cover the entire replaced code block — include ALL lines being replaced so GitHub replaces the full range cleanly without overlap.
+- Malformed or partial suggestions are stripped server-side; the comment text is kept but the Apply button is removed.
+- line values MUST be from the Valid Diff Lines list — no other lines will be accepted
 - Prefer lines from the added (prefer these) list; only use context (allowed) if no added line is appropriate
 - suggestion blocks MUST match the exact indentation of the surrounding code at the target line — use the numbered source to determine the correct whitespace prefix
 - body MUST start with [CRITICAL], [HIGH], or [MEDIUM]
@@ -688,9 +692,8 @@ IMPORTANT:
                         !diffEntry.valid.has(Number(c.start_line))
                     ) {
                         core.warning(
-                            `start_line ${c.start_line} not in diff for ${c.path}, dropping to single-line`,
+                            `start_line ${c.start_line} not in diff for ${c.path}, will attempt range repair`,
                         );
-                        c.start_line = undefined;
                     }
 
                     if (!diffEntry.added.has(lineNum)) {
@@ -720,11 +723,31 @@ IMPORTANT:
                     const badge = `<div align="left"><img src="https://img.shields.io/badge/${sev}-${color}" alt="${sev}" /></div>\n\n`;
                     bodyStr = badge + bodyStr;
 
-                    const indentAnchor = c.start_line ? Number(c.start_line) : lineNum;
+                    const repaired = repairSuggestionComment({
+                        body: bodyStr,
+                        path: c.path,
+                        line: lineNum,
+                        startLine: c.start_line
+                            ? Number(c.start_line)
+                            : undefined,
+                        numberedSourceMap,
+                        validLines: diffEntry.valid,
+                    });
+
+                    if (repaired.stripped) {
+                        core.warning(
+                            `Stripped suggestion on ${c.path}:${lineNum} — ${repaired.reason ?? 'repair failed'}`,
+                        );
+                    }
+
+                    bodyStr = repaired.body;
+                    c.line = repaired.line;
+                    c.start_line = repaired.start_line;
+
                     bodyStr = fixSuggestionIndent(
                         bodyStr,
                         c.path,
-                        indentAnchor,
+                        repaired.start_line ?? repaired.line,
                         numberedSourceMap,
                     );
 

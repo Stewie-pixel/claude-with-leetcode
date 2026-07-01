@@ -1,24 +1,25 @@
 {
-  "name": "claude-with-leetcode",
-  "version": "1.0.0",
-  "description": "<h1 align=\"center\">Hi 👋, I'm Edwardz</h1>\r <h3 align=\"center\">A passionate ML/DSA developer from Australia</h3>",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Stewie-pixel/claude-with-leetcode.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/issues"
-  },
-  "homepage": "https://github.com/Stewie-pixel/claude-with-leetcode#readme",
-  "dependencies": {
-    "node-html-parser": "^8.0.4"
-  }
+    "name": "claude-with-leetcode",
+    "version": "1.0.0",
+    "description": "<h1 align=\"center\">Hi 👋, I'm Stewie</h1>\r <h3 align=\"center\">A passionate ML/DSA developer from Australia</h3>",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "test:review": "node --test .github/scripts/suggestion-utils.test.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Stewie-pixel/claude-with-leetcode.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Stewie-pixel/claude-with-leetcode/issues"
+    },
+    "homepage": "https://github.com/Stewie-pixel/claude-with-leetcode#readme",
+    "dependencies": {
+        "node-html-parser": "^8.0.4"
+    }
 }
