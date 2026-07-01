@@ -12,7 +12,8 @@ import { callOpenRouter, extractJSON } from './openrouter-utils.mjs';
  */
 function buildValidDiffLines(patch) {
     const valid = new Set();
-    if (!patch) return valid;
+    const added = new Set();
+    if (!patch) return { valid, added };
 
     let currentLine = 0;
     for (const line of patch.split('\n')) {
@@ -27,9 +28,10 @@ function buildValidDiffLines(patch) {
         currentLine++;
         if (!line.startsWith('\\')) {
             valid.add(currentLine);
+            if (line.startsWith('+')) added.add(currentLine);
         }
     }
-    return valid;
+    return { valid, added };
 }
 
 /**
@@ -99,6 +101,38 @@ function numberLines(source) {
         .split('\n')
         .map((l, i) => `${String(i + 1).padStart(4)} | ${l}`)
         .join('\n');
+}
+
+function fixSuggestionIndent(body, path, line, numberedSourceMap) {
+    const source = numberedSourceMap.get(path);
+    if (!source) return body;
+
+    const sourceLine = source
+        .split('\n')
+        .find((l) => l.startsWith(`${String(line).padStart(4)} | `));
+    if (!sourceLine) return body;
+
+    const codeAtLine = sourceLine.replace(/^\s*\d+\s*\| ?/, '');
+    const baseIndent = codeAtLine.match(/^(\s*)/)[1];
+
+    return body.replace(/```suggestion\n([\s\S]*?)```/g, (_, block) => {
+        const lines = block.split('\n');
+
+        const minIndent = lines
+            .filter((l) => l.trim().length > 0)
+            .reduce((min, l) => {
+                const indent = l.match(/^(\s*)/)[1].length;
+                return Math.min(min, indent);
+            }, Infinity);
+
+        const normalized = lines.map((l) => {
+            if (l.trim().length === 0) return '';
+            const stripped = l.slice(minIndent === Infinity ? 0 : minIndent);
+            return baseIndent + stripped;
+        });
+
+        return '```suggestion\n' + normalized.join('\n') + '```';
+    });
 }
 
 export async function review({ github, context, core }) {
@@ -343,7 +377,7 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
         missingReadme: [],
     };
 
-    /** @type {Map<string, Set<number>>} path → Set of valid right-side line numbers */
+    /** @type {Map<string, { valid: Set<number>, added: Set<number> }>} path → diff line sets */
     const validDiffLinesMap = new Map();
     let diff = '';
 
@@ -465,9 +499,16 @@ Answer directly and concisely in 3-5 sentences. Be technical and helpful.${categ
     const validLinesSection =
         validDiffLinesMap.size > 0
             ? [...validDiffLinesMap.entries()]
-                  .map(([path, lineSet]) => {
-                      const lines = [...lineSet].sort((a, b) => a - b);
-                      return `${path}: [${lines.join(', ')}]`;
+                  .map(([path, { valid, added }]) => {
+                      const addedSorted = [...added].sort((a, b) => a - b);
+                      const contextOnly = [...valid]
+                          .filter((n) => !added.has(n))
+                          .sort((a, b) => a - b);
+                      return (
+                          `${path}:\n` +
+                          `  added (prefer these): [${addedSorted.join(', ')}]\n` +
+                          `  context (allowed):    [${contextOnly.join(', ')}]`
+                      );
                   })
                   .join('\n')
             : 'No diff line data available.';
@@ -584,6 +625,8 @@ Return ONLY a raw JSON object with no markdown fences, matching this schema:
 IMPORTANT:
 - If you detect a logical error, you MUST provide at least one inline comment with a \`\`\`suggestion block fixing it.
 - line values MUST be from the Valid Diff Lines list — no other lines will be accepted
+- Prefer lines from the added (prefer these) list; only use context (allowed) if no added line is appropriate
+- suggestion blocks MUST match the exact indentation of the surrounding code at the target line — use the numbered source to determine the correct whitespace prefix
 - body MUST start with [CRITICAL], [HIGH], or [MEDIUM]
 - Include at least 1 comment when any check is "fail"
 - Maximum 5 comments, CRITICAL/HIGH only unless budget allows MEDIUM
@@ -606,32 +649,38 @@ IMPORTANT:
                 const filtered = [];
                 for (const c of rawComments) {
                     const rawPath = (c.path || '').trim().replace(/:$/, '');
-                    let validLines = validDiffLinesMap.get(rawPath);
+                    let diffEntry = validDiffLinesMap.get(rawPath);
 
-                    if (!validLines) {
+                    if (!diffEntry) {
                         for (const [key, val] of validDiffLinesMap.entries()) {
                             if (
                                 key.endsWith(rawPath) ||
                                 rawPath.endsWith(key)
                             ) {
-                                validLines = val;
+                                diffEntry = val;
                                 c.path = key;
                                 break;
                             }
                         }
                     }
 
-                    if (!validLines) {
+                    if (!diffEntry) {
                         core.warning(
                             `Dropping inline comment on unknown path "${c.path}" (not in diff)`,
                         );
                         continue;
                     }
-                    if (!validLines.has(Number(c.line))) {
+                    const lineNum = Number(c.line);
+                    if (!diffEntry.valid.has(lineNum)) {
                         core.warning(
                             `Dropping inline comment on ${c.path}:${c.line} — line not in diff`,
                         );
                         continue;
+                    }
+                    if (!diffEntry.added.has(lineNum)) {
+                        core.info(
+                            `Inline comment on ${c.path}:${c.line} anchored to context line (not a pure addition).`,
+                        );
                     }
 
                     let bodyStr = (c.body ?? '').trim();
@@ -648,12 +697,20 @@ IMPORTANT:
                         bodyStr = bodyStr.replace(/^\[.*?\]\s*/, '');
                     }
 
-                    let color = 'yellow';
+                    let color = 'green';
                     if (sev === 'CRITICAL') color = 'red';
                     else if (sev === 'HIGH') color = 'orange';
+                    else if (sev === 'MEDIUM') color = 'yellow';
 
-                    const badge = `<div align="right"><img src="https://img.shields.io/badge/Severity-${sev}-${color}" alt="${sev}" /></div>\n\n`;
+                    const badge = `<div align="left"><img src="https://img.shields.io/badge/${sev}-${color}" alt="${sev}" /></div>\n\n`;
+
                     bodyStr = badge + bodyStr;
+                    bodyStr = fixSuggestionIndent(
+                        bodyStr,
+                        c.path,
+                        lineNum,
+                        numberedSourceMap,
+                    );
 
                     filtered.push({
                         path: c.path,
@@ -743,6 +800,45 @@ ${violations.missingReadme.length > 0 ? `Missing \`README.md\`:\n${violations.mi
         event: resolvedEvent,
         comments: inlineComments,
     });
+
+    const severityRank = { CRITICAL: 4, HIGH: 3, MEDIUM: 2, LOW: 1 };
+    const severityLabels = {
+        CRITICAL: 'review/critical',
+        HIGH: 'review/high',
+        MEDIUM: 'review/medium',
+        LOW: 'review/low',
+    };
+    const allSeverityLabels = Object.values(severityLabels);
+
+    let topSeverity = null;
+    for (const c of inlineComments) {
+        const match = c.body.match(/alt="(CRITICAL|HIGH|MEDIUM|LOW)"/);
+        if (match) {
+            const sev = match[1];
+            if (!topSeverity || severityRank[sev] > severityRank[topSeverity]) {
+                topSeverity = sev;
+            }
+        }
+    }
+
+    for (const label of allSeverityLabels) {
+        try {
+            await github.rest.issues.removeLabel({
+                owner,
+                repo,
+                issue_number: prNumber,
+                name: label,
+            });
+        } catch {}
+    }
+    if (topSeverity) {
+        await github.rest.issues.addLabels({
+            owner,
+            repo,
+            issue_number: prNumber,
+            labels: [severityLabels[topSeverity]],
+        });
+    }
 
     if (hasViolations) {
         await github.rest.issues.addLabels({
