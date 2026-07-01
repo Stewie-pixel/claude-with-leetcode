@@ -23,39 +23,4 @@ class Solution {
         result: MutableList<String>
     ) {
 
-        if (index == s.length) {
-
-            result.add(parts.joinToString("."))
-
-            return
-        }
-
-
-        for (end in index + 1..s.length) {
-
-            val segment = s.substring(index, end)
-
-            if (segment.length > 3) {
-                continue
-            }
-
-            if (segment.toInt() > 255) {
-                continue
-            }
-
-
-            parts.add(segment)
-
-            backtrack(
-                s,
-                end,
-                parts,
-                result
-            )
-
-            if (parts.isNotEmpty()) {
-                parts.removeAt(0)
-            }
-        }
-    }
-}
+        // (Handled by parts.size==4 check above)
