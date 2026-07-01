@@ -1,7 +1,9 @@
 class Solution {
     fun convert(s: String, numRows: Int): String {
 
-        if (numRows < 0 || s.length <= numRows) {
+if (numRows == 1 || s.length <= numRows) {
+    return s
+}
             return ""
         }
 
@@ -16,7 +18,12 @@ class Solution {
 
             rows[currentRow].append(char)
 
-            if (currentRow == numRows) {
+// Change direction at the top or bottom row
+if (currentRow == 0) {
+    goingDown = true
+} else if (currentRow == numRows - 1) {
+    goingDown = false
+}
                 goingDown = false
             }
 
