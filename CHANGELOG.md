@@ -1,4 +1,10 @@
-## [0.2.3-nightly.20260701.20260702] - 2026-07-02
+# Changelog
+
+All notable changes to this repository will be documented in this file.
+
+The format follows
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+and versions follow Semantic Versioning.
 
 ### Added
 - feat: add code suggestion rule (b10d178)
@@ -30,13 +36,3 @@
 - Merge pull request #262 from Stewie-pixel/refactor/github-automation-workflow (a095253)
 - Update README table (e8507b5)
 - docs: add claude mentor analysis for new solution (#252) (9783964)
-
-# Changelog
-
-All notable changes to this repository will be documented in this file.
-
-The format follows
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
-and versions follow Semantic Versioning.
-
-## [Unreleased]
