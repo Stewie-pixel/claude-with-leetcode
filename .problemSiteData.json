@@ -657,6 +657,14 @@
     "cpp": true
   },
   {
+    "problem": "Find a Safe Walk Through a Grid",
+    "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-a-safe-walk-through-a-grid",
+    "code": "3286",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -694,6 +702,14 @@
     "difficulty": "Hard",
     "link": "process-string-with-special-operations-ii",
     "code": "3614",
+    "cpp": true
+  },
+  {
+    "problem": "Network Recovery Pathways",
+    "pattern": "Array, Binary Search, Dynamic Programming, Graph Theory, Topological Sort, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "network-recovery-pathways",
+    "code": "3620",
     "cpp": true
   },
   {
