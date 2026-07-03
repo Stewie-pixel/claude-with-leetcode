@@ -255,6 +255,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3020-find-the-maximum-number-of-elements-in-subset/ANALYSIS.md"
   },
   {
+    "slug": "3286-find-a-safe-walk-through-a-grid",
+    "title": "0‑1 BFS  ",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3286-find-a-safe-walk-through-a-grid/ANALYSIS.md"
+  },
+  {
     "slug": "332-reconstruct-itinerary",
     "title": "Graphs",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/332-reconstruct-itinerary/ANALYSIS.md"
@@ -273,6 +278,11 @@
     "slug": "3614-process-string-with-special-operations-ii",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3614-process-string-with-special-operations-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "3620-network-recovery-pathways",
+    "title": "Binary Search",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3620-network-recovery-pathways/ANALYSIS.md"
   },
   {
     "slug": "3635-earliest-finish-time-for-land-and-water-rides-ii",
