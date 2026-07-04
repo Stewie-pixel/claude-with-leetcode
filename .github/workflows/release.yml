@@ -59,11 +59,11 @@ jobs:
                   if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
                     TAG_NAME="${{ github.event.inputs.tag }}"
                   elif [ "${{ github.event_name }}" = "schedule" ]; then
-                    LATEST_TAG=$(git tag --sort=-creatordate | head -n1)
+                    LATEST_TAG=$(git tag --sort=-creatordate | grep -v -- '-nightly' | head -n1)
                     if [ -z "$LATEST_TAG" ]; then
                       LATEST_TAG="v0.0.0"
                     fi
-                    TAG_NAME="${LATEST_TAG}.$(date +%Y%m%d)"
+                    TAG_NAME="${LATEST_TAG}-nightly.$(date +%Y%m%d)"
                   else
                     TAG_NAME="${GITHUB_REF#refs/tags/}"
                   fi
@@ -96,11 +96,11 @@ jobs:
 
                   FEATS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^feat" -i || true)
                   FIXES=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^fix" -i || true)
-                  DOCS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^docs" -i || true)
-                  CHORE=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^chore" -i || true)
-                  REFACTOR=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^refactor" -i || true)
+                  DOCS=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^docs" --grep="document" -i || true)
+                  CHORE=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^chore" --grep="update" -i || true)
+                  REFACTOR=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^refactor" --grep="resolve" -i || true)
                   TEST=$(git log $RANGE --pretty=format:"- %s (%h)" --grep="^test" -i || true)
-                  OTHERS=$(git log $RANGE --pretty=format:"- %s (%h)" --invert-grep --grep="^feat" --grep="^fix" -i || true)
+                  OTHERS=$(git log $RANGE --pretty=format:"- %s (%h)" --invert-grep --grep="^feat" --grep="^fix" --grep="^docs" --grep="^chore" --grep="^refactor" --grep="^test" -i || true)
 
                   {
                     echo "## [${VERSION}] - ${DATE}"
@@ -162,11 +162,28 @@ jobs:
 
                   git checkout -b $TARGET_BRANCH
 
-                  if grep -q "^## \[${VERSION}\]" CHANGELOG.md 2>/dev/null; then
-                    echo "Changelog entry for ${VERSION} already exists on ${TARGET_BRANCH}, skipping insert."
+                  if [ -f CHANGELOG.md ] && grep -q "^## \[" CHANGELOG.md; then
+                    awk '/^## \[/{exit} {print}' CHANGELOG.md > /tmp/header.md
+                    awk 'BEGIN{found=0} /^## \[/{found=1} found{print}' CHANGELOG.md > /tmp/body.md
                   else
-                    touch CHANGELOG.md
-                    cat /tmp/new_entry.md CHANGELOG.md > /tmp/CHANGELOG.tmp.md
+                    cat > /tmp/header.md <<'EOF'
+                  # Changelog
+                  All notable changes to this repository will be documented in this file.
+                  The format follows
+                  [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+                  and versions follow Semantic Versioning.
+                  EOF
+                    touch /tmp/body.md
+                  fi
+
+                  if grep -q "^## \[${VERSION}\]" /tmp/body.md 2>/dev/null; then
+                    echo "Changelog entry for ${VERSION} already exists on ${TARGET_BRANCH}, skipping insert."
+                    cat /tmp/header.md /tmp/body.md > CHANGELOG.md
+                  else
+                    cat /tmp/header.md > /tmp/CHANGELOG.tmp.md
+                    echo "" >> /tmp/CHANGELOG.tmp.md
+                    cat /tmp/new_entry.md >> /tmp/CHANGELOG.tmp.md
+                    cat /tmp/body.md >> /tmp/CHANGELOG.tmp.md
                     mv /tmp/CHANGELOG.tmp.md CHANGELOG.md
                   fi
 
