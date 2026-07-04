@@ -162,9 +162,9 @@ jobs:
 
                   git checkout -b $TARGET_BRANCH
 
-                  if [ -f CHANGELOG.md ] && grep -q "^## \[" CHANGELOG.md; then
-                    awk '/^## \[/{exit} {print}' CHANGELOG.md > /tmp/header.md
-                    awk 'BEGIN{found=0} /^## \[/{found=1} found{print}' CHANGELOG.md > /tmp/body.md
+                  if [ -f CHANGELOG.md ] && grep -q "^# Changelog" CHANGELOG.md; then
+                    awk '/^# Changelog/{h=1} h{print; if(/Semantic Versioning\.$/) exit}' CHANGELOG.md > /tmp/header.md
+                    awk 'BEGIN{skip=1} skip{if(/Semantic Versioning\.$/){skip=0}; next} {print}' CHANGELOG.md > /tmp/body.md
                   else
                     cat > /tmp/header.md <<'EOF'
                   # Changelog
