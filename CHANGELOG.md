@@ -1,3 +1,21 @@
+## [0.2.3-nightly.20260701.20260702.20260703.20260704] - 2026-07-04
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#278) (f8e3e46)
+- docs: add claude mentor analysis for new solution (#275) (3f0232f)
+
+### Updated
+- chore: update claude solution count to 102 (74ea256)
+- chore: release nightly v0.2.3-nightly.20260701.20260702 (#274) (06aa48c)
+
+### Other
+- chore: update claude solution count to 102 (74ea256)
+- Update README table (ff70e2d)
+- docs: add claude mentor analysis for new solution (#278) (f8e3e46)
+- chore: release nightly v0.2.3-nightly.20260701.20260702 (#274) (06aa48c)
+- Update README table (97d36a0)
+- docs: add claude mentor analysis for new solution (#275) (3f0232f)
+
 # Changelog
 
 All notable changes to this repository will be documented in this file.
