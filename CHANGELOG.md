@@ -6,6 +6,24 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.2.5] - 2026-07-04
+
+### Added
+- feat(py): added solution for 118-pascal-triangles (#217) (7fdfd4e)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#284) (61b9589)
+
+### Updated
+- Update README table (9d7d023)
+- Update README table (dae7936)
+- chore: backfill version headers on legacy changelog entries (b0adbb8)
+
+### Other
+- Update README table (9d7d023)
+- Update README table (dae7936)
+
+
 ### Added
 
 ## [0.2.3-nightly.20260701] - 2026-07-01
