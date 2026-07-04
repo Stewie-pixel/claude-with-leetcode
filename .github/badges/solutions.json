@@ -95,6 +95,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1311-get-watched-videos-by-your-friends/ANALYSIS.md"
   },
   {
+    "slug": "1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "title": "Floyd‑Warshall (All‑Pairs Shortest Path)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/ANALYSIS.md"
+  },
+  {
     "slug": "1344-angle-between-hands-of-a-clock",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1344-angle-between-hands-of-a-clock/ANALYSIS.md"
@@ -210,6 +215,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2196-create-binary-tree-from-descriptions/ANALYSIS.md"
   },
   {
+    "slug": "2203-minimum-weighted-subgraph-with-the-required-paths",
+    "title": "Graphs  ",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2203-minimum-weighted-subgraph-with-the-required-paths/ANALYSIS.md"
+  },
+  {
     "slug": "2223-sum-of-scores-of-built-strings",
     "title": "String Matching – Z‑Algorithm (Sum of Scores of Built Strings)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2223-sum-of-scores-of-built-strings/ANALYSIS.md"
@@ -238,6 +248,11 @@
     "slug": "2574-left-and-right-sum-differences",
     "title": "Prefix Sum",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2574-left-and-right-sum-differences/ANALYSIS.md"
+  },
+  {
+    "slug": "2642-design-graph-with-shortest-path-calculator",
+    "title": "Graph",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2642-design-graph-with-shortest-path-calculator/ANALYSIS.md"
   },
   {
     "slug": "2685-count-the-number-of-complete-components",
@@ -483,6 +498,11 @@
     "slug": "2723-add-two-promises",
     "title": "JavaScript Promises",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/javascript/2723-add-two-promises/ANALYSIS.md"
+  },
+  {
+    "slug": "118-pascals-triangle",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/118-pascals-triangle/ANALYSIS.md"
   },
   {
     "slug": "20-valid-parentheses",
