@@ -1,17 +1,4 @@
-**Solution Explanation**
-
-We need a data structure that supports  
-
-* construction from an initial edge list,  
-* adding a new directed edge (guaranteed not to already exist), and  
-* answering *shortest‑path* queries between any two vertices.
-
-`n ≤ 100` and at most `100` edge insertions + `100` queries, so an **O(n³)** all‑pairs algorithm is easily fast enough.  
-We can therefore maintain an **all‑pairs shortest‑path** matrix with the Floyd‑Warshall DP and update it incrementally whenever a new edge is added.
-
----
-
-### Data structure
+# Graph
 * `n` – number of vertices (`0 … n‑1`)  
 * `dist[i][j]` – current known shortest distance from `i` to `j`.  
   Initialise `dist[i][i] = 0`, all other entries = `INF` (a value larger than any possible path, e.g. `1e9`).  
