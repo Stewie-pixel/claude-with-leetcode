@@ -183,6 +183,14 @@
     "rust": true
   },
   {
+    "problem": "Pascal's Triangle",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "pascals-triangle",
+    "code": "0118",
+    "python": true
+  },
+  {
     "problem": "Longest Consecutive Sequence",
     "pattern": "Array, Hash Table, Union-Find",
     "difficulty": "Medium",
