@@ -23,10 +23,9 @@ and versions follow Semantic Versioning.
 - Update README table (9d7d023)
 - Update README table (dae7936)
 
+## [0.2.3-nightly.20260701] - 2026-07-01
 
 ### Added
-
-## [0.2.3-nightly.20260701] - 2026-07-01
 
 - feat: add code suggestion rule (b10d178)
 - feat(ci): add multi line comment for code suggestion (8970721)
