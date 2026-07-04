@@ -371,6 +371,14 @@
     "cpp": true
   },
   {
+    "problem": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "pattern": "Dynamic Programming, Graph Theory, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "code": "1334",
+    "cpp": true
+  },
+  {
     "problem": "Angle Between Hands of a Clock",
     "pattern": "Math",
     "difficulty": "Medium",
@@ -568,6 +576,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Weighted Subgraph With the Required Paths",
+    "pattern": "Graph Theory, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "minimum-weighted-subgraph-with-the-required-paths",
+    "code": "2203",
+    "cpp": true
+  },
+  {
     "problem": "Sum of Scores of Built Strings",
     "pattern": "String",
     "difficulty": "Hard",
@@ -630,6 +646,14 @@
     "code": "2627",
     "javascript": true,
     "typescript": true
+  },
+  {
+    "problem": "Design Graph With Shortest Path Calculator",
+    "pattern": "Graph Theory, Design, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "design-graph-with-shortest-path-calculator",
+    "code": "2642",
+    "cpp": true
   },
   {
     "problem": "Count the Number of Complete Components",
