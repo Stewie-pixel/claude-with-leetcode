@@ -40,7 +40,8 @@
     "difficulty": "Medium",
     "link": "zigzag-conversion",
     "code": "0006",
-    "cpp": true
+    "cpp": true,
+    "rust": true
   },
   {
     "problem": "Reverse Integer",
@@ -89,7 +90,8 @@
     "difficulty": "Easy",
     "link": "valid-parentheses",
     "code": "0020",
-    "c": true
+    "c": true,
+    "python": true
   },
   {
     "problem": "Merge Two Sorted Lists",
@@ -101,12 +103,52 @@
     "cpp": true
   },
   {
+    "problem": "Generate Parentheses",
+    "pattern": "String, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
     "problem": "Search Insert Position",
     "pattern": "Array, Binary Search",
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
     "python": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum II",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum-ii",
+    "code": "0040",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -435,6 +477,22 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Strings That Appear as Substrings in Word",
+    "pattern": "Array, String",
+    "difficulty": "Easy",
+    "link": "number-of-strings-that-appear-as-substrings-in-word",
+    "code": "1967",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
@@ -583,11 +641,27 @@
     "typescript": true
   },
   {
+    "problem": "Find the Safest Path in a Grid",
+    "pattern": "Array, Binary Search, Breadth-First Search, Union-Find, Heap (Priority Queue), Matrix",
+    "difficulty": "Medium",
+    "link": "find-the-safest-path-in-a-grid",
+    "code": "2812",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
     "link": "find-the-maximum-number-of-elements-in-subset",
     "code": "3020",
+    "cpp": true
+  },
+  {
+    "problem": "Find a Safe Walk Through a Grid",
+    "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-a-safe-walk-through-a-grid",
+    "code": "3286",
     "cpp": true
   },
   {
@@ -628,6 +702,14 @@
     "difficulty": "Hard",
     "link": "process-string-with-special-operations-ii",
     "code": "3614",
+    "cpp": true
+  },
+  {
+    "problem": "Network Recovery Pathways",
+    "pattern": "Array, Binary Search, Dynamic Programming, Graph Theory, Topological Sort, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "network-recovery-pathways",
+    "code": "3620",
     "cpp": true
   },
   {
