@@ -70,6 +70,26 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/biweekly/cpp/3952-maximum-total-value-of-covered-indices/ANALYSIS.md"
   },
   {
+    "slug": "3982-sum-of-integers-with-maximum-digit-range",
+    "title": "## Algorithm",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/weekly/509/cpp/3982-sum-of-integers-with-maximum-digit-range/ANALYSIS.md"
+  },
+  {
+    "slug": "3983-subsequence-after-one-replacement",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/weekly/509/cpp/3983-subsequence-after-one-replacement/ANALYSIS.md"
+  },
+  {
+    "slug": "3984-divisible-game",
+    "title": "## Correctness Argument",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/weekly/509/cpp/3984-divisible-game/ANALYSIS.md"
+  },
+  {
+    "slug": "3985-palindromic-subarray-sum",
+    "title": "## Algorithm",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/weekly/509/cpp/3985-palindromic-subarray-sum/ANALYSIS.md"
+  },
+  {
     "slug": "1129-shortest-path-with-alternating-colors",
     "title": "Graphs – BFS with State (Shortest Path with Alternating Colors)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1129-shortest-path-with-alternating-colors/ANALYSIS.md"
@@ -88,6 +108,11 @@
     "slug": "128-longest-consecutive-sequence",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/128-longest-consecutive-sequence/ANALYSIS.md"
+  },
+  {
+    "slug": "1301-number-of-paths-with-max-score",
+    "title": "Dynamic Programming (2D Grid)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1301-number-of-paths-with-max-score/ANALYSIS.md"
   },
   {
     "slug": "1311-get-watched-videos-by-your-friends",
