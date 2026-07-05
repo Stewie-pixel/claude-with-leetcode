@@ -363,6 +363,14 @@
     "cpp": true
   },
   {
+    "problem": "Number of Paths with Max Score",
+    "pattern": "Array, Dynamic Programming, Matrix",
+    "difficulty": "Hard",
+    "link": "number-of-paths-with-max-score",
+    "code": "1301",
+    "cpp": true
+  },
+  {
     "problem": "Get Watched Videos by Your Friends",
     "pattern": "Array, Hash Table, Breadth-First Search, Graph Theory, Sorting",
     "difficulty": "Medium",
@@ -942,6 +950,38 @@
     "difficulty": "Medium",
     "link": "maximize-sum-of-device-ratings",
     "code": "3961",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of Integers with Maximum Digit Range",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "sum-of-integers-with-maximum-digit-range",
+    "code": "3982",
+    "cpp": true
+  },
+  {
+    "problem": "Subsequence After One Replacement",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "subsequence-after-one-replacement",
+    "code": "3983",
+    "cpp": true
+  },
+  {
+    "problem": "Divisible Game",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "divisible-game",
+    "code": "3984",
+    "cpp": true
+  },
+  {
+    "problem": "Palindromic Subarray Sum",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "palindromic-subarray-sum",
+    "code": "3985",
     "cpp": true
   }
 ]
