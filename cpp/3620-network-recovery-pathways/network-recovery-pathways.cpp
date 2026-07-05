@@ -1,64 +1,71 @@
 class Solution {
 public:
-    int findMaxPathScore(vector<vector<int>>& edges, vector<bool>& online, long long k) {
-        int n = online.size();
-        vector<vector<pair<int,long long>>> adj(n);
+    int maxMinPath(vector<vector<int>>& edges, vector<bool>& online, long long k) {
+        int n = (int)online.size();
+        vector<vector<pair<int, int>>> adj(n);
         vector<int> indeg(n, 0);
-        set<long long> costSet;
+        vector<int> costs;
+        costs.reserve(edges.size());
+
         for (auto& e : edges) {
-            int u = e[0], v = e[1];
-            long long c = e[2];
-            adj[u].push_back({v, c});
+            int u = e[0], v = e[1], w = e[2];
+            adj[u].push_back({v, w});
             indeg[v]++;
-            costSet.insert(c);
+            costs.push_back(w);
         }
 
-        if (costSet.empty()) return -1;
+        if (costs.empty()) return -1;
 
-        vector<int> deg = indeg;
-        queue<int> dq;
-        for (int i = 0; i < n; i++) if (deg[i] == 0) dq.push(i);
+        queue<int> q;
+        for (int i = 0; i < n; i++) {
+            if (indeg[i] == 0) q.push(i);
+        }
+
         vector<int> topo;
         topo.reserve(n);
-        while (!dq.empty()) {
-            int u = dq.front(); dq.pop();
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
             topo.push_back(u);
-            for (auto& [v, c] : adj[u]) {
-                if (--deg[v] == 0) dq.push(v);
+            for (auto& [v, w] : adj[u]) {
+                if (--indeg[v] == 0) q.push(v);
             }
         }
 
-        vector<long long> sortedCosts(costSet.begin(), costSet.end());
-        const long long INF = LLONG_MAX / 2;
+        sort(costs.begin(), costs.end());
+        costs.erase(unique(costs.begin(), costs.end()), costs.end());
 
-        auto feasible = [&](long long T) -> bool {
+        auto feasible = [&](int threshold) {
+            const long long INF = LLONG_MAX / 4;
             vector<long long> dist(n, INF);
             dist[0] = 0;
+
             for (int u : topo) {
-                if (dist[u] >= INF) continue;
+                if (dist[u] == INF) continue;
                 long long du = dist[u];
-                for (auto& [v, c] : adj[u]) {
-                    if (c >= T && online[v]) {
-                        long long nd = du + c;
-                        if (nd < dist[v]) dist[v] = nd;
-                    }
+                for (auto& [v, w] : adj[u]) {
+                    if (w < threshold) continue;
+                    if (!online[v] && v != n - 1) continue;
+                    long long nd = du + w;
+                    if (nd < dist[v]) dist[v] = nd;
                 }
             }
+
             return dist[n - 1] <= k;
         };
 
-        int lo = 0, hi = (int)sortedCosts.size() - 1;
-        long long ans = -1;
+        int lo = 0, hi = (int)costs.size() - 1;
+        int ans = -1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
-            if (feasible(sortedCosts[mid])) {
-                ans = sortedCosts[mid];
+            if (feasible(costs[mid])) {
+                ans = costs[mid];
                 lo = mid + 1;
             } else {
                 hi = mid - 1;
             }
         }
 
-        return (int)ans;
+        return ans;
     }
 };
