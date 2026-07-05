@@ -6,6 +6,24 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.3.1] - 2026-07-05
+
+### Added
+- feat: add new solutions for weekly contest 509 problems (9bcac75)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#293) (36e8d83)
+
+### Updated
+- Update README table (62fd480)
+- Update README table (b5e40fb)
+- chore: release nightly v0.2.5-nightly.20260705 (#292) (18d3df4)
+
+### Other
+- Update README table (62fd480)
+- Update README table (b5e40fb)
+
+
 ## [0.2.5-nightly] - 2026-07-05
 
 ### Documentation
