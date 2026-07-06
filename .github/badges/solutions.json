@@ -110,6 +110,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/128-longest-consecutive-sequence/ANALYSIS.md"
   },
   {
+    "slug": "1288-remove-covered-intervals",
+    "title": "Merge Intervals",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1288-remove-covered-intervals/ANALYSIS.md"
+  },
+  {
     "slug": "1301-number-of-paths-with-max-score",
     "title": "Dynamic Programming (2D Grid)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1301-number-of-paths-with-max-score/ANALYSIS.md"
