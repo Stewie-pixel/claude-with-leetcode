@@ -1,4 +1,4 @@
-# Intervals
+# Merge Intervals
 
 ## Video Solution
 
