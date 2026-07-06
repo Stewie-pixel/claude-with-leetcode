@@ -6,6 +6,24 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.3.2] - 2026-07-06
+
+### Added
+- feat(cpp): add new solution for problem 1288 (#314) (39c9878)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#312) (08cdc55)
+
+### Updated
+- Update README table (b3c0456)
+- Update README table (24806ea)
+- chore: release nightly v0.3.1-nightly.20260706 (#306) (534ea77)
+
+### Other
+- Update README table (b3c0456)
+- Update README table (24806ea)
+
+
 ## [0.3.1-nightly] - 2026-07-06
 
 ### Updated
