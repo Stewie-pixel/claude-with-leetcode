@@ -363,6 +363,14 @@
     "cpp": true
   },
   {
+    "problem": "Remove Covered Intervals",
+    "pattern": "Array, Sorting",
+    "difficulty": "Medium",
+    "link": "remove-covered-intervals",
+    "code": "1288",
+    "cpp": true
+  },
+  {
     "problem": "Number of Paths with Max Score",
     "pattern": "Array, Dynamic Programming, Matrix",
     "difficulty": "Hard",
