@@ -841,6 +841,14 @@
     "cpp": true
   },
   {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum I",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-i",
+    "code": "3754",
+    "cpp": true
+  },
+  {
     "problem": "Weighted Word Mapping",
     "pattern": "Array",
     "difficulty": "Easy",
