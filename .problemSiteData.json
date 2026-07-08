@@ -857,6 +857,14 @@
     "cpp": true
   },
   {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum II",
+    "pattern": "Math, String, Prefix Sum",
+    "difficulty": "Medium",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "code": "3756",
+    "cpp": true
+  },
+  {
     "problem": "Weighted Word Mapping",
     "pattern": "Array",
     "difficulty": "Easy",
