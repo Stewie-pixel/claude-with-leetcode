@@ -375,6 +375,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3753-total-waviness-of-numbers-in-range-ii/ANALYSIS.md"
   },
   {
+    "slug": "3754-concatenate-non-zero-digits-and-multiply-by-sum-i",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3754-concatenate-non-zero-digits-and-multiply-by-sum-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3756-concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "title": "Prefix Sum",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii/ANALYSIS.md"
+  },
+  {
     "slug": "3838-weighted-word-mapping",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3838-weighted-word-mapping/ANALYSIS.md"
