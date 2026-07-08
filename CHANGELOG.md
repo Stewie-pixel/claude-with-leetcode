@@ -6,6 +6,29 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.3.3] - 2026-07-08
+
+### Added
+- feat(c): add solution for 36-valid-sudoku (#225) (dcd0251)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#327) (f045929)
+- docs: add claude mentor analysis for new solution (#321) (a689482)
+
+### Updated
+- Update README table (f08d935)
+- Update README table (fa0003f)
+- chore: release nightly v0.3.2-nightly.20260708 (#323) (394a0f2)
+- Update README table (48be8ee)
+- Update README table (c868358)
+
+### Other
+- Update README table (f08d935)
+- Update README table (fa0003f)
+- Update README table (48be8ee)
+- Update README table (c868358)
+
+
 ## [0.3.2-nightly] - 2026-07-08
 
 ### Updated
