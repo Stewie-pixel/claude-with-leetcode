@@ -40,7 +40,8 @@
     "difficulty": "Medium",
     "link": "zigzag-conversion",
     "code": "0006",
-    "cpp": true
+    "cpp": true,
+    "rust": true
   },
   {
     "problem": "Reverse Integer",
@@ -89,7 +90,8 @@
     "difficulty": "Easy",
     "link": "valid-parentheses",
     "code": "0020",
-    "c": true
+    "c": true,
+    "python": true
   },
   {
     "problem": "Merge Two Sorted Lists",
@@ -101,12 +103,52 @@
     "cpp": true
   },
   {
+    "problem": "Generate Parentheses",
+    "pattern": "String, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "generate-parentheses",
+    "code": "0022",
+    "c": true
+  },
+  {
+    "problem": "Merge k Sorted Lists",
+    "pattern": "Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort",
+    "difficulty": "Hard",
+    "link": "merge-k-sorted-lists",
+    "code": "0023",
+    "c": true
+  },
+  {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
     "problem": "Search Insert Position",
     "pattern": "Array, Binary Search",
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
     "python": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum II",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum-ii",
+    "code": "0040",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -139,6 +181,14 @@
     "link": "binary-tree-inorder-traversal",
     "code": "0094",
     "rust": true
+  },
+  {
+    "problem": "Pascal's Triangle",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "pascals-triangle",
+    "code": "0118",
+    "python": true
   },
   {
     "problem": "Longest Consecutive Sequence",
@@ -313,11 +363,35 @@
     "cpp": true
   },
   {
+    "problem": "Remove Covered Intervals",
+    "pattern": "Array, Sorting",
+    "difficulty": "Medium",
+    "link": "remove-covered-intervals",
+    "code": "1288",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Paths with Max Score",
+    "pattern": "Array, Dynamic Programming, Matrix",
+    "difficulty": "Hard",
+    "link": "number-of-paths-with-max-score",
+    "code": "1301",
+    "cpp": true
+  },
+  {
     "problem": "Get Watched Videos by Your Friends",
     "pattern": "Array, Hash Table, Breadth-First Search, Graph Theory, Sorting",
     "difficulty": "Medium",
     "link": "get-watched-videos-by-your-friends",
     "code": "1311",
+    "cpp": true
+  },
+  {
+    "problem": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "pattern": "Dynamic Programming, Graph Theory, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "code": "1334",
     "cpp": true
   },
   {
@@ -435,6 +509,22 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Element After Decreasing and Rearranging",
+    "pattern": "Array, Greedy, Sorting",
+    "difficulty": "Medium",
+    "link": "maximum-element-after-decreasing-and-rearranging",
+    "code": "1846",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Strings That Appear as Substrings in Word",
+    "pattern": "Array, String",
+    "difficulty": "Easy",
+    "link": "number-of-strings-that-appear-as-substrings-in-word",
+    "code": "1967",
+    "cpp": true
+  },
+  {
     "problem": "Find if Path Exists in Graph",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Easy",
@@ -502,6 +592,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Weighted Subgraph With the Required Paths",
+    "pattern": "Graph Theory, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "minimum-weighted-subgraph-with-the-required-paths",
+    "code": "2203",
+    "cpp": true
+  },
+  {
     "problem": "Sum of Scores of Built Strings",
     "pattern": "String",
     "difficulty": "Hard",
@@ -566,6 +664,14 @@
     "typescript": true
   },
   {
+    "problem": "Design Graph With Shortest Path Calculator",
+    "pattern": "Graph Theory, Design, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "design-graph-with-shortest-path-calculator",
+    "code": "2642",
+    "cpp": true
+  },
+  {
     "problem": "Count the Number of Complete Components",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Medium",
@@ -583,11 +689,27 @@
     "typescript": true
   },
   {
+    "problem": "Find the Safest Path in a Grid",
+    "pattern": "Array, Binary Search, Breadth-First Search, Union-Find, Heap (Priority Queue), Matrix",
+    "difficulty": "Medium",
+    "link": "find-the-safest-path-in-a-grid",
+    "code": "2812",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
     "link": "find-the-maximum-number-of-elements-in-subset",
     "code": "3020",
+    "cpp": true
+  },
+  {
+    "problem": "Find a Safe Walk Through a Grid",
+    "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-a-safe-walk-through-a-grid",
+    "code": "3286",
     "cpp": true
   },
   {
@@ -628,6 +750,14 @@
     "difficulty": "Hard",
     "link": "process-string-with-special-operations-ii",
     "code": "3614",
+    "cpp": true
+  },
+  {
+    "problem": "Network Recovery Pathways",
+    "pattern": "Array, Binary Search, Dynamic Programming, Graph Theory, Topological Sort, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "network-recovery-pathways",
+    "code": "3620",
     "cpp": true
   },
   {
@@ -708,6 +838,14 @@
     "difficulty": "Hard",
     "link": "total-waviness-of-numbers-in-range-ii",
     "code": "3753",
+    "cpp": true
+  },
+  {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum I",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-i",
+    "code": "3754",
     "cpp": true
   },
   {
@@ -828,6 +966,38 @@
     "difficulty": "Medium",
     "link": "maximize-sum-of-device-ratings",
     "code": "3961",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of Integers with Maximum Digit Range",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "sum-of-integers-with-maximum-digit-range",
+    "code": "3982",
+    "cpp": true
+  },
+  {
+    "problem": "Subsequence After One Replacement",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "subsequence-after-one-replacement",
+    "code": "3983",
+    "cpp": true
+  },
+  {
+    "problem": "Divisible Game",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "divisible-game",
+    "code": "3984",
+    "cpp": true
+  },
+  {
+    "problem": "Palindromic Subarray Sum",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "palindromic-subarray-sum",
+    "code": "3985",
     "cpp": true
   }
 ]
