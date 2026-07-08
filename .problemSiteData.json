@@ -135,6 +135,14 @@
     "python": true
   },
   {
+    "problem": "Valid Sudoku",
+    "pattern": "Array, Hash Table, Matrix",
+    "difficulty": "Medium",
+    "link": "valid-sudoku",
+    "code": "0036",
+    "c": true
+  },
+  {
     "problem": "Combination Sum",
     "pattern": "Array, Backtracking",
     "difficulty": "Medium",
