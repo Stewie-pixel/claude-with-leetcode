@@ -729,6 +729,14 @@
     "cpp": true
   },
   {
+    "problem": "Path Existence Queries in a Graph I",
+    "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "path-existence-queries-in-a-graph-i",
+    "code": "3532",
+    "cpp": true
+  },
+  {
     "problem": "Number of Ways to Assign Edge Weights I",
     "pattern": "Math",
     "difficulty": "Medium",
