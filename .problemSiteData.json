@@ -737,6 +737,14 @@
     "cpp": true
   },
   {
+    "problem": "Path Existence Queries in a Graph II",
+    "pattern": "Array, Two Pointers, Binary Search, Dynamic Programming, Greedy, Bit Manipulation, Graph Theory, Sorting",
+    "difficulty": "Hard",
+    "link": "path-existence-queries-in-a-graph-ii",
+    "code": "3534",
+    "cpp": true
+  },
+  {
     "problem": "Number of Ways to Assign Edge Weights I",
     "pattern": "Math",
     "difficulty": "Medium",
