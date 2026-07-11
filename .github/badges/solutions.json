@@ -320,6 +320,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3532-path-existence-queries-in-a-graph-i/ANALYSIS.md"
   },
   {
+    "slug": "3534-path-existence-queries-in-a-graph-ii",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3534-path-existence-queries-in-a-graph-ii/ANALYSIS.md"
+  },
+  {
     "slug": "3612-process-string-with-special-operations-i",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3612-process-string-with-special-operations-i/ANALYSIS.md"
@@ -553,6 +558,11 @@
     "slug": "20-valid-parentheses",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/20-valid-parentheses/ANALYSIS.md"
+  },
+  {
+    "slug": "349-intersection-of-two-arrays",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/349-intersection-of-two-arrays/ANALYSIS.md"
   },
   {
     "slug": "35-search-insert-position",
