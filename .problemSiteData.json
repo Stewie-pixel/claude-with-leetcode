@@ -271,6 +271,14 @@
     "cpp": true
   },
   {
+    "problem": "Intersection of Two Arrays",
+    "pattern": "Array, Hash Table, Two Pointers, Binary Search, Sorting",
+    "difficulty": "Easy",
+    "link": "intersection-of-two-arrays",
+    "code": "0349",
+    "python": true
+  },
+  {
     "problem": "Decode String",
     "pattern": "String",
     "difficulty": "Medium",
