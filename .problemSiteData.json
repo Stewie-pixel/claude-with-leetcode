@@ -1039,5 +1039,37 @@
     "link": "palindromic-subarray-sum",
     "code": "3985",
     "cpp": true
+  },
+  {
+    "problem": "Number of Elapsed Seconds Between Two Times",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "number-of-elapsed-seconds-between-two-times",
+    "code": "3986",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Total Cost to Process All Elements",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-total-cost-to-process-all-elements",
+    "code": "3987",
+    "cpp": true
+  },
+  {
+    "problem": "Create Grid With Exactly K Paths I",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "create-grid-with-exactly-k-paths-i",
+    "code": "3988",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Consistent Columns in a Grid",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-consistent-columns-in-a-grid",
+    "code": "3989",
+    "cpp": true
   }
 ]
