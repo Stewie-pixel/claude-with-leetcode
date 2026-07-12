@@ -125,6 +125,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1311-get-watched-videos-by-your-friends/ANALYSIS.md"
   },
   {
+    "slug": "1331-rank-transform-of-an-array",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1331-rank-transform-of-an-array/ANALYSIS.md"
+  },
+  {
     "slug": "1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
     "title": "Floyd‑Warshall (All‑Pairs Shortest Path)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/ANALYSIS.md"
@@ -448,6 +453,26 @@
     "slug": "3961-maximize-sum-of-device-ratings",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3961-maximize-sum-of-device-ratings/ANALYSIS.md"
+  },
+  {
+    "slug": "3986-number-of-elapsed-seconds-between-two-times",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3986-number-of-elapsed-seconds-between-two-times/ANALYSIS.md"
+  },
+  {
+    "slug": "3987-minimum-total-cost-to-process-all-elements",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3987-minimum-total-cost-to-process-all-elements/ANALYSIS.md"
+  },
+  {
+    "slug": "3988-create-grid-with-exactly-k-paths-i",
+    "title": "## Minor improvements / style notes",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3988-create-grid-with-exactly-k-paths-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3989-maximum-consistent-columns-in-a-grid",
+    "title": "## Algorithm",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3989-maximum-consistent-columns-in-a-grid/ANALYSIS.md"
   },
   {
     "slug": "463-island-perimeter",
