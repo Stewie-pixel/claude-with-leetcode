@@ -1,4 +1,4 @@
-**Solution Explanation**
+# Binary Search Tree
 
 For a Binary Search Tree (BST) every node satisfies  
 
