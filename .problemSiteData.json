@@ -387,6 +387,14 @@
     "cpp": true
   },
   {
+    "problem": "Sequential Digits",
+    "pattern": "Enumeration",
+    "difficulty": "Medium",
+    "link": "sequential-digits",
+    "code": "1291",
+    "cpp": true
+  },
+  {
     "problem": "Number of Paths with Max Score",
     "pattern": "Array, Dynamic Programming, Matrix",
     "difficulty": "Hard",
