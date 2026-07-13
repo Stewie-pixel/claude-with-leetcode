@@ -295,6 +295,14 @@
     "cpp": true
   },
   {
+    "problem": "Delete Node in a BST",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "delete-node-in-a-bst",
+    "code": "0450",
+    "cpp": true
+  },
+  {
     "problem": "Island Perimeter",
     "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
     "difficulty": "Easy",
@@ -309,6 +317,30 @@
     "link": "find-k-closest-elements",
     "code": "0658",
     "java": true
+  },
+  {
+    "problem": "Longest Univalue Path",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "longest-univalue-path",
+    "code": "0687",
+    "cpp": true
+  },
+  {
+    "problem": "Search in a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "search-in-a-binary-search-tree",
+    "code": "0700",
+    "cpp": true
+  },
+  {
+    "problem": "Insert into a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "insert-into-a-binary-search-tree",
+    "code": "0701",
+    "cpp": true
   },
   {
     "problem": "Find Pivot Index",
@@ -637,6 +669,14 @@
     "difficulty": "Hard",
     "link": "sum-of-scores-of-built-strings",
     "code": "2223",
+    "cpp": true
+  },
+  {
+    "problem": "Root Equals Sum of Children",
+    "pattern": "Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "root-equals-sum-of-children",
+    "code": "2236",
     "cpp": true
   },
   {
