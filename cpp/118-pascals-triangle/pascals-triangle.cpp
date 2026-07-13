@@ -23,8 +23,8 @@ public:
                 tmp[tmp.size()-1] = 1;
                 for (int j = 1;j<i;j++){
                     tmp[j] = res[i-1][j] + res[i-1][j-1];
-                    res[i] = tmp;
                 }
+                res[i] = tmp;
             }
         }
             return res;
