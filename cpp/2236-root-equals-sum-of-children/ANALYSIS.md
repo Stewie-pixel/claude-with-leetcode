@@ -1,4 +1,4 @@
-# Trees
+# Binary Search Tree
 
 ## Video Solution
 
