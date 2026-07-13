@@ -6,6 +6,48 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.4.1-nightly] - 2026-07-13
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#351) (5b2e6d8)
+
+### Updated
+- chore: update claude solution count to 122 (165d544)
+- Update README table (057ba77)
+
+### Other
+- Update README table (057ba77)
+
+
+## [0.3.4-nightly] - 2026-07-12
+
+### Updated
+- chore: update claude solution count to 117 (ad8874d)
+- chore: update changelog for v0.3.4 [skip ci] (#345) (2ba9306)
+
+
+## [0.3.4] - 2026-07-11
+
+### Added
+- feat(py): added solution for intersection of two arrays (#220) (f240a07)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#343) (c32cc41)
+- docs: add claude mentor analysis for new solution (#339) (3846799)
+
+### Updated
+- Update README table (1f7f59e)
+- Update README table (8d3615c)
+- chore: release nightly v0.3.3-nightly.20260711 (#342) (313e8a1)
+- Update README table (fd0bea2)
+- chore: release nightly v0.3.3-nightly.20260710 (#338) (42d1c7f)
+
+### Other
+- Update README table (1f7f59e)
+- Update README table (8d3615c)
+- Update README table (fd0bea2)
+
+
 ## [0.3.3-nightly] - 2026-07-11
 
 ### Updated

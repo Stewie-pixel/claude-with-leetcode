@@ -295,6 +295,14 @@
     "cpp": true
   },
   {
+    "problem": "Delete Node in a BST",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "delete-node-in-a-bst",
+    "code": "0450",
+    "cpp": true
+  },
+  {
     "problem": "Island Perimeter",
     "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
     "difficulty": "Easy",
@@ -309,6 +317,30 @@
     "link": "find-k-closest-elements",
     "code": "0658",
     "java": true
+  },
+  {
+    "problem": "Longest Univalue Path",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "longest-univalue-path",
+    "code": "0687",
+    "cpp": true
+  },
+  {
+    "problem": "Search in a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "search-in-a-binary-search-tree",
+    "code": "0700",
+    "cpp": true
+  },
+  {
+    "problem": "Insert into a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "insert-into-a-binary-search-tree",
+    "code": "0701",
+    "cpp": true
   },
   {
     "problem": "Find Pivot Index",
@@ -387,6 +419,14 @@
     "cpp": true
   },
   {
+    "problem": "Sequential Digits",
+    "pattern": "Enumeration",
+    "difficulty": "Medium",
+    "link": "sequential-digits",
+    "code": "1291",
+    "cpp": true
+  },
+  {
     "problem": "Number of Paths with Max Score",
     "pattern": "Array, Dynamic Programming, Matrix",
     "difficulty": "Hard",
@@ -400,6 +440,14 @@
     "difficulty": "Medium",
     "link": "get-watched-videos-by-your-friends",
     "code": "1311",
+    "cpp": true
+  },
+  {
+    "problem": "Rank Transform of an Array",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "rank-transform-of-an-array",
+    "code": "1331",
     "cpp": true
   },
   {
@@ -621,6 +669,14 @@
     "difficulty": "Hard",
     "link": "sum-of-scores-of-built-strings",
     "code": "2223",
+    "cpp": true
+  },
+  {
+    "problem": "Root Equals Sum of Children",
+    "pattern": "Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "root-equals-sum-of-children",
+    "code": "2236",
     "cpp": true
   },
   {
@@ -1038,6 +1094,38 @@
     "difficulty": "Hard",
     "link": "palindromic-subarray-sum",
     "code": "3985",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Elapsed Seconds Between Two Times",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "number-of-elapsed-seconds-between-two-times",
+    "code": "3986",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Total Cost to Process All Elements",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-total-cost-to-process-all-elements",
+    "code": "3987",
+    "cpp": true
+  },
+  {
+    "problem": "Create Grid With Exactly K Paths I",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "create-grid-with-exactly-k-paths-i",
+    "code": "3988",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Consistent Columns in a Grid",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-consistent-columns-in-a-grid",
+    "code": "3989",
     "cpp": true
   }
 ]
