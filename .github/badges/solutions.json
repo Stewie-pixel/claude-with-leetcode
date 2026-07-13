@@ -115,6 +115,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1288-remove-covered-intervals/ANALYSIS.md"
   },
   {
+    "slug": "1291-sequential-digits",
+    "title": "Backtracking",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1291-sequential-digits/ANALYSIS.md"
+  },
+  {
     "slug": "1301-number-of-paths-with-max-score",
     "title": "Dynamic Programming (2D Grid)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1301-number-of-paths-with-max-score/ANALYSIS.md"
@@ -258,6 +263,11 @@
     "slug": "2223-sum-of-scores-of-built-strings",
     "title": "String Matching – Z‑Algorithm (Sum of Scores of Built Strings)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2223-sum-of-scores-of-built-strings/ANALYSIS.md"
+  },
+  {
+    "slug": "2236-root-equals-sum-of-children",
+    "title": "Binary Search Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2236-root-equals-sum-of-children/ANALYSIS.md"
   },
   {
     "slug": "2352-equal-row-and-column-pairs",
@@ -475,6 +485,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3989-maximum-consistent-columns-in-a-grid/ANALYSIS.md"
   },
   {
+    "slug": "450-delete-node-in-a-bst",
+    "title": "Binary Search Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/450-delete-node-in-a-bst/ANALYSIS.md"
+  },
+  {
     "slug": "463-island-perimeter",
     "title": "Matrix Traversal",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/463-island-perimeter/ANALYSIS.md"
@@ -488,6 +503,21 @@
     "slug": "6-zigzag-conversion",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/6-zigzag-conversion/ANALYSIS.md"
+  },
+  {
+    "slug": "687-longest-univalue-path",
+    "title": "Tree DFS",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/687-longest-univalue-path/ANALYSIS.md"
+  },
+  {
+    "slug": "700-search-in-a-binary-search-tree",
+    "title": "Search in a Binary Search Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/700-search-in-a-binary-search-tree/ANALYSIS.md"
+  },
+  {
+    "slug": "701-insert-into-a-binary-search-tree",
+    "title": "Binary Search Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/701-insert-into-a-binary-search-tree/ANALYSIS.md"
   },
   {
     "slug": "743-network-delay-time",
