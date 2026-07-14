@@ -311,6 +311,14 @@
     "cpp": true
   },
   {
+    "problem": "Keyboard Row",
+    "pattern": "Array, Hash Table, String",
+    "difficulty": "Easy",
+    "link": "keyboard-row",
+    "code": "0500",
+    "python": true
+  },
+  {
     "problem": "Find K Closest Elements",
     "pattern": "Array, Two Pointers, Binary Search, Sliding Window, Sorting, Heap (Priority Queue)",
     "difficulty": "Medium",
