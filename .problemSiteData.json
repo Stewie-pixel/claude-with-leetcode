@@ -785,6 +785,14 @@
     "cpp": true
   },
   {
+    "problem": "Find the Number of Subsequences With Equal GCD",
+    "pattern": "Array, Math, Dynamic Programming, Number Theory",
+    "difficulty": "Hard",
+    "link": "find-the-number-of-subsequences-with-equal-gcd",
+    "code": "3336",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
