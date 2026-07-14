@@ -325,6 +325,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/332-reconstruct-itinerary/ANALYSIS.md"
   },
   {
+    "slug": "3336-find-the-number-of-subsequences-with-equal-gcd",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3336-find-the-number-of-subsequences-with-equal-gcd/ANALYSIS.md"
+  },
+  {
     "slug": "3512-minimum-operations-to-make-array-sum-divisible-by-k",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3512-minimum-operations-to-make-array-sum-divisible-by-k/ANALYSIS.md"
@@ -633,6 +638,11 @@
     "slug": "3559-number-of-ways-to-assign-edge-weights-ii",
     "title": "Lowest Common Ancestor (Binary Lifting)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3559-number-of-ways-to-assign-edge-weights-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "500-keyboard-row",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/500-keyboard-row/ANALYSIS.md"
   },
   {
     "slug": "94-binary-tree-inorder-traversal",
