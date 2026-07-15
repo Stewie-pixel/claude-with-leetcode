@@ -263,6 +263,14 @@
     "java": true
   },
   {
+    "problem": "Range Sum Query - Mutable",
+    "pattern": "Array, Divide and Conquer, Design, Binary Indexed Tree, Segment Tree",
+    "difficulty": "Medium",
+    "link": "range-sum-query-mutable",
+    "code": "0307",
+    "cpp": true
+  },
+  {
     "problem": "Reconstruct Itinerary",
     "pattern": "Array, String, Depth-First Search, Graph Theory, Sorting, Heap (Priority Queue), Eulerian Circuit",
     "difficulty": "Hard",
@@ -356,6 +364,14 @@
     "difficulty": "Easy",
     "link": "find-pivot-index",
     "code": "0724",
+    "cpp": true
+  },
+  {
+    "problem": "My Calendar II",
+    "pattern": "Array, Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set",
+    "difficulty": "Medium",
+    "link": "my-calendar-ii",
+    "code": "0731",
     "cpp": true
   },
   {
@@ -774,6 +790,14 @@
     "difficulty": "Medium",
     "link": "find-the-safest-path-in-a-grid",
     "code": "2812",
+    "cpp": true
+  },
+  {
+    "problem": "Find Building Where Alice and Bob Can Meet",
+    "pattern": "Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "find-building-where-alice-and-bob-can-meet",
+    "code": "2940",
     "cpp": true
   },
   {
