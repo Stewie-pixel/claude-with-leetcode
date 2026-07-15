@@ -67,7 +67,7 @@ def two_sum_brute(nums, target):
 
 ---
 
-### Approach  ### Approach \ 2: Hash Map – Two‑Pass
+### Approach 2: Hash Map – Two‑Pass
 
 **Intuition**
 If we first store every number’s index in a hash map, we can later look up the complement in O(1) time. Doing the lookup in a second loop avoids the need to check “have we seen this before?” while inserting, making the logic easier to reason about for beginners.
@@ -99,7 +99,7 @@ def two_sum_two_pass(nums, target):
 - Time complexity: O(n) — \- \- Two \* O(n) passes over the array plus O(1) map lookups.  
 - Space complexity: O(n) — we store up to n entries in the hash map.
 
-\### Approach 3: Hash Map – One‑Pass (Optimal)
+### Approach 3: Hash Map – One‑Pass (Optimal)
 
 **Intuition**
 We can combine the two passes into one: while inserting each number into the map, we immediately check whether its complement has already been seen. This avoids the extra loop and still guarantees O(n) time.
