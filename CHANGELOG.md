@@ -6,6 +6,30 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.4.1-nightly.20260715] - 2026-07-15
+
+### Added
+- feat: added solution for Keyboard Row in Python (#224) (2c3e879)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#374) (cf77f95)
+- docs: add claude mentor analysis for new solution (#373) (ad05c53)
+
+### Updated
+- chore: update claude solution count to 130 (ad9c5e9)
+- Update README table (0f809d9)
+- Update README table (3b1ebc9)
+- Update README table (de4b514)
+- chore: release nightly v0.4.1-nightly.20260714 (#372) (508fa9d)
+- Update README table (2777d45)
+
+### Other
+- Update README table (0f809d9)
+- Update README table (3b1ebc9)
+- Update README table (de4b514)
+- Update README table (2777d45)
+
+
 ## [0.4.1-nightly] - 2026-07-14
 
 ### Documentation
