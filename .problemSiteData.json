@@ -40,7 +40,8 @@
     "difficulty": "Medium",
     "link": "zigzag-conversion",
     "code": "0006",
-    "cpp": true
+    "cpp": true,
+    "rust": true
   },
   {
     "problem": "Reverse Integer",
@@ -118,12 +119,44 @@
     "c": true
   },
   {
+    "problem": "Reverse Nodes in k-Group",
+    "pattern": "Linked List, Recursion",
+    "difficulty": "Hard",
+    "link": "reverse-nodes-in-k-group",
+    "code": "0025",
+    "c": true
+  },
+  {
     "problem": "Search Insert Position",
     "pattern": "Array, Binary Search",
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
     "python": true
+  },
+  {
+    "problem": "Valid Sudoku",
+    "pattern": "Array, Hash Table, Matrix",
+    "difficulty": "Medium",
+    "link": "valid-sudoku",
+    "code": "0036",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum",
+    "code": "0039",
+    "c": true
+  },
+  {
+    "problem": "Combination Sum II",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "combination-sum-ii",
+    "code": "0040",
+    "c": true
   },
   {
     "problem": "Permutations II",
@@ -156,6 +189,14 @@
     "link": "binary-tree-inorder-traversal",
     "code": "0094",
     "rust": true
+  },
+  {
+    "problem": "Pascal's Triangle",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "pascals-triangle",
+    "code": "0118",
+    "python": true
   },
   {
     "problem": "Longest Consecutive Sequence",
@@ -222,12 +263,28 @@
     "java": true
   },
   {
+    "problem": "Range Sum Query - Mutable",
+    "pattern": "Array, Divide and Conquer, Design, Binary Indexed Tree, Segment Tree",
+    "difficulty": "Medium",
+    "link": "range-sum-query-mutable",
+    "code": "0307",
+    "cpp": true
+  },
+  {
     "problem": "Reconstruct Itinerary",
     "pattern": "Array, String, Depth-First Search, Graph Theory, Sorting, Heap (Priority Queue), Eulerian Circuit",
     "difficulty": "Hard",
     "link": "reconstruct-itinerary",
     "code": "0332",
     "cpp": true
+  },
+  {
+    "problem": "Intersection of Two Arrays",
+    "pattern": "Array, Hash Table, Two Pointers, Binary Search, Sorting",
+    "difficulty": "Easy",
+    "link": "intersection-of-two-arrays",
+    "code": "0349",
+    "python": true
   },
   {
     "problem": "Decode String",
@@ -246,12 +303,28 @@
     "cpp": true
   },
   {
+    "problem": "Delete Node in a BST",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "delete-node-in-a-bst",
+    "code": "0450",
+    "cpp": true
+  },
+  {
     "problem": "Island Perimeter",
     "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
     "difficulty": "Easy",
     "link": "island-perimeter",
     "code": "0463",
     "cpp": true
+  },
+  {
+    "problem": "Keyboard Row",
+    "pattern": "Array, Hash Table, String",
+    "difficulty": "Easy",
+    "link": "keyboard-row",
+    "code": "0500",
+    "python": true
   },
   {
     "problem": "Find K Closest Elements",
@@ -262,11 +335,43 @@
     "java": true
   },
   {
+    "problem": "Longest Univalue Path",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "longest-univalue-path",
+    "code": "0687",
+    "cpp": true
+  },
+  {
+    "problem": "Search in a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "search-in-a-binary-search-tree",
+    "code": "0700",
+    "cpp": true
+  },
+  {
+    "problem": "Insert into a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "insert-into-a-binary-search-tree",
+    "code": "0701",
+    "cpp": true
+  },
+  {
     "problem": "Find Pivot Index",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "find-pivot-index",
     "code": "0724",
+    "cpp": true
+  },
+  {
+    "problem": "My Calendar II",
+    "pattern": "Array, Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set",
+    "difficulty": "Medium",
+    "link": "my-calendar-ii",
+    "code": "0731",
     "cpp": true
   },
   {
@@ -330,11 +435,51 @@
     "cpp": true
   },
   {
+    "problem": "Remove Covered Intervals",
+    "pattern": "Array, Sorting",
+    "difficulty": "Medium",
+    "link": "remove-covered-intervals",
+    "code": "1288",
+    "cpp": true
+  },
+  {
+    "problem": "Sequential Digits",
+    "pattern": "Enumeration",
+    "difficulty": "Medium",
+    "link": "sequential-digits",
+    "code": "1291",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Paths with Max Score",
+    "pattern": "Array, Dynamic Programming, Matrix",
+    "difficulty": "Hard",
+    "link": "number-of-paths-with-max-score",
+    "code": "1301",
+    "cpp": true
+  },
+  {
     "problem": "Get Watched Videos by Your Friends",
     "pattern": "Array, Hash Table, Breadth-First Search, Graph Theory, Sorting",
     "difficulty": "Medium",
     "link": "get-watched-videos-by-your-friends",
     "code": "1311",
+    "cpp": true
+  },
+  {
+    "problem": "Rank Transform of an Array",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "rank-transform-of-an-array",
+    "code": "1331",
+    "cpp": true
+  },
+  {
+    "problem": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "pattern": "Dynamic Programming, Graph Theory, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "code": "1334",
     "cpp": true
   },
   {
@@ -535,11 +680,27 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Weighted Subgraph With the Required Paths",
+    "pattern": "Graph Theory, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "minimum-weighted-subgraph-with-the-required-paths",
+    "code": "2203",
+    "cpp": true
+  },
+  {
     "problem": "Sum of Scores of Built Strings",
     "pattern": "String",
     "difficulty": "Hard",
     "link": "sum-of-scores-of-built-strings",
     "code": "2223",
+    "cpp": true
+  },
+  {
+    "problem": "Root Equals Sum of Children",
+    "pattern": "Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "root-equals-sum-of-children",
+    "code": "2236",
     "cpp": true
   },
   {
@@ -599,6 +760,14 @@
     "typescript": true
   },
   {
+    "problem": "Design Graph With Shortest Path Calculator",
+    "pattern": "Graph Theory, Design, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "design-graph-with-shortest-path-calculator",
+    "code": "2642",
+    "cpp": true
+  },
+  {
     "problem": "Count the Number of Complete Components",
     "pattern": "Depth-First Search, Breadth-First Search, Union-Find, Graph Theory",
     "difficulty": "Medium",
@@ -616,6 +785,22 @@
     "typescript": true
   },
   {
+    "problem": "Find the Safest Path in a Grid",
+    "pattern": "Array, Binary Search, Breadth-First Search, Union-Find, Heap (Priority Queue), Matrix",
+    "difficulty": "Medium",
+    "link": "find-the-safest-path-in-a-grid",
+    "code": "2812",
+    "cpp": true
+  },
+  {
+    "problem": "Find Building Where Alice and Bob Can Meet",
+    "pattern": "Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "find-building-where-alice-and-bob-can-meet",
+    "code": "2940",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
@@ -624,11 +809,43 @@
     "cpp": true
   },
   {
+    "problem": "Find a Safe Walk Through a Grid",
+    "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
+    "difficulty": "Medium",
+    "link": "find-a-safe-walk-through-a-grid",
+    "code": "3286",
+    "cpp": true
+  },
+  {
+    "problem": "Find the Number of Subsequences With Equal GCD",
+    "pattern": "Array, Math, Dynamic Programming, Number Theory",
+    "difficulty": "Hard",
+    "link": "find-the-number-of-subsequences-with-equal-gcd",
+    "code": "3336",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "minimum-operations-to-make-array-sum-divisible-by-k",
     "code": "3512",
+    "cpp": true
+  },
+  {
+    "problem": "Path Existence Queries in a Graph I",
+    "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "path-existence-queries-in-a-graph-i",
+    "code": "3532",
+    "cpp": true
+  },
+  {
+    "problem": "Path Existence Queries in a Graph II",
+    "pattern": "Array, Two Pointers, Binary Search, Dynamic Programming, Greedy, Bit Manipulation, Graph Theory, Sorting",
+    "difficulty": "Hard",
+    "link": "path-existence-queries-in-a-graph-ii",
+    "code": "3534",
     "cpp": true
   },
   {
@@ -664,6 +881,14 @@
     "cpp": true
   },
   {
+    "problem": "Network Recovery Pathways",
+    "pattern": "Array, Binary Search, Dynamic Programming, Graph Theory, Topological Sort, Heap (Priority Queue), Shortest Path",
+    "difficulty": "Hard",
+    "link": "network-recovery-pathways",
+    "code": "3620",
+    "cpp": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -678,6 +903,24 @@
     "link": "earliest-finish-time-for-land-and-water-rides-ii",
     "code": "3635",
     "cpp": true
+  },
+  {
+    "problem": "GCD of Odd and Even Sums",
+    "pattern": "Math, Number Theory",
+    "difficulty": "Easy",
+    "link": "gcd-of-odd-and-even-sums",
+    "code": "3658",
+    "c": true,
+    "cpp": true,
+    "csharp": true,
+    "java": true,
+    "python": true,
+    "javascript": true,
+    "typescript": true,
+    "go": true,
+    "ruby": true,
+    "kotlin": true,
+    "rust": true
   },
   {
     "problem": "Maximum Total Subarray Value I",
@@ -741,6 +984,22 @@
     "difficulty": "Hard",
     "link": "total-waviness-of-numbers-in-range-ii",
     "code": "3753",
+    "cpp": true
+  },
+  {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum I",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-i",
+    "code": "3754",
+    "cpp": true
+  },
+  {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum II",
+    "pattern": "Math, String, Prefix Sum",
+    "difficulty": "Medium",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "code": "3756",
     "cpp": true
   },
   {
@@ -861,6 +1120,70 @@
     "difficulty": "Medium",
     "link": "maximize-sum-of-device-ratings",
     "code": "3961",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of Integers with Maximum Digit Range",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "sum-of-integers-with-maximum-digit-range",
+    "code": "3982",
+    "cpp": true
+  },
+  {
+    "problem": "Subsequence After One Replacement",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "subsequence-after-one-replacement",
+    "code": "3983",
+    "cpp": true
+  },
+  {
+    "problem": "Divisible Game",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "divisible-game",
+    "code": "3984",
+    "cpp": true
+  },
+  {
+    "problem": "Palindromic Subarray Sum",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "palindromic-subarray-sum",
+    "code": "3985",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Elapsed Seconds Between Two Times",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "number-of-elapsed-seconds-between-two-times",
+    "code": "3986",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Total Cost to Process All Elements",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-total-cost-to-process-all-elements",
+    "code": "3987",
+    "cpp": true
+  },
+  {
+    "problem": "Create Grid With Exactly K Paths I",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "create-grid-with-exactly-k-paths-i",
+    "code": "3988",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Consistent Columns in a Grid",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-consistent-columns-in-a-grid",
+    "code": "3989",
     "cpp": true
   }
 ]

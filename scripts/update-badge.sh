@@ -31,7 +31,7 @@ while IFS= read -r FILE_PATH; do
   fi
   SEEN_SLUGS[$SLUG]=1
 
-  TITLE=$(grep -m 1 '^#' "$FILE_PATH" 2>/dev/null | sed 's/^#\s*//')
+  TITLE=$(grep -m 1 '^#' "$FILE_PATH" 2>/dev/null | sed 's/^#\s*//' || true)
   TITLE="${TITLE:-$SLUG}"
 
   FILE_URL="https://github.com/$REPO/blob/$BRANCH/$FILE_PATH"
