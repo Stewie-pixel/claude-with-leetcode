@@ -6,6 +6,7 @@
     "link": "two-sum",
     "code": "0001",
     "cpp": true,
+    "java": true,
     "python": true,
     "rust": true
   },
