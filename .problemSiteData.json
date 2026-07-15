@@ -881,6 +881,24 @@
     "cpp": true
   },
   {
+    "problem": "GCD of Odd and Even Sums",
+    "pattern": "Math, Number Theory",
+    "difficulty": "Easy",
+    "link": "gcd-of-odd-and-even-sums",
+    "code": "3658",
+    "c": true,
+    "cpp": true,
+    "csharp": true,
+    "java": true,
+    "python": true,
+    "javascript": true,
+    "typescript": true,
+    "go": true,
+    "ruby": true,
+    "kotlin": true,
+    "rust": true
+  },
+  {
     "problem": "Maximum Total Subarray Value I",
     "pattern": "Array",
     "difficulty": "Medium",
