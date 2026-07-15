@@ -35,6 +35,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/3-longest-substring-without-repeating-characters/ANALYSIS.md"
   },
   {
+    "slug": "3658-gcd-of-odd-and-even-sums",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/3658-gcd-of-odd-and-even-sums/ANALYSIS.md"
+  },
+  {
     "slug": "39-combination-sum",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/39-combination-sum/ANALYSIS.md"
@@ -315,6 +320,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3020-find-the-maximum-number-of-elements-in-subset/ANALYSIS.md"
   },
   {
+    "slug": "307-range-sum-query-mutable",
+    "title": "Segment Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/307-range-sum-query-mutable/ANALYSIS.md"
+  },
+  {
     "slug": "3286-find-a-safe-walk-through-a-grid",
     "title": "0‑1 BFS  ",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3286-find-a-safe-walk-through-a-grid/ANALYSIS.md"
@@ -525,6 +535,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/701-insert-into-a-binary-search-tree/ANALYSIS.md"
   },
   {
+    "slug": "731-my-calendar-ii",
+    "title": "731-my-calendar-ii",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/731-my-calendar-ii/ANALYSIS.md"
+  },
+  {
     "slug": "743-network-delay-time",
     "title": "Dijkstra's Algorithm",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/743-network-delay-time/ANALYSIS.md"
@@ -563,6 +578,11 @@
     "slug": "2574-left-and-right-sum-differences copy",
     "title": "Prefix Sum",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/dcc/cpp/2574-left-and-right-sum-differences copy/ANALYSIS.md"
+  },
+  {
+    "slug": "1-two-sum",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/1-two-sum/ANALYSIS.md"
   },
   {
     "slug": "138-copy-list-with-random-pointer",
