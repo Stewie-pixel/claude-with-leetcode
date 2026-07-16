@@ -312,6 +312,14 @@
     "cpp": true
   },
   {
+    "problem": "K-th Smallest in Lexicographical Order",
+    "pattern": "Trie",
+    "difficulty": "Hard",
+    "link": "k-th-smallest-in-lexicographical-order",
+    "code": "0440",
+    "cpp": true
+  },
+  {
     "problem": "Delete Node in a BST",
     "pattern": "Tree, Binary Search Tree, Binary Tree",
     "difficulty": "Medium",
