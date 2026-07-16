@@ -6,6 +6,33 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.4.1-nightly] - 2026-07-16
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#381) (9f848a2)
+- docs: add claude mentor analysis for new solution (#380) (5019c7e)
+- docs: add claude mentor analysis for new solution (#379) (7f185a2)
+
+### Updated
+- chore: update claude solution count to 134 (03e7c46)
+- Update README table (0a75880)
+- Update README table (4d1761c)
+- Update README table (441557f)
+- Update README table (c3882be)
+- Update README table (101add2)
+- Update README table (482115a)
+- chore: release nightly v0.4.1-nightly.20260715 (#378) (12d68e7)
+
+### Other
+- Update README table (0a75880)
+- Update README table (4d1761c)
+- Add Two Sum solution in Java (#245) (0073b9b)
+- Update README table (441557f)
+- Update README table (c3882be)
+- Update README table (101add2)
+- Update README table (482115a)
+
+
 ## [0.4.1-nightly] - 2026-07-15
 
 ### Added
