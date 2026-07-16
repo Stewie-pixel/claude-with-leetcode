@@ -69,6 +69,14 @@
     "cpp": true
   },
   {
+    "problem": "Longest Common Prefix",
+    "pattern": "Array, String, Trie",
+    "difficulty": "Easy",
+    "link": "longest-common-prefix",
+    "code": "0014",
+    "cpp": true
+  },
+  {
     "problem": "3Sum",
     "pattern": "Array, Two Pointers, Sorting",
     "difficulty": "Medium",
@@ -1009,6 +1017,14 @@
     "difficulty": "Easy",
     "link": "weighted-word-mapping",
     "code": "3838",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of GCD of Formed Pairs",
+    "pattern": "Array, Math, Two Pointers, Sorting, Simulation, Number Theory",
+    "difficulty": "Medium",
+    "link": "sum-of-gcd-of-formed-pairs",
+    "code": "3867",
     "cpp": true
   },
   {
