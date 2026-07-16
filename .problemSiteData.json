@@ -376,6 +376,14 @@
     "cpp": true
   },
   {
+    "problem": "Longest Word in Dictionary",
+    "pattern": "Array, Hash Table, String, Trie, Sorting",
+    "difficulty": "Medium",
+    "link": "longest-word-in-dictionary",
+    "code": "0720",
+    "cpp": true
+  },
+  {
     "problem": "Find Pivot Index",
     "pattern": "Array",
     "difficulty": "Easy",
