@@ -216,7 +216,3 @@ After sorting (already sorted): `["w","wo","wor","worl","world"]`
 Result: `"world"` – matches expected output.
 
 A second dry‑run on Example 2 (`["a","banana","app","appl","ap","apply","apple"]`) shows how the algorithm picks `"apple"` over `"apply"` because both are valid and same length, but `"apple"` is lexicographically smaller (encountered first after sorting).
-
---- 
-
-**End of lecture**. Commit this file as `/lectures/2025-09-26-trie.md`.
