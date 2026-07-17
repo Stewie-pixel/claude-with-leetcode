@@ -858,6 +858,14 @@
     "cpp": true
   },
   {
+    "problem": "Sorted GCD Pair Queries",
+    "pattern": "Array, Hash Table, Math, Binary Search, Combinatorics, Counting, Number Theory, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "sorted-gcd-pair-queries",
+    "code": "3312",
+    "python": true
+  },
+  {
     "problem": "Find the Number of Subsequences With Equal GCD",
     "pattern": "Array, Math, Dynamic Programming, Number Theory",
     "difficulty": "Hard",
