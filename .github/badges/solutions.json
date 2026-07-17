@@ -185,6 +185,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1567-maximum-length-of-subarray-with-positive-product/ANALYSIS.md"
   },
   {
+    "slug": "1584-min-cost-to-connect-all-points",
+    "title": "Minimum Spanning Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1584-min-cost-to-connect-all-points/ANALYSIS.md"
+  },
+  {
     "slug": "1657-determine-if-two-strings-are-close",
     "title": "Arrays & Hashing  ",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1657-determine-if-two-strings-are-close/ANALYSIS.md"
@@ -550,6 +555,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/701-insert-into-a-binary-search-tree/ANALYSIS.md"
   },
   {
+    "slug": "720-longest-word-in-dictionary",
+    "title": "Trie",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/720-longest-word-in-dictionary/ANALYSIS.md"
+  },
+  {
     "slug": "731-my-calendar-ii",
     "title": "731-my-calendar-ii",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/731-my-calendar-ii/ANALYSIS.md"
@@ -653,6 +663,11 @@
     "slug": "20-valid-parentheses",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/20-valid-parentheses/ANALYSIS.md"
+  },
+  {
+    "slug": "3312-sorted-gcd-pair-queries",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3312-sorted-gcd-pair-queries/ANALYSIS.md"
   },
   {
     "slug": "349-intersection-of-two-arrays",
