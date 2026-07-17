@@ -284,11 +284,3 @@ The sorted list of all pair‑GCDs is `[1,1,2]` (prefix tells us there are 2 ≤
 - query 2 → same → answer 2
 
 Result `[1,2,2]` matches the expected output. 
-
---- 
-
-This completes the lecture for **Math & Geometry** (topic: Sorted GCD Pair Queries using sieve and prefix sums). The file should be saved as:
-
-`/lectures/YYYY-MM-DD-math-geometry.md`
-
-(use today’s date in `YYYY-MM-DD` format). No other files are modified.
