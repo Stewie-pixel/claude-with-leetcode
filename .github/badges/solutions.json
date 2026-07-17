@@ -155,6 +155,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1392-longest-happy-prefix/ANALYSIS.md"
   },
   {
+    "slug": "14-longest-common-prefix",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/14-longest-common-prefix/ANALYSIS.md"
+  },
+  {
     "slug": "1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/ANALYSIS.md"
@@ -430,6 +435,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3838-weighted-word-mapping/ANALYSIS.md"
   },
   {
+    "slug": "3867-sum-of-gcd-of-formed-pairs",
+    "title": "## Algorithm",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3867-sum-of-gcd-of-formed-pairs/ANALYSIS.md"
+  },
+  {
     "slug": "3898-find-the-degree-of-each-vertex",
     "title": "Find the Degree of Each Vertex",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3898-find-the-degree-of-each-vertex/ANALYSIS.md"
@@ -498,6 +508,11 @@
     "slug": "3989-maximum-consistent-columns-in-a-grid",
     "title": "## Algorithm",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3989-maximum-consistent-columns-in-a-grid/ANALYSIS.md"
+  },
+  {
+    "slug": "440-k-th-smallest-in-lexicographical-order",
+    "title": "Trie",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/440-k-th-smallest-in-lexicographical-order/ANALYSIS.md"
   },
   {
     "slug": "450-delete-node-in-a-bst",
