@@ -1,4 +1,4 @@
-# Minimum Spanning Tree (Prim's & Kruskal's)
+# Minimum Spanning Tree
 
 ## Video Solution
 
