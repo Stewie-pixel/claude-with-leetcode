@@ -1250,5 +1250,37 @@
     "link": "maximum-consistent-columns-in-a-grid",
     "code": "3989",
     "cpp": true
+  },
+  {
+    "problem": "Rearrange String to Avoid Character Pair",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "rearrange-string-to-avoid-character-pair",
+    "code": "3992",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Value of an Alternating Sequence",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "maximum-value-of-an-alternating-sequence",
+    "code": "3993",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Adjacent Swaps to Partition Array",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-adjacent-swaps-to-partition-array",
+    "code": "3994",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Cost to Convert String III",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "minimum-cost-to-convert-string-iii",
+    "code": "3995",
+    "cpp": true
   }
 ]
