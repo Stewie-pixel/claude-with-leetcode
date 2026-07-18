@@ -225,6 +225,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1971-find-if-path-exists-in-graph/ANALYSIS.md"
   },
   {
+    "slug": "1979-find-greatest-common-divisor-of-array",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1979-find-greatest-common-divisor-of-array/ANALYSIS.md"
+  },
+  {
     "slug": "2065-maximum-path-quality-of-a-graph",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2065-maximum-path-quality-of-a-graph/ANALYSIS.md"
@@ -513,6 +518,26 @@
     "slug": "3989-maximum-consistent-columns-in-a-grid",
     "title": "## Algorithm",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3989-maximum-consistent-columns-in-a-grid/ANALYSIS.md"
+  },
+  {
+    "slug": "3992-rearrange-string-to-avoid-character-pair",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3992-rearrange-string-to-avoid-character-pair/ANALYSIS.md"
+  },
+  {
+    "slug": "3993-maximum-value-of-an-alternating-sequence",
+    "title": "### 1.   Observations  ",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3993-maximum-value-of-an-alternating-sequence/ANALYSIS.md"
+  },
+  {
+    "slug": "3994-minimum-adjacent-swaps-to-partition-array",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3994-minimum-adjacent-swaps-to-partition-array/ANALYSIS.md"
+  },
+  {
+    "slug": "3995-minimum-cost-to-convert-string-iii",
+    "title": "### 1.   Pre‑processing – all usable rules",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3995-minimum-cost-to-convert-string-iii/ANALYSIS.md"
   },
   {
     "slug": "440-k-th-smallest-in-lexicographical-order",
