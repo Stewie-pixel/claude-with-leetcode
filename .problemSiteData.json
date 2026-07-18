@@ -662,6 +662,14 @@
     "cpp": true
   },
   {
+    "problem": "Find Greatest Common Divisor of Array",
+    "pattern": "Array, Math, Number Theory",
+    "difficulty": "Easy",
+    "link": "find-greatest-common-divisor-of-array",
+    "code": "1979",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Path Quality of a Graph",
     "pattern": "Array, Backtracking, Graph Theory",
     "difficulty": "Hard",
