@@ -444,6 +444,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Subsequence of Distinct Characters",
+    "pattern": "String, Stack, Greedy, Monotonic Stack",
+    "difficulty": "Medium",
+    "link": "smallest-subsequence-of-distinct-characters",
+    "code": "1081",
+    "cpp": true
+  },
+  {
     "problem": "Shortest Path with Alternating Colors",
     "pattern": "Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
