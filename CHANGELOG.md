@@ -6,7 +6,7 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
-## [0.4.2-nightly.20260719] - 2026-07-19
+## [0.4.2-nightly] - 2026-07-19
 
 ### Documentation
 - docs: add claude mentor analysis for new solution (#404) (66ca2b0)
