@@ -20,6 +20,6 @@
     },
     "homepage": "https://github.com/Stewie-pixel/claude-with-leetcode#readme",
     "dependencies": {
-        "node-html-parser": "^8.0.4"
+        "node-html-parser": "^9.0.0"
     }
 }
