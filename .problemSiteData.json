@@ -468,6 +468,14 @@
     "cpp": true
   },
   {
+    "problem": "Shift 2D Grid",
+    "pattern": "Array, Matrix, Simulation",
+    "difficulty": "Easy",
+    "link": "shift-2d-grid",
+    "code": "1260",
+    "cpp": true
+  },
+  {
     "problem": "Remove Covered Intervals",
     "pattern": "Array, Sorting",
     "difficulty": "Medium",
