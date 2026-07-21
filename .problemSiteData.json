@@ -898,6 +898,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximize Active Section with Trade I",
+    "pattern": "String, Enumeration",
+    "difficulty": "Medium",
+    "link": "maximize-active-section-with-trade-i",
+    "code": "3499",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
