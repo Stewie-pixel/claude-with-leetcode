@@ -13,6 +13,13 @@ and versions follow Semantic Versioning.
 
 ### Other
 - Update README table (b6b185c)
+## [0.5.1-nightly] - 2026-07-20
+
+### Updated
+- Update README table (5bfeb07)
+
+### Other
+- Update README table (5bfeb07)
 
 
 ## [0.4.2-nightly] - 2026-07-19
