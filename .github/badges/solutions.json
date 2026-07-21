@@ -95,6 +95,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/weekly/509/cpp/3985-palindromic-subarray-sum/ANALYSIS.md"
   },
   {
+    "slug": "1081-smallest-subsequence-of-distinct-characters",
+    "title": "Stack (Monotonic Stack)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1081-smallest-subsequence-of-distinct-characters/ANALYSIS.md"
+  },
+  {
     "slug": "1129-shortest-path-with-alternating-colors",
     "title": "Graphs – BFS with State (Shortest Path with Alternating Colors)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1129-shortest-path-with-alternating-colors/ANALYSIS.md"
@@ -108,6 +113,11 @@
     "slug": "12-integer-to-roman",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/12-integer-to-roman/ANALYSIS.md"
+  },
+  {
+    "slug": "1260-shift-2d-grid",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1260-shift-2d-grid/ANALYSIS.md"
   },
   {
     "slug": "128-longest-consecutive-sequence",
@@ -353,6 +363,11 @@
     "slug": "3336-find-the-number-of-subsequences-with-equal-gcd",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3336-find-the-number-of-subsequences-with-equal-gcd/ANALYSIS.md"
+  },
+  {
+    "slug": "3499-maximize-active-section-with-trade-i",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3499-maximize-active-section-with-trade-i/ANALYSIS.md"
   },
   {
     "slug": "3512-minimum-operations-to-make-array-sum-divisible-by-k",
