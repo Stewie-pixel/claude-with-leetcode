@@ -380,8 +380,3 @@ Answer = `total_ones + best_gain = 1 + 3 = 4`.
 This matches the expected output `[4]`.
 
 The same procedure applied to the other queries yields `[4,3,1,1]` as shown in the problem statement.
-
---- 
-
-**End of lecture**.  
-Commit this file as `/lectures/2025-09-26-segment-tree.md`.
