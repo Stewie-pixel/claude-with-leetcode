@@ -906,6 +906,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximize Active Section with Trade II",
+    "pattern": "Array, String, Binary Search, Segment Tree",
+    "difficulty": "Hard",
+    "link": "maximize-active-section-with-trade-ii",
+    "code": "3501",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
