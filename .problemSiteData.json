@@ -436,6 +436,14 @@
     "kotlin": true
   },
   {
+    "problem": "Lemonade Change",
+    "pattern": "Array, Greedy",
+    "difficulty": "Easy",
+    "link": "lemonade-change",
+    "code": "0860",
+    "cpp": true
+  },
+  {
     "problem": "Largest Component Size by Common Factor",
     "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
     "difficulty": "Hard",
