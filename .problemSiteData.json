@@ -58,7 +58,8 @@
     "difficulty": "Medium",
     "link": "container-with-most-water",
     "code": "0011",
-    "c": true
+    "c": true,
+    "cpp": true
   },
   {
     "problem": "Integer to Roman",
@@ -176,6 +177,14 @@
     "cpp": true
   },
   {
+    "problem": "Climbing Stairs",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "climbing-stairs",
+    "code": "0070",
+    "cpp": true
+  },
+  {
     "problem": "Combinations",
     "pattern": "Backtracking",
     "difficulty": "Medium",
@@ -213,6 +222,14 @@
     "difficulty": "Medium",
     "link": "longest-consecutive-sequence",
     "code": "0128",
+    "cpp": true
+  },
+  {
+    "problem": "Candy",
+    "pattern": "Array, Greedy",
+    "difficulty": "Hard",
+    "link": "candy",
+    "code": "0135",
     "cpp": true
   },
   {
