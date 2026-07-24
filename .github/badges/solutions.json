@@ -160,6 +160,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1344-angle-between-hands-of-a-clock/ANALYSIS.md"
   },
   {
+    "slug": "135-candy",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/135-candy/ANALYSIS.md"
+  },
+  {
     "slug": "1392-longest-happy-prefix",
     "title": "String Matching (KMP) – Longest Happy Prefix  ",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1392-longest-happy-prefix/ANALYSIS.md"
@@ -380,6 +385,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3512-minimum-operations-to-make-array-sum-divisible-by-k/ANALYSIS.md"
   },
   {
+    "slug": "3513-number-of-unique-xor-triplets-i",
+    "title": "Bitwise XOR",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3513-number-of-unique-xor-triplets-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3514-number-of-unique-xor-triplets-ii",
+    "title": "Bit Manipulation",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3514-number-of-unique-xor-triplets-ii/ANALYSIS.md"
+  },
+  {
     "slug": "3532-path-existence-queries-in-a-graph-i",
     "title": "Union Find (Disjoint Set Union)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3532-path-existence-queries-in-a-graph-i/ANALYSIS.md"
@@ -588,6 +603,11 @@
     "slug": "687-longest-univalue-path",
     "title": "Tree DFS",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/687-longest-univalue-path/ANALYSIS.md"
+  },
+  {
+    "slug": "70-climbing-stairs",
+    "title": "70-climbing-stairs",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/70-climbing-stairs/ANALYSIS.md"
   },
   {
     "slug": "700-search-in-a-binary-search-tree",
