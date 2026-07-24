@@ -938,6 +938,14 @@
     "cpp": true
   },
   {
+    "problem": "Number of Unique XOR Triplets II",
+    "pattern": "Array, Math, Bit Manipulation, Enumeration",
+    "difficulty": "Medium",
+    "link": "number-of-unique-xor-triplets-ii",
+    "code": "3514",
+    "cpp": true
+  },
+  {
     "problem": "Path Existence Queries in a Graph I",
     "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
     "difficulty": "Medium",
