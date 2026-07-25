@@ -979,6 +979,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Product of Two Digits",
+    "pattern": "Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-digits",
+    "code": "3536",
+    "cpp": true
+  },
+  {
     "problem": "Number of Ways to Assign Edge Weights I",
     "pattern": "Math",
     "difficulty": "Medium",
