@@ -177,6 +177,14 @@
     "c": true
   },
   {
+    "problem": "Multiply Strings",
+    "pattern": "Math, String, Simulation",
+    "difficulty": "Medium",
+    "link": "multiply-strings",
+    "code": "0043",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
