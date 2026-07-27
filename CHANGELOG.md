@@ -6,6 +6,35 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.2] - 2026-07-27
+
+### Added
+- feat(c): add solution for 43-multiply-strings (#325) (431c952)
+- feat(c): add solution for 42-trapping-rain-water (#324) (17111a7)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#452) (7b996a7)
+- docs: add claude mentor analysis for new solution (#451) (d324aef)
+- docs: add claude mentor analysis for new solution (#449) (0101346)
+
+### Updated
+- Update README table (551fed6)
+- docs: add claude mentor analysis for new solution (#452) (7b996a7)
+- Update README table (013ea0c)
+- Update README table (4fc07d4)
+- Update README table (60207a0)
+- Update README table (05a7437)
+- chore: update changelog for 0.5.1-nightly.20260726 [skip ci] (#448) (2f5b67c)
+- chore: release nightly 0.5.1-nightly.20260725 (#441) (bfd2d8a)
+
+### Other
+- Update README table (551fed6)
+- Update README table (013ea0c)
+- Update README table (4fc07d4)
+- Update README table (60207a0)
+- Update README table (05a7437)
+
+
 ## [0.5.1-nightly] - 2026-07-26
 
 ### Documentation
