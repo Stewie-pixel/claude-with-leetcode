@@ -144,7 +144,3 @@ We trace the single‑pass algorithm on the input `nums = [3,4,5,2]`.
 | 4    | 2  | 5           | 4           | x ≤ max1 and x > max2? no → unchanged| 5          | 4          |
 
 Result: `(5‑1)*(4‑1) = 4*3 = 12`, matching the expected output.
-
---- 
-
-*This lecture follows the Arrays & Hashing pattern: identify the two largest elements to maximize a monotonic function of a pair.*
