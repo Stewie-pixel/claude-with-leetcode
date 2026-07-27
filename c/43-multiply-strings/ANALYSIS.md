@@ -234,8 +234,3 @@ We trace the algorithm on `num1 = "123"` and `num2 = "456"`.
 
 Final `pos` array (indices 0…5): `[0, 5, 8, 9, 3, 8]`  
 Skip leading zero → `"56088"` which matches the expected output.
-
---- 
-
-**End of lecture**.  
-Commit this file as `/lectures/2025-08-27-math-geometry.md`.
