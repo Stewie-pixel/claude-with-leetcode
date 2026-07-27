@@ -169,6 +169,14 @@
     "c": true
   },
   {
+    "problem": "Trapping Rain Water",
+    "pattern": "Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "trapping-rain-water",
+    "code": "0042",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
