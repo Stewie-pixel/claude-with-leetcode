@@ -361,6 +361,14 @@
     "python": true
   },
   {
+    "problem": "Maximum Product of Three Numbers",
+    "pattern": "Array, Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-three-numbers",
+    "code": "0628",
+    "python": true
+  },
+  {
     "problem": "Find K Closest Elements",
     "pattern": "Array, Two Pointers, Binary Search, Sliding Window, Sorting, Heap (Priority Queue)",
     "difficulty": "Medium",
@@ -976,6 +984,14 @@
     "difficulty": "Hard",
     "link": "path-existence-queries-in-a-graph-ii",
     "code": "3534",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Product of Two Digits",
+    "pattern": "Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-digits",
+    "code": "3536",
     "cpp": true
   },
   {
