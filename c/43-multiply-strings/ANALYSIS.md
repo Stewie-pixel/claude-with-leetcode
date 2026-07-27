@@ -231,6 +231,3 @@ We trace the algorithm on `num1 = "123"` and `num2 = "456"`.
 | 7    | 0 (‘1’)  | 2 (‘6’)  | 1      | 6      | 6   | 2  | 3  | (2,3)              | 6+3=9                 | 9                   | 0 added to pos[2]                  | pos[3]=9, pos[2]=3                 |
 | 8    | 0 (‘1’)  | 1 (‘5’)  | 1      | 5      | 5   | 1  | 2  | (1,3)              | 5+3=8                 | 8                   | 0 added to pos[1]                  | pos[2]=8, pos[1]=1                 |
 | 9    | 0 (‘1’)  | 0 (‘4’)  | 1      | 4      | 4   | 0  | 1  | (0,1)              | 4+1=5                 | 5                   | 0 added to pos[0]                  | pos[1]=5, pos[0]=0                 |
-
-Final `pos` array (indices 0…5): `[0, 5, 8, 9, 3, 8]`  
-Skip leading zero → `"56088"` which matches the expected output.
