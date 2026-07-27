@@ -273,6 +273,14 @@
     "java": true
   },
   {
+    "problem": "House Robber",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "house-robber",
+    "code": "0198",
+    "cpp": true
+  },
+  {
     "problem": "Reverse Linked List",
     "pattern": "Linked List, Recursion",
     "difficulty": "Easy",
@@ -366,6 +374,14 @@
     "difficulty": "Easy",
     "link": "island-perimeter",
     "code": "0463",
+    "cpp": true
+  },
+  {
+    "problem": "Target Sum",
+    "pattern": "Array, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "target-sum",
+    "code": "0494",
     "cpp": true
   },
   {
@@ -611,6 +627,14 @@
     "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
     "code": "1456",
     "cpp": true
+  },
+  {
+    "problem": "Maximum Product of Two Elements in an Array",
+    "pattern": "Array, Sorting, Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-elements-in-an-array",
+    "code": "1464",
+    "python": true
   },
   {
     "problem": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
