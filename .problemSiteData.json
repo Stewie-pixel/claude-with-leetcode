@@ -6,6 +6,7 @@
     "link": "two-sum",
     "code": "0001",
     "cpp": true,
+    "java": true,
     "python": true,
     "rust": true
   },
@@ -57,7 +58,8 @@
     "difficulty": "Medium",
     "link": "container-with-most-water",
     "code": "0011",
-    "c": true
+    "c": true,
+    "cpp": true
   },
   {
     "problem": "Integer to Roman",
@@ -65,6 +67,14 @@
     "difficulty": "Medium",
     "link": "integer-to-roman",
     "code": "0012",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Common Prefix",
+    "pattern": "Array, String, Trie",
+    "difficulty": "Easy",
+    "link": "longest-common-prefix",
+    "code": "0014",
     "cpp": true
   },
   {
@@ -135,6 +145,14 @@
     "python": true
   },
   {
+    "problem": "Valid Sudoku",
+    "pattern": "Array, Hash Table, Matrix",
+    "difficulty": "Medium",
+    "link": "valid-sudoku",
+    "code": "0036",
+    "c": true
+  },
+  {
     "problem": "Combination Sum",
     "pattern": "Array, Backtracking",
     "difficulty": "Medium",
@@ -151,11 +169,35 @@
     "c": true
   },
   {
+    "problem": "Trapping Rain Water",
+    "pattern": "Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "trapping-rain-water",
+    "code": "0042",
+    "c": true
+  },
+  {
+    "problem": "Multiply Strings",
+    "pattern": "Math, String, Simulation",
+    "difficulty": "Medium",
+    "link": "multiply-strings",
+    "code": "0043",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
     "link": "permutations-ii",
     "code": "0047",
+    "cpp": true
+  },
+  {
+    "problem": "Climbing Stairs",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "climbing-stairs",
+    "code": "0070",
     "cpp": true
   },
   {
@@ -199,6 +241,14 @@
     "cpp": true
   },
   {
+    "problem": "Candy",
+    "pattern": "Array, Greedy",
+    "difficulty": "Hard",
+    "link": "candy",
+    "code": "0135",
+    "cpp": true
+  },
+  {
     "problem": "Copy List with Random Pointer",
     "pattern": "Hash Table, Linked List",
     "difficulty": "Medium",
@@ -221,6 +271,14 @@
     "link": "reorder-list",
     "code": "0143",
     "java": true
+  },
+  {
+    "problem": "House Robber",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "house-robber",
+    "code": "0198",
+    "cpp": true
   },
   {
     "problem": "Reverse Linked List",
@@ -255,12 +313,28 @@
     "java": true
   },
   {
+    "problem": "Range Sum Query - Mutable",
+    "pattern": "Array, Divide and Conquer, Design, Binary Indexed Tree, Segment Tree",
+    "difficulty": "Medium",
+    "link": "range-sum-query-mutable",
+    "code": "0307",
+    "cpp": true
+  },
+  {
     "problem": "Reconstruct Itinerary",
     "pattern": "Array, String, Depth-First Search, Graph Theory, Sorting, Heap (Priority Queue), Eulerian Circuit",
     "difficulty": "Hard",
     "link": "reconstruct-itinerary",
     "code": "0332",
     "cpp": true
+  },
+  {
+    "problem": "Intersection of Two Arrays",
+    "pattern": "Array, Hash Table, Two Pointers, Binary Search, Sorting",
+    "difficulty": "Easy",
+    "link": "intersection-of-two-arrays",
+    "code": "0349",
+    "python": true
   },
   {
     "problem": "Decode String",
@@ -279,12 +353,52 @@
     "cpp": true
   },
   {
+    "problem": "K-th Smallest in Lexicographical Order",
+    "pattern": "Trie",
+    "difficulty": "Hard",
+    "link": "k-th-smallest-in-lexicographical-order",
+    "code": "0440",
+    "cpp": true
+  },
+  {
+    "problem": "Delete Node in a BST",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "delete-node-in-a-bst",
+    "code": "0450",
+    "cpp": true
+  },
+  {
     "problem": "Island Perimeter",
     "pattern": "Array, Depth-First Search, Breadth-First Search, Matrix",
     "difficulty": "Easy",
     "link": "island-perimeter",
     "code": "0463",
     "cpp": true
+  },
+  {
+    "problem": "Target Sum",
+    "pattern": "Array, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "target-sum",
+    "code": "0494",
+    "cpp": true
+  },
+  {
+    "problem": "Keyboard Row",
+    "pattern": "Array, Hash Table, String",
+    "difficulty": "Easy",
+    "link": "keyboard-row",
+    "code": "0500",
+    "python": true
+  },
+  {
+    "problem": "Maximum Product of Three Numbers",
+    "pattern": "Array, Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-three-numbers",
+    "code": "0628",
+    "python": true
   },
   {
     "problem": "Find K Closest Elements",
@@ -295,11 +409,51 @@
     "java": true
   },
   {
+    "problem": "Longest Univalue Path",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "longest-univalue-path",
+    "code": "0687",
+    "cpp": true
+  },
+  {
+    "problem": "Search in a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "search-in-a-binary-search-tree",
+    "code": "0700",
+    "cpp": true
+  },
+  {
+    "problem": "Insert into a Binary Search Tree",
+    "pattern": "Tree, Binary Search Tree, Binary Tree",
+    "difficulty": "Medium",
+    "link": "insert-into-a-binary-search-tree",
+    "code": "0701",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Word in Dictionary",
+    "pattern": "Array, Hash Table, String, Trie, Sorting",
+    "difficulty": "Medium",
+    "link": "longest-word-in-dictionary",
+    "code": "0720",
+    "cpp": true
+  },
+  {
     "problem": "Find Pivot Index",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "find-pivot-index",
     "code": "0724",
+    "cpp": true
+  },
+  {
+    "problem": "My Calendar II",
+    "pattern": "Array, Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set",
+    "difficulty": "Medium",
+    "link": "my-calendar-ii",
+    "code": "0731",
     "cpp": true
   },
   {
@@ -339,11 +493,27 @@
     "kotlin": true
   },
   {
+    "problem": "Lemonade Change",
+    "pattern": "Array, Greedy",
+    "difficulty": "Easy",
+    "link": "lemonade-change",
+    "code": "0860",
+    "cpp": true
+  },
+  {
     "problem": "Largest Component Size by Common Factor",
     "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
     "difficulty": "Hard",
     "link": "largest-component-size-by-common-factor",
     "code": "0952",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Subsequence of Distinct Characters",
+    "pattern": "String, Stack, Greedy, Monotonic Stack",
+    "difficulty": "Medium",
+    "link": "smallest-subsequence-of-distinct-characters",
+    "code": "1081",
     "cpp": true
   },
   {
@@ -363,11 +533,27 @@
     "cpp": true
   },
   {
+    "problem": "Shift 2D Grid",
+    "pattern": "Array, Matrix, Simulation",
+    "difficulty": "Easy",
+    "link": "shift-2d-grid",
+    "code": "1260",
+    "cpp": true
+  },
+  {
     "problem": "Remove Covered Intervals",
     "pattern": "Array, Sorting",
     "difficulty": "Medium",
     "link": "remove-covered-intervals",
     "code": "1288",
+    "cpp": true
+  },
+  {
+    "problem": "Sequential Digits",
+    "pattern": "Enumeration",
+    "difficulty": "Medium",
+    "link": "sequential-digits",
+    "code": "1291",
     "cpp": true
   },
   {
@@ -384,6 +570,14 @@
     "difficulty": "Medium",
     "link": "get-watched-videos-by-your-friends",
     "code": "1311",
+    "cpp": true
+  },
+  {
+    "problem": "Rank Transform of an Array",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "rank-transform-of-an-array",
+    "code": "1331",
     "cpp": true
   },
   {
@@ -435,6 +629,22 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Product of Two Elements in an Array",
+    "pattern": "Array, Sorting, Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-elements-in-an-array",
+    "code": "1464",
+    "python": true
+  },
+  {
+    "problem": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+    "pattern": "Union-Find, Graph Theory, Sorting, Minimum Spanning Tree, Strongly Connected Component",
+    "difficulty": "Hard",
+    "link": "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+    "code": "1489",
+    "cpp": true
+  },
+  {
     "problem": "Longest Subarray of 1's After Deleting One Element",
     "pattern": "Array",
     "difficulty": "Medium",
@@ -464,6 +674,14 @@
     "difficulty": "Medium",
     "link": "maximum-length-of-subarray-with-positive-product",
     "code": "1567",
+    "cpp": true
+  },
+  {
+    "problem": "Min Cost to Connect All Points",
+    "pattern": "Array, Union-Find, Graph Theory, Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "link": "min-cost-to-connect-all-points",
+    "code": "1584",
     "cpp": true
   },
   {
@@ -530,6 +748,14 @@
     "difficulty": "Easy",
     "link": "find-if-path-exists-in-graph",
     "code": "1971",
+    "cpp": true
+  },
+  {
+    "problem": "Find Greatest Common Divisor of Array",
+    "pattern": "Array, Math, Number Theory",
+    "difficulty": "Easy",
+    "link": "find-greatest-common-divisor-of-array",
+    "code": "1979",
     "cpp": true
   },
   {
@@ -605,6 +831,14 @@
     "difficulty": "Hard",
     "link": "sum-of-scores-of-built-strings",
     "code": "2223",
+    "cpp": true
+  },
+  {
+    "problem": "Root Equals Sum of Children",
+    "pattern": "Tree, Binary Tree",
+    "difficulty": "Easy",
+    "link": "root-equals-sum-of-children",
+    "code": "2236",
     "cpp": true
   },
   {
@@ -697,6 +931,14 @@
     "cpp": true
   },
   {
+    "problem": "Find Building Where Alice and Bob Can Meet",
+    "pattern": "Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "find-building-where-alice-and-bob-can-meet",
+    "code": "2940",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
@@ -713,11 +955,83 @@
     "cpp": true
   },
   {
+    "problem": "Sorted GCD Pair Queries",
+    "pattern": "Array, Hash Table, Math, Binary Search, Combinatorics, Counting, Number Theory, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "sorted-gcd-pair-queries",
+    "code": "3312",
+    "python": true
+  },
+  {
+    "problem": "Find the Number of Subsequences With Equal GCD",
+    "pattern": "Array, Math, Dynamic Programming, Number Theory",
+    "difficulty": "Hard",
+    "link": "find-the-number-of-subsequences-with-equal-gcd",
+    "code": "3336",
+    "cpp": true
+  },
+  {
+    "problem": "Maximize Active Section with Trade I",
+    "pattern": "String, Enumeration",
+    "difficulty": "Medium",
+    "link": "maximize-active-section-with-trade-i",
+    "code": "3499",
+    "cpp": true
+  },
+  {
+    "problem": "Maximize Active Section with Trade II",
+    "pattern": "Array, String, Binary Search, Segment Tree",
+    "difficulty": "Hard",
+    "link": "maximize-active-section-with-trade-ii",
+    "code": "3501",
+    "cpp": true
+  },
+  {
     "problem": "Minimum Operations to Make Array Sum Divisible by K",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "minimum-operations-to-make-array-sum-divisible-by-k",
     "code": "3512",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Unique XOR Triplets I",
+    "pattern": "Array, Math, Bit Manipulation",
+    "difficulty": "Medium",
+    "link": "number-of-unique-xor-triplets-i",
+    "code": "3513",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Unique XOR Triplets II",
+    "pattern": "Array, Math, Bit Manipulation, Enumeration",
+    "difficulty": "Medium",
+    "link": "number-of-unique-xor-triplets-ii",
+    "code": "3514",
+    "cpp": true
+  },
+  {
+    "problem": "Path Existence Queries in a Graph I",
+    "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
+    "difficulty": "Medium",
+    "link": "path-existence-queries-in-a-graph-i",
+    "code": "3532",
+    "cpp": true
+  },
+  {
+    "problem": "Path Existence Queries in a Graph II",
+    "pattern": "Array, Two Pointers, Binary Search, Dynamic Programming, Greedy, Bit Manipulation, Graph Theory, Sorting",
+    "difficulty": "Hard",
+    "link": "path-existence-queries-in-a-graph-ii",
+    "code": "3534",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Product of Two Digits",
+    "pattern": "Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-digits",
+    "code": "3536",
     "cpp": true
   },
   {
@@ -775,6 +1089,24 @@
     "link": "earliest-finish-time-for-land-and-water-rides-ii",
     "code": "3635",
     "cpp": true
+  },
+  {
+    "problem": "GCD of Odd and Even Sums",
+    "pattern": "Math, Number Theory",
+    "difficulty": "Easy",
+    "link": "gcd-of-odd-and-even-sums",
+    "code": "3658",
+    "c": true,
+    "cpp": true,
+    "csharp": true,
+    "java": true,
+    "python": true,
+    "javascript": true,
+    "typescript": true,
+    "go": true,
+    "ruby": true,
+    "kotlin": true,
+    "rust": true
   },
   {
     "problem": "Maximum Total Subarray Value I",
@@ -849,11 +1181,27 @@
     "cpp": true
   },
   {
+    "problem": "Concatenate Non-Zero Digits and Multiply by Sum II",
+    "pattern": "Math, String, Prefix Sum",
+    "difficulty": "Medium",
+    "link": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "code": "3756",
+    "cpp": true
+  },
+  {
     "problem": "Weighted Word Mapping",
     "pattern": "Array",
     "difficulty": "Easy",
     "link": "weighted-word-mapping",
     "code": "3838",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of GCD of Formed Pairs",
+    "pattern": "Array, Math, Two Pointers, Sorting, Simulation, Number Theory",
+    "difficulty": "Medium",
+    "link": "sum-of-gcd-of-formed-pairs",
+    "code": "3867",
     "cpp": true
   },
   {
@@ -998,6 +1346,70 @@
     "difficulty": "Hard",
     "link": "palindromic-subarray-sum",
     "code": "3985",
+    "cpp": true
+  },
+  {
+    "problem": "Number of Elapsed Seconds Between Two Times",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "number-of-elapsed-seconds-between-two-times",
+    "code": "3986",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Total Cost to Process All Elements",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-total-cost-to-process-all-elements",
+    "code": "3987",
+    "cpp": true
+  },
+  {
+    "problem": "Create Grid With Exactly K Paths I",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "create-grid-with-exactly-k-paths-i",
+    "code": "3988",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Consistent Columns in a Grid",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-consistent-columns-in-a-grid",
+    "code": "3989",
+    "cpp": true
+  },
+  {
+    "problem": "Rearrange String to Avoid Character Pair",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "rearrange-string-to-avoid-character-pair",
+    "code": "3992",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Value of an Alternating Sequence",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "maximum-value-of-an-alternating-sequence",
+    "code": "3993",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Adjacent Swaps to Partition Array",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-adjacent-swaps-to-partition-array",
+    "code": "3994",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Cost to Convert String III",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "minimum-cost-to-convert-string-iii",
+    "code": "3995",
     "cpp": true
   }
 ]
