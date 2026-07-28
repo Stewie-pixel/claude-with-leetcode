@@ -1019,6 +1019,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Palindromic Rearrangement I",
+    "pattern": "String, Sorting, Counting Sort",
+    "difficulty": "Medium",
+    "link": "smallest-palindromic-rearrangement-i",
+    "code": "3517",
+    "cpp": true
+  },
+  {
     "problem": "Path Existence Queries in a Graph I",
     "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
     "difficulty": "Medium",
