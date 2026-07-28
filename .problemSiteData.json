@@ -313,6 +313,14 @@
     "cpp": true
   },
   {
+    "problem": "Sliding Window Maximum",
+    "pattern": "Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue",
+    "difficulty": "Hard",
+    "link": "sliding-window-maximum",
+    "code": "0239",
+    "java": true
+  },
+  {
     "problem": "Find the Duplicate Number",
     "pattern": "Array, Two Pointers, Binary Search, Bit Manipulation",
     "difficulty": "Medium",
