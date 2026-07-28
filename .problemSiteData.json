@@ -708,7 +708,8 @@
     "difficulty": "Easy",
     "link": "find-the-highest-altitude",
     "code": "1732",
-    "cpp": true
+    "cpp": true,
+    "python": true
   },
   {
     "problem": "Map of Highest Peak",
