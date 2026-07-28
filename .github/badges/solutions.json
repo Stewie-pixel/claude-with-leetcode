@@ -55,6 +55,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/40-combination-sum-ii/ANALYSIS.md"
   },
   {
+    "slug": "42-trapping-rain-water",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/42-trapping-rain-water/ANALYSIS.md"
+  },
+  {
+    "slug": "43-multiply-strings",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/43-multiply-strings/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -243,6 +253,11 @@
     "slug": "1979-find-greatest-common-divisor-of-array",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1979-find-greatest-common-divisor-of-array/ANALYSIS.md"
+  },
+  {
+    "slug": "198-house-robber",
+    "title": "House Robber",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/198-house-robber/ANALYSIS.md"
   },
   {
     "slug": "2065-maximum-path-quality-of-a-graph",
@@ -600,6 +615,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/47-permutations-ii/ANALYSIS.md"
   },
   {
+    "slug": "494-target-sum",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/494-target-sum/ANALYSIS.md"
+  },
+  {
     "slug": "6-zigzag-conversion",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/6-zigzag-conversion/ANALYSIS.md"
@@ -735,6 +755,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/118-pascals-triangle/ANALYSIS.md"
   },
   {
+    "slug": "1464-maximum-product-of-two-elements-in-an-array",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/1464-maximum-product-of-two-elements-in-an-array/ANALYSIS.md"
+  },
+  {
     "slug": "20-valid-parentheses",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/20-valid-parentheses/ANALYSIS.md"
@@ -768,6 +793,11 @@
     "slug": "500-keyboard-row",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/500-keyboard-row/ANALYSIS.md"
+  },
+  {
+    "slug": "628-maximum-product-of-three-numbers",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/628-maximum-product-of-three-numbers/ANALYSIS.md"
   },
   {
     "slug": "94-binary-tree-inorder-traversal",
