@@ -177,7 +177,7 @@ We trace Approach 2 (visited backtracking) on `nums = [1, 2, 3]`.
 
 Input: `nums = [1, 2, 3]`
 
-```
+
 | Step | path        | visited (index:0 1 2) | Action                                 |
 |------|-------------|-----------------------|----------------------------------------|
 | 1    | []          | [F, F, F]             | start loop i=0 → choose 1              |
@@ -195,8 +195,6 @@ Input: `nums = [1, 2, 3]`
 |13    | [2,1]       | [T, T, F]             | recurse, i=2 → choose 3                |
 |14    | [2,1,3]     | [T, T, T]             | add [2,1,3]                            |
 |15    | ...         | ...                   | (continue symmetric branches)          |
-|…    | …           | …                     | …                                      |
-Final result: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
-```
+|…     | …           | …                     | …                                      |
 
-The table shows how the algorithm builds each permutation, backtracks when a dead‑end is reached, and eventually explores all `n!` possibilities.
+Final result: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
