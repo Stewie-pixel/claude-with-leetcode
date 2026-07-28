@@ -185,6 +185,14 @@
     "c": true
   },
   {
+    "problem": "Permutations",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "permutations",
+    "code": "0046",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
