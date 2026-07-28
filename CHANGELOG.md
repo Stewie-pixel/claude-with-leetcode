@@ -6,6 +6,39 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3] - 2026-07-28
+
+### Added
+- feat(c): add solution for 46-permutations (#326) (fcd4b00)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#468) (b313ca1)
+- docs: add claude mentor analysis for new solution (#467) (3c31686)
+- docs: add claude mentor analysis for new solution (#466) (f309d3a)
+- docs: add claude mentor analysis for new solution (#465) (51ef1e3)
+
+### Updated
+- Update README table (67fc733)
+- Update README table (5277cff)
+- Update README table (c73ed73)
+- Update README table (4bbbb51)
+- chore: release nightly v0.5.2-nightly.20260728 (#464) (6b5b395)
+- Update README table (4b1406f)
+- Update README table (b810371)
+- Update README table (f09e4a0)
+
+### Other
+- Update README table (67fc733)
+- Update README table (5277cff)
+- Add Java solution for Sliding Window Maximum (#239) (#463) (f4eb4be)
+- Update README table (c73ed73)
+- Update README table (4bbbb51)
+- first commit solution (#334) (0a8df56)
+- Update README table (4b1406f)
+- Update README table (b810371)
+- Update README table (f09e4a0)
+
+
 ## [0.5.2-nightly] - 2026-07-28
 
 ### Documentation
