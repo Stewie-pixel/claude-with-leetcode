@@ -233,6 +233,14 @@
     "rust": true
   },
   {
+    "problem": "Interleaving String",
+    "pattern": "String, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "interleaving-string",
+    "code": "0097",
+    "cpp": true
+  },
+  {
     "problem": "Pascal's Triangle",
     "pattern": "Array, Dynamic Programming",
     "difficulty": "Easy",
@@ -263,6 +271,14 @@
     "link": "copy-list-with-random-pointer",
     "code": "0138",
     "java": true
+  },
+  {
+    "problem": "Word Break",
+    "pattern": "Array, Hash Table, String, Dynamic Programming, Trie, Memoization",
+    "difficulty": "Medium",
+    "link": "word-break",
+    "code": "0139",
+    "cpp": true
   },
   {
     "problem": "Linked List Cycle",
