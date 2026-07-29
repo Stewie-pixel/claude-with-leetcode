@@ -549,6 +549,14 @@
     "cpp": true
   },
   {
+    "problem": "K-Concatenation Maximum Sum",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "k-concatenation-maximum-sum",
+    "code": "1191",
+    "cpp": true
+  },
+  {
     "problem": "Shift 2D Grid",
     "pattern": "Array, Matrix, Simulation",
     "difficulty": "Easy",
