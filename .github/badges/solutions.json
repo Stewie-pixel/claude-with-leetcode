@@ -65,6 +65,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/43-multiply-strings/ANALYSIS.md"
   },
   {
+    "slug": "46-permutations",
+    "title": "Backtracking",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/46-permutations/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -410,6 +415,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3514-number-of-unique-xor-triplets-ii/ANALYSIS.md"
   },
   {
+    "slug": "3517-smallest-palindromic-rearrangement-i",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3517-smallest-palindromic-rearrangement-i/ANALYSIS.md"
+  },
+  {
     "slug": "3532-path-existence-queries-in-a-graph-i",
     "title": "Union Find (Disjoint Set Union)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3532-path-existence-queries-in-a-graph-i/ANALYSIS.md"
@@ -730,6 +740,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/206-reverse-linked-list/ANALYSIS.md"
   },
   {
+    "slug": "239-sliding-window-maximum",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/239-sliding-window-maximum/ANALYSIS.md"
+  },
+  {
     "slug": "287-find-the-duplicate-number",
     "title": "Fast & Slow Pointers",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/287-find-the-duplicate-number/ANALYSIS.md"
@@ -758,6 +773,11 @@
     "slug": "1464-maximum-product-of-two-elements-in-an-array",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/1464-maximum-product-of-two-elements-in-an-array/ANALYSIS.md"
+  },
+  {
+    "slug": "1732-find-the-highest-altitude",
+    "title": "Prefix Sum",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/1732-find-the-highest-altitude/ANALYSIS.md"
   },
   {
     "slug": "20-valid-parentheses",
