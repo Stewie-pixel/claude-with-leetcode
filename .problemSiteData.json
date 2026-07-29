@@ -1036,6 +1036,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Palindromic Rearrangement II",
+    "pattern": "Hash Table, Math, String, Combinatorics, Counting",
+    "difficulty": "Hard",
+    "link": "smallest-palindromic-rearrangement-ii",
+    "code": "3518",
+    "python": true
+  },
+  {
     "problem": "Path Existence Queries in a Graph I",
     "pattern": "Array, Hash Table, Binary Search, Union-Find, Graph Theory",
     "difficulty": "Medium",
