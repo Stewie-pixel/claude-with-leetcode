@@ -185,6 +185,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/135-candy/ANALYSIS.md"
   },
   {
+    "slug": "139-word-break",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/139-word-break/ANALYSIS.md"
+  },
+  {
     "slug": "1392-longest-happy-prefix",
     "title": "String Matching (KMP) – Longest Happy Prefix  ",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1392-longest-happy-prefix/ANALYSIS.md"
@@ -368,6 +373,11 @@
     "slug": "2812-find-the-safest-path-in-a-grid",
     "title": "Binary Search",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2812-find-the-safest-path-in-a-grid/ANALYSIS.md"
+  },
+  {
+    "slug": "3014-minimum-number-of-pushes-to-type-word-i",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3014-minimum-number-of-pushes-to-type-word-i/ANALYSIS.md"
   },
   {
     "slug": "3020-find-the-maximum-number-of-elements-in-subset",
@@ -708,6 +718,11 @@
     "slug": "952-largest-component-size-by-common-factor",
     "title": "Union Find",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/952-largest-component-size-by-common-factor/ANALYSIS.md"
+  },
+  {
+    "slug": "97-interleaving-string",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/97-interleaving-string/ANALYSIS.md"
   },
   {
     "slug": "2574-left-and-right-sum-differences copy",
