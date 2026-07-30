@@ -218,7 +218,7 @@ dp[i][j]  (i = chars taken from s1, j = chars taken from s2)
 So after borders we have:
 
 ```
-   j:0 1 2 3 4 5
+j  0 1 2 3 4 5
 i0 T F F F F F
 i1 T . . . . .
 i2 T . . . . .
@@ -252,7 +252,3 @@ At the end `dp[5][5]` becomes True.
 **Result**
 
 The algorithm returns `True`, matching the expected output.
-
---- 
-
-*This lecture covers the 2D DP pattern, demonstrates three approaches (brute force, memoized recursion, bottom‑up table), and includes a step‑by‑step dry run to solidify understanding.*
