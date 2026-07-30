@@ -125,6 +125,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1189-maximum-number-of-balloons/ANALYSIS.md"
   },
   {
+    "slug": "1191-k-concatenation-maximum-sum",
+    "title": "Prefix Sum",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1191-k-concatenation-maximum-sum/ANALYSIS.md"
+  },
+  {
     "slug": "12-integer-to-roman",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/12-integer-to-roman/ANALYSIS.md"
@@ -798,6 +803,11 @@
     "slug": "35-search-insert-position",
     "title": "Binary Search",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/35-search-insert-position/ANALYSIS.md"
+  },
+  {
+    "slug": "3518-smallest-palindromic-rearrangement-ii",
+    "title": "Backtracking",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3518-smallest-palindromic-rearrangement-ii/ANALYSIS.md"
   },
   {
     "slug": "3558-number-of-ways-to-assign-edge-weights-i",
