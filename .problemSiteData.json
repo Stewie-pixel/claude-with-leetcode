@@ -980,6 +980,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Number of Pushes to Type Word I",
+    "pattern": "Math, String, Greedy",
+    "difficulty": "Easy",
+    "link": "minimum-number-of-pushes-to-type-word-i",
+    "code": "3014",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
