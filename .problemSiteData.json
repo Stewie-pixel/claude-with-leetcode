@@ -988,6 +988,14 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Number of Pushes to Type Word II",
+    "pattern": "Hash Table, String, Greedy, Sorting, Counting",
+    "difficulty": "Medium",
+    "link": "minimum-number-of-pushes-to-type-word-ii",
+    "code": "3016",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
