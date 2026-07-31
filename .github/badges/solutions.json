@@ -380,6 +380,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3014-minimum-number-of-pushes-to-type-word-i/ANALYSIS.md"
   },
   {
+    "slug": "3016-minimum-number-of-pushes-to-type-word-ii",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3016-minimum-number-of-pushes-to-type-word-ii/ANALYSIS.md"
+  },
+  {
     "slug": "3020-find-the-maximum-number-of-elements-in-subset",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3020-find-the-maximum-number-of-elements-in-subset/ANALYSIS.md"
