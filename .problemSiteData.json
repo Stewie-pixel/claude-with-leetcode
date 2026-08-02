@@ -541,6 +541,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Medium",
+    "link": "stone-game",
+    "code": "0877",
+    "cpp": true
+  },
+  {
     "problem": "Largest Component Size by Common Factor",
     "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
     "difficulty": "Hard",
