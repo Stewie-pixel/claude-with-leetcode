@@ -669,6 +669,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game III",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Hard",
+    "link": "stone-game-iii",
+    "code": "1406",
+    "cpp": true
+  },
+  {
     "problem": "The k-th Lexicographical String of All Happy Strings of Length n",
     "pattern": "String",
     "difficulty": "Medium",
