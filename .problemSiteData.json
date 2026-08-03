@@ -409,6 +409,14 @@
     "cpp": true
   },
   {
+    "problem": "Predict the Winner",
+    "pattern": "Array, Math, Dynamic Programming, Recursion, Game Theory",
+    "difficulty": "Medium",
+    "link": "predict-the-winner",
+    "code": "0486",
+    "cpp": true
+  },
+  {
     "problem": "Target Sum",
     "pattern": "Array, Dynamic Programming, Backtracking",
     "difficulty": "Medium",
@@ -530,6 +538,14 @@
     "difficulty": "Easy",
     "link": "lemonade-change",
     "code": "0860",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Medium",
+    "link": "stone-game",
+    "code": "0877",
     "cpp": true
   },
   {
