@@ -200,6 +200,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/14-longest-common-prefix/ANALYSIS.md"
   },
   {
+    "slug": "1406-stone-game-iii",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1406-stone-game-iii/ANALYSIS.md"
+  },
+  {
     "slug": "1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/ANALYSIS.md"
@@ -645,6 +650,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/47-permutations-ii/ANALYSIS.md"
   },
   {
+    "slug": "486-predict-the-winner",
+    "title": "Predict the Winner",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/486-predict-the-winner/ANALYSIS.md"
+  },
+  {
     "slug": "494-target-sum",
     "title": "1D Dynamic Programming",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/494-target-sum/ANALYSIS.md"
@@ -713,6 +723,11 @@
     "slug": "860-lemonade-change",
     "title": "Greedy (Lemonade Change)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/860-lemonade-change/ANALYSIS.md"
+  },
+  {
+    "slug": "877-stone-game",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/877-stone-game/ANALYSIS.md"
   },
   {
     "slug": "93-restore-ip-addresses",
