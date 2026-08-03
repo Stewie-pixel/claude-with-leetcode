@@ -198,7 +198,3 @@ We dry‑run the bottom‑up DP on the example `piles = [5, 3, 4, 5]` (n = 4).
 | 4      | 0 | 3 | [5,3,4,5] | (4‑4)%2=0 → Alice | max(5+dp[1][3], 5+dp[0][2]) = max(5-4, 5-4) = 1 | 1 |
 
 Final `dp[0][3] = 1 > 0`, so Alice wins → **true**.
-
---- 
-
-*End of lecture.*
