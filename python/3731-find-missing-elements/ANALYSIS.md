@@ -152,7 +152,6 @@ We trace the hash‑set approach on Example 1: `nums = [1,4,2,5]`.
 
 Input: nums = [1,4,2,5]
 
-```
 | Step | Action                                      | seen set                | low | high | x | x in seen? | missing so far |
 |------|---------------------------------------------|-------------------------|-----|------|---|------------|----------------|
 | 1    | Build set from nums                         | {1,4,2,5}               | 1   | 5    |   |            |                |
@@ -162,10 +161,5 @@ Input: nums = [1,4,2,5]
 | 5    | x = 4                                       | {1,4,2,5}               | 1   | 5    | 4 | Yes        | [3]            |
 | 6    | x = 5                                       | {1,4,2,5}               | 1   | 5    | 5 | Yes        | [3]            |
 | 7    | End loop, return missing                    |                         |     |      |   |            | [3]            |
-```
 
 The algorithm correctly returns `[3]`.
-
---- 
-
-*End of lecture.*
