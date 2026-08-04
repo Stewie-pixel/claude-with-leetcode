@@ -554,7 +554,16 @@
     "difficulty": "Medium",
     "link": "stone-game",
     "code": "0877",
-    "cpp": true
+    "cpp": true,
+    "python": true
+  },
+  {
+    "problem": "Cat and Mouse",
+    "pattern": "Math, Dynamic Programming, Graph Theory, Topological Sort, Memoization, Minimax, Game Theory, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "cat-and-mouse",
+    "code": "0913",
+    "python": true
   },
   {
     "problem": "Largest Component Size by Common Factor",
