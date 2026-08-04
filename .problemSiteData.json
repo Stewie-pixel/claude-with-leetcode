@@ -1238,6 +1238,14 @@
     "cpp": true
   },
   {
+    "problem": "Find Missing Elements",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "find-missing-elements",
+    "code": "3731",
+    "python": true
+  },
+  {
     "problem": "Count Subarrays With Majority Element I",
     "pattern": "Array, Hash Table, Divide and Conquer, Segment Tree, Merge Sort, Counting, Prefix Sum",
     "difficulty": "Medium",
