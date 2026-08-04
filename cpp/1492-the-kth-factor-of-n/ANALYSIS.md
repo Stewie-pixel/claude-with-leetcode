@@ -160,14 +160,10 @@ Input: `n = 12`, `k = 3`
 
 We will trace **Approach 3** (constant‑space sqrt method).
 
-```
 | Step | i   | n % i == 0? | cnt before | Action (cnt after) | big list so far | k-th? |
 |------|-----|-------------|------------|--------------------|-----------------|-------|
 | 1    | 1   | True        | 0          | cnt = 1 (not k)    | [12]            | No    |
 | 2    | 2   | True        | 1          | cnt = 2 (not k)    | [12, 6]         | No    |
 | 3    | 3   | True        | 2          | cnt = 3 -> k hit!  | [12, 6, 4]      | Yes → return i = 3 |
-```
 
 The algorithm returns `3`, which matches the expected output.
-
----
