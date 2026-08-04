@@ -345,6 +345,14 @@
     "java": true
   },
   {
+    "problem": "Nim Game",
+    "pattern": "Math, Brainteaser, Minimax, Game Theory, Nim Game, Impartial Game",
+    "difficulty": "Easy",
+    "link": "nim-game",
+    "code": "0292",
+    "cpp": true
+  },
+  {
     "problem": "Range Sum Query - Mutable",
     "pattern": "Array, Divide and Conquer, Design, Binary Indexed Tree, Segment Tree",
     "difficulty": "Medium",
@@ -1033,6 +1041,14 @@
     "difficulty": "Medium",
     "link": "find-the-maximum-number-of-elements-in-subset",
     "code": "3020",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Prime Difference",
+    "pattern": "Array, Math, Number Theory, Primality Test",
+    "difficulty": "Medium",
+    "link": "maximum-prime-difference",
+    "code": "3115",
     "cpp": true
   },
   {
