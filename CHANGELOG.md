@@ -6,6 +6,30 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260804] - 2026-08-04
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#500) (65e6a75)
+- docs: add claude mentor analysis for new solution (#497) (03c468c)
+- docs: add claude mentor analysis for new solution (#494) (26e50fc)
+- chore: release nightly v0.5.3-nightly.20260731 (#489) (7f51e65)
+
+### Updated
+- chore: update claude solution count to 174 (1c48939)
+- Update README table (1aa714c)
+- Update README table (f6600a9)
+- Update README table (e1e7d06)
+- Update README table (86974c0)
+- chore: release nightly v0.5.3-nightly.20260801 (#493) (ae1cf13)
+- chore: release nightly v0.5.3-nightly.20260731 (#489) (7f51e65)
+
+### Other
+- Update README table (1aa714c)
+- Update README table (f6600a9)
+- Update README table (e1e7d06)
+- Update README table (86974c0)
+
+
 ## [0.5.3-nightly] - 2026-08-01
 
 ### Documentation
