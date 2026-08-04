@@ -709,6 +709,14 @@
     "cpp": true
   },
   {
+    "problem": "The kth Factor of n",
+    "pattern": "Math, Number Theory, Prime Factorization",
+    "difficulty": "Medium",
+    "link": "the-kth-factor-of-n",
+    "code": "1492",
+    "cpp": true
+  },
+  {
     "problem": "Longest Subarray of 1's After Deleting One Element",
     "pattern": "Array",
     "difficulty": "Medium",
