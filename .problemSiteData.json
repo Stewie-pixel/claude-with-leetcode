@@ -505,6 +505,14 @@
     "cpp": true
   },
   {
+    "problem": "Asteroid Collision",
+    "pattern": "Array, Stack, Simulation",
+    "difficulty": "Medium",
+    "link": "asteroid-collision",
+    "code": "0735",
+    "cpp": true
+  },
+  {
     "problem": "Network Delay Time",
     "pattern": "Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path",
     "difficulty": "Medium",
@@ -564,6 +572,14 @@
     "link": "cat-and-mouse",
     "code": "0913",
     "python": true
+  },
+  {
+    "problem": "Number of Recent Calls",
+    "pattern": "Design, Queue, Data Stream",
+    "difficulty": "Easy",
+    "link": "number-of-recent-calls",
+    "code": "0933",
+    "cpp": true
   },
   {
     "problem": "Largest Component Size by Common Factor",
@@ -1066,6 +1082,14 @@
     "difficulty": "Medium",
     "link": "find-a-safe-walk-through-a-grid",
     "code": "3286",
+    "cpp": true
+  },
+  {
+    "problem": "Remove Methods From Project",
+    "pattern": "Depth-First Search, Breadth-First Search, Graph Theory",
+    "difficulty": "Medium",
+    "link": "remove-methods-from-project",
+    "code": "3310",
     "cpp": true
   },
   {
