@@ -420,6 +420,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3286-find-a-safe-walk-through-a-grid/ANALYSIS.md"
   },
   {
+    "slug": "3310-remove-methods-from-project",
+    "title": "Graphs",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3310-remove-methods-from-project/ANALYSIS.md"
+  },
+  {
     "slug": "332-reconstruct-itinerary",
     "title": "Graphs",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/332-reconstruct-itinerary/ANALYSIS.md"
@@ -710,6 +715,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/731-my-calendar-ii/ANALYSIS.md"
   },
   {
+    "slug": "735-asteroid-collision",
+    "title": "## Algorithm",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/735-asteroid-collision/ANALYSIS.md"
+  },
+  {
     "slug": "743-network-delay-time",
     "title": "Dijkstra's Algorithm",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/743-network-delay-time/ANALYSIS.md"
@@ -748,6 +758,11 @@
     "slug": "93-restore-ip-addresses",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/93-restore-ip-addresses/ANALYSIS.md"
+  },
+  {
+    "slug": "933-number-of-recent-calls",
+    "title": "933-number-of-recent-calls",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/933-number-of-recent-calls/ANALYSIS.md"
   },
   {
     "slug": "952-largest-component-size-by-common-factor",
