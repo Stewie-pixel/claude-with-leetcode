@@ -1117,6 +1117,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Divisible Digit Product I",
+    "pattern": "Math, Enumeration",
+    "difficulty": "Easy",
+    "link": "smallest-divisible-digit-product-i",
+    "code": "3345",
+    "cpp": true
+  },
+  {
     "problem": "Maximize Active Section with Trade I",
     "pattern": "String, Enumeration",
     "difficulty": "Medium",
