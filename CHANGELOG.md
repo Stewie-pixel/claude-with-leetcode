@@ -6,6 +6,515 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly] - 2026-08-06
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#518) (d8b0a32)
+
+### Updated
+- chore: update claude solution count to 182 (03d7608)
+- Update README table (4d77b64)
+- chore: release nightly v0.5.3-nightly.20260805 (#517) (d5125eb)
+- Update README table (bcda7d0)
+
+### Other
+- Update README table (4d77b64)
+- Update README table (bcda7d0)
+
+
+## [0.5.3-nightly] - 2026-08-05
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#509) (afb32ad)
+- docs: add claude mentor analysis for new solution (#508) (d52101e)
+- docs: add claude mentor analysis for new solution (#507) (404fbf5)
+- docs: add claude mentor analysis for new solution (#506) (1e7b58f)
+
+### Updated
+- chore: update claude solution count to 179 (05bc775)
+- Update README table (21de93b)
+- Update README table (13c9401)
+- Update README table (5e96b52)
+- Update README table (41935af)
+- Update README table (8e04aa9)
+- Update README table (f80ed1d)
+- chore: release nightly v0.5.3-nightly.20260804 (#505) (b78bc71)
+
+### Other
+- Update README table (21de93b)
+- Update README table (13c9401)
+- Update README table (5e96b52)
+- Update README table (41935af)
+- Update README table (8e04aa9)
+- Update README table (f80ed1d)
+
+
+## [0.5.3-nightly] - 2026-08-04
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#500) (65e6a75)
+- docs: add claude mentor analysis for new solution (#497) (03c468c)
+- docs: add claude mentor analysis for new solution (#494) (26e50fc)
+- chore: release nightly v0.5.3-nightly.20260731 (#489) (7f51e65)
+
+### Updated
+- chore: update claude solution count to 174 (1c48939)
+- Update README table (1aa714c)
+- Update README table (f6600a9)
+- Update README table (e1e7d06)
+- Update README table (86974c0)
+- chore: release nightly v0.5.3-nightly.20260801 (#493) (ae1cf13)
+- chore: release nightly v0.5.3-nightly.20260731 (#489) (7f51e65)
+
+### Other
+- Update README table (1aa714c)
+- Update README table (f6600a9)
+- Update README table (e1e7d06)
+- Update README table (86974c0)
+
+
+## [0.5.3-nightly] - 2026-08-01
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#490) (a80c775)
+
+### Updated
+- chore: update claude solution count to 171 (201bdfd)
+- Update README table (2a40723)
+- Update README table (1b834e5)
+
+### Other
+- Update README table (2a40723)
+- Update README table (1b834e5)
+## [0.5.3-nightly] - 2026-07-31
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#484) (821f51b)
+- docs: add claude mentor analysis for new solution (#479) (c1f95c2)
+
+### Updated
+- chore: update claude solution count to 170 (0a4aa05)
+- Update README table (4cef007)
+- Update README table (492ee89)
+- chore: release nightly v0.5.3-nightly.20260730 (#483) (6eb096c)
+- Update README table (c69a0f2)
+
+### Other
+- Update README table (4cef007)
+- Update README table (492ee89)
+- Update README table (c69a0f2)
+
+
+## [0.5.3-nightly] - 2026-07-30
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#478) (58a5a9f)
+- docs: add claude mentor analysis for new solution (#477) (328b6e1)
+
+### Updated
+- chore: update claude solution count to 167 (55316e1)
+- Update README table (fabc6cb)
+- Update README table (f22633c)
+- Update README table (ddb2227)
+- Update README table (d54bf1a)
+- Update README table (67a7103)
+- chore: update changelog for v0.5.3 [skip ci] (#470) (ca8675d)
+
+### Other
+- Update README table (fabc6cb)
+- Update README table (f22633c)
+- Update README table (ddb2227)
+- Update README table (d54bf1a)
+- Update README table (67a7103)
+
+
+## [0.5.3] - 2026-07-28
+
+### Added
+- feat(c): add solution for 46-permutations (#326) (fcd4b00)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#468) (b313ca1)
+- docs: add claude mentor analysis for new solution (#467) (3c31686)
+- docs: add claude mentor analysis for new solution (#466) (f309d3a)
+- docs: add claude mentor analysis for new solution (#465) (51ef1e3)
+
+### Updated
+- Update README table (67fc733)
+- Update README table (5277cff)
+- Update README table (c73ed73)
+- Update README table (4bbbb51)
+- chore: release nightly v0.5.2-nightly.20260728 (#464) (6b5b395)
+- Update README table (4b1406f)
+- Update README table (b810371)
+- Update README table (f09e4a0)
+
+### Other
+- Update README table (67fc733)
+- Update README table (5277cff)
+- Add Java solution for Sliding Window Maximum (#239) (#463) (f4eb4be)
+- Update README table (c73ed73)
+- Update README table (4bbbb51)
+- first commit solution (#334) (0a8df56)
+- Update README table (4b1406f)
+- Update README table (b810371)
+- Update README table (f09e4a0)
+
+
+## [0.5.2-nightly] - 2026-07-28
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#455) (e6c3685)
+
+### Updated
+- chore: update claude solution count to 161 (900dd92)
+- Update README table (79ab1eb)
+- docs: add claude mentor analysis for new solution (#455) (e6c3685)
+- Update README table (20e5ef6)
+- chore: update changelog for v0.5.2 [skip ci] (#454) (3db301d)
+
+### Other
+- Update README table (79ab1eb)
+- Update README table (20e5ef6)
+
+
+## [0.5.2] - 2026-07-27
+
+### Added
+- feat(c): add solution for 43-multiply-strings (#325) (431c952)
+- feat(c): add solution for 42-trapping-rain-water (#324) (17111a7)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#452) (7b996a7)
+- docs: add claude mentor analysis for new solution (#451) (d324aef)
+- docs: add claude mentor analysis for new solution (#449) (0101346)
+
+### Updated
+- Update README table (551fed6)
+- docs: add claude mentor analysis for new solution (#452) (7b996a7)
+- Update README table (013ea0c)
+- Update README table (4fc07d4)
+- Update README table (60207a0)
+- Update README table (05a7437)
+- chore: update changelog for 0.5.1-nightly.20260726 [skip ci] (#448) (2f5b67c)
+- chore: release nightly 0.5.1-nightly.20260725 (#441) (bfd2d8a)
+
+### Other
+- Update README table (551fed6)
+- Update README table (013ea0c)
+- Update README table (4fc07d4)
+- Update README table (60207a0)
+- Update README table (05a7437)
+
+
+## [0.5.1-nightly] - 2026-07-26
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#442) (02bc866)
+
+### Updated
+- chore: update claude solution count to 155 (f347ff5)
+- Update README table (7715960)
+- Update README table (31462d1)
+
+### Other
+- Update README table (7715960)
+- Update README table (31462d1)
+- 
+## [0.5.1-nightly] - 2026-07-25
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#438) (3ad4420)
+- docs: add claude mentor analysis for new solution (#437) (d755c0e)
+- docs: add claude mentor analysis for new solution (#434) (f85c0d5)
+
+### Updated
+- chore: update claude solution count to 154 (c6a8b44)
+- Update README table (7f0f728)
+- Update README table (292dda6)
+- Update README table (6a21d6e)
+- Update README table (8cee86b)
+- chore: release nightly 0.5.1-nightly.20260723 (#433) (73b7e55)
+
+### Other
+- Update README table (7f0f728)
+- Update README table (292dda6)
+- Update README table (6a21d6e)
+- Update README table (8cee86b)
+
+
+## [0.5.1-nightly] - 2026-07-23
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#429) (de11b8c)
+- docs: add claude mentor analysis for new solution (#428) (dd045ec)
+
+### Updated
+- chore: update claude solution count to 150 (455ffcf)
+- Update README table (e384c6d)
+- Update README table (505dddd)
+- Update README table (bead986)
+- chore: release nightly 0.5.1-nightly.20260722 (#427) (3300de4)
+
+### Other
+- Update README table (e384c6d)
+- Update README table (505dddd)
+- Update README table (bead986)
+
+
+## [0.5.1-nightly] - 2026-07-22
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#422) (4882b3a)
+- docs: add claude mentor analysis for new solution (#418) (eb25f41)
+- docs: add claude mentor analysis for new solution (#413) (a36f28a)
+
+### Updated
+- chore: update claude solution count to 148 (5523d33)
+- Update README table (5eb041b)
+- chore: release nightly 0.5.1-nightly.20260721 (#421) (7605640)
+- Update README table (11d0770)
+- chore: release nightly 0.5.1-nightly.20260720 (#416) (9a24a3c)
+- Update README table (134bf62)
+- Update README table (81b0fe2)
+
+### Other
+- Update README table (5eb041b)
+- Update README table (11d0770)
+- Update README table (134bf62)
+- Update README table (81b0fe2)
+
+
+## [0.5.1-nightly] - 2026-07-21
+
+### Updated
+- Update README table (b6b185c)
+
+### Other
+- Update README table (b6b185c)
+## [0.5.1-nightly] - 2026-07-20
+
+### Updated
+- Update README table (5bfeb07)
+
+### Other
+- Update README table (5bfeb07)
+
+
+## [0.4.2-nightly] - 2026-07-19
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#404) (66ca2b0)
+- docs: add claude mentor analysis for new solution (#403) (f07c284)
+
+### Updated
+- chore: update claude solution count to 145 (42c2694)
+- Update README table (43e3736)
+- Update README table (5531133)
+- Update README table (6268e02)
+- Update README table (fef7ce8)
+- chore: release nightly v0.4.2-nightly.20260718 (#402) (d54e486)
+
+### Other
+- Update README table (43e3736)
+- Update README table (5531133)
+- Update README table (6268e02)
+- Update README table (fef7ce8)
+
+
+## [0.4.2-nightly] - 2026-07-18
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#397) (ef5a004)
+- docs: add claude mentor analysis for new solution (#391) (734383e)
+- docs: add claude mentor analysis for new solution (#390) (d39c0c2)
+
+### Updated
+- chore: update claude solution count to 140 (2f112f9)
+- Update README table (d182dda)
+- Update README table (d097bed)
+- Update README table (13c1bcb)
+- Update README table (66e41e0)
+- chore: release nightly v0.4.2-nightly.20260717 (#396) (b99ce36)
+
+### Other
+- Update README table (d182dda)
+- Update README table (d097bed)
+- Update README table (13c1bcb)
+- Update README table (66e41e0)
+
+
+## [0.4.2-nightly] - 2026-07-17
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#389) (b3f9199)
+
+### Updated
+- chore: update claude solution count to 137 (e203ab0)
+- Update README table (74a065b)
+- Update README table (ce87db6)
+- chore: update changelog for v0.4.2 [skip ci] (#388) (8b61801)
+- Update README table (ba71c9a)
+- Update README table (9567547)
+
+### Other
+- Update README table (74a065b)
+- Update README table (ce87db6)
+- Update README table (ba71c9a)
+- Update README table (9567547)
+
+
+## [0.4.2] - 2026-07-16
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#386) (624028f)
+
+### Updated
+- Update README table (a473ff7)
+- Update README table (01ceb0b)
+- chore: release nightly v0.4.1-nightly.20260716 (#385) (2a54d1b)
+
+### Other
+- Update README table (a473ff7)
+- Update README table (01ceb0b)
+
+
+## [0.4.1-nightly] - 2026-07-16
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#381) (9f848a2)
+- docs: add claude mentor analysis for new solution (#380) (5019c7e)
+- docs: add claude mentor analysis for new solution (#379) (7f185a2)
+
+### Updated
+- chore: update claude solution count to 134 (03e7c46)
+- Update README table (0a75880)
+- Update README table (4d1761c)
+- Update README table (441557f)
+- Update README table (c3882be)
+- Update README table (101add2)
+- Update README table (482115a)
+- chore: release nightly v0.4.1-nightly.20260715 (#378) (12d68e7)
+
+### Other
+- Update README table (0a75880)
+- Update README table (4d1761c)
+- Add Two Sum solution in Java (#245) (0073b9b)
+- Update README table (441557f)
+- Update README table (c3882be)
+- Update README table (101add2)
+- Update README table (482115a)
+
+
+## [0.4.1-nightly] - 2026-07-15
+
+### Added
+- feat: added solution for Keyboard Row in Python (#224) (2c3e879)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#374) (cf77f95)
+- docs: add claude mentor analysis for new solution (#373) (ad05c53)
+
+### Updated
+- chore: update claude solution count to 130 (ad9c5e9)
+- Update README table (0f809d9)
+- Update README table (3b1ebc9)
+- Update README table (de4b514)
+- chore: release nightly v0.4.1-nightly.20260714 (#372) (508fa9d)
+- Update README table (2777d45)
+
+### Other
+- Update README table (0f809d9)
+- Update README table (3b1ebc9)
+- Update README table (de4b514)
+- Update README table (2777d45)
+
+
+## [0.4.1-nightly] - 2026-07-14
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#362) (64fea1d)
+- docs: add claude mentor analysis for new solution (#361) (1ceb7c8)
+
+### Updated
+- chore: update claude solution count to 128 (3dba0a4)
+- Update README table (034931e)
+- docs: add claude mentor analysis for new solution (#362) (64fea1d)
+- Update README table (5f9f76c)
+- Update README table (2367c3d)
+- chore: release nightly v0.4.1-nightly.20260713 (#360) (b5aaa27)
+
+### Other
+- Update README table (034931e)
+- Update README table (5f9f76c)
+- Update README table (2367c3d)
+
+
+## [0.4.1-nightly] - 2026-07-13
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#351) (5b2e6d8)
+
+### Updated
+- chore: update claude solution count to 122 (165d544)
+- Update README table (057ba77)
+
+### Other
+- Update README table (057ba77)
+
+
+## [0.3.4-nightly] - 2026-07-12
+
+### Updated
+- chore: update claude solution count to 117 (ad8874d)
+- chore: update changelog for v0.3.4 [skip ci] (#345) (2ba9306)
+
+
+## [0.3.4] - 2026-07-11
+
+### Added
+- feat(py): added solution for intersection of two arrays (#220) (f240a07)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#343) (c32cc41)
+- docs: add claude mentor analysis for new solution (#339) (3846799)
+
+### Updated
+- Update README table (1f7f59e)
+- Update README table (8d3615c)
+- chore: release nightly v0.3.3-nightly.20260711 (#342) (313e8a1)
+- Update README table (fd0bea2)
+- chore: release nightly v0.3.3-nightly.20260710 (#338) (42d1c7f)
+
+### Other
+- Update README table (1f7f59e)
+- Update README table (8d3615c)
+- Update README table (fd0bea2)
+
+
+## [0.3.3-nightly] - 2026-07-11
+
+### Updated
+- Update README table (7b35911)
+
+### Other
+- Update README table (7b35911)
+## [0.3.3-nightly] - 2026-07-10
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#335) (0c71e0f)
+
+### Updated
+- chore: update claude solution count to 115 (0f919e3)
+- Update README table (58359f2)
+- chore: release nightly v0.3.3-nightly.20260709 (#333) (f21c104)
+- Update README table (fd45871)
+
+### Other
+- Update README table (58359f2)
+- Update README table (fd45871)
+
+
 ## [0.3.3-nightly] - 2026-07-09
 
 ### Updated
