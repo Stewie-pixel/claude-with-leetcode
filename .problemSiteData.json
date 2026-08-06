@@ -241,6 +241,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Depth of Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Easy",
+    "link": "maximum-depth-of-binary-tree",
+    "code": "0104",
+    "cpp": true
+  },
+  {
     "problem": "Pascal's Triangle",
     "pattern": "Array, Dynamic Programming",
     "difficulty": "Easy",
@@ -305,6 +313,14 @@
     "cpp": true
   },
   {
+    "problem": "Binary Tree Right Side View",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "binary-tree-right-side-view",
+    "code": "0199",
+    "cpp": true
+  },
+  {
     "problem": "Reverse Linked List",
     "pattern": "Linked List, Recursion",
     "difficulty": "Easy",
@@ -326,6 +342,14 @@
     "difficulty": "Easy",
     "link": "contains-duplicate-ii",
     "code": "0219",
+    "cpp": true
+  },
+  {
+    "problem": "Lowest Common Ancestor of a Binary Tree",
+    "pattern": "Tree, Depth-First Search, Binary Tree, Binary Lifting, Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "link": "lowest-common-ancestor-of-a-binary-tree",
+    "code": "0236",
     "cpp": true
   },
   {
@@ -401,6 +425,14 @@
     "cpp": true
   },
   {
+    "problem": "Path Sum III",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "path-sum-iii",
+    "code": "0437",
+    "cpp": true
+  },
+  {
     "problem": "K-th Smallest in Lexicographical Order",
     "pattern": "Trie",
     "difficulty": "Hard",
@@ -455,6 +487,14 @@
     "link": "maximum-product-of-three-numbers",
     "code": "0628",
     "python": true
+  },
+  {
+    "problem": "Dota2 Senate",
+    "pattern": "String, Greedy, Queue",
+    "difficulty": "Medium",
+    "link": "dota2-senate",
+    "code": "0649",
+    "cpp": true
   },
   {
     "problem": "Find K Closest Elements",
@@ -565,6 +605,14 @@
     "cpp": true
   },
   {
+    "problem": "Leaf-Similar Trees",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Easy",
+    "link": "leaf-similar-trees",
+    "code": "0872",
+    "cpp": true
+  },
+  {
     "problem": "Stone Game",
     "pattern": "Array, Math, Dynamic Programming, Game Theory",
     "difficulty": "Medium",
@@ -611,6 +659,14 @@
     "difficulty": "Medium",
     "link": "shortest-path-with-alternating-colors",
     "code": "1129",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Level Sum of a Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "maximum-level-sum-of-a-binary-tree",
+    "code": "1161",
     "cpp": true
   },
   {
@@ -702,6 +758,14 @@
     "cpp": true
   },
   {
+    "problem": "Longest ZigZag Path in a Binary Tree",
+    "pattern": "Dynamic Programming, Tree, Depth-First Search, Binary Tree, DP on Trees",
+    "difficulty": "Medium",
+    "link": "longest-zigzag-path-in-a-binary-tree",
+    "code": "1372",
+    "cpp": true
+  },
+  {
     "problem": "Longest Happy Prefix",
     "pattern": "String",
     "difficulty": "Hard",
@@ -723,6 +787,14 @@
     "difficulty": "Medium",
     "link": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
     "code": "1415",
+    "cpp": true
+  },
+  {
+    "problem": "Count Good Nodes in Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "count-good-nodes-in-binary-tree",
+    "code": "1448",
     "cpp": true
   },
   {
