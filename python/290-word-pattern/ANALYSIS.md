@@ -205,17 +205,11 @@ class Solution:
 Input: `pattern = "abba"`, `s = "dog cat cat dog"`  
 Words after split: `["dog", "cat", "cat", "dog"]`
 
-```
 | Step | ch | w   | c2w (char→word)          | w2c (word→char)      | Action                                 |
 |------|----|-----|--------------------------|----------------------|----------------------------------------|
 | 0    | a  | dog | {}                       | {}                   | a→dog, dog→a                           |
 | 1    | b  | cat | {a:dog}                  | {dog:a}              | b→cat, cat→b                           |
 | 2    | b  | cat | {a:dog, b:cat}           | {dog:a, cat:b}       | b already maps to cat (ok), cat→b (ok)|
 | 3    | a  | dog | {a:dog, b:cat}           | {dog:a, cat:b}       | a maps to dog (ok), dog→a (ok)        |
-```
 
 All checks pass → return `True`.
-
----
-
-**Follow the lecture structure above for each new problem. Commit the file to `/lectures/YYYY-MM-DD-arrays-hashing.md` (using today’s date) and push to `main`.**
