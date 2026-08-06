@@ -345,6 +345,14 @@
     "java": true
   },
   {
+    "problem": "Word Pattern",
+    "pattern": "Hash Table, String",
+    "difficulty": "Easy",
+    "link": "word-pattern",
+    "code": "0290",
+    "python": true
+  },
+  {
     "problem": "Nim Game",
     "pattern": "Math, Brainteaser, Minimax, Game Theory, Nim Game, Impartial Game",
     "difficulty": "Easy",
