@@ -52,65 +52,94 @@ char*** allocateResult(int strsSize, int **returnColumnSizes){
 }
 
 char*** groupAnagrams(char** strs, int strsSize, int* returnSize, int** returnColumnSizes) {
+if (strsSize <= 0) {
+    *returnSize = 0;
+    return NULL;
+}
 
-    if(strsSize <= 0){
-        *returnSize = 0;
-        return NULL;
-    }
+struct Helper *s = createHelperArray(strs, strsSize);
+qsort(s, strsSize, sizeof(struct Helper), compareHelpers);
 
-    char ***result = allocateResult(strsSize, returnColumnSizes);
-    if (!result){
-        return NULL;
-    }
-
-    for (int i = 0; i < strsSize; i++) {
-        result[i] = (char **)malloc(sizeof(char *) * strsSize);
-        if (!result[i]){
-            for(int j = 0; j < i; j++){
-                free(result[j]);
-            }
-            free(*returnColumnSizes);
-            free(result);
-            return NULL;
-        }
-    }
-
-    int groupCount = 0;
-
-    struct Helper *s = createHelperArray(strs, strsSize);
-
-    int pos = s[0].index;
-
-    int index = (*returnColumnSizes)[groupCount];
-    result[groupCount][index] = (char *)malloc(sizeof(char) * (strlen(strs[pos]) + 1));
-    strcpy(result[groupCount][index], strs[pos]);
-    (*returnColumnSizes)[groupCount]++;
-
-    for(int i = 0; i < strsSize - 1; i++){
-        pos = s[i + 1].index;
-        if(strcmp(s[i + 1].str, s[i].str) != 0){
-            groupCount++;
-        }
-
-        index = (*returnColumnSizes)[groupCount];
-        result[groupCount][index] = (char *)malloc(sizeof(char) * (strlen(strs[pos]) + 1));
-        strcpy(result[groupCount][index], strs[pos]);
-        (*returnColumnSizes)[groupCount]++;
-    }
-
-    groupCount++;
-
-    *returnSize = groupCount;
-    *returnColumnSizes = (int *)realloc(*returnColumnSizes, sizeof(int) * groupCount);
-    for (int i = groupCount; i < strsSize; i++) {
-        free(result[i]);
-    }
-    result = (char ***)realloc(result, sizeof(char **) * groupCount);
-    for(int i = 0; i < groupCount; i++){
-        result[i] = (char **)realloc(result[i], sizeof(char *) * (*returnColumnSizes)[i]);
-    }
-
+// First pass: count the size of each group
+int *groupSizes = (int *)malloc(strsSize * sizeof(int));
+if (!groupSizes) {
     freeFunc(s, strsSize);
+    return NULL;
+}
+int groupCount = 0;
+int count = 1;
+for (int i = 1; i < strsSize; i++) {
+    if (strcmp(s[i].str, s[i-1].str) == 0) {
+        count++;
+    } else {
+        groupSizes[groupCount] = count;
+        groupCount++;
+        count = 1;
+    }
+}
+groupSizes[groupCount] = count;
+groupCount++;
 
-    return result;
+// Allocate return arrays
+*returnColumnSizes = (int *)malloc(groupCount * sizeof(int));
+if (!*returnColumnSizes) {
+    free(groupSizes);
+    freeFunc(s, strsSize);
+    return NULL;
+}
+memcpy(*returnColumnSizes, groupSizes, groupCount * sizeof(int));
+free(groupSizes);
+
+*returnSize = groupCount;
+char ***result = (char***)malloc(groupCount * sizeof(char**));
+if (!result) {
+    free(*returnColumnSizes);
+    *returnColumnSizes = NULL;
+    freeFunc(s, strsSize);
+    return NULL;
+}
+for (int i = 0; i < groupCount; i++) {
+    result[i] = (char**)malloc((*returnColumnSizes)[i] * sizeof(char*));
+    if (!result[i]) {
+        // Free previously allocated rows
+        for (int j = 0; j < i; j++) {
+            free(result[j]);
+        }
+        free(result);
+        free(*returnColumnSizes);
+        *returnColumnSizes = NULL;
+        freeFunc(s, strsSize);
+        return NULL;
+    }
+}
+
+// Second pass: fill the result array
+int groupIdx = 0;
+int idxInGroup = 0;
+for (int i = 0; i < strsSize; i++) {
+    if (i > 0 && strcmp(s[i].str, s[i-1].str) != 0) {
+        groupIdx++;
+        idxInGroup = 0;
+    }
+    result[groupIdx][idxInGroup] = (char *)malloc(strlen(strs[s[i].index]) + 1);
+    if (!result[groupIdx][idxInGroup]) {
+        // Free everything allocated so far
+        for (int j = 0; j < groupIdx; j++) {
+            for (int k = 0; k < (*returnColumnSizes)[j]; k++) {
+                free(result[j][k]);
+            }
+            free(result[j]);
+        }
+        free(result);
+        free(*returnColumnSizes);
+        *returnColumnSizes = NULL;
+        freeFunc(s, strsSize);
+        return NULL;
+    }
+    strcpy(result[groupIdx][idxInGroup], strs[s[i].index]);
+    idxInGroup++;
+}
+
+freeFunc(s, strsSize);
+return result;
 }
