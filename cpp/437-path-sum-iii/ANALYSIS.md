@@ -1,4 +1,3 @@
-/lectures/2025-09-26-tree-dfs.md
 # Tree DFS
 
 ## Video Solution
@@ -223,8 +222,3 @@ We walk the tree in pre‑order, maintaining `curr_sum` and the hash map `prefix
 Continuing the traversal we also encounter the path `10 → 5 → -2` (sum = 13) not valid, and the path `5 → 2 → 1` (sum = 8) which is found when we reach node `1` under the left subtree of node `2`.
 
 **Total paths found:** 3 (matching the expected output).
-
---- 
-
-**File Path:** `/lectures/2025-09-26-tree-dfs.md`  
-**Commit directly to `main`.** No other files should be modified.
