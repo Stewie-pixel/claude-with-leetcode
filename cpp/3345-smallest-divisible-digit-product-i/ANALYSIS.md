@@ -136,11 +136,9 @@ class Solution:
 
 **Dry Run** (using Approach 1 on the sample `n = 15, t = 3`)
 
-```
 | Step | x   | digits | product | product % 3 | Action          |
 |------|-----|--------|---------|-------------|-----------------|
 | 1    | 15  | 1,5    | 5       | 2           | not ok → x+=1   |
 | 2    | 16  | 1,6    | 6       | 0           | ok → return 16  |
-```
 
 The algorithm stops at `x = 16`, matching the expected output.
