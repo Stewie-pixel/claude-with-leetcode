@@ -1197,6 +1197,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Divisible Digit Product II",
+    "pattern": "Math, String, Backtracking, Greedy, Number Theory",
+    "difficulty": "Hard",
+    "link": "smallest-divisible-digit-product-ii",
+    "code": "3348",
+    "cpp": true
+  },
+  {
     "problem": "Maximize Active Section with Trade I",
     "pattern": "String, Enumeration",
     "difficulty": "Medium",
