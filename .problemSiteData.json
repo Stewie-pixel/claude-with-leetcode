@@ -1165,6 +1165,14 @@
     "cpp": true
   },
   {
+    "problem": "Find the Lexicographically Smallest Valid Sequence",
+    "pattern": "Two Pointers, String, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "find-the-lexicographically-smallest-valid-sequence",
+    "code": "3302",
+    "cpp": true
+  },
+  {
     "problem": "Remove Methods From Project",
     "pattern": "Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
