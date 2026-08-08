@@ -6,6 +6,16 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260808] - 2026-08-08
+
+### Updated
+- chore: update claude solution count to 193 (a5dd87a)
+- Update README table (98b2aeb)
+
+### Other
+- Update README table (98b2aeb)
+
+
 ## [0.5.3-nightly] - 2026-08-06
 
 ### Documentation
