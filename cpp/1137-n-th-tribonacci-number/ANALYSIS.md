@@ -148,7 +148,6 @@ class Solution:
 
 We trace the O(1) space solution for `n = 4`.
 
-```
 Input: n = 4
 Initial: a = 0 (T0), b = 1 (T1), c = 1 (T2)
 
@@ -156,6 +155,5 @@ Initial: a = 0 (T0), b = 1 (T1), c = 1 (T2)
 |------|---|------------|------------|------------|------------|------------------------|
 | 1    | 3 | 0          | 1          | 1          | 0+1+1 = 2  | (1, 1, 2)  -> T3 = 2   |
 | 2    | 4 | 1          | 1          | 2          | 1+1+2 = 4  | (1, 2, 4)  -> T4 = 4   |
-```
 
 After the loop `c = 4`, which matches the expected output.
