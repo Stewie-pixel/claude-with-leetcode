@@ -662,6 +662,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game II",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Medium",
+    "link": "stone-game-ii",
+    "code": "1140",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Level Sum of a Binary Tree",
     "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
     "difficulty": "Medium",
@@ -1162,6 +1170,14 @@
     "difficulty": "Medium",
     "link": "find-a-safe-walk-through-a-grid",
     "code": "3286",
+    "cpp": true
+  },
+  {
+    "problem": "Find the Lexicographically Smallest Valid Sequence",
+    "pattern": "Two Pointers, String, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "find-the-lexicographically-smallest-valid-sequence",
+    "code": "3302",
     "cpp": true
   },
   {
