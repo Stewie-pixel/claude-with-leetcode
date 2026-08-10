@@ -846,6 +846,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game IV",
+    "pattern": "Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-iv",
+    "code": "1510",
+    "cpp": true
+  },
+  {
     "problem": "Find Kth Bit in Nth Binary String",
     "pattern": "String",
     "difficulty": "Medium",
