@@ -254,6 +254,7 @@
     "difficulty": "Easy",
     "link": "pascals-triangle",
     "code": "0118",
+    "cpp": true,
     "python": true
   },
   {
