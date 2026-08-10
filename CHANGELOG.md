@@ -6,7 +6,7 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
-## [0.5.3-nightly.20260807] - 2026-08-07
+## [0.5.3-nightly] - 2026-08-07
 
 ### Added
 - feat/added solution 290 in python language (#340) (fc654d8)
