@@ -671,6 +671,14 @@
     "cpp": true
   },
   {
+    "problem": "N-th Tribonacci Number",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "n-th-tribonacci-number",
+    "code": "1137",
+    "cpp": true
+  },
+  {
     "problem": "Stone Game II",
     "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
     "difficulty": "Medium",
