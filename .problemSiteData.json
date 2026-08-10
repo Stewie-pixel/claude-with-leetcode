@@ -254,6 +254,7 @@
     "difficulty": "Easy",
     "link": "pascals-triangle",
     "code": "0118",
+    "cpp": true,
     "python": true
   },
   {
@@ -667,6 +668,14 @@
     "difficulty": "Medium",
     "link": "shortest-path-with-alternating-colors",
     "code": "1129",
+    "cpp": true
+  },
+  {
+    "problem": "N-th Tribonacci Number",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "n-th-tribonacci-number",
+    "code": "1137",
     "cpp": true
   },
   {
