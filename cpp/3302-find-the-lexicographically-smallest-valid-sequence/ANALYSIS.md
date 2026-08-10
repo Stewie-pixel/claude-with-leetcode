@@ -283,17 +283,3 @@ So `suf = [2,2,1,1,0,0]`.
 Result `[0,1,2]` matches the expected output.  
 
 A similar trace on Example 2 yields `[1,2,4]`.  
-
----
-
-## Summary  
-
-* We start with a **brute‑force** enumeration to formalise the problem.  
-* A **DP** solution shows how to handle the “at most one change” constraint with O(N·M) time.  
-* The **greedy + suffix‑match** approach reduces the complexity to linear time while guaranteeing the lexicographically smallest answer by always picking the earliest feasible index.  
-
-This lecture follows the required structure: concept, when to use, reusable template, three approaches (brute → DP → greedy) with full intuition, algorithm, implementation, and complexity analysis, and ends with a concrete dry‑run demonstration.  
-
----  
-
-*Commit this lecture as `/lectures/YYYY-MM-DD-two-pointers.md` (using today’s date) in the main branch.*
