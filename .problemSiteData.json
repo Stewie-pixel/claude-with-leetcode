@@ -662,6 +662,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game II",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Medium",
+    "link": "stone-game-ii",
+    "code": "1140",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Level Sum of a Binary Tree",
     "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
     "difficulty": "Medium",
@@ -1165,6 +1173,14 @@
     "cpp": true
   },
   {
+    "problem": "Find the Lexicographically Smallest Valid Sequence",
+    "pattern": "Two Pointers, String, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "find-the-lexicographically-smallest-valid-sequence",
+    "code": "3302",
+    "cpp": true
+  },
+  {
     "problem": "Remove Methods From Project",
     "pattern": "Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
@@ -1194,6 +1210,14 @@
     "difficulty": "Easy",
     "link": "smallest-divisible-digit-product-i",
     "code": "3345",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Divisible Digit Product II",
+    "pattern": "Math, String, Backtracking, Greedy, Number Theory",
+    "difficulty": "Hard",
+    "link": "smallest-divisible-digit-product-ii",
+    "code": "3348",
     "cpp": true
   },
   {
