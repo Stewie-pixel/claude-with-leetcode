@@ -662,6 +662,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game II",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Medium",
+    "link": "stone-game-ii",
+    "code": "1140",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Level Sum of a Binary Tree",
     "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
     "difficulty": "Medium",
@@ -835,6 +843,14 @@
     "difficulty": "Medium",
     "link": "longest-subarray-of-1s-after-deleting-one-element",
     "code": "1493",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game IV",
+    "pattern": "Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-iv",
+    "code": "1510",
     "cpp": true
   },
   {
