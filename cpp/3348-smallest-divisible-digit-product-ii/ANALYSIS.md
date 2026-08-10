@@ -400,14 +400,3 @@ We trace the greedy algorithm on the sample
 |   |        |        |     | 8        | adds 2³ → need (2⁰,3⁰) → feasible! | "1488" | (0,0,0,0) |
 
 All needs are satisfied → answer `"1488"`.
-
----
-
-**Summary**
-
-- We factor the divisor `t` into the only primes that can appear in a zero‑free digit product (2, 3, 5, 7).  
-- Using a *minimal‑length* feasibility test we can decide, at each position, whether a digit choice leaves a solvable suffix.  
-- Greedily picking the smallest viable digit yields the lexicographically (and numerically) smallest answer.  
-- The algorithm runs in linear time and easily meets the constraints (`|num| ≤ 2·10⁵`).  
-
-Commit this lecture as `/lectures/YYYY-MM-DD-greedy.md` (using today’s date) and proceed to the next day’s topic.
