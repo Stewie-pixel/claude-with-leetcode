@@ -569,6 +569,14 @@
     "cpp": true
   },
   {
+    "problem": "Min Cost Climbing Stairs",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "min-cost-climbing-stairs",
+    "code": "0746",
+    "cpp": true
+  },
+  {
     "problem": "All Paths From Source to Target",
     "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
