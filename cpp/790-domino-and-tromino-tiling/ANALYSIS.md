@@ -1,4 +1,4 @@
-# Domino and Tromino Tiling
+# 2D Dynamic Programing
 
 ## Video Solution
 
