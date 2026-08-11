@@ -1002,6 +1002,14 @@
     "cpp": true
   },
   {
+    "problem": "Nearest Exit from Entrance in Maze",
+    "pattern": "Array, Breadth-First Search, Matrix",
+    "difficulty": "Medium",
+    "link": "nearest-exit-from-entrance-in-maze",
+    "code": "1926",
+    "cpp": true
+  },
+  {
     "problem": "Number of Strings That Appear as Substrings in Word",
     "pattern": "Array, String",
     "difficulty": "Easy",
