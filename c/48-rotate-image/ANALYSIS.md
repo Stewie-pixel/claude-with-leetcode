@@ -198,4 +198,3 @@ After transpose:
 - left=0 (1), right=2 (7) → swap → [7,4,1]; left=1, right=1 → stop
 
 Final result: [[7,4,1],[8,5,2],[9,6,3]] ✓
-```
