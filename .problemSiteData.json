@@ -169,6 +169,30 @@
     "c": true
   },
   {
+    "problem": "Trapping Rain Water",
+    "pattern": "Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack",
+    "difficulty": "Hard",
+    "link": "trapping-rain-water",
+    "code": "0042",
+    "c": true
+  },
+  {
+    "problem": "Multiply Strings",
+    "pattern": "Math, String, Simulation",
+    "difficulty": "Medium",
+    "link": "multiply-strings",
+    "code": "0043",
+    "c": true
+  },
+  {
+    "problem": "Permutations",
+    "pattern": "Array, Backtracking",
+    "difficulty": "Medium",
+    "link": "permutations",
+    "code": "0046",
+    "c": true
+  },
+  {
     "problem": "Permutations II",
     "pattern": "Array",
     "difficulty": "Medium",
@@ -209,11 +233,28 @@
     "rust": true
   },
   {
+    "problem": "Interleaving String",
+    "pattern": "String, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "interleaving-string",
+    "code": "0097",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Depth of Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Easy",
+    "link": "maximum-depth-of-binary-tree",
+    "code": "0104",
+    "cpp": true
+  },
+  {
     "problem": "Pascal's Triangle",
     "pattern": "Array, Dynamic Programming",
     "difficulty": "Easy",
     "link": "pascals-triangle",
     "code": "0118",
+    "cpp": true,
     "python": true
   },
   {
@@ -241,6 +282,14 @@
     "java": true
   },
   {
+    "problem": "Word Break",
+    "pattern": "Array, Hash Table, String, Dynamic Programming, Trie, Memoization",
+    "difficulty": "Medium",
+    "link": "word-break",
+    "code": "0139",
+    "cpp": true
+  },
+  {
     "problem": "Linked List Cycle",
     "pattern": "Hash Table, Linked List, Two Pointers",
     "difficulty": "Easy",
@@ -255,6 +304,22 @@
     "link": "reorder-list",
     "code": "0143",
     "java": true
+  },
+  {
+    "problem": "House Robber",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "house-robber",
+    "code": "0198",
+    "cpp": true
+  },
+  {
+    "problem": "Binary Tree Right Side View",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "binary-tree-right-side-view",
+    "code": "0199",
+    "cpp": true
   },
   {
     "problem": "Reverse Linked List",
@@ -281,12 +346,44 @@
     "cpp": true
   },
   {
+    "problem": "Lowest Common Ancestor of a Binary Tree",
+    "pattern": "Tree, Depth-First Search, Binary Tree, Binary Lifting, Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "link": "lowest-common-ancestor-of-a-binary-tree",
+    "code": "0236",
+    "cpp": true
+  },
+  {
+    "problem": "Sliding Window Maximum",
+    "pattern": "Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue",
+    "difficulty": "Hard",
+    "link": "sliding-window-maximum",
+    "code": "0239",
+    "java": true
+  },
+  {
     "problem": "Find the Duplicate Number",
     "pattern": "Array, Two Pointers, Binary Search, Bit Manipulation",
     "difficulty": "Medium",
     "link": "find-the-duplicate-number",
     "code": "0287",
     "java": true
+  },
+  {
+    "problem": "Word Pattern",
+    "pattern": "Hash Table, String",
+    "difficulty": "Easy",
+    "link": "word-pattern",
+    "code": "0290",
+    "python": true
+  },
+  {
+    "problem": "Nim Game",
+    "pattern": "Math, Brainteaser, Minimax, Game Theory, Nim Game, Impartial Game",
+    "difficulty": "Easy",
+    "link": "nim-game",
+    "code": "0292",
+    "cpp": true
   },
   {
     "problem": "Range Sum Query - Mutable",
@@ -329,6 +426,14 @@
     "cpp": true
   },
   {
+    "problem": "Path Sum III",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "path-sum-iii",
+    "code": "0437",
+    "cpp": true
+  },
+  {
     "problem": "K-th Smallest in Lexicographical Order",
     "pattern": "Trie",
     "difficulty": "Hard",
@@ -353,12 +458,44 @@
     "cpp": true
   },
   {
+    "problem": "Predict the Winner",
+    "pattern": "Array, Math, Dynamic Programming, Recursion, Game Theory",
+    "difficulty": "Medium",
+    "link": "predict-the-winner",
+    "code": "0486",
+    "cpp": true
+  },
+  {
+    "problem": "Target Sum",
+    "pattern": "Array, Dynamic Programming, Backtracking",
+    "difficulty": "Medium",
+    "link": "target-sum",
+    "code": "0494",
+    "cpp": true
+  },
+  {
     "problem": "Keyboard Row",
     "pattern": "Array, Hash Table, String",
     "difficulty": "Easy",
     "link": "keyboard-row",
     "code": "0500",
     "python": true
+  },
+  {
+    "problem": "Maximum Product of Three Numbers",
+    "pattern": "Array, Math, Sorting",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-three-numbers",
+    "code": "0628",
+    "python": true
+  },
+  {
+    "problem": "Dota2 Senate",
+    "pattern": "String, Greedy, Queue",
+    "difficulty": "Medium",
+    "link": "dota2-senate",
+    "code": "0649",
+    "cpp": true
   },
   {
     "problem": "Find K Closest Elements",
@@ -417,11 +554,27 @@
     "cpp": true
   },
   {
+    "problem": "Asteroid Collision",
+    "pattern": "Array, Stack, Simulation",
+    "difficulty": "Medium",
+    "link": "asteroid-collision",
+    "code": "0735",
+    "cpp": true
+  },
+  {
     "problem": "Network Delay Time",
     "pattern": "Depth-First Search, Breadth-First Search, Graph Theory, Heap (Priority Queue), Shortest Path",
     "difficulty": "Medium",
     "link": "network-delay-time",
     "code": "0743",
+    "cpp": true
+  },
+  {
+    "problem": "Min Cost Climbing Stairs",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "min-cost-climbing-stairs",
+    "code": "0746",
     "cpp": true
   },
   {
@@ -461,6 +614,39 @@
     "cpp": true
   },
   {
+    "problem": "Leaf-Similar Trees",
+    "pattern": "Tree, Depth-First Search, Binary Tree",
+    "difficulty": "Easy",
+    "link": "leaf-similar-trees",
+    "code": "0872",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Medium",
+    "link": "stone-game",
+    "code": "0877",
+    "cpp": true,
+    "python": true
+  },
+  {
+    "problem": "Cat and Mouse",
+    "pattern": "Math, Dynamic Programming, Graph Theory, Topological Sort, Memoization, Minimax, Game Theory, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "cat-and-mouse",
+    "code": "0913",
+    "python": true
+  },
+  {
+    "problem": "Number of Recent Calls",
+    "pattern": "Design, Queue, Data Stream",
+    "difficulty": "Easy",
+    "link": "number-of-recent-calls",
+    "code": "0933",
+    "cpp": true
+  },
+  {
     "problem": "Largest Component Size by Common Factor",
     "pattern": "Array, Hash Table, Math, Union-Find, Number Theory",
     "difficulty": "Hard",
@@ -485,11 +671,43 @@
     "cpp": true
   },
   {
+    "problem": "N-th Tribonacci Number",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "n-th-tribonacci-number",
+    "code": "1137",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game II",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Medium",
+    "link": "stone-game-ii",
+    "code": "1140",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Level Sum of a Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "maximum-level-sum-of-a-binary-tree",
+    "code": "1161",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Number of Balloons",
     "pattern": "Hash Table, String, Counting",
     "difficulty": "Easy",
     "link": "maximum-number-of-balloons",
     "code": "1189",
+    "cpp": true
+  },
+  {
+    "problem": "K-Concatenation Maximum Sum",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "k-concatenation-maximum-sum",
+    "code": "1191",
     "cpp": true
   },
   {
@@ -565,11 +783,27 @@
     "cpp": true
   },
   {
+    "problem": "Longest ZigZag Path in a Binary Tree",
+    "pattern": "Dynamic Programming, Tree, Depth-First Search, Binary Tree, DP on Trees",
+    "difficulty": "Medium",
+    "link": "longest-zigzag-path-in-a-binary-tree",
+    "code": "1372",
+    "cpp": true
+  },
+  {
     "problem": "Longest Happy Prefix",
     "pattern": "String",
     "difficulty": "Hard",
     "link": "longest-happy-prefix",
     "code": "1392",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game III",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Hard",
+    "link": "stone-game-iii",
+    "code": "1406",
     "cpp": true
   },
   {
@@ -581,12 +815,28 @@
     "cpp": true
   },
   {
+    "problem": "Count Good Nodes in Binary Tree",
+    "pattern": "Tree, Depth-First Search, Breadth-First Search, Binary Tree",
+    "difficulty": "Medium",
+    "link": "count-good-nodes-in-binary-tree",
+    "code": "1448",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Number of Vowels in a Substring of Given Length",
     "pattern": "String",
     "difficulty": "Medium",
     "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
     "code": "1456",
     "cpp": true
+  },
+  {
+    "problem": "Maximum Product of Two Elements in an Array",
+    "pattern": "Array, Sorting, Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "link": "maximum-product-of-two-elements-in-an-array",
+    "code": "1464",
+    "python": true
   },
   {
     "problem": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
@@ -597,11 +847,27 @@
     "cpp": true
   },
   {
+    "problem": "The kth Factor of n",
+    "pattern": "Math, Number Theory, Prime Factorization",
+    "difficulty": "Medium",
+    "link": "the-kth-factor-of-n",
+    "code": "1492",
+    "cpp": true
+  },
+  {
     "problem": "Longest Subarray of 1's After Deleting One Element",
     "pattern": "Array",
     "difficulty": "Medium",
     "link": "longest-subarray-of-1s-after-deleting-one-element",
     "code": "1493",
+    "cpp": true
+  },
+  {
+    "problem": "Stone Game IV",
+    "pattern": "Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-iv",
+    "code": "1510",
     "cpp": true
   },
   {
@@ -652,7 +918,8 @@
     "difficulty": "Easy",
     "link": "find-the-highest-altitude",
     "code": "1732",
-    "cpp": true
+    "cpp": true,
+    "python": true
   },
   {
     "problem": "Map of Highest Peak",
@@ -891,6 +1158,22 @@
     "cpp": true
   },
   {
+    "problem": "Minimum Number of Pushes to Type Word I",
+    "pattern": "Math, String, Greedy",
+    "difficulty": "Easy",
+    "link": "minimum-number-of-pushes-to-type-word-i",
+    "code": "3014",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Number of Pushes to Type Word II",
+    "pattern": "Hash Table, String, Greedy, Sorting, Counting",
+    "difficulty": "Medium",
+    "link": "minimum-number-of-pushes-to-type-word-ii",
+    "code": "3016",
+    "cpp": true
+  },
+  {
     "problem": "Find the Maximum Number of Elements in Subset",
     "pattern": "Array, Hash Table, Enumeration",
     "difficulty": "Medium",
@@ -899,11 +1182,35 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Prime Difference",
+    "pattern": "Array, Math, Number Theory, Primality Test",
+    "difficulty": "Medium",
+    "link": "maximum-prime-difference",
+    "code": "3115",
+    "cpp": true
+  },
+  {
     "problem": "Find a Safe Walk Through a Grid",
     "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
     "difficulty": "Medium",
     "link": "find-a-safe-walk-through-a-grid",
     "code": "3286",
+    "cpp": true
+  },
+  {
+    "problem": "Find the Lexicographically Smallest Valid Sequence",
+    "pattern": "Two Pointers, String, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "find-the-lexicographically-smallest-valid-sequence",
+    "code": "3302",
+    "cpp": true
+  },
+  {
+    "problem": "Remove Methods From Project",
+    "pattern": "Depth-First Search, Breadth-First Search, Graph Theory",
+    "difficulty": "Medium",
+    "link": "remove-methods-from-project",
+    "code": "3310",
     "cpp": true
   },
   {
@@ -920,6 +1227,22 @@
     "difficulty": "Hard",
     "link": "find-the-number-of-subsequences-with-equal-gcd",
     "code": "3336",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Divisible Digit Product I",
+    "pattern": "Math, Enumeration",
+    "difficulty": "Easy",
+    "link": "smallest-divisible-digit-product-i",
+    "code": "3345",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Divisible Digit Product II",
+    "pattern": "Math, String, Backtracking, Greedy, Number Theory",
+    "difficulty": "Hard",
+    "link": "smallest-divisible-digit-product-ii",
+    "code": "3348",
     "cpp": true
   },
   {
@@ -961,6 +1284,22 @@
     "link": "number-of-unique-xor-triplets-ii",
     "code": "3514",
     "cpp": true
+  },
+  {
+    "problem": "Smallest Palindromic Rearrangement I",
+    "pattern": "String, Sorting, Counting Sort",
+    "difficulty": "Medium",
+    "link": "smallest-palindromic-rearrangement-i",
+    "code": "3517",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Palindromic Rearrangement II",
+    "pattern": "Hash Table, Math, String, Combinatorics, Counting",
+    "difficulty": "Hard",
+    "link": "smallest-palindromic-rearrangement-ii",
+    "code": "3518",
+    "python": true
   },
   {
     "problem": "Path Existence Queries in a Graph I",
@@ -1091,6 +1430,14 @@
     "link": "number-of-zigzag-arrays-ii",
     "code": "3700",
     "cpp": true
+  },
+  {
+    "problem": "Find Missing Elements",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "find-missing-elements",
+    "code": "3731",
+    "python": true
   },
   {
     "problem": "Count Subarrays With Majority Element I",
