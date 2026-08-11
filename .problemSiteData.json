@@ -671,6 +671,14 @@
     "python": true
   },
   {
+    "problem": "Online Stock Span",
+    "pattern": "Stack, Design, Monotonic Stack, Data Stream",
+    "difficulty": "Medium",
+    "link": "online-stock-span",
+    "code": "0901",
+    "cpp": true
+  },
+  {
     "problem": "Cat and Mouse",
     "pattern": "Math, Dynamic Programming, Graph Theory, Topological Sort, Memoization, Minimax, Game Theory, Zero-Sum Game",
     "difficulty": "Hard",
