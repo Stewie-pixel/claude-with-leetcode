@@ -546,6 +546,14 @@
     "cpp": true
   },
   {
+    "problem": "Best Time to Buy and Sell Stock with Transaction Fee",
+    "pattern": "Array, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "best-time-to-buy-and-sell-stock-with-transaction-fee",
+    "code": "0714",
+    "cpp": true
+  },
+  {
     "problem": "Longest Word in Dictionary",
     "pattern": "Array, Hash Table, String, Trie, Sorting",
     "difficulty": "Medium",
