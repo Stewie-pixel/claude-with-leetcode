@@ -201,6 +201,14 @@
     "cpp": true
   },
   {
+    "problem": "Rotate Image",
+    "pattern": "Array, Math, Matrix",
+    "difficulty": "Medium",
+    "link": "rotate-image",
+    "code": "0048",
+    "c": true
+  },
+  {
     "problem": "Climbing Stairs",
     "pattern": "Math, Dynamic Programming, Memoization",
     "difficulty": "Easy",
