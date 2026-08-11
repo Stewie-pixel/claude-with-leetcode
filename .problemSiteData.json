@@ -225,6 +225,14 @@
     "cpp": true
   },
   {
+    "problem": "Edit Distance",
+    "pattern": "String, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "edit-distance",
+    "code": "0072",
+    "cpp": true
+  },
+  {
     "problem": "Combinations",
     "pattern": "Backtracking",
     "difficulty": "Medium",
