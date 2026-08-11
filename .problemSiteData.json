@@ -209,6 +209,14 @@
     "c": true
   },
   {
+    "problem": "Unique Paths",
+    "pattern": "Math, Dynamic Programming, Combinatorics",
+    "difficulty": "Medium",
+    "link": "unique-paths",
+    "code": "0062",
+    "cpp": true
+  },
+  {
     "problem": "Climbing Stairs",
     "pattern": "Math, Dynamic Programming, Memoization",
     "difficulty": "Easy",
@@ -586,6 +594,14 @@
     "cpp": true
   },
   {
+    "problem": "Domino and Tromino Tiling",
+    "pattern": "Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "domino-and-tromino-tiling",
+    "code": "0790",
+    "cpp": true
+  },
+  {
     "problem": "All Paths From Source to Target",
     "pattern": "Backtracking, Depth-First Search, Breadth-First Search, Graph Theory",
     "difficulty": "Medium",
@@ -692,6 +708,14 @@
     "difficulty": "Medium",
     "link": "stone-game-ii",
     "code": "1140",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Common Subsequence",
+    "pattern": "String, Dynamic Programming, Longest Common Subsequence",
+    "difficulty": "Medium",
+    "link": "longest-common-subsequence",
+    "code": "1143",
     "cpp": true
   },
   {
@@ -1163,6 +1187,14 @@
     "difficulty": "Hard",
     "link": "find-building-where-alice-and-bob-can-meet",
     "code": "2940",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "code": "2996",
     "cpp": true
   },
   {
