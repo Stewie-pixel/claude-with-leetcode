@@ -194,7 +194,3 @@ Return 6.
 The table above shows the correct trace.
 
 This dry run demonstrates how each price’s span is built by accumulating the spans of popped smaller-or-equal prices, yielding the expected outputs `[1,1,1,2,1,4,6]`.
-
---- 
-
-*End of lecture.*
