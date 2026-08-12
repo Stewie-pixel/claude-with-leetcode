@@ -142,6 +142,7 @@
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
+    "cpp": true,
     "python": true
   },
   {
