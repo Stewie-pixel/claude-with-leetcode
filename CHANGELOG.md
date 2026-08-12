@@ -6,6 +6,101 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly] - 2026-08-12
+
+### Added
+- feat(c): add solution for 48-rotate-image (#443) (a54d682)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#557) (82a4c50)
+- docs: add claude mentor analysis for new solution (#556) (43b7843)
+- docs: add claude mentor analysis for new solution (#555) (ba1d8da)
+- docs: add claude mentor analysis for new solution (#553) (d4f24e7)
+
+### Updated
+- chore: update claude solution count to 206 (8a65d76)
+- Update README table (a2ba7e5)
+- Update README table (83ce204)
+- Update README table (84f341b)
+- Update README table (75fa038)
+- Update README table (fea4ba8)
+- docs: add claude mentor analysis for new solution (#555) (ba1d8da)
+- Update README table (f9e7d44)
+- Update README table (298b33b)
+- Update README table (3ae1f62)
+- chore: release nightly v0.5.3-nightly.20260811 (#552) (973a5b0)
+
+### Other
+- Update README table (a2ba7e5)
+- Update README table (83ce204)
+- Update README table (84f341b)
+- Update README table (75fa038)
+- Update README table (fea4ba8)
+- Update README table (f9e7d44)
+- Update README table (298b33b)
+- Update README table (3ae1f62)
+
+
+## [0.5.3-nightly] - 2026-08-11
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#542) (2e73e44)
+- docs: add claude mentor analysis for new solution (#541) (93d05d2)
+- docs: add claude mentor analysis for new solution (#540) (68931cd)
+- docs: add claude mentor analysis for new solution (#539) (843fc47)
+- docs: add claude mentor analysis for new solution (#536) (0494ab2)
+- docs: add claude mentor analysis for new solution (#533) (f3ccaeb)
+- docs: add claude mentor analysis for new solution (#528) (73e98e2)
+
+### Updated
+- chore: update claude solution count to 199 (bcfd65f)
+- Update README table (000b54d)
+- docs: add claude mentor analysis for new solution (#542) (2e73e44)
+- Update README table (046fc88)
+- Update README table (e00b04c)
+- Add/pascals triangle cpp (#364) (1022aba)
+- Update README table (4c013d4)
+- Update README table (e0ae6f4)
+- Update README table (ea34527)
+- Update README table (67b92e4)
+- chore: release nightly v0.5.3-nightly.20260807 (#527) (a6edf44)
+
+### Other
+- Update README table (000b54d)
+- Update README table (046fc88)
+- Update README table (e00b04c)
+- Add/pascals triangle cpp (#364) (1022aba)
+- Update README table (4c013d4)
+- Update README table (e0ae6f4)
+- Update README table (ea34527)
+- Update README table (67b92e4)
+
+
+## [0.5.3-nightly] - 2026-08-07
+
+### Added
+- feat/added solution 290 in python language (#340) (fc654d8)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#525) (76af20a)
+- docs: add claude mentor analysis for new solution (#524) (cbe2d96)
+- docs: add claude mentor analysis for new solution (#523) (9989d58)
+
+### Updated
+- Update README table (59b908a)
+- Update README table (59e1a9c)
+- docs: add claude mentor analysis for new solution (#524) (cbe2d96)
+- Update README table (687abd6)
+- Update README table (02281d1)
+- chore: release nightly v0.5.3-nightly.20260806 (#522) (733dd19)
+
+### Other
+- Update README table (59b908a)
+- Update README table (59e1a9c)
+- Update README table (687abd6)
+- Update README table (02281d1)
+
+
 ## [0.5.3-nightly] - 2026-08-06
 
 ### Documentation
