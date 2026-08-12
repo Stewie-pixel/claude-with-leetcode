@@ -219,7 +219,3 @@ entrance = [1, 2]   # cell with '.' at row1,col2
 | 1    | [(1,1,1), (0,2,1), (2,2,1)]        | 1            | Neighbours: left (1,1), up (0,2), down (2,2). <br>**Up cell (0,2)** is border → **return 1** |
 
 The algorithm stops as soon as it discovers the border cell (0,2), reporting the correct answer = 1.
-
----
-
-**End of lecture** – commit this file as `/lectures/YYYY-MM-DD-tree-bfs.md` (use today’s date). Ensure no prior lecture on Tree BFS exists; if it does, skip creation.
