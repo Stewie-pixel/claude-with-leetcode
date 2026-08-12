@@ -6,7 +6,7 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
-## [0.5.3-nightly.20260812] - 2026-08-12
+## [0.5.3-nightly] - 2026-08-12
 
 ### Added
 - feat(c): add solution for 48-rotate-image (#443) (a54d682)
