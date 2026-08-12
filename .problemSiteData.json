@@ -1222,6 +1222,14 @@
     "cpp": true
   },
   {
+    "problem": "Length of Longest Subarray With at Most K Frequency",
+    "pattern": "Array, Hash Table, Sliding Window",
+    "difficulty": "Medium",
+    "link": "length-of-longest-subarray-with-at-most-k-frequency",
+    "code": "2958",
+    "cpp": true
+  },
+  {
     "problem": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
     "pattern": "Array, Hash Table, Sorting",
     "difficulty": "Easy",
