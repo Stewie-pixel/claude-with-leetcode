@@ -6,6 +6,41 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260812] - 2026-08-12
+
+### Added
+- feat(c): add solution for 48-rotate-image (#443) (a54d682)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#557) (82a4c50)
+- docs: add claude mentor analysis for new solution (#556) (43b7843)
+- docs: add claude mentor analysis for new solution (#555) (ba1d8da)
+- docs: add claude mentor analysis for new solution (#553) (d4f24e7)
+
+### Updated
+- chore: update claude solution count to 206 (8a65d76)
+- Update README table (a2ba7e5)
+- Update README table (83ce204)
+- Update README table (84f341b)
+- Update README table (75fa038)
+- Update README table (fea4ba8)
+- docs: add claude mentor analysis for new solution (#555) (ba1d8da)
+- Update README table (f9e7d44)
+- Update README table (298b33b)
+- Update README table (3ae1f62)
+- chore: release nightly v0.5.3-nightly.20260811 (#552) (973a5b0)
+
+### Other
+- Update README table (a2ba7e5)
+- Update README table (83ce204)
+- Update README table (84f341b)
+- Update README table (75fa038)
+- Update README table (fea4ba8)
+- Update README table (f9e7d44)
+- Update README table (298b33b)
+- Update README table (3ae1f62)
+
+
 ## [0.5.3-nightly] - 2026-08-11
 
 ### Documentation
