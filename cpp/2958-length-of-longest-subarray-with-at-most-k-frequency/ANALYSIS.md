@@ -130,7 +130,6 @@ class Solution:
 
 Input: `nums = [1,2,3,1,2,3,1,2]`, `k = 2`
 
-```
 | Step | right | val | freq after add                     | left before shrink | while triggered? | left after shrink | window size | best |
 |------|-------|-----|------------------------------------|--------------------|------------------|-------------------|-------------|------|
 | 0    | 0     | 1   | {1:1}                              | 0                  | No               | 0                 | 1           | 1    |
@@ -141,6 +140,5 @@ Input: `nums = [1,2,3,1,2,3,1,2]`, `k = 2`
 | 5    | 5     | 3   | {1:2,2:2,3:2}                      | 0                  | No               | 0                 | 6           | 6    |
 | 6    | 6     | 1   | {1:3,2:2,3:2}                      | 0                  | Yes (1>2)        | 1                 | 5           | 6    |
 | 7    | 7     | 2   | {1:2,2:3,3:2} (after add)          | 1                  | Yes (2>2)        | 2                 | 5           | 6    |
-```
 
 The maximum window size observed is `6`, which matches the expected answer.
