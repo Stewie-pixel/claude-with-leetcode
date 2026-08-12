@@ -1,4 +1,4 @@
-# Closures
+# Counter
 
 ## Video Solution
 
