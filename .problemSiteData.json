@@ -142,6 +142,7 @@
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
+    "cpp": true,
     "python": true
   },
   {
@@ -201,11 +202,35 @@
     "cpp": true
   },
   {
+    "problem": "Rotate Image",
+    "pattern": "Array, Math, Matrix",
+    "difficulty": "Medium",
+    "link": "rotate-image",
+    "code": "0048",
+    "c": true
+  },
+  {
+    "problem": "Unique Paths",
+    "pattern": "Math, Dynamic Programming, Combinatorics",
+    "difficulty": "Medium",
+    "link": "unique-paths",
+    "code": "0062",
+    "cpp": true
+  },
+  {
     "problem": "Climbing Stairs",
     "pattern": "Math, Dynamic Programming, Memoization",
     "difficulty": "Easy",
     "link": "climbing-stairs",
     "code": "0070",
+    "cpp": true
+  },
+  {
+    "problem": "Edit Distance",
+    "pattern": "String, Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "edit-distance",
+    "code": "0072",
     "cpp": true
   },
   {
@@ -254,6 +279,7 @@
     "difficulty": "Easy",
     "link": "pascals-triangle",
     "code": "0118",
+    "cpp": true,
     "python": true
   },
   {
@@ -529,6 +555,14 @@
     "cpp": true
   },
   {
+    "problem": "Best Time to Buy and Sell Stock with Transaction Fee",
+    "pattern": "Array, Dynamic Programming, Greedy",
+    "difficulty": "Medium",
+    "link": "best-time-to-buy-and-sell-stock-with-transaction-fee",
+    "code": "0714",
+    "cpp": true
+  },
+  {
     "problem": "Longest Word in Dictionary",
     "pattern": "Array, Hash Table, String, Trie, Sorting",
     "difficulty": "Medium",
@@ -566,6 +600,22 @@
     "difficulty": "Medium",
     "link": "network-delay-time",
     "code": "0743",
+    "cpp": true
+  },
+  {
+    "problem": "Min Cost Climbing Stairs",
+    "pattern": "Array, Dynamic Programming",
+    "difficulty": "Easy",
+    "link": "min-cost-climbing-stairs",
+    "code": "0746",
+    "cpp": true
+  },
+  {
+    "problem": "Domino and Tromino Tiling",
+    "pattern": "Dynamic Programming",
+    "difficulty": "Medium",
+    "link": "domino-and-tromino-tiling",
+    "code": "0790",
     "cpp": true
   },
   {
@@ -622,6 +672,14 @@
     "python": true
   },
   {
+    "problem": "Online Stock Span",
+    "pattern": "Stack, Design, Monotonic Stack, Data Stream",
+    "difficulty": "Medium",
+    "link": "online-stock-span",
+    "code": "0901",
+    "cpp": true
+  },
+  {
     "problem": "Cat and Mouse",
     "pattern": "Math, Dynamic Programming, Graph Theory, Topological Sort, Memoization, Minimax, Game Theory, Zero-Sum Game",
     "difficulty": "Hard",
@@ -662,11 +720,27 @@
     "cpp": true
   },
   {
+    "problem": "N-th Tribonacci Number",
+    "pattern": "Math, Dynamic Programming, Memoization",
+    "difficulty": "Easy",
+    "link": "n-th-tribonacci-number",
+    "code": "1137",
+    "cpp": true
+  },
+  {
     "problem": "Stone Game II",
     "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
     "difficulty": "Medium",
     "link": "stone-game-ii",
     "code": "1140",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Common Subsequence",
+    "pattern": "String, Dynamic Programming, Longest Common Subsequence",
+    "difficulty": "Medium",
+    "link": "longest-common-subsequence",
+    "code": "1143",
     "cpp": true
   },
   {
@@ -846,6 +920,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game IV",
+    "pattern": "Math, Dynamic Programming, Minimax, Game Theory, Nim Game, Sprague–Grundy Theorem, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-iv",
+    "code": "1510",
+    "cpp": true
+  },
+  {
     "problem": "Find Kth Bit in Nth Binary String",
     "pattern": "String",
     "difficulty": "Medium",
@@ -926,6 +1008,14 @@
     "difficulty": "Medium",
     "link": "maximum-element-after-decreasing-and-rearranging",
     "code": "1846",
+    "cpp": true
+  },
+  {
+    "problem": "Nearest Exit from Entrance in Maze",
+    "pattern": "Array, Breadth-First Search, Matrix",
+    "difficulty": "Medium",
+    "link": "nearest-exit-from-entrance-in-maze",
+    "code": "1926",
     "cpp": true
   },
   {
@@ -1130,6 +1220,22 @@
     "difficulty": "Hard",
     "link": "find-building-where-alice-and-bob-can-meet",
     "code": "2940",
+    "cpp": true
+  },
+  {
+    "problem": "Length of Longest Subarray With at Most K Frequency",
+    "pattern": "Array, Hash Table, Sliding Window",
+    "difficulty": "Medium",
+    "link": "length-of-longest-subarray-with-at-most-k-frequency",
+    "code": "2958",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+    "pattern": "Array, Hash Table, Sorting",
+    "difficulty": "Easy",
+    "link": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "code": "2996",
     "cpp": true
   },
   {

@@ -70,6 +70,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/46-permutations/ANALYSIS.md"
   },
   {
+    "slug": "48-rotate-image",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/48-rotate-image/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -125,9 +130,29 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1129-shortest-path-with-alternating-colors/ANALYSIS.md"
   },
   {
+    "slug": "1137-n-th-tribonacci-number",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1137-n-th-tribonacci-number/ANALYSIS.md"
+  },
+  {
+    "slug": "1140-stone-game-ii",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1140-stone-game-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "1143-longest-common-subsequence",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1143-longest-common-subsequence/ANALYSIS.md"
+  },
+  {
     "slug": "1161-maximum-level-sum-of-a-binary-tree",
     "title": "Tree BFS",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1161-maximum-level-sum-of-a-binary-tree/ANALYSIS.md"
+  },
+  {
+    "slug": "118-pascals-triangle",
+    "title": "Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/118-pascals-triangle/ANALYSIS.md"
   },
   {
     "slug": "1189-maximum-number-of-balloons",
@@ -238,6 +263,11 @@
     "slug": "1493-longest-subarray-of-1s-after-deleting-one-element",
     "title": "Sliding Window",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1493-longest-subarray-of-1s-after-deleting-one-element/ANALYSIS.md"
+  },
+  {
+    "slug": "1510-stone-game-iv",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1510-stone-game-iv/ANALYSIS.md"
   },
   {
     "slug": "1545-find-kth-bit-in-nth-binary-string",
@@ -420,6 +450,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/292-nim-game/ANALYSIS.md"
   },
   {
+    "slug": "2996-smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/ANALYSIS.md"
+  },
+  {
     "slug": "3014-minimum-number-of-pushes-to-type-word-i",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3014-minimum-number-of-pushes-to-type-word-i/ANALYSIS.md"
@@ -450,6 +485,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3286-find-a-safe-walk-through-a-grid/ANALYSIS.md"
   },
   {
+    "slug": "3302-find-the-lexicographically-smallest-valid-sequence",
+    "title": "Two Pointers & Greedy with One Mismatch  ",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3302-find-the-lexicographically-smallest-valid-sequence/ANALYSIS.md"
+  },
+  {
     "slug": "3310-remove-methods-from-project",
     "title": "Graphs",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3310-remove-methods-from-project/ANALYSIS.md"
@@ -468,6 +508,11 @@
     "slug": "3345-smallest-divisible-digit-product-i",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3345-smallest-divisible-digit-product-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3348-smallest-divisible-digit-product-ii",
+    "title": "Greedy",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3348-smallest-divisible-digit-product-ii/ANALYSIS.md"
   },
   {
     "slug": "3499-maximize-active-section-with-trade-i",
@@ -725,6 +770,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/6-zigzag-conversion/ANALYSIS.md"
   },
   {
+    "slug": "62-unique-paths",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/62-unique-paths/ANALYSIS.md"
+  },
+  {
     "slug": "649-dota2-senate",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/649-dota2-senate/ANALYSIS.md"
@@ -750,6 +800,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/701-insert-into-a-binary-search-tree/ANALYSIS.md"
   },
   {
+    "slug": "714-best-time-to-buy-and-sell-stock-with-transaction-fee",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/714-best-time-to-buy-and-sell-stock-with-transaction-fee/ANALYSIS.md"
+  },
+  {
+    "slug": "72-edit-distance",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/72-edit-distance/ANALYSIS.md"
+  },
+  {
     "slug": "720-longest-word-in-dictionary",
     "title": "Trie",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/720-longest-word-in-dictionary/ANALYSIS.md"
@@ -770,9 +830,19 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/743-network-delay-time/ANALYSIS.md"
   },
   {
+    "slug": "746-min-cost-climbing-stairs",
+    "title": "Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/746-min-cost-climbing-stairs/ANALYSIS.md"
+  },
+  {
     "slug": "77-combinations",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/77-combinations/ANALYSIS.md"
+  },
+  {
+    "slug": "790-domino-and-tromino-tiling",
+    "title": "2D Dynamic Programing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/790-domino-and-tromino-tiling/ANALYSIS.md"
   },
   {
     "slug": "797-all-paths-from-source-to-target",
@@ -883,11 +953,6 @@
     "slug": "2723-add-two-promises",
     "title": "JavaScript Promises",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/javascript/2723-add-two-promises/ANALYSIS.md"
-  },
-  {
-    "slug": "118-pascals-triangle",
-    "title": "1D Dynamic Programming",
-    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/118-pascals-triangle/ANALYSIS.md"
   },
   {
     "slug": "1464-maximum-product-of-two-elements-in-an-array",
