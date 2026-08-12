@@ -1173,6 +1173,14 @@
     "cpp": true
   },
   {
+    "problem": "Counter",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "counter",
+    "code": "2620",
+    "typescript": true
+  },
+  {
     "problem": "Debounce",
     "pattern": "Contest",
     "difficulty": "Medium",
