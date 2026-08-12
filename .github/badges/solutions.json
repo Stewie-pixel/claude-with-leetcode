@@ -70,6 +70,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/46-permutations/ANALYSIS.md"
   },
   {
+    "slug": "48-rotate-image",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/48-rotate-image/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -133,6 +138,11 @@
     "slug": "1140-stone-game-ii",
     "title": "2D Dynamic Programming",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1140-stone-game-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "1143-longest-common-subsequence",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1143-longest-common-subsequence/ANALYSIS.md"
   },
   {
     "slug": "1161-maximum-level-sum-of-a-binary-tree",
@@ -438,6 +448,11 @@
     "slug": "292-nim-game",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/292-nim-game/ANALYSIS.md"
+  },
+  {
+    "slug": "2996-smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/ANALYSIS.md"
   },
   {
     "slug": "3014-minimum-number-of-pushes-to-type-word-i",
@@ -755,6 +770,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/6-zigzag-conversion/ANALYSIS.md"
   },
   {
+    "slug": "62-unique-paths",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/62-unique-paths/ANALYSIS.md"
+  },
+  {
     "slug": "649-dota2-senate",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/649-dota2-senate/ANALYSIS.md"
@@ -778,6 +798,16 @@
     "slug": "701-insert-into-a-binary-search-tree",
     "title": "Binary Search Tree",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/701-insert-into-a-binary-search-tree/ANALYSIS.md"
+  },
+  {
+    "slug": "714-best-time-to-buy-and-sell-stock-with-transaction-fee",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/714-best-time-to-buy-and-sell-stock-with-transaction-fee/ANALYSIS.md"
+  },
+  {
+    "slug": "72-edit-distance",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/72-edit-distance/ANALYSIS.md"
   },
   {
     "slug": "720-longest-word-in-dictionary",
@@ -808,6 +838,11 @@
     "slug": "77-combinations",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/77-combinations/ANALYSIS.md"
+  },
+  {
+    "slug": "790-domino-and-tromino-tiling",
+    "title": "2D Dynamic Programing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/790-domino-and-tromino-tiling/ANALYSIS.md"
   },
   {
     "slug": "797-all-paths-from-source-to-target",
