@@ -6,6 +6,42 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260813] - 2026-08-13
+
+### Added
+- feat(cpp): added solution search-insert-position (#526) (24e0bdf)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#574) (bbc83d4)
+- docs: add claude mentor analysis for new solution (#573) (bfa80b4)
+- docs: add claude mentor analysis for new solution (#572) (6d0d32c)
+- docs: add claude mentor analysis for new solution (#559) (cc87f52)
+- docs: add claude mentor analysis for new solution (#558) (536d5be)
+
+### Updated
+- chore: update claude solution count to 210 (42d5e46)
+- Update README table (9460f4d)
+- docs: add claude mentor analysis for new solution (#574) (bbc83d4)
+- Update README table (03c7d64)
+- Update README table (91c4640)
+- Update README table (b445e25)
+- Update README table (a01dd85)
+- docs: add claude mentor analysis for new solution (#572) (6d0d32c)
+- chore: release nightly v0.5.3-nightly.20260812 (#568) (b0f24f6)
+- Update README table (7159c84)
+- Update README table (c409ee2)
+
+### Other
+- Update README table (9460f4d)
+- Update README table (03c7d64)
+- add(typescript)/added solution counter (#530) (f32f890)
+- Update README table (91c4640)
+- Update README table (b445e25)
+- Update README table (a01dd85)
+- Update README table (7159c84)
+- Update README table (c409ee2)
+
+
 ## [0.5.3-nightly] - 2026-08-12
 
 ### Added
