@@ -1110,6 +1110,14 @@
     "cpp": true
   },
   {
+    "problem": "Longest Substring of One Repeating Character",
+    "pattern": "Array, String, Segment Tree, Ordered Set",
+    "difficulty": "Hard",
+    "link": "longest-substring-of-one-repeating-character",
+    "code": "2213",
+    "cpp": true
+  },
+  {
     "problem": "Sum of Scores of Built Strings",
     "pattern": "String",
     "difficulty": "Hard",
