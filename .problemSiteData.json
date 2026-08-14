@@ -142,6 +142,7 @@
     "difficulty": "Easy",
     "link": "search-insert-position",
     "code": "0035",
+    "cpp": true,
     "python": true
   },
   {
@@ -1109,6 +1110,14 @@
     "cpp": true
   },
   {
+    "problem": "Longest Substring of One Repeating Character",
+    "pattern": "Array, String, Segment Tree, Ordered Set",
+    "difficulty": "Hard",
+    "link": "longest-substring-of-one-repeating-character",
+    "code": "2213",
+    "cpp": true
+  },
+  {
     "problem": "Sum of Scores of Built Strings",
     "pattern": "String",
     "difficulty": "Hard",
@@ -1172,6 +1181,14 @@
     "cpp": true
   },
   {
+    "problem": "Counter",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "counter",
+    "code": "2620",
+    "typescript": true
+  },
+  {
     "problem": "Debounce",
     "pattern": "Contest",
     "difficulty": "Medium",
@@ -1222,6 +1239,14 @@
     "cpp": true
   },
   {
+    "problem": "Length of Longest Subarray With at Most K Frequency",
+    "pattern": "Array, Hash Table, Sliding Window",
+    "difficulty": "Medium",
+    "link": "length-of-longest-subarray-with-at-most-k-frequency",
+    "code": "2958",
+    "cpp": true
+  },
+  {
     "problem": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
     "pattern": "Array, Hash Table, Sorting",
     "difficulty": "Easy",
@@ -1251,6 +1276,14 @@
     "difficulty": "Medium",
     "link": "find-the-maximum-number-of-elements-in-subset",
     "code": "3020",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Length Substring With Two Occurrences",
+    "pattern": "Hash Table, String, Sliding Window",
+    "difficulty": "Easy",
+    "link": "maximum-length-substring-with-two-occurrences",
+    "code": "3090",
     "cpp": true
   },
   {

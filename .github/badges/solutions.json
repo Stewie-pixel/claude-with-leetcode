@@ -315,6 +315,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1846-maximum-element-after-decreasing-and-rearranging/ANALYSIS.md"
   },
   {
+    "slug": "1926-nearest-exit-from-entrance-in-maze",
+    "title": "Tree BFS",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1926-nearest-exit-from-entrance-in-maze/ANALYSIS.md"
+  },
+  {
     "slug": "1967-number-of-strings-that-appear-as-substrings-in-word",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1967-number-of-strings-that-appear-as-substrings-in-word/ANALYSIS.md"
@@ -450,6 +455,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/292-nim-game/ANALYSIS.md"
   },
   {
+    "slug": "2958-length-of-longest-subarray-with-at-most-k-frequency",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2958-length-of-longest-subarray-with-at-most-k-frequency/ANALYSIS.md"
+  },
+  {
     "slug": "2996-smallest-missing-integer-greater-than-sequential-prefix-sum",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/ANALYSIS.md"
@@ -518,6 +528,11 @@
     "slug": "3499-maximize-active-section-with-trade-i",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3499-maximize-active-section-with-trade-i/ANALYSIS.md"
+  },
+  {
+    "slug": "35-search-insert-position",
+    "title": "Binary Search",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/35-search-insert-position/ANALYSIS.md"
   },
   {
     "slug": "3501-maximize-active-section-with-trade-ii",
@@ -875,6 +890,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/877-stone-game/ANALYSIS.md"
   },
   {
+    "slug": "901-online-stock-span",
+    "title": "Monotonic Stack",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/901-online-stock-span/ANALYSIS.md"
+  },
+  {
     "slug": "93-restore-ip-addresses",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/93-restore-ip-addresses/ANALYSIS.md"
@@ -985,11 +1005,6 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/349-intersection-of-two-arrays/ANALYSIS.md"
   },
   {
-    "slug": "35-search-insert-position",
-    "title": "Binary Search",
-    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/35-search-insert-position/ANALYSIS.md"
-  },
-  {
     "slug": "3518-smallest-palindromic-rearrangement-ii",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3518-smallest-palindromic-rearrangement-ii/ANALYSIS.md"
@@ -1028,5 +1043,10 @@
     "slug": "94-binary-tree-inorder-traversal",
     "title": "Tree DFS - Inorder Traversal",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/rust/94-binary-tree-inorder-traversal/ANALYSIS.md"
+  },
+  {
+    "slug": "2620-counter",
+    "title": "Counter",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/typescript/2620-counter/ANALYSIS.md"
   }
 ]
