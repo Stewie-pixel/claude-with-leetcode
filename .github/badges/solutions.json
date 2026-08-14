@@ -395,6 +395,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2203-minimum-weighted-subgraph-with-the-required-paths/ANALYSIS.md"
   },
   {
+    "slug": "2213-longest-substring-of-one-repeating-character",
+    "title": "Segment Tree",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2213-longest-substring-of-one-repeating-character/ANALYSIS.md"
+  },
+  {
     "slug": "2223-sum-of-scores-of-built-strings",
     "title": "String Matching – Z‑Algorithm (Sum of Scores of Built Strings)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2223-sum-of-scores-of-built-strings/ANALYSIS.md"
@@ -483,6 +488,11 @@
     "slug": "307-range-sum-query-mutable",
     "title": "Segment Tree",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/307-range-sum-query-mutable/ANALYSIS.md"
+  },
+  {
+    "slug": "3090-maximum-length-substring-with-two-occurrences",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3090-maximum-length-substring-with-two-occurrences/ANALYSIS.md"
   },
   {
     "slug": "3115-maximum-prime-difference",
@@ -965,6 +975,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/658-find-k-closest-elements/ANALYSIS.md"
   },
   {
+    "slug": "2620-counter",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/javascript/2620-counter/ANALYSIS.md"
+  },
+  {
     "slug": "2627-debounce",
     "title": "Debounce",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/javascript/2627-debounce/ANALYSIS.md"
@@ -1043,10 +1058,5 @@
     "slug": "94-binary-tree-inorder-traversal",
     "title": "Tree DFS - Inorder Traversal",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/rust/94-binary-tree-inorder-traversal/ANALYSIS.md"
-  },
-  {
-    "slug": "2620-counter",
-    "title": "Counter",
-    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/typescript/2620-counter/ANALYSIS.md"
   }
 ]
