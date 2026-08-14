@@ -1279,6 +1279,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Length Substring With Two Occurrences",
+    "pattern": "Hash Table, String, Sliding Window",
+    "difficulty": "Easy",
+    "link": "maximum-length-substring-with-two-occurrences",
+    "code": "3090",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Prime Difference",
     "pattern": "Array, Math, Number Theory, Primality Test",
     "difficulty": "Medium",
