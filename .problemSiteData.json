@@ -427,6 +427,14 @@
     "cpp": true
   },
   {
+    "problem": "Counting Bits",
+    "pattern": "Dynamic Programming, Bit Manipulation",
+    "difficulty": "Easy",
+    "link": "counting-bits",
+    "code": "0338",
+    "cpp": true
+  },
+  {
     "problem": "Intersection of Two Arrays",
     "pattern": "Array, Hash Table, Two Pointers, Binary Search, Sorting",
     "difficulty": "Easy",
@@ -805,6 +813,14 @@
     "difficulty": "Medium",
     "link": "get-watched-videos-by-your-friends",
     "code": "1311",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Flips to Make a OR b Equal to c",
+    "pattern": "Bit Manipulation",
+    "difficulty": "Medium",
+    "link": "minimum-flips-to-make-a-or-b-equal-to-c",
+    "code": "1318",
     "cpp": true
   },
   {
@@ -1535,6 +1551,14 @@
     "difficulty": "Hard",
     "link": "number-of-zigzag-arrays-ii",
     "code": "3700",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Subsequence With Non-Zero Bitwise XOR",
+    "pattern": "Array, Bit Manipulation",
+    "difficulty": "Medium",
+    "link": "longest-subsequence-with-non-zero-bitwise-xor",
+    "code": "3702",
     "cpp": true
   },
   {
