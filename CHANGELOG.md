@@ -6,7 +6,7 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
-## [0.5.3-nightly.20260815] - 2026-08-15
+## [0.5.3-nightly] - 2026-08-15
 
 ### Added
 - feat(js): add solution for 2620-counter (#554) (e8335c3)
