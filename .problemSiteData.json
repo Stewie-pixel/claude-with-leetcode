@@ -1840,5 +1840,37 @@
     "link": "minimum-cost-to-convert-string-iii",
     "code": "3995",
     "cpp": true
+  },
+  {
+    "problem": "Elevator Requests I",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "elevator-requests-i",
+    "code": "4020",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Operations to Make a Rotated Palindrome I",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-operations-to-make-a-rotated-palindrome-i",
+    "code": "4021",
+    "cpp": true
+  },
+  {
+    "problem": "K-th Digit in Infinite String",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "k-th-digit-in-infinite-string",
+    "code": "4022",
+    "cpp": true
+  },
+  {
+    "problem": "Elevator Requests II",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "elevator-requests-ii",
+    "code": "4023",
+    "cpp": true
   }
 ]
