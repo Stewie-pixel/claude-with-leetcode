@@ -350,6 +350,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/199-binary-tree-right-side-view/ANALYSIS.md"
   },
   {
+    "slug": "2029-stone-game-ix",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2029-stone-game-ix/ANALYSIS.md"
+  },
+  {
     "slug": "2065-maximum-path-quality-of-a-graph",
     "title": "Backtracking",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2065-maximum-path-quality-of-a-graph/ANALYSIS.md"
@@ -768,6 +773,26 @@
     "slug": "3995-minimum-cost-to-convert-string-iii",
     "title": "### 1.   Pre‑processing – all usable rules",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3995-minimum-cost-to-convert-string-iii/ANALYSIS.md"
+  },
+  {
+    "slug": "4020-elevator-requests-i",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/4020-elevator-requests-i/ANALYSIS.md"
+  },
+  {
+    "slug": "4021-minimum-operations-to-make-a-rotated-palindrome-i",
+    "title": "Two Pointers",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/4021-minimum-operations-to-make-a-rotated-palindrome-i/ANALYSIS.md"
+  },
+  {
+    "slug": "4022-k-th-digit-in-infinite-string",
+    "title": "Math & Geometry: K‑th Digit in an Infinite String  ",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/4022-k-th-digit-in-infinite-string/ANALYSIS.md"
+  },
+  {
+    "slug": "4023-elevator-requests-ii",
+    "title": "Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/4023-elevator-requests-ii/ANALYSIS.md"
   },
   {
     "slug": "437-path-sum-iii",
