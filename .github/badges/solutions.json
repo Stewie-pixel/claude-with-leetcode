@@ -200,6 +200,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1311-get-watched-videos-by-your-friends/ANALYSIS.md"
   },
   {
+    "slug": "1318-minimum-flips-to-make-a-or-b-equal-to-c",
+    "title": "Bit Manipulation",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1318-minimum-flips-to-make-a-or-b-equal-to-c/ANALYSIS.md"
+  },
+  {
     "slug": "1331-rank-transform-of-an-array",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1331-rank-transform-of-an-array/ANALYSIS.md"
@@ -535,6 +540,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3348-smallest-divisible-digit-product-ii/ANALYSIS.md"
   },
   {
+    "slug": "338-counting-bits",
+    "title": "Bit Manipulation",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/338-counting-bits/ANALYSIS.md"
+  },
+  {
     "slug": "3499-maximize-active-section-with-trade-i",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3499-maximize-active-section-with-trade-i/ANALYSIS.md"
@@ -623,6 +633,11 @@
     "slug": "3700-number-of-zigzag-arrays-ii",
     "title": "3700-number-of-zigzag-arrays-ii",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3700-number-of-zigzag-arrays-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "3702-longest-subsequence-with-non-zero-bitwise-xor",
+    "title": "Bitwise XOR",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3702-longest-subsequence-with-non-zero-bitwise-xor/ANALYSIS.md"
   },
   {
     "slug": "3737-count-subarrays-with-majority-element-i",

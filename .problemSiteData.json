@@ -1059,6 +1059,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game IX",
+    "pattern": "Array, Math, Greedy, Minimax, Counting, Game Theory, Nim Game, Zero-Sum Game",
+    "difficulty": "Medium",
+    "link": "stone-game-ix",
+    "code": "2029",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Path Quality of a Graph",
     "pattern": "Array, Backtracking, Graph Theory",
     "difficulty": "Hard",
