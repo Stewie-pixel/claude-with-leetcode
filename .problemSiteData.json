@@ -960,6 +960,14 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game V",
+    "pattern": "Array, Math, Dynamic Programming, Game Theory",
+    "difficulty": "Hard",
+    "link": "stone-game-v",
+    "code": "1563",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Length of Subarray With Positive Product",
     "pattern": "Array",
     "difficulty": "Medium",
