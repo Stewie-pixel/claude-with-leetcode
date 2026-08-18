@@ -6,6 +6,19 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260818] - 2026-08-18
+
+### Documentation
+- chore: release nightly v0.5.3-nightly.20260817 (#606) (c27368e)
+
+### Updated
+- Update README table (eae03be)
+- chore: release nightly v0.5.3-nightly.20260817 (#606) (c27368e)
+
+### Other
+- Update README table (eae03be)
+
+
 ## [0.5.3-nightly] - 2026-08-17
 
 ### Documentation
