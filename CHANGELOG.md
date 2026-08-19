@@ -6,6 +6,15 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260819] - 2026-08-19
+
+### Updated
+- Update README table (830f54c)
+
+### Other
+- Update README table (830f54c)
+
+
 ## [0.5.3-nightly] - 2026-08-17
 
 ### Documentation
