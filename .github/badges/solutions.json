@@ -230,6 +230,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1372-longest-zigzag-path-in-a-binary-tree/ANALYSIS.md"
   },
   {
+    "slug": "1386-cinema-seat-allocation",
+    "title": "Bit Manipulation",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1386-cinema-seat-allocation/ANALYSIS.md"
+  },
+  {
     "slug": "139-word-break",
     "title": "1D Dynamic Programming",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/139-word-break/ANALYSIS.md"
@@ -283,6 +288,11 @@
     "slug": "1557-minimum-number-of-vertices-to-reach-all-nodes",
     "title": "Graphs - Indegree Zero Nodes",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1557-minimum-number-of-vertices-to-reach-all-nodes/ANALYSIS.md"
+  },
+  {
+    "slug": "1563-stone-game-v",
+    "title": "2D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1563-stone-game-v/ANALYSIS.md"
   },
   {
     "slug": "1567-maximum-length-of-subarray-with-positive-product",
@@ -495,6 +505,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3020-find-the-maximum-number-of-elements-in-subset/ANALYSIS.md"
   },
   {
+    "slug": "3069-distribute-elements-into-two-arrays-i",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3069-distribute-elements-into-two-arrays-i/ANALYSIS.md"
+  },
+  {
     "slug": "307-range-sum-query-mutable",
     "title": "Segment Tree",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/307-range-sum-query-mutable/ANALYSIS.md"
@@ -548,6 +563,11 @@
     "slug": "338-counting-bits",
     "title": "Bit Manipulation",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/338-counting-bits/ANALYSIS.md"
+  },
+  {
+    "slug": "3471-find-the-largest-almost-missing-integer",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3471-find-the-largest-almost-missing-integer/ANALYSIS.md"
   },
   {
     "slug": "3499-maximize-active-section-with-trade-i",
