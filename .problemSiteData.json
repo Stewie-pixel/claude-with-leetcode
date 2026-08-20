@@ -864,6 +864,14 @@
     "cpp": true
   },
   {
+    "problem": "Cinema Seat Allocation",
+    "pattern": "Array, Hash Table, Greedy, Bit Manipulation",
+    "difficulty": "Medium",
+    "link": "cinema-seat-allocation",
+    "code": "1386",
+    "cpp": true
+  },
+  {
     "problem": "Longest Happy Prefix",
     "pattern": "String",
     "difficulty": "Hard",
