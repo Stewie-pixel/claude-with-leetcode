@@ -1384,6 +1384,14 @@
     "cpp": true
   },
   {
+    "problem": "Find the Largest Almost Missing Integer",
+    "pattern": "Array, Hash Table",
+    "difficulty": "Easy",
+    "link": "find-the-largest-almost-missing-integer",
+    "code": "3471",
+    "cpp": true
+  },
+  {
     "problem": "Maximize Active Section with Trade I",
     "pattern": "String, Enumeration",
     "difficulty": "Medium",
