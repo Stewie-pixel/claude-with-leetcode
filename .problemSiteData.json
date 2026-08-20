@@ -1320,6 +1320,14 @@
     "cpp": true
   },
   {
+    "problem": "Distribute Elements Into Two Arrays I",
+    "pattern": "Array, Simulation",
+    "difficulty": "Easy",
+    "link": "distribute-elements-into-two-arrays-i",
+    "code": "3069",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Length Substring With Two Occurrences",
     "pattern": "Hash Table, String, Sliding Window",
     "difficulty": "Easy",
