@@ -1344,6 +1344,14 @@
     "cpp": true
   },
   {
+    "problem": "Kth Smallest Amount With Single Denomination Combination",
+    "pattern": "Array, Math, Binary Search, Bit Manipulation, Combinatorics, Number Theory",
+    "difficulty": "Hard",
+    "link": "kth-smallest-amount-with-single-denomination-combination",
+    "code": "3116",
+    "python": true
+  },
+  {
     "problem": "Find a Safe Walk Through a Grid",
     "pattern": "Array, Breadth-First Search, Graph Theory, Heap (Priority Queue), Matrix, Shortest Path",
     "difficulty": "Medium",
