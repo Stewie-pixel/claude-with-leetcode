@@ -1536,6 +1536,14 @@
     "cpp": true
   },
   {
+    "problem": "Check Divisibility by Digit Sum and Product",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "check-divisibility-by-digit-sum-and-product",
+    "code": "3622",
+    "cpp": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
