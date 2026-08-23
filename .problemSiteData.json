@@ -1051,6 +1051,14 @@
     "cpp": true
   },
   {
+    "problem": "Sum Game",
+    "pattern": "Math, String, Greedy, Game Theory",
+    "difficulty": "Medium",
+    "link": "sum-game",
+    "code": "1927",
+    "cpp": true
+  },
+  {
     "problem": "Number of Strings That Appear as Substrings in Word",
     "pattern": "Array, String",
     "difficulty": "Easy",
