@@ -210,6 +210,14 @@
     "c": true
   },
   {
+    "problem": "Group Anagrams",
+    "pattern": "Array, Hash Table, String, Sorting",
+    "difficulty": "Medium",
+    "link": "group-anagrams",
+    "code": "0049",
+    "c": true
+  },
+  {
     "problem": "Unique Paths",
     "pattern": "Math, Dynamic Programming, Combinatorics",
     "difficulty": "Medium",
