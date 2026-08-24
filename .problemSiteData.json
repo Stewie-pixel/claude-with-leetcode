@@ -1043,11 +1043,27 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game VIII",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-viii",
+    "code": "1872",
+    "cpp": true
+  },
+  {
     "problem": "Nearest Exit from Entrance in Maze",
     "pattern": "Array, Breadth-First Search, Matrix",
     "difficulty": "Medium",
     "link": "nearest-exit-from-entrance-in-maze",
     "code": "1926",
+    "cpp": true
+  },
+  {
+    "problem": "Sum Game",
+    "pattern": "Math, String, Greedy, Game Theory",
+    "difficulty": "Medium",
+    "link": "sum-game",
+    "code": "1927",
     "cpp": true
   },
   {
