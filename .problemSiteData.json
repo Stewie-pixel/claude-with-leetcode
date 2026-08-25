@@ -1642,6 +1642,14 @@
     "cpp": true
   },
   {
+    "problem": "Smallest Missing Multiple of K",
+    "pattern": "Array, Hash Table",
+    "difficulty": "Easy",
+    "link": "smallest-missing-multiple-of-k",
+    "code": "3718",
+    "cpp": true
+  },
+  {
     "problem": "Find Missing Elements",
     "pattern": "Array, Hash Table, Sorting",
     "difficulty": "Easy",
