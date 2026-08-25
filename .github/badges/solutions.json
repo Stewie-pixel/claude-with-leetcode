@@ -80,6 +80,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/49-group-anagrams/ANALYSIS.md"
   },
   {
+    "slug": "50-powx-n",
+    "title": "Divide and Conquer",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/50-powx-n/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -683,6 +688,11 @@
     "slug": "3702-longest-subsequence-with-non-zero-bitwise-xor",
     "title": "Bitwise XOR",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3702-longest-subsequence-with-non-zero-bitwise-xor/ANALYSIS.md"
+  },
+  {
+    "slug": "3718-smallest-missing-multiple-of-k",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3718-smallest-missing-multiple-of-k/ANALYSIS.md"
   },
   {
     "slug": "3737-count-subarrays-with-majority-element-i",
