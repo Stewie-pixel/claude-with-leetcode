@@ -6,6 +6,38 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260825] - 2026-08-25
+
+### Added
+- feat(c): add solution for 49-group-anagrams (#444) (e8430c5)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#633) (33e0d5f)
+- docs: add claude mentor analysis for new solution (#632) (7002b54)
+- docs: add claude mentor analysis for new solution (#629) (826be89)
+- docs: add claude mentor analysis for new solution (#626) (7d16146)
+- docs: add claude mentor analysis for new solution (#622) (363ee56)
+
+### Updated
+- chore: update claude solution count to 229 (9bc7e8d)
+- Update README table (8f48967)
+- Update README table (8e10aab)
+- feat(c): add solution for 49-group-anagrams (#444) (e8430c5)
+- Update README table (17ffa46)
+- Update README table (20c7294)
+- Update README table (f182a6a)
+- Update README table (733e2cd)
+- chore: update changelog for v0.5.3-nightly.20260821 [skip ci] (#621) (cb0f9b8)
+
+### Other
+- Update README table (8f48967)
+- Update README table (8e10aab)
+- Update README table (17ffa46)
+- Update README table (20c7294)
+- Update README table (f182a6a)
+- Update README table (733e2cd)
+
+
 ## [0.5.3-nightly.20260821] - 2026-08-21
 
 ### Documentation
