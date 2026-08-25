@@ -218,6 +218,14 @@
     "c": true
   },
   {
+    "problem": "Pow(x, n)",
+    "pattern": "Math, Recursion",
+    "difficulty": "Medium",
+    "link": "powx-n",
+    "code": "0050",
+    "c": true
+  },
+  {
     "problem": "Unique Paths",
     "pattern": "Math, Dynamic Programming, Combinatorics",
     "difficulty": "Medium",
