@@ -1304,6 +1304,14 @@
     "cpp": true
   },
   {
+    "problem": "Shortest and Lexicographically Smallest Beautiful String",
+    "pattern": "String, Sliding Window",
+    "difficulty": "Medium",
+    "link": "shortest-and-lexicographically-smallest-beautiful-string",
+    "code": "2904",
+    "cpp": true
+  },
+  {
     "problem": "Find Building Where Alice and Bob Can Meet",
     "pattern": "Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack",
     "difficulty": "Hard",
