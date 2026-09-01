@@ -6,6 +6,31 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260826] - 2026-08-26
+
+### Added
+- feat(c): add solution for 50-powx-n (#445) (5b1cc5c)
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#642) (4e89fa2)
+- docs: add claude mentor analysis for new solution (#641) (336bb19)
+
+### Updated
+- chore: update claude solution count to 231 (67a020c)
+- Update README table (dce5b3f)
+- Update README table (d676c5c)
+- feat(c): add solution for 50-powx-n (#445) (5b1cc5c)
+- Update README table (6768e24)
+- chore: release nightly v0.5.3-nightly.20260825 (#640) (63c9bb2)
+- Update README table (b30456f)
+
+### Other
+- Update README table (dce5b3f)
+- Update README table (d676c5c)
+- Update README table (6768e24)
+- Update README table (b30456f)
+
+
 ## [0.5.3-nightly] - 2026-08-25
 
 ### Added
