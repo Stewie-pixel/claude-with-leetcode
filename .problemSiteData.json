@@ -210,6 +210,22 @@
     "c": true
   },
   {
+    "problem": "Group Anagrams",
+    "pattern": "Array, Hash Table, String, Sorting",
+    "difficulty": "Medium",
+    "link": "group-anagrams",
+    "code": "0049",
+    "c": true
+  },
+  {
+    "problem": "Pow(x, n)",
+    "pattern": "Math, Recursion",
+    "difficulty": "Medium",
+    "link": "powx-n",
+    "code": "0050",
+    "c": true
+  },
+  {
     "problem": "Unique Paths",
     "pattern": "Math, Dynamic Programming, Combinatorics",
     "difficulty": "Medium",
@@ -1043,11 +1059,27 @@
     "cpp": true
   },
   {
+    "problem": "Stone Game VIII",
+    "pattern": "Array, Math, Dynamic Programming, Minimax, Prefix Sum, Game Theory, Zero-Sum Game",
+    "difficulty": "Hard",
+    "link": "stone-game-viii",
+    "code": "1872",
+    "cpp": true
+  },
+  {
     "problem": "Nearest Exit from Entrance in Maze",
     "pattern": "Array, Breadth-First Search, Matrix",
     "difficulty": "Medium",
     "link": "nearest-exit-from-entrance-in-maze",
     "code": "1926",
+    "cpp": true
+  },
+  {
+    "problem": "Sum Game",
+    "pattern": "Math, String, Greedy, Game Theory",
+    "difficulty": "Medium",
+    "link": "sum-game",
+    "code": "1927",
     "cpp": true
   },
   {
@@ -1269,6 +1301,14 @@
     "difficulty": "Medium",
     "link": "find-the-safest-path-in-a-grid",
     "code": "2812",
+    "cpp": true
+  },
+  {
+    "problem": "Shortest and Lexicographically Smallest Beautiful String",
+    "pattern": "String, Sliding Window",
+    "difficulty": "Medium",
+    "link": "shortest-and-lexicographically-smallest-beautiful-string",
+    "code": "2904",
     "cpp": true
   },
   {
@@ -1536,6 +1576,14 @@
     "cpp": true
   },
   {
+    "problem": "Check Divisibility by Digit Sum and Product",
+    "pattern": "Math",
+    "difficulty": "Easy",
+    "link": "check-divisibility-by-digit-sum-and-product",
+    "code": "3622",
+    "cpp": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -1607,6 +1655,14 @@
     "difficulty": "Medium",
     "link": "longest-subsequence-with-non-zero-bitwise-xor",
     "code": "3702",
+    "cpp": true
+  },
+  {
+    "problem": "Smallest Missing Multiple of K",
+    "pattern": "Array, Hash Table",
+    "difficulty": "Easy",
+    "link": "smallest-missing-multiple-of-k",
+    "code": "3718",
     "cpp": true
   },
   {

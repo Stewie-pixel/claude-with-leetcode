@@ -75,6 +75,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/48-rotate-image/ANALYSIS.md"
   },
   {
+    "slug": "49-group-anagrams",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/49-group-anagrams/ANALYSIS.md"
+  },
+  {
+    "slug": "50-powx-n",
+    "title": "Divide and Conquer",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/50-powx-n/ANALYSIS.md"
+  },
+  {
     "slug": "7-reverse-integer",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
@@ -330,9 +340,19 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1846-maximum-element-after-decreasing-and-rearranging/ANALYSIS.md"
   },
   {
+    "slug": "1872-stone-game-viii",
+    "title": "1D Dynamic Programming",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1872-stone-game-viii/ANALYSIS.md"
+  },
+  {
     "slug": "1926-nearest-exit-from-entrance-in-maze",
     "title": "Tree BFS",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1926-nearest-exit-from-entrance-in-maze/ANALYSIS.md"
+  },
+  {
+    "slug": "1927-sum-game",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/1927-sum-game/ANALYSIS.md"
   },
   {
     "slug": "1967-number-of-strings-that-appear-as-substrings-in-word",
@@ -635,6 +655,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3620-network-recovery-pathways/ANALYSIS.md"
   },
   {
+    "slug": "3622-check-divisibility-by-digit-sum-and-product",
+    "title": "Math & Geometry (Digit Operations)",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3622-check-divisibility-by-digit-sum-and-product/ANALYSIS.md"
+  },
+  {
     "slug": "3635-earliest-finish-time-for-land-and-water-rides-ii",
     "title": "Greedy",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3635-earliest-finish-time-for-land-and-water-rides-ii/ANALYSIS.md"
@@ -663,6 +688,11 @@
     "slug": "3702-longest-subsequence-with-non-zero-bitwise-xor",
     "title": "Bitwise XOR",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3702-longest-subsequence-with-non-zero-bitwise-xor/ANALYSIS.md"
+  },
+  {
+    "slug": "3718-smallest-missing-multiple-of-k",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3718-smallest-missing-multiple-of-k/ANALYSIS.md"
   },
   {
     "slug": "3737-count-subarrays-with-majority-element-i",
@@ -1068,6 +1098,11 @@
     "slug": "290-word-pattern",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/290-word-pattern/ANALYSIS.md"
+  },
+  {
+    "slug": "3116-kth-smallest-amount-with-single-denomination-combination",
+    "title": "Binary Search",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3116-kth-smallest-amount-with-single-denomination-combination/ANALYSIS.md"
   },
   {
     "slug": "3312-sorted-gcd-pair-queries",
