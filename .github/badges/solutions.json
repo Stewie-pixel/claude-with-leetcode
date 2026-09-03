@@ -495,6 +495,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2812-find-the-safest-path-in-a-grid/ANALYSIS.md"
   },
   {
+    "slug": "2904-shortest-and-lexicographically-smallest-beautiful-string",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/2904-shortest-and-lexicographically-smallest-beautiful-string/ANALYSIS.md"
+  },
+  {
     "slug": "292-nim-game",
     "title": "Math & Geometry",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/292-nim-game/ANALYSIS.md"
