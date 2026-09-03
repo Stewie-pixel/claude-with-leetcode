@@ -1448,6 +1448,14 @@
     "cpp": true
   },
   {
+    "problem": "Reschedule Meetings for Maximum Free Time I",
+    "pattern": "Array, Greedy, Sliding Window",
+    "difficulty": "Medium",
+    "link": "reschedule-meetings-for-maximum-free-time-i",
+    "code": "3439",
+    "python": true
+  },
+  {
     "problem": "Find the Largest Almost Missing Integer",
     "pattern": "Array, Hash Table",
     "difficulty": "Easy",

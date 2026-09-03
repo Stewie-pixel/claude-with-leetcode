@@ -1110,6 +1110,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3312-sorted-gcd-pair-queries/ANALYSIS.md"
   },
   {
+    "slug": "3439-reschedule-meetings-for-maximum-free-time-i",
+    "title": "Sliding Window",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3439-reschedule-meetings-for-maximum-free-time-i/ANALYSIS.md"
+  },
+  {
     "slug": "349-intersection-of-two-arrays",
     "title": "Arrays & Hashing",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/349-intersection-of-two-arrays/ANALYSIS.md"
