@@ -6,6 +6,22 @@ The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and versions follow Semantic Versioning.
 
+## [0.5.3-nightly.20260903] - 2026-09-03
+
+### Documentation
+- docs: add claude mentor analysis for new solution (#662) (f983b18)
+
+### Updated
+- chore: update claude solution count to 232 (a60afb1)
+- Update README table (28816f9)
+- Update README table (2c4680e)
+
+### Other
+- Update README table (28816f9)
+- Update README table (2c4680e)
+- add solution for 3439. Reschedule Meetings for Maximum Free Time I (#623) (a4d5957)
+
+
 ## [0.5.3-nightly] - 2026-08-25
 
 ### Added
