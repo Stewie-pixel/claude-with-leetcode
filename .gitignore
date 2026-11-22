@@ -17,7 +17,6 @@ public_html/storage
 public_html/hot
 
 storage/*.key
-.env
 .idea/
 __pycache__/
 Homestead.yaml
@@ -103,7 +102,6 @@ web_modules/
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -164,7 +162,6 @@ dist
 .svelte-kit
 
 ### VisualStudioCode ###
-.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -207,3 +204,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+config.bat
